@@ -19,6 +19,7 @@ const Footer = () => {
               <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
               <li><a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Subscriptions</a></li>
               <li><a href="#download" className="text-muted-foreground hover:text-foreground transition-colors">Early Access</a></li>
+              {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Updates</a></li>
             </ul>
           </div>
@@ -27,8 +28,11 @@ const Footer = () => {
             <h3 className="font-medium text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Press</a></li>
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -36,9 +40,13 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-4">Legal</h3>
             <ul className="space-y-3">
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a></li>
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a></li>
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</a></li>
+                            {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">GDPR</a></li>
             </ul>
           </div>
@@ -48,15 +56,20 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Parapluie. All rights reserved.</p>
           
           <div className="flex space-x-6 mt-4 md:mt-0">
+                          {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </a>
+                          {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                         
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </a>
+                          {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+           
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </a>

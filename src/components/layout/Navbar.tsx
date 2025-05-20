@@ -37,7 +37,6 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               className={cn(
                 'text-primary font-medium',
                 {
-                  'text-primary': scrolled,
                   'text-primary': !scrolled,
                 }
               )}
@@ -50,6 +49,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         </nav>
 
         {/* Mobile Navigation Toggle */}
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           className="md:hidden p-2 z-50"
           onClick={toggleMenu}

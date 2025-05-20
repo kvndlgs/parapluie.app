@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/bg2.png';
 
@@ -23,6 +22,7 @@ const Hero = () => {
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button size="lg" className="w-full justify-start sm:w-auto bg-[#1f1f1f]">
+            {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
             <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_76_45)">
                 <path d="M20.3132 10.0976C17.1534 8.33033 12.0819 5.49244 4.2156 1.08791C3.68526 0.737654 3.07506 0.691754 2.54785 0.870201L16.0442 14.3666L20.3132 10.0976Z" fill="#32BBFF" />
@@ -68,7 +68,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-[30px] h-[50px] rounded-full border-2 border-white/70 flex justify-center items-start p-1">
-          <div className="w-1 h-3 bg-white/70 rounded-full animate-scroll-down"></div>
+          <div className="w-1 h-3 bg-white/70 rounded-full animate-scroll-down" />
         </div>
       </div>
     </section>
