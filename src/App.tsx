@@ -26,7 +26,7 @@ function App() {
   }, [scrolled]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-display">
       <Navbar scrolled={scrolled} />
       <main>
         <Hero />

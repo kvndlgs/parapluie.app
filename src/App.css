@@ -3,4 +3,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  /* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
+  font-family: 'Gantari', 'sans-serif';
 }
