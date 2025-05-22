@@ -6,19 +6,6 @@ const Download = () => {
   return (
     <section className="py-24 bg-primary/5" id="download">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Download Parapluie Today</h2>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <Button size="lg" className="gap-2">
-            <Apple className="h-5 w-5" />
-            <span>App Store</span>
-          </Button>
-          <Button size="lg" variant="outline" className="gap-2">
-            <PlayCircle className="h-5 w-5" />
-            <span>Google Play</span>
-          </Button>
-        </div>
-
         <div className="relative mx-auto max-w-5xl">
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10 rounded-3xl" />
           <div className="bg-gradient-to-r from-primary/20 to-primary/5 rounded-3xl p-8 md:p-12">

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-1">
             <Logo className="mb-4" />
-            <p className="text-muted-foreground text-sm mt-4">
+            <p className="text-text text-xs -mt-2">
             AI Protection for Senior Financial Safety.
             </p>
           </div>
@@ -57,18 +57,18 @@ const Footer = () => {
           
           <div className="flex space-x-6 mt-4 md:mt-0">
                           {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://x.com/parapluie.app" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </a>
                           {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://instagram.com/parapluie.app" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
                          
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </a>
                           {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://github.com/kvndlgs/parapluie-app.git" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
            
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
