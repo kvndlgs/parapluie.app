@@ -1,19 +1,19 @@
 import Mockup from '@/assets/mockup.png';
-import heroBg from '@/assets/meshg.png';
+import heroBg from '@/assets/meshbgbig.png';
 
 const Hero = () => {
   return (
     <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden" id="home">
       {/* Purple Gradient Background */}
       <div className="absolute inset-0 z-0">
-       <img src={heroBg} className='asolute object-cover bg-top-left w-full h-full'/>
+       <img src={heroBg} className='absolute object-cover bg-center w-full h-full'/>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6 lg:px-0">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 -mt-16 md:-mt-0leading-tight">
-          <span className="block md:pb-2">Real-Time Protection </span>
-          <span className="block">Against Scams Powered by AI.</span>
+        <h1 className="text-3xl  lg:text-4xl font-bold text-primary mb-8 -mt-16 md:-mt-0leading-tight">
+          <span className="block md:pb-2"> AI-Powered Protection </span>
+          <span className="block">Against Scams In Real-Time</span>
         </h1>
         
         <div className="flex flex-row w-full items-center justify-center gap-2 md:mb-12">

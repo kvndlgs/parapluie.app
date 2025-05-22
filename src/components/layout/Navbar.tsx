@@ -35,7 +35,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               key={item}
               href={`#${item.toLowerCase()}`}
               className={cn(
-                'text-primary font-medium',
+                'text-primary text-sm font-bold',
                 {
                   'text-primary': !scrolled,
                 }
@@ -45,7 +45,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </a>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button className='text-primary border-2 border-primary py-1.5 px-3 rounded-full hidden sm:flex'>Early Access</button>
+          <button className='text-white text-sm font-bold bg-primary py-2 px-3.5 rounded-full hidden sm:flex'>Early Access</button>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -75,7 +75,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         {/* Mobile Navigation Menu */}
         <div
           className={cn(
-            'fixed inset-0 bg-white/95 flex flex-col items-center top-44 justify-center transition-all duration-300 sm:hidden drop-shadow-md',
+            'fixed inset-0 bg-white/95 flex flex-col items-center top-52 justify-center transition-all duration-300 sm:hidden drop-shadow-md',
             {
               'opacity-100 visible': isMenuOpen,
               'opacity-0 invisible': !isMenuOpen,
@@ -86,14 +86,14 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-md w-full text-center py-3 font-regular text-primary transition-colors bg-white/95"
+              className="text-sm w-full text-center pb-4 pt-6 font-bold text-primary transition-colors bg-white/95"
               onClick={() => setIsMenuOpen(false)}
             >
               {item}
             </a>
           ))}
-          <div className='w-full py-4 bg-white/95 flex items-center justify-center'>
-          <Button size="lg" onClick={() => setIsMenuOpen(false)}>
+          <div className='w-full pb-5 pt-4 bg-white/95 flex items-center justify-center'>
+          <Button size="lg" onClick={() => setIsMenuOpen(false)} className='rounded-full'>
             Early Access
           </Button>
           </div>
