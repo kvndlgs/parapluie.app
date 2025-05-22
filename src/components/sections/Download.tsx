@@ -1,5 +1,3 @@
-import { Apple, PlayCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import AppPreview from '@/assets/ai-protection.png';
 
 const Download = () => {
