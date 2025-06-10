@@ -6,7 +6,6 @@ import About from '@/components/sections/About';
 import Pricing from '@/components/sections/Pricing';
 import Download from '@/components/sections/Download';
 import Footer from '@/components/layout/Footer';
-import { LocaleSwitcher } from 'lingo.dev/react-client';
 
 
 
@@ -31,9 +30,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background font-display">
-      <div className="local-switcher">
-      <LocaleSwitcher locales={["fr", "en"]} />
-      </div>
       <Navbar scrolled={scrolled} />
       <main>
         <Hero />
