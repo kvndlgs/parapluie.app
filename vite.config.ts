@@ -4,6 +4,10 @@ import { defineConfig } from 'vite';
 
 import lingoCompiler from 'lingo.dev/compiler';
 
+
+const compilerConfig = {
+  prompt: "You are a professional translator specializing in web dev. Translate from {SOURCE_LOCALE} to {TARGET_LOCALE} while maintaining meaning accuracy."
+}
 const viteConfig = {
   plugins: [react()],
   resolve: {
@@ -11,14 +15,14 @@ const viteConfig = {
       '@': path.resolve(__dirname, './src'),
     },
   },
+  compilerConfig: {
+    compilerConfig
+  },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
 };
 
-const compilerConfig = {
-  prompt: "You are a professional translator specializing in web dev. Translate from {SOURCE_LOCALE} to {TARGET_LOCALE} while maintaining meaning accuracy."
-}
 
 export default defineConfig(() =>
   lingoCompiler.vite({
@@ -26,7 +30,7 @@ export default defineConfig(() =>
     models: {
       "*:*": "groq:mistral-saba-24b",
     },
-  })(viteConfig)(compilerConfig),
+  })(viteConfig)
 );
 
 
