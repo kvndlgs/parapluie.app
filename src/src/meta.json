@@ -223,6 +223,30 @@
     },
     "components/layout/Navbar.tsx": {
       "scopes": {
+        "5/0/init/body/2/argument/1/11-aria-label": {
+          "type": "attribute",
+          "hash": "29dea3e0b6238874f8c7a27619df8e36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Toggle menu"
+        },
+        "5/0/init/body/2/argument/1/15/3/1": {
+          "type": "element",
+          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "5/0/init/body/2/argument/1/5/5": {
+          "type": "element",
+          "hash": "359fca35d95853e13ade0c138715b815",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
         "6/0/init/body/2/argument/1/11-aria-label": {
           "type": "attribute",
           "hash": "29dea3e0b6238874f8c7a27619df8e36",
