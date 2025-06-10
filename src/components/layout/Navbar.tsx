@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/ui/Logo';
 
+
 interface NavbarProps {
   scrolled: boolean;
 }
