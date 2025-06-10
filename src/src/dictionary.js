@@ -5,10 +5,10 @@ export default {
       entries: {
         "9/body/2/argument": {
           content: {
-            en: "<element:LocaleSwitcher></element:LocaleSwitcher>;<element:div><element:Navbar></element:Navbar><element:main><element:Hero></element:Hero><element:Features></element:Features><element:About></element:About><element:Pricing></element:Pricing><element:Download></element:Download></element:main><element:Footer></element:Footer></element:div>",
-            fr: "<element:LocaleSwitcher></element:LocaleSwitcher><element:div><element:Navbar></element:Navbar><element:main><element:Hero></element:Hero><element:Features></element:Features><element:About></element:About><element:Pricing></element:Pricing><element:Download></element:Download></element:main><element:Footer></element:Footer></element:div>",
+            en: "#root > div > div > select<element:div><element:LocaleSwitcher></element:LocaleSwitcher></element:div><element:Navbar></element:Navbar><element:main><element:Hero></element:Hero><element:Features></element:Features><element:About></element:About><element:Pricing></element:Pricing><element:Download></element:Download></element:main><element:Footer></element:Footer>",
+            fr: "#root > div > div > select<element:div><element:LocaleSwitcher></element:LocaleSwitcher></element:div><element:Navbar></element:Navbar><element:main><element:Hero></element:Hero><element:Features></element:Features><element:About></element:About><element:Pricing></element:Pricing><element:Download></element:Download></element:main><element:Footer></element:Footer>",
           },
-          hash: "2f62dc2d4830a696526152c05108be56",
+          hash: "d311435b9bb4d1ebb7f4b3b72d17e741",
         },
       },
     },
@@ -161,7 +161,7 @@ export default {
         "2/0/init/body/0/argument/11/1-alt": {
           content: {
             en: "Parapluie AI-Powered Scams Protection Mockup",
-            fr: "Parapluie Protection contre les Arnaques Alimentées par l'IA Maquette",
+            fr: "Maquette de protection contre les arnaques alimentée par l'IA de Parapluie",
           },
           hash: "0f3efb8b4ec95b6c9375951a0c5e482e",
         },
@@ -175,7 +175,7 @@ export default {
         "2/0/init/body/0/argument/7/1/1": {
           content: {
             en: "AI-Powered Protection for Senior Financial Safety",
-            fr: "Protection Alimentée par l'IA pour la Sécurité Financière des Seniors",
+            fr: "Protection par l'IA pour la sécurité financière des seniors",
           },
           hash: "46ab728bba3364604455a04f6badad50",
         },
@@ -204,21 +204,7 @@ export default {
           },
           hash: "29dea3e0b6238874f8c7a27619df8e36",
         },
-        "6/0/init/body/2/argument/1/13-aria-label": {
-          content: {
-            en: "Toggle menu",
-            fr: "Basculer le menu",
-          },
-          hash: "29dea3e0b6238874f8c7a27619df8e36",
-        },
         "6/0/init/body/2/argument/1/15/3/1": {
-          content: {
-            en: "Early Access",
-            fr: "Accès anticipé",
-          },
-          hash: "dda458d386e6b22a8eceee34b5997551",
-        },
-        "6/0/init/body/2/argument/1/17/3/1": {
           content: {
             en: "Early Access",
             fr: "Accès anticipé",
@@ -232,7 +218,42 @@ export default {
           },
           hash: "359fca35d95853e13ade0c138715b815",
         },
-        "6/0/init/body/2/argument/1/7/5": {
+        "6/0/init/body/2/argument/3/11-aria-label": {
+          content: {
+            en: "Toggle menu",
+            fr: "Basculer le menu",
+          },
+          hash: "29dea3e0b6238874f8c7a27619df8e36",
+        },
+        "6/0/init/body/2/argument/3/15/3/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "dda458d386e6b22a8eceee34b5997551",
+        },
+        "6/0/init/body/2/argument/3/5/5": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "359fca35d95853e13ade0c138715b815",
+        },
+        "7/0/init/body/2/argument/3/11-aria-label": {
+          content: {
+            en: "Toggle menu",
+            fr: "Basculer le menu",
+          },
+          hash: "29dea3e0b6238874f8c7a27619df8e36",
+        },
+        "7/0/init/body/2/argument/3/15/3/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "dda458d386e6b22a8eceee34b5997551",
+        },
+        "7/0/init/body/2/argument/3/5/5": {
           content: {
             en: "Early Access",
             fr: "Accès anticipé",
@@ -255,14 +276,14 @@ export default {
             en: "Sends friendly payment reminders. Tracks recurring expenses to prevent overlooked bills.",
             fr: "Envoie des rappels de paiement amicaux. Suivi des dépenses récurrentes pour éviter les factures oubliées.",
           },
-          hash: "6d532bb6c95d43f9109de28998632e92",
+          hash: "05c5036de12efdff87205de47e264014",
         },
         "3/0/init/body/0/argument/1/1/1/5": {
           content: {
             en: "Provides simplified financial tools. Large, readable displays with intuitive controls.",
             fr: "Fournit des outils financiers simplifiés. Affichages grands et lisibles avec des commandes intuitives.",
           },
-          hash: "3c88a0892b68ebe095a91506327e241d",
+          hash: "5b29c49e7c7c1070139524697a1e0d6a",
         },
         "3/0/init/body/0/argument/1/1/3/1-alt": {
           content: {
@@ -299,14 +320,14 @@ export default {
         "1/0/init/body/0/argument/1/1/3/1/1/5/3": {
           content: {
             en: "Links medication schedules with financial safeguards.",
-            fr: "Lie les calendriers de médicaments aux garanties financières.",
+            fr: "Lie les calendriers de médicaments aux garde-fous financiers.",
           },
           hash: "cc973a4e0b9ca13f49779cbdad7be5e6",
         },
         "1/0/init/body/0/argument/1/1/3/1/1/5/5": {
           content: {
             en: "Adds safeguards during times of potential cognitive fluctuation.",
-            fr: "Ajoute des garanties pendant les périodes de fluctuation cognitive potentielle.",
+            fr: "Ajoute des garde-fous pendant les périodes de fluctuation cognitive potentielle.",
           },
           hash: "a5767b5e93d75fca0887590b268a7c15",
         },

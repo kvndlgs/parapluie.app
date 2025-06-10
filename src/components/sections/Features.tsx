@@ -35,7 +35,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="features">
           {features.map((feature, index) => (
             <Card key={index} className="border border-border bg-white hover:shadow-lg transition-shadow duration-300 drop-shadow-md">
               <CardHeader className="text-center pb-2 text-grey-600">

@@ -5,11 +5,11 @@
       "scopes": {
         "9/body/2/argument": {
           "type": "element",
-          "hash": "2f62dc2d4830a696526152c05108be56",
+          "hash": "d311435b9bb4d1ebb7f4b3b72d17e741",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "<element:LocaleSwitcher><element:Option>FR</element:Option></element:LocaleSwitcher>;<element:div><element:Navbar></element:Navbar><element:main><element:Hero></element:Hero><element:Features></element:Features><element:About></element:About><element:Pricing></element:Pricing><element:Download></element:Download></element:main><element:Footer></element:Footer></element:div>"
+          "content": "#root > div > div > select<element:div><element:LocaleSwitcher></element:LocaleSwitcher></element:div><element:Navbar></element:Navbar><element:main><element:Hero></element:Hero><element:Features></element:Features><element:About></element:About><element:Pricing></element:Pricing><element:Download></element:Download></element:main><element:Footer></element:Footer>"
         }
       }
     },
@@ -231,23 +231,7 @@
           "overrides": {},
           "content": "Toggle menu"
         },
-        "6/0/init/body/2/argument/1/13-aria-label": {
-          "type": "attribute",
-          "hash": "29dea3e0b6238874f8c7a27619df8e36",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Toggle menu"
-        },
         "6/0/init/body/2/argument/1/15/3/1": {
-          "type": "element",
-          "hash": "dda458d386e6b22a8eceee34b5997551",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "Early Access"
-        },
-        "6/0/init/body/2/argument/1/17/3/1": {
           "type": "element",
           "hash": "dda458d386e6b22a8eceee34b5997551",
           "context": "",
@@ -263,7 +247,47 @@
           "overrides": {},
           "content": "Early Access"
         },
-        "6/0/init/body/2/argument/1/7/5": {
+        "6/0/init/body/2/argument/3/11-aria-label": {
+          "type": "attribute",
+          "hash": "29dea3e0b6238874f8c7a27619df8e36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Toggle menu"
+        },
+        "6/0/init/body/2/argument/3/15/3/1": {
+          "type": "element",
+          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "6/0/init/body/2/argument/3/5/5": {
+          "type": "element",
+          "hash": "359fca35d95853e13ade0c138715b815",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "7/0/init/body/2/argument/3/11-aria-label": {
+          "type": "attribute",
+          "hash": "29dea3e0b6238874f8c7a27619df8e36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Toggle menu"
+        },
+        "7/0/init/body/2/argument/3/15/3/1": {
+          "type": "element",
+          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "7/0/init/body/2/argument/3/5/5": {
           "type": "element",
           "hash": "359fca35d95853e13ade0c138715b815",
           "context": "",
@@ -285,7 +309,7 @@
         },
         "3/0/init/body/0/argument/1/1/1/3": {
           "type": "element",
-          "hash": "6d532bb6c95d43f9109de28998632e92",
+          "hash": "05c5036de12efdff87205de47e264014",
           "context": "",
           "skip": false,
           "overrides": {},
@@ -293,7 +317,7 @@
         },
         "3/0/init/body/0/argument/1/1/1/5": {
           "type": "element",
-          "hash": "3c88a0892b68ebe095a91506327e241d",
+          "hash": "5b29c49e7c7c1070139524697a1e0d6a",
           "context": "",
           "skip": false,
           "overrides": {},

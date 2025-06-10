@@ -6,13 +6,13 @@ const Hero = () => {
     <section className="relative w-screen h-screen flex items-center justify-center overflow-hidden" id="home">
       {/* Purple Gradient Background */}
       <div className="absolute inset-0 z-0">
-       <img src={heroBg} className='absolute object-cover bg-center w-full h-full'/>
+       <img src={heroBg} alt="parapluie-app-background-image" className='absolute object-cover bg-center w-full h-full'/>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6 lg:px-0">
-        <h1 className="text-3xl  lg:text-4xl font-bold text-primary mb-8 -mt-16 md:-mt-0leading-tight">
-          <span className="block md:pb-2" data-lingo="hero-heading">AI-Powered Financial Scams Protection For Senior </span>
+        <h1 className="text-4xl lg:text-5xl font-black text-primary lg:px-16 mb-8 -mt-16 md:-mt-4 leading-tight">
+          <span className="block md:pb-2" >AI-Powered Protection for Senior Financial Safety</span>
         </h1>
         
         <div className="flex flex-row w-full items-center justify-center gap-2 md:mb-12">
@@ -24,7 +24,7 @@ const Hero = () => {
             />
           </a>
           <a href='#' className="w-32 h-10 inline-flex items-center justify-center rounded-md font-regular  text-sm text-white
-           bg-[#1E1E1E] border-2 border-[#616161] hover:bg-[#616161]/95 transition-colors duration-300" data-lingo="hero-link">
+           bg-[#1E1E1E] border-2 border-[#616161] hover:bg-[#616161]/95 transition-colors duration-300">
             Early Access
           </a>
         </div>
@@ -32,7 +32,7 @@ const Hero = () => {
       
       {/* Phone Mockups */}
       <div className="absolute md:bottom-0 bottom-4 scale-150 md:scale-110  left-1/2 transform -translate-x-1/2 w-full max-w-3xl z-20">
-        <img src={Mockup} alt="App Mockup" className="w-full absolute md:-bottom-52 z-9999 -bottom-20" />
+        <img src={Mockup} alt="Parapluie AI-Powered Scams Protection Mockup" className="w-full absolute md:-bottom-52 z-9999 -bottom-20" />
       </div>
   
     </section>

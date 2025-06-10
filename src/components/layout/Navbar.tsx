@@ -19,7 +19,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 lg:px-12',
+        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-2.5 px-6 lg:px-12',
         {
           'bg-transparent': !scrolled && !isMenuOpen,
           'bg-white/90 backdrop-blur-md shadow-sm': scrolled || isMenuOpen,
@@ -27,15 +27,14 @@ const Navbar = ({ scrolled }: NavbarProps) => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Logo />
-
+        <a href="/">
+          <Logo className="w-44"/>
+        </a>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          {['Features', 'Subscriptions', 'Get In Touch'].map((item, n) => (
+          {['Features', 'Subscriptions'].map((item) => (
             <a
-              
               key={item}
-              data-lingo={`nav-link-${n}`}
               href={`#${item.toLowerCase()}`}
               className={cn(
                 'text-primary text-sm font-bold',
@@ -48,7 +47,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </a>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button className='text-white text-sm font-bold bg-primary py-2 px-3.5 rounded-full hidden sm:flex'>Early Access</button>
+          <a href="#download" className='text-white text-sm font-regular bg-secondary py-2.5 px-3.5 leading-normal rounded-full hidden sm:flex hover:shadow-xl hover:bg-primary'>Early Access</a>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -85,10 +84,9 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             }
           )}
         >
-          {['Features', 'Subscriptions', 'Get In Touch'].map((item, n) => (
+          {['Features', 'Subscriptions'].map((item) => (
             <a
               key={item}
-              data-lingo={`nav-link-${n}`}
               href={`#${item.toLowerCase()}`}
               className="text-sm w-full text-center pb-4 pt-6 font-bold text-primary transition-colors bg-white/95"
               onClick={() => setIsMenuOpen(false)}
@@ -97,9 +95,9 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </a>
           ))}
           <div className='w-full pb-5 pt-4 bg-white/95 flex items-center justify-center'>
-          <Button size="lg" onClick={() => setIsMenuOpen(false)} className='rounded-full' data-lingo='nav-link-4'>
+          <a href="#download" onClick={() => setIsMenuOpen(false)} className='rounded-full px-3 py-2 bg-primary'>
             Early Access
-          </Button>
+          </a>
           </div>
         </div>
       </div>

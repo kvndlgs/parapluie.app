@@ -4,9 +4,7 @@ import App from './App.tsx';
 import './index.css';
 import { LingoProviderWrapper, loadDictionary } from 'lingo.dev/react/client';
 
-
-
-
+ 
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
