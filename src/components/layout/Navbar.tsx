@@ -31,9 +31,11 @@ const Navbar = ({ scrolled }: NavbarProps) => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          {['Features', 'Subscriptions', 'Get In Touch'].map((item) => (
+          {['Features', 'Subscriptions', 'Get In Touch'].map((item, n) => (
             <a
+              
               key={item}
+              data-lingo={`nav-link-${n}`}
               href={`#${item.toLowerCase()}`}
               className={cn(
                 'text-primary text-sm font-bold',
@@ -83,9 +85,10 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             }
           )}
         >
-          {['Features', 'Subscriptions', 'Get In Touch'].map((item) => (
+          {['Features', 'Subscriptions', 'Get In Touch'].map((item, n) => (
             <a
               key={item}
+              data-lingo={`nav-link-${n}`}
               href={`#${item.toLowerCase()}`}
               className="text-sm w-full text-center pb-4 pt-6 font-bold text-primary transition-colors bg-white/95"
               onClick={() => setIsMenuOpen(false)}
@@ -94,7 +97,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </a>
           ))}
           <div className='w-full pb-5 pt-4 bg-white/95 flex items-center justify-center'>
-          <Button size="lg" onClick={() => setIsMenuOpen(false)} className='rounded-full'>
+          <Button size="lg" onClick={() => setIsMenuOpen(false)} className='rounded-full' data-lingo='nav-link-4'>
             Early Access
           </Button>
           </div>

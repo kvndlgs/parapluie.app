@@ -2,7 +2,9 @@ import path from 'path';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+import lingoCompiler from 'lingo.dev/compiler';
+
+const viteConfig = {
   plugins: [react()],
   resolve: {
     alias: {
@@ -12,4 +14,16 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+};
+
+export default defineConfig(() =>
+  lingoCompiler.vite({
+    sourceRoot: "src",
+    targetLocales: ["en", "fr"],
+    models: {
+      "*:*": "groq:mistral-saba-24b",
+    },
+  })(viteConfig),
+);
+
+

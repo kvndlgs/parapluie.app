@@ -12,8 +12,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6 lg:px-0">
         <h1 className="text-3xl  lg:text-4xl font-bold text-primary mb-8 -mt-16 md:-mt-0leading-tight">
-          <span className="block md:pb-2"> AI-Powered Protection </span>
-          <span className="block">Against Scams In Real-Time</span>
+          <span className="block md:pb-2" data-lingo="hero-heading">AI-Powered Financial Scams Protection For Senior </span>
         </h1>
         
         <div className="flex flex-row w-full items-center justify-center gap-2 md:mb-12">
@@ -25,7 +24,7 @@ const Hero = () => {
             />
           </a>
           <a href='#' className="w-32 h-10 inline-flex items-center justify-center rounded-md font-regular  text-sm text-white
-           bg-[#1E1E1E] border-2 border-[#616161] hover:bg-[#616161]/95 transition-colors duration-300">
+           bg-[#1E1E1E] border-2 border-[#616161] hover:bg-[#616161]/95 transition-colors duration-300" data-lingo="hero-link">
             Early Access
           </a>
         </div>

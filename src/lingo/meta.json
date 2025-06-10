@@ -1,0 +1,361 @@
+{
+  "version": 0.1,
+  "files": {
+    "components/layout/Footer.tsx": {
+      "scopes": {
+        "2/0/init/body/0/argument/1/1/1/3": {
+          "type": "element",
+          "hash": "baadac80a947ccb45c295f654e25c39c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI Protection for Senior Financial Safety."
+        },
+        "2/0/init/body/0/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "4e5f845a09d417dde0a1310bc9ca4bfe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Product"
+        },
+        "2/0/init/body/0/argument/1/1/3/3/1/0": {
+          "type": "element",
+          "hash": "341ff316a339b106a178f0b8d362951b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Features"
+        },
+        "2/0/init/body/0/argument/1/1/3/3/3/0": {
+          "type": "element",
+          "hash": "0d17f4d8d660df40b41d82e0171af6ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Subscriptions"
+        },
+        "2/0/init/body/0/argument/1/1/3/3/5/0": {
+          "type": "element",
+          "hash": "359fca35d95853e13ade0c138715b815",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "2/0/init/body/0/argument/1/1/3/3/9/0": {
+          "type": "element",
+          "hash": "c5f658a393f5d8d6e251a0fb5a0de394",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Updates"
+        },
+        "2/0/init/body/0/argument/1/1/5/1": {
+          "type": "element",
+          "hash": "9e36d11fa82d1bd4563eef2abc4fcfba",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Company"
+        },
+        "2/0/init/body/0/argument/1/1/5/3/1/0": {
+          "type": "element",
+          "hash": "944521eeeed2511833d2299931273c71",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "About"
+        },
+        "2/0/init/body/0/argument/1/1/5/3/13/0": {
+          "type": "element",
+          "hash": "9afa39bc47019ee6dec6c74b6273967c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contact"
+        },
+        "2/0/init/body/0/argument/1/1/5/3/5/0": {
+          "type": "element",
+          "hash": "0c3de148ec7e5f5076feaf91f545eb3a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Careers"
+        },
+        "2/0/init/body/0/argument/1/1/5/3/9/0": {
+          "type": "element",
+          "hash": "717686be221d6387db5a07f368338200",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Press"
+        },
+        "2/0/init/body/0/argument/1/1/7/1": {
+          "type": "element",
+          "hash": "00d3f08da61a21887009819cf93fb414",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legal"
+        },
+        "2/0/init/body/0/argument/1/1/7/3/11/0": {
+          "type": "element",
+          "hash": "3729dde157adf062b3f07301ae3cd596",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cookie Policy"
+        },
+        "2/0/init/body/0/argument/1/1/7/3/15/0": {
+          "type": "element",
+          "hash": "eeef6c38854924a55abb86805996a1fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "GDPR"
+        },
+        "2/0/init/body/0/argument/1/1/7/3/3/0": {
+          "type": "element",
+          "hash": "7459744a63ef8af4e517a09024bd7c08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Privacy Policy"
+        },
+        "2/0/init/body/0/argument/1/1/7/3/7/0": {
+          "type": "element",
+          "hash": "5add91f519e39025708e54a7eb7a9fc5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Terms of Service"
+        },
+        "2/0/init/body/0/argument/1/3/1": {
+          "type": "element",
+          "hash": "39513cd76433baa43a98c5bc3183dcc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "© <function:Date.getFullYear/> Parapluie. All rights reserved."
+        },
+        "2/0/init/body/0/argument/1/3/3/11/3": {
+          "type": "element",
+          "hash": "6e1cf3c00fa6fbe24afcc78ea3b5f3e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "GitHub"
+        },
+        "2/0/init/body/0/argument/1/3/3/3/3": {
+          "type": "element",
+          "hash": "ba3d4aed69a50759b53a0b7c319a3ad9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Twitter"
+        },
+        "2/0/init/body/0/argument/1/3/3/7/3": {
+          "type": "element",
+          "hash": "c9555810826c30d571ffae869a236494",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Instagram"
+        }
+      }
+    },
+    "components/layout/Hero.tsx": {
+      "scopes": {
+        "2/0/init/body/0/argument/11/1-alt": {
+          "type": "attribute",
+          "hash": "5dafcf7535b5676cd23ed8aa3a48df92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "App Mockup"
+        },
+        "2/0/init/body/0/argument/7/1/1": {
+          "type": "element",
+          "hash": "687babc08a6e3d5366b65c018517fbc1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-Powered Financial Scams Protection For Senior"
+        },
+        "2/0/init/body/0/argument/7/3/1/1-alt": {
+          "type": "attribute",
+          "hash": "e0962022279bb4f8a92c1ed079ca308e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Get it on Google Play"
+        },
+        "2/0/init/body/0/argument/7/3/3": {
+          "type": "element",
+          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        }
+      }
+    },
+    "components/layout/Navbar.tsx": {
+      "scopes": {
+        "6/0/init/body/2/argument/1/11-aria-label": {
+          "type": "attribute",
+          "hash": "29dea3e0b6238874f8c7a27619df8e36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Toggle menu"
+        },
+        "6/0/init/body/2/argument/1/15/3/1": {
+          "type": "element",
+          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "6/0/init/body/2/argument/1/5/5": {
+          "type": "element",
+          "hash": "359fca35d95853e13ade0c138715b815",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        }
+      }
+    },
+    "components/sections/About.tsx": {
+      "scopes": {
+        "3/0/init/body/0/argument/1/1/1/1": {
+          "type": "element",
+          "hash": "1a1d7eb2cc0c0cee857486e14f55f2cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Financial Wellness Support"
+        },
+        "3/0/init/body/0/argument/1/1/1/3": {
+          "type": "element",
+          "hash": "6d532bb6c95d43f9109de28998632e92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sends friendly payment reminders. Tracks recurring expenses to prevent overlooked bills."
+        },
+        "3/0/init/body/0/argument/1/1/1/5": {
+          "type": "element",
+          "hash": "3c88a0892b68ebe095a91506327e241d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Provides simplified financial tools. Large, readable displays with intuitive controls."
+        },
+        "3/0/init/body/0/argument/1/1/3/1-alt": {
+          "type": "attribute",
+          "hash": "d565fa5e9444883c45e39033252213a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Smartphone with weather app"
+        }
+      }
+    },
+    "components/sections/Download.tsx": {
+      "scopes": {
+        "1/0/init/body/0/argument/1/1/3/1/1/1": {
+          "type": "element",
+          "hash": "9e01421031e54b60d4c60e05f57a3879",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Health and Financial Integration"
+        },
+        "1/0/init/body/0/argument/1/1/3/1/1/3": {
+          "type": "element",
+          "hash": "61da587091886eac99660d612ded13bf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Whether it's rain, shine, snow, or anything in between, Parapluie keeps you prepared with accurate forecasts and timely notifications."
+        },
+        "1/0/init/body/0/argument/1/1/3/1/1/5/1": {
+          "type": "element",
+          "hash": "f586ce55c63dafb5614193c384d0cea8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Recognizes how health status affects financial judgment"
+        },
+        "1/0/init/body/0/argument/1/1/3/1/1/5/3": {
+          "type": "element",
+          "hash": "cc973a4e0b9ca13f49779cbdad7be5e6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Links medication schedules with financial safeguards."
+        },
+        "1/0/init/body/0/argument/1/1/3/1/1/5/5": {
+          "type": "element",
+          "hash": "a5767b5e93d75fca0887590b268a7c15",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Adds safeguards during times of potential cognitive fluctuation."
+        },
+        "1/0/init/body/0/argument/1/1/3/1/3/1/1-alt": {
+          "type": "attribute",
+          "hash": "afcde9faccff03c9106bebe423469e33",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Parapluie app on smartphone"
+        }
+      }
+    },
+    "components/sections/Features.tsx": {
+      "scopes": {
+        "3/0/init/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "1bcc11f1fe4e0f864b20a5ee94992689",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Technology that protects our loved ones from financial exploitation and scams. Simple, unobtrusive solutions designed specifically for seniors."
+        }
+      }
+    },
+    "components/sections/Pricing.tsx": {
+      "scopes": {
+        "4/0/init/body/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "680c1228bc4b023acee47a10a944b718",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Simple, Transparent Pricing"
+        },
+        "4/0/init/body/0/argument/1/1/3": {
+          "type": "element",
+          "hash": "3b13e9b62f03686a596ea9312be4455c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Choose the plan that fits your needs. No hidden fees or complicated tiers."
+        },
+        "4/0/init/body/0/argument/1/3/1/expression/0/body/1/3/3/expression/right": {
+          "type": "element",
+          "hash": "d727054cb65d0e95c79cfb34bc3e3f28",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "/{plan.period}"
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,8 @@
     "json": {
       "include": [
         "i18n/[locale].json"
-      ]
+      ],
+      "exclude": ["branding/companyName"]
     }
   },
   "$schema": "https://lingo.dev/schema/i18n.json"
