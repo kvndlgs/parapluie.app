@@ -16,16 +16,17 @@ const viteConfig = {
   },
 };
 
+const compilerConfig = {
+  prompt: "You are a professional translator specializing in web dev. Translate from {SOURCE_LOCALE} to {TARGET_LOCALE} while maintaining meaning accuracy."
+}
+
 export default defineConfig(() =>
   lingoCompiler.vite({
-    sourceRoot: "./src",
-    sourceLocale: "fr",
-    targetLocales: ["en", "fr"],
-    lingoDir: "lingo",
+    targetLocales: ["fr"],
     models: {
       "*:*": "groq:mistral-saba-24b",
     },
-  })(viteConfig),
+  })(viteConfig)(compilerConfig),
 );
 
 
