@@ -1,15 +1,21 @@
 import path from 'path';
 import react from '@vitejs/plugin-react';
+import generateSitemap from 'vite-plugin-pages-sitemap';
+import Pages from 'vite-plugin-pages';
 import { defineConfig } from 'vite';
 
 import lingoCompiler from 'lingo.dev/compiler';
+
+
 
 
 const compilerConfig = {
   prompt: "You are a professional translator specializing in web dev. Translate from {SOURCE_LOCALE} to {TARGET_LOCALE} while maintaining meaning accuracy."
 }
 const viteConfig = {
-  plugins: [react()],
+  plugins: [react(), Pages({
+      onRoutesGenerated: routes => (generateSitemap({ routes })),
+    }),],
   server: {
     historyApiFallback: true,
   },
