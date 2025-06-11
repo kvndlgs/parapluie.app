@@ -41,7 +41,7 @@ export function BlogPostPage() {
       // Headers
       if (trimmedSection.startsWith('# ')) {
         return (
-          <h1 key={index} className="text-3xl font-bold text-gray-900 mb-6">
+          <h1 key={index} className="text-3xl font-bold text-neutral-900 mb-6">
             {trimmedSection.substring(2)}
           </h1>
         );
@@ -49,7 +49,7 @@ export function BlogPostPage() {
       
       if (trimmedSection.startsWith('## ')) {
         return (
-          <h2 key={index} className="text-2xl font-semibold text-gray-900 mb-4 mt-8">
+          <h2 key={index} className="text-2xl font-semibold text-neutral-900 mb-4 mt-8">
             {trimmedSection.substring(3)}
           </h2>
         );
@@ -57,7 +57,7 @@ export function BlogPostPage() {
       
       if (trimmedSection.startsWith('### ')) {
         return (
-          <h3 key={index} className="text-xl font-semibold text-gray-900 mb-3 mt-6">
+          <h3 key={index} className="text-xl font-semibold text-neutral-900 mb-3 mt-6">
             {trimmedSection.substring(4)}
           </h3>
         );
@@ -69,7 +69,7 @@ export function BlogPostPage() {
         return (
           <ul key={index} className="list-disc pl-6 mb-4 space-y-2">
             {items.map((item, itemIndex) => (
-              <li key={itemIndex} className="text-gray-700 leading-relaxed">
+              <li key={itemIndex} className="text-neutral-700 leading-relaxed">
                 {item.substring(2)}
               </li>
             ))}
@@ -83,7 +83,7 @@ export function BlogPostPage() {
         return (
           <ol key={index} className="list-decimal pl-6 mb-4 space-y-2">
             {items.map((item, itemIndex) => (
-              <li key={itemIndex} className="text-gray-700 leading-relaxed">
+              <li key={itemIndex} className="text-neutral-700 leading-relaxed">
                 {item.replace(/^\d+\.\s*/, '')}
               </li>
             ))}
@@ -94,7 +94,7 @@ export function BlogPostPage() {
       // Bold text
       if (trimmedSection.startsWith('**') && trimmedSection.endsWith('**')) {
         return (
-          <p key={index} className="font-semibold text-gray-900 mb-4">
+          <p key={index} className="font-semibold text-neutral-900 mb-4">
             {trimmedSection.slice(2, -2)}
           </p>
         );
@@ -102,7 +102,7 @@ export function BlogPostPage() {
 
       // Regular paragraphs
       return (
-        <p key={index} className="text-gray-700 mb-4 leading-relaxed">
+        <p key={index} className="text-neutral-700 mb-4 leading-relaxed">
           {trimmedSection}
         </p>
       );
@@ -114,7 +114,7 @@ export function BlogPostPage() {
       {/* Header Navigation */}
       <div className="border-b bg-white sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Button variant="ghost" asChild className="text-gray-600 hover:text-gray-900">
+          <Button variant="ghost" asChild className="text-neutral-600 hover:text-neutral-900">
             <Link to="/blog" className="flex items-center gap-2">
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
@@ -156,17 +156,17 @@ export function BlogPostPage() {
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 leading-tight">
             {post.title}
           </h1>
 
           {/* Excerpt */}
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
             {post.excerpt}
           </p>
 
           {/* Meta Information */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+          <div className="flex flex-wrap items-center gap-6 text-sm text-neutral-600 mb-6">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               {format(new Date(post.publishedAt), 'MMMM d, yyyy')}
@@ -191,9 +191,9 @@ export function BlogPostPage() {
                 </AvatarFallback>
               </Avatar>
               <div>
-                <div className="font-medium text-gray-900">{post.author.name}</div>
+                <div className="font-medium text-neutral-900">{post.author.name}</div>
                 {post.author.bio && (
-                  <div className="text-sm text-gray-600">{post.author.bio}</div>
+                  <div className="text-sm text-neutral-600">{post.author.bio}</div>
                 )}
               </div>
             </div>
@@ -216,7 +216,7 @@ export function BlogPostPage() {
               />
             </div>
             {post.image.caption && (
-              <p className="text-sm text-gray-600 text-center mt-2 italic">
+              <p className="text-sm text-neutral-600 text-center mt-2 italic">
                 {post.image.caption}
               </p>
             )}
@@ -231,7 +231,7 @@ export function BlogPostPage() {
         {/* Tags */}
         {post.tags.length > 0 && (
           <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Tags</h3>
+            <h3 className="text-lg font-semibold text-neutral-900 mb-3">Tags</h3>
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <Badge key={tag} variant="outline" className="text-sm">
@@ -246,11 +246,11 @@ export function BlogPostPage() {
         <Separator className="my-8" />
 
         {/* Article Footer */}
-        <div className="bg-gray-50 rounded-lg p-6 mb-12">
+        <div className="bg-neutral-50 rounded-lg p-6 mb-12">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Found this helpful?</h3>
-              <p className="text-gray-600">Share it with others who might benefit from this information.</p>
+              <h3 className="font-semibold text-neutral-900 mb-2">Found this helpful?</h3>
+              <p className="text-neutral-600">Share it with others who might benefit from this information.</p>
             </div>
             <SocialShare 
               title={post.title}
@@ -263,7 +263,7 @@ export function BlogPostPage() {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+            <h2 className="text-2xl font-bold text-neutral-900 mb-6">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost) => (
                 <BlogCard key={relatedPost.id} post={relatedPost} />

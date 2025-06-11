@@ -68,7 +68,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
             <h2 className="text-2xl font-bold text-neutral-900 mb-3 line-clamp-2">
               <Link 
                 to={`/blog/${post.slug}`}
-                className="hover:text-blue-600 transition-colors"
+                className="hover:text-secondary-600 transition-colors"
               >
                 {post.title}
               </Link>
@@ -94,7 +94,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               </div>
               <Link 
                 to={`/blog/${post.slug}`}
-                className="text-blue-600 hover:text-blue-800 font-medium"
+                className="text-secondary-600 hover:text-secondary-800 font-medium"
               >
                 Read More →
               </Link>
@@ -141,7 +141,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
                 {format(new Date(post.publishedAt), 'MMM d')}
               </span>
             </div>
-            <h3 className="font-semibold text-neutral-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+            <h3 className="font-semibold text-neutral-900 mb-2 line-clamp-2 hover:text-secondary-600 transition-colors">
               <Link to={`/blog/${post.slug}`}>
                 {post.title}
               </Link>

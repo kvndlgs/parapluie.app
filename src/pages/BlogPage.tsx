@@ -81,8 +81,8 @@ export default function BlogPage() {
           <section className="mb-16">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Article</h2>
-                <p className="text-gray-600">Essential reading for your digital safety</p>
+                <h2 className="text-3xl font-bold text-neutral-900 mb-2">Featured Article</h2>
+                <p className="text-neutral-600">Essential reading for your digital safety</p>
               </div>
             </div>
             <div className="grid gap-8">
@@ -101,8 +101,8 @@ export default function BlogPage() {
         {/* Search and Filter */}
         <section className="mb-8">
           <div className="mb-6">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">All Articles</h2>
-            <p className="text-gray-600">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-2">All Articles</h2>
+            <p className="text-neutral-600">
               Browse our complete collection of cybersecurity guides and tips
             </p>
           </div>
@@ -112,7 +112,7 @@ export default function BlogPage() {
         {/* Results Summary */}
         {filters.query || filters.category || filters.threatLevel ? (
           <div className="mb-6">
-            <p className="text-gray-600">
+            <p className="text-neutral-600">
               {totalPosts === 0 
                 ? "No articles found matching your criteria."
                 : `Found ${totalPosts} article${totalPosts !== 1 ? 's' : ''} matching your criteria.`
@@ -138,18 +138,18 @@ export default function BlogPage() {
           </>
         ) : (
           <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
+            <div className="text-neutral-400 mb-4">
               <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3 className="text-xl font-medium text-gray-900 mb-2">No articles found</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-xl font-medium text-neutral-900 mb-2">No articles found</h3>
+            <p className="text-neutral-600 mb-6">
               Try adjusting your search terms or filters to find what you're looking for.
             </p>
             <button
               onClick={() => handleFiltersChange({})}
-              className="text-blue-600 hover:text-blue-800 font-medium"
+              className="text-secondary-600 hover:text-secondary-800 font-medium"
             >
               Clear all filters
             </button>

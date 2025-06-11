@@ -50,7 +50,7 @@ export function BlogPagination({ pagination, onPageChange }: BlogPaginationProps
   return (
     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-8">
       {/* Results Info */}
-      <div className="text-sm text-gray-600">
+      <div className="text-sm text-neutral-600">
         Showing <span className="font-medium">{startResult}</span> to{' '}
         <span className="font-medium">{endResult}</span> of{' '}
         <span className="font-medium">{totalPosts}</span> results
@@ -76,7 +76,7 @@ export function BlogPagination({ pagination, onPageChange }: BlogPaginationProps
             if (page === 'dots') {
               return (
                 <div key={`dots-${index}`} className="px-2">
-                  <MoreHorizontal className="w-4 h-4 text-gray-400" />
+                  <MoreHorizontal className="w-4 h-4 text-neutral-400" />
                 </div>
               );
             }

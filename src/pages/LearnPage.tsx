@@ -21,10 +21,10 @@ export default function LearnPage() {
                   <SectionIcon className="w-6 h-6" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900">
+                  <h2 className="text-3xl font-bold text-neutral-900">
                     {section.title}
                   </h2>
-                  <p className="text-gray-600 mt-1">
+                  <p className="text-neutral-600 mt-1">
                     {section.description}
                   </p>
                 </div>
@@ -44,11 +44,11 @@ export default function LearnPage() {
         })}
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="bg-gradient-to-r from-secop-50 to-purple-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-4">
             Ready to Strengthen Your Digital Security?
           </h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
             Start with any topic that interests you. Each learning module is designed to be 
             completed independently, so you can learn at your own pace and focus on what 
             matters most to you.
@@ -62,7 +62,7 @@ export default function LearnPage() {
             </a>
             <a 
               href="#social-engineering" 
-              className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+              className="border border-neutral-300 text-neutral-700 px-6 py-3 rounded-lg hover:bg-neutral-50 transition-colors"
             >
               Learn Social Engineering Defense
             </a>

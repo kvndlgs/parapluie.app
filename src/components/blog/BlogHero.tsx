@@ -26,7 +26,7 @@ export function BlogHero() {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 px-4">
+    <div className="relative bg-gradient-to-br from-primary via-white to-secondary-400 pt-28 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
@@ -34,11 +34,11 @@ export function BlogHero() {
               <Shield className="w-12 h-12 text-white" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-6">
             Stay Safe in the
-            <span className="text-blue-600"> Digital World</span>
+            <span className="text-secondary-600"> Digital World</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
             Expert cybersecurity guidance written in plain language. Learn how to protect yourself 
             from online threats, AI scams, and digital fraud with practical, easy-to-follow advice.
           </p>
@@ -68,10 +68,10 @@ export function BlogHero() {
                   <div className={`inline-flex p-3 rounded-full ${highlight.color} mb-4`}>
                     <IconComponent className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">
                     {highlight.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-neutral-600">
                     {highlight.description}
                   </p>
                 </CardContent>
@@ -83,23 +83,23 @@ export function BlogHero() {
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
           <div className="bg-white rounded-lg shadow-sm border p-6 max-w-4xl mx-auto">
-            <p className="text-sm text-gray-500 mb-4">Trusted by thousands of readers</p>
+            <p className="text-sm text-neutral-500 mb-4">Trusted by thousands of readers</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-2xl font-bold text-gray-900">50K+</div>
-                <div className="text-sm text-gray-600">Monthly Readers</div>
+                <div className="text-2xl font-bold text-neutral-900">50K+</div>
+                <div className="text-sm text-neutral-600">Monthly Readers</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">100+</div>
-                <div className="text-sm text-gray-600">Security Articles</div>
+                <div className="text-2xl font-bold text-neutral-900">100+</div>
+                <div className="text-sm text-neutral-600">Security Articles</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">Expert</div>
-                <div className="text-sm text-gray-600">Reviewed Content</div>
+                <div className="text-2xl font-bold text-neutral-900">Expert</div>
+                <div className="text-sm text-neutral-600">Reviewed Content</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">Free</div>
-                <div className="text-sm text-gray-600">Always Free Access</div>
+                <div className="text-2xl font-bold text-neutral-900">Free</div>
+                <div className="text-sm text-neutral-600">Always Free Access</div>
               </div>
             </div>
           </div>

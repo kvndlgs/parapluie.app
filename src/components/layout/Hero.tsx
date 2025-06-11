@@ -15,7 +15,7 @@ const Hero = () => {
           <span className="block md:pb-2" >AI-Powered Protection for Senior Financial Safety</span>
         </h1>
         
-        <div className="flex flex-row w-full items-center justify-center gap-2 md:mb-12">
+        <div className="flex flex-row w-full items-center justify-center gap-4 md:mb-12">
           <a href='#' className="flex items-center justify-center text-white rounded">
             <img 
               src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
@@ -23,8 +23,8 @@ const Hero = () => {
               className="h-14 w-22" 
             />
           </a>
-          <a href='#' className="w-32 h-10 inline-flex items-center justify-center rounded-md font-regular  text-sm text-white
-           bg-[#1E1E1E] border-2 border-[#616161] hover:bg-[#616161]/95 transition-colors duration-300">
+          <a href='#' className="w-32 h-10 inline-flex items-center justify-center rounded-md font-regular text-sm text-white
+           bg-gradient-to-br from-secondary-600 via-secondary-400 via-secondary-200 via-secondary-100 to-secondary-100 text-secondary-100">
             Early Access
           </a>
         </div>

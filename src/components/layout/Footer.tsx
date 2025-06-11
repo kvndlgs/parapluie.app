@@ -1,5 +1,6 @@
 import { Github, Instagram, Twitter } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-1">
             <Logo className="w-40 mb-2 -ml-4" />
-            <p className="text-neutral-400 text-xs -mt-1.5">
+            <p className="text-neutral-400 text-xs -mt-2">
               AI Protection for Senior Financial Safety.
             </p>
           </div>
@@ -31,9 +32,9 @@ const Footer = () => {
               {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground text-sm hover:text-primary-400 transition-colors">Careers</a></li>
               {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-              <li><a href="#" className="text-muted-foreground text-sm hover:text-primary-400 transition-colors">Press</a></li>
+              <li><Link to="/blog" className="text-muted-foreground text-sm hover:text-primary-400 transition-colors">Blog</Link></li>
               {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-              <li><a href="#" className="text-muted-foreground text-sm hover:text-primary-400 transition-all ease-in">Contact</a></li>
+              <li><Link to="/learn" className="text-muted-foreground text-sm hover:text-primary-400 transition-all ease-in">Learning Center</Link></li>
             </ul>
           </div>
 
@@ -47,7 +48,7 @@ const Footer = () => {
               {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
               <li><a href="#" className="text-muted-foreground text-sm hover:text-primary-400 transition-colors" >Cookie Policy</a></li>
               {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-              <li><a href="#" className="text-muted-foreground text-sm hover:text-primary-400 transition-colors" >GDPR</a></li>
+              <li><a href="#" className="text-muted-foreground text-sm hover:text-primary-400 transition-colors">GDPR</a></li>
             </ul>
           </div>
         </div>

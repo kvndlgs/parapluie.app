@@ -29,15 +29,14 @@ export function ResourceList({ resources, title = "Additional Resources" }: Reso
     intermediate: 'bg-yellow-100 text-yellow-800 border-yellow-200',
     advanced: 'bg-red-100 text-red-800 border-red-200'
   };
-
+/*
   const typeColors = {
-    article: 'bg-blue-100 text-blue-800',
-    guide: 'bg-purple-100 text-purple-800',
+    article: 'bg-purple-100 text-purple-800',
     video: 'bg-red-100 text-red-800',
     tool: 'bg-green-100 text-green-800',
     infographic: 'bg-orange-100 text-orange-800'
   };
-
+*/
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-neutral-900">{title}</h2>
@@ -80,7 +79,7 @@ export function ResourceList({ resources, title = "Additional Resources" }: Reso
                       
                       <Badge 
                         variant="secondary" 
-                        className={cn('text-xs', typeColors[resource.type])}
+                        className={'text-xs text-primary'}
                       >
                         {resource.type}
                       </Badge>

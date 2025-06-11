@@ -29,7 +29,6 @@ const Layout: FC<LayoutProps> = ({children}) => {
 
  return (
     <div className="min-h-screen bg-background">
-      
       <div className='z-50 fixed w-20 px-3 py-2 text-sm font-regular leading-large text-primary ring-none'>
         <LocaleSwitcher locales={["en", "fr"]} />
       </div>

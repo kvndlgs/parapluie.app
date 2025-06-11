@@ -7,13 +7,11 @@ import Download from '@/components/sections/Download';
 export default function HomePage() {
     return (
      <main>
-
         <Hero />
         <Features />
         <About />
         <Pricing />
         <Download />
-
       </main>
     )
 }

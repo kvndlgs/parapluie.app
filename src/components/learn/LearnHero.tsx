@@ -30,19 +30,15 @@ export function LearnHero() {
   ];
 
   return (
-    <div className="relative bg-primary-to-br from-secondary-100 via-secondary-500 to-primary-100 py-16 px-4">
+    <div className="relative bg-gradient-to-b from-secondary-100 via-secondary-200 to-white pt-24 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-blue-600 rounded-full">
-              <BookOpen className="w-12 h-12 text-white" />
-            </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-6">
-            Security Learning
-            <span className="text-blue-600"> Center</span>
+          <h1 className="text-3xl md:text-4xl font-bold text-secondary-600 mb-6">
+           Learning Center
           </h1>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl text-neutral-800 max-w-3xl mx-auto mb-8 leading-relaxed">
             Master the fundamentals of web security and social engineering prevention with 
             our comprehensive, easy-to-understand learning resources. Build confidence in 
             your digital safety knowledge.
@@ -89,39 +85,39 @@ export function LearnHero() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-blue-600 mb-3">
+              <h3 className="text-lg font-semibold text-secondary-600 mb-3">
                 1. Web Security Fundamentals
               </h3>
               <ul className="space-y-2 text-neutral-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-secondary-500 mt-1">•</span>
                   <span>Understand common online threats and how they work</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-secondary-500 mt-1">•</span>
                   <span>Learn password security and two-factor authentication</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-secondary-500 mt-1">•</span>
                   <span>Develop safe browsing and online shopping habits</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-red-600 mb-3">
+              <h3 className="text-lg font-semibold text-secondary-600 mb-3">
                 2. Social Engineering Defense
               </h3>
               <ul className="space-y-2 text-neutral-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Recognize manipulation tactics and red flags</span>
+                  <span className="text-primary-500 mt-1">•</span>
+                  <span>Recognize manipulation tactics and primary flags</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">•</span>
+                  <span className="text-primary-500 mt-1">•</span>
                   <span>Study real-world attack scenarios and responses</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">•</span>
+                  <span className="text-primary-500 mt-1">•</span>
                   <span>Build effective response strategies and verification habits</span>
                 </li>
               </ul>

@@ -58,8 +58,8 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
       <PopoverContent className="w-80" align="end">
         <div className="space-y-4">
           <div>
-            <h4 className="font-medium text-gray-900 mb-2">Share this article</h4>
-            <p className="text-sm text-gray-600 line-clamp-2">{title}</p>
+            <h4 className="font-medium text-neutral-900 mb-2">Share this article</h4>
+            <p className="text-sm text-neutral-600 line-clamp-2">{title}</p>
           </div>
           
           <div className="grid grid-cols-2 gap-2">
@@ -69,7 +69,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
               onClick={() => handleShare('twitter')}
               className="flex items-center gap-2 justify-start"
             >
-              <Twitter className="w-4 h-4 text-blue-500" />
+              <Twitter className="w-4 h-4 text-secondary-500" />
               Twitter
             </Button>
             
@@ -79,7 +79,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
               onClick={() => handleShare('facebook')}
               className="flex items-center gap-2 justify-start"
             >
-              <Facebook className="w-4 h-4 text-blue-600" />
+              <Facebook className="w-4 h-4 text-secondary-600" />
               Facebook
             </Button>
             
@@ -89,7 +89,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
               onClick={() => handleShare('linkedin')}
               className="flex items-center gap-2 justify-start"
             >
-              <Linkedin className="w-4 h-4 text-blue-700" />
+              <Linkedin className="w-4 h-4 text-secondary-700" />
               LinkedIn
             </Button>
             
@@ -99,7 +99,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
               onClick={() => handleShare('email')}
               className="flex items-center gap-2 justify-start"
             >
-              <Mail className="w-4 h-4 text-gray-600" />
+              <Mail className="w-4 h-4 text-neutral-600" />
               Email
             </Button>
           </div>
@@ -110,7 +110,7 @@ export function SocialShare({ title, url, description }: SocialShareProps) {
                 type="text"
                 value={shareUrl}
                 readOnly
-                className="flex-1 px-3 py-2 text-sm border rounded-md bg-gray-50 text-gray-600"
+                className="flex-1 px-3 py-2 text-sm border rounded-md bg-neutral-50 text-neutral-600"
               />
               <Button
                 variant="outline"

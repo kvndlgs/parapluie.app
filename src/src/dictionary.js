@@ -340,6 +340,92 @@ export default {
           },
           hash: "d96155b7c11079b1493e7a397a341305",
         },
+        "8/declaration/body/5/argument/11/expression/right/1/expression/right":
+          {
+            content: {
+              en: "Category: <expression/><element:Button><element:X></element:X></element:Button>",
+              fr: "Catégorie: <expression/><element:Button><element:X></element:X></element:Button>",
+            },
+            hash: "1a0bc728bfe796df34596d96aa121e80",
+          },
+        "8/declaration/body/5/argument/11/expression/right/3/expression/right":
+          {
+            content: {
+              en: "Risk: {filters.threatLevel}<element:Button><element:X></element:X></element:Button>",
+              fr: "Risque: {filters.threatLevel}<element:Button><element:X></element:X></element:Button>",
+            },
+            hash: "b092ed50eee7740d33db06d2c8d532e3",
+          },
+        "8/declaration/body/5/argument/3/3-placeholder": {
+          content: {
+            en: "Search cybersecurity topics, threats, or protection tips...",
+            fr: "Rechercher des sujets de cybersécurité, des menaces ou des conseils de protection...",
+          },
+          hash: "f0a40c4efb5c5dcbeb81685f61d5d97e",
+        },
+        "8/declaration/body/5/argument/7/11/expression/right": {
+          content: {
+            en: "<element:X></element:X> Clear Filters",
+            fr: "<element:X></element:X> Effacer les filtres",
+          },
+          hash: "e03f5d3d96f758b09f75984035f78d61",
+        },
+        "8/declaration/body/5/argument/7/3/1/1-placeholder": {
+          content: {
+            en: "All Categories",
+            fr: "Toutes les catégories",
+          },
+          hash: "2547e684d62a4710bdfbb9415a9970d0",
+        },
+        "8/declaration/body/5/argument/7/3/3/1": {
+          content: {
+            en: "All Categories",
+            fr: "Toutes les catégories",
+          },
+          hash: "2547e684d62a4710bdfbb9415a9970d0",
+        },
+        "8/declaration/body/5/argument/7/7/1/1-placeholder": {
+          content: {
+            en: "Threat Level",
+            fr: "Niveau de menace",
+          },
+          hash: "d4c9ed5809feff8c20d9482532f0a2f0",
+        },
+        "8/declaration/body/5/argument/7/7/3/1": {
+          content: {
+            en: "All Levels",
+            fr: "Tous les niveaux",
+          },
+          hash: "e2ea11fe8c975ba986cac2255c5ed9b4",
+        },
+        "8/declaration/body/5/argument/7/7/3/3": {
+          content: {
+            en: "Low Risk",
+            fr: "Faible risque",
+          },
+          hash: "2d13154dff6e8313b922b63225b004cd",
+        },
+        "8/declaration/body/5/argument/7/7/3/5": {
+          content: {
+            en: "Medium Risk",
+            fr: "Risque moyen",
+          },
+          hash: "dc15fdece1d3ca74f14423883bd2836c",
+        },
+        "8/declaration/body/5/argument/7/7/3/7": {
+          content: {
+            en: "High Risk",
+            fr: "Haut risque",
+          },
+          hash: "ddd7cbc88914976edefdfe8cba35ad83",
+        },
+        "8/declaration/body/5/argument/7/7/3/9": {
+          content: {
+            en: "Critical Risk",
+            fr: "Risque critique",
+          },
+          hash: "d96155b7c11079b1493e7a397a341305",
+        },
       },
     },
     "components/blog/SocialShare.tsx": {
@@ -530,6 +616,146 @@ export default {
           },
           hash: "c9555810826c30d571ffae869a236494",
         },
+        "3/0/init/body/0/argument/1/1/1/3": {
+          content: {
+            en: "AI Protection for Senior Financial Safety.",
+            fr: "Protection par l'IA pour la sécurité financière des seniors.",
+          },
+          hash: "d978f22b9498d89aacd8275c8fed86ec",
+        },
+        "3/0/init/body/0/argument/1/1/3/1": {
+          content: {
+            en: "Product",
+            fr: "Produit",
+          },
+          hash: "4e5f845a09d417dde0a1310bc9ca4bfe",
+        },
+        "3/0/init/body/0/argument/1/1/3/3/1/0": {
+          content: {
+            en: "Features",
+            fr: "Fonctionnalités",
+          },
+          hash: "341ff316a339b106a178f0b8d362951b",
+        },
+        "3/0/init/body/0/argument/1/1/3/3/3/0": {
+          content: {
+            en: "Subscriptions",
+            fr: "Abonnements",
+          },
+          hash: "0d17f4d8d660df40b41d82e0171af6ad",
+        },
+        "3/0/init/body/0/argument/1/1/3/3/5/0": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "359fca35d95853e13ade0c138715b815",
+        },
+        "3/0/init/body/0/argument/1/1/3/3/9/0": {
+          content: {
+            en: "Updates",
+            fr: "Mises à jour",
+          },
+          hash: "c5f658a393f5d8d6e251a0fb5a0de394",
+        },
+        "3/0/init/body/0/argument/1/1/5/1": {
+          content: {
+            en: "Company",
+            fr: "Entreprise",
+          },
+          hash: "9e36d11fa82d1bd4563eef2abc4fcfba",
+        },
+        "3/0/init/body/0/argument/1/1/5/3/1/0": {
+          content: {
+            en: "About",
+            fr: "À propos",
+          },
+          hash: "944521eeeed2511833d2299931273c71",
+        },
+        "3/0/init/body/0/argument/1/1/5/3/13/0": {
+          content: {
+            en: "Learning Center",
+            fr: "Centre d'apprentissage",
+          },
+          hash: "ad8b7da384ae356df5f5419d19c52be1",
+        },
+        "3/0/init/body/0/argument/1/1/5/3/5/0": {
+          content: {
+            en: "Careers",
+            fr: "Carrières",
+          },
+          hash: "0c3de148ec7e5f5076feaf91f545eb3a",
+        },
+        "3/0/init/body/0/argument/1/1/5/3/9/0": {
+          content: {
+            en: "Blog",
+            fr: "Blog",
+          },
+          hash: "7feb9b36be2028520ffe37de06505148",
+        },
+        "3/0/init/body/0/argument/1/1/7/1": {
+          content: {
+            en: "Legal",
+            fr: "Juridique",
+          },
+          hash: "00d3f08da61a21887009819cf93fb414",
+        },
+        "3/0/init/body/0/argument/1/1/7/3/11/0": {
+          content: {
+            en: "Cookie Policy",
+            fr: "Politique des cookies",
+          },
+          hash: "3729dde157adf062b3f07301ae3cd596",
+        },
+        "3/0/init/body/0/argument/1/1/7/3/15/0": {
+          content: {
+            en: "GDPR",
+            fr: "RGPD",
+          },
+          hash: "eeef6c38854924a55abb86805996a1fe",
+        },
+        "3/0/init/body/0/argument/1/1/7/3/3/0": {
+          content: {
+            en: "Privacy Policy",
+            fr: "Politique de confidentialité",
+          },
+          hash: "7459744a63ef8af4e517a09024bd7c08",
+        },
+        "3/0/init/body/0/argument/1/1/7/3/7/0": {
+          content: {
+            en: "Terms of Service",
+            fr: "Conditions d'utilisation",
+          },
+          hash: "5add91f519e39025708e54a7eb7a9fc5",
+        },
+        "3/0/init/body/0/argument/1/3/1": {
+          content: {
+            en: "© <function:Date.getFullYear/> Parapluie. All rights reserved.",
+            fr: "© <function:Date.getFullYear/> Parapluie. Tous droits réservés.",
+          },
+          hash: "39513cd76433baa43a98c5bc3183dcc9",
+        },
+        "3/0/init/body/0/argument/1/3/3/11/3": {
+          content: {
+            en: "GitHub",
+            fr: "GitHub",
+          },
+          hash: "6e1cf3c00fa6fbe24afcc78ea3b5f3e4",
+        },
+        "3/0/init/body/0/argument/1/3/3/3/3": {
+          content: {
+            en: "Twitter",
+            fr: "Twitter",
+          },
+          hash: "ba3d4aed69a50759b53a0b7c319a3ad9",
+        },
+        "3/0/init/body/0/argument/1/3/3/7/3": {
+          content: {
+            en: "Instagram",
+            fr: "Instagram",
+          },
+          hash: "c9555810826c30d571ffae869a236494",
+        },
       },
     },
     "components/layout/Hero.tsx": {
@@ -678,10 +904,87 @@ export default {
           },
           hash: "359fca35d95853e13ade0c138715b815",
         },
+        "7/0/init/body/3/argument/1/11-aria-label": {
+          content: {
+            en: "Toggle menu",
+            fr: "Basculer le menu",
+          },
+          hash: "29dea3e0b6238874f8c7a27619df8e36",
+        },
+        "7/0/init/body/3/argument/1/15/3/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "dda458d386e6b22a8eceee34b5997551",
+        },
+        "7/0/init/body/3/argument/1/5/5": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "359fca35d95853e13ade0c138715b815",
+        },
+        "7/0/init/body/4/argument/1/11-aria-label": {
+          content: {
+            en: "Toggle menu",
+            fr: "Basculer le menu",
+          },
+          hash: "29dea3e0b6238874f8c7a27619df8e36",
+        },
+        "7/0/init/body/4/argument/1/15/3/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "dda458d386e6b22a8eceee34b5997551",
+        },
+        "7/0/init/body/4/argument/1/5/5": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "359fca35d95853e13ade0c138715b815",
+        },
       },
     },
     "components/learn/LearnCard.tsx": {
       entries: {
+        "9/declaration/body/1/argument/3/11/1": {
+          content: {
+            en: "Resources:",
+            fr: "Ressources:",
+          },
+          hash: "a80b05f764339ba775e8e41cfd089634",
+        },
+        "9/declaration/body/1/argument/3/11/3/3/expression/right": {
+          content: {
+            en: "+<expression/> more resources",
+            fr: "+<expression/> plus de ressources",
+          },
+          hash: "2dcc5a3c86b1b8515d5bdcd4b777e279",
+        },
+        "9/declaration/body/1/argument/3/15/1": {
+          content: {
+            en: "<element:null></element:null> Start Learning",
+            fr: "<element:null></element:null> Commencer à apprendre",
+          },
+          hash: "ff094395585bf4494a50f09c2328da98",
+        },
+        "9/declaration/body/1/argument/3/7/1": {
+          content: {
+            en: "Key Takeaways:",
+            fr: "Points clés:",
+          },
+          hash: "b2a1cfb0543fc8ee9a2746549f368d43",
+        },
+        "9/declaration/body/1/argument/3/7/3/3/expression/right": {
+          content: {
+            en: "+<expression/> more insight...",
+            fr: "+<expression/> plus d'insights...",
+          },
+          hash: "5447c93a0d368bb57efe86cb3a36cb43",
+        },
         "9/declaration/body/2/argument/3/11/1": {
           content: {
             en: "Resources:",
@@ -731,10 +1034,10 @@ export default {
       entries: {
         "2/declaration/body/1/argument/1/1/3": {
           content: {
-            en: "Security Learning<element:span>Center</element:span>",
-            fr: "Centre d'apprentissage de la<element:span>sécurité</element:span>",
+            en: "Learning Center",
+            fr: "Centre d'apprentissage",
           },
-          hash: "0bcbb37de893bdb51ed818a9e6a32fb7",
+          hash: "7ac6e19c18eb728a5d209d1c39ee5669",
         },
         "2/declaration/body/1/argument/1/1/5": {
           content: {
@@ -850,10 +1153,10 @@ export default {
         },
         "2/declaration/body/1/argument/1/9/3/3/3/1/3": {
           content: {
-            en: "Recognize manipulation tactics and red flags",
-            fr: "Reconnaître les tactiques de manipulation et les signaux d'alerte",
+            en: "Recognize manipulation tactics and primary flags",
+            fr: "Reconnaître les tactiques de manipulation et les drapeaux principaux",
           },
-          hash: "a74aaeb0ce23a4904c119e50404640dc",
+          hash: "e3df24937ff8e1b7b5ce992e276e2121",
         },
         "2/declaration/body/1/argument/1/9/3/3/3/3/1": {
           content: {

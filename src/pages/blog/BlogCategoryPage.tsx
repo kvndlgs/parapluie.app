@@ -74,22 +74,22 @@ export function BlogCategoryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Category Header */}
-      <div className="bg-gradient-to-r from-gray-50 to-white border-b">
+      <div className="bg-gradient-to-r from-neutral-50 to-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="flex items-center gap-4 mb-4">
             <div className={`p-4 rounded-lg text-white ${category.color}`}>
               <IconComponent className="w-8 h-8" />
             </div>
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h1 className="text-3xl md:text-4xl font-bold text-neutral-900">
                 {category.name}
               </h1>
-              <p className="text-lg text-gray-600 mt-2">
+              <p className="text-lg text-neutral-600 mt-2">
                 {category.description}
               </p>
             </div>
           </div>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-neutral-500">
             {totalPosts} article{totalPosts !== 1 ? 's' : ''} in this category
           </div>
         </div>
@@ -107,7 +107,7 @@ export function BlogCategoryPage() {
         {/* Results Summary */}
         {filters.query || filters.threatLevel ? (
           <div className="mb-6">
-            <p className="text-gray-600">
+            <p className="text-neutral-600">
               {totalPosts === 0 
                 ? "No articles found matching your criteria in this category."
                 : `Found ${totalPosts} article${totalPosts !== 1 ? 's' : ''} in ${category.name}.`
@@ -133,11 +133,11 @@ export function BlogCategoryPage() {
           </>
         ) : (
           <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
+            <div className="text-neutral-400 mb-4">
               <IconComponent className="w-16 h-16 mx-auto" />
             </div>
-            <h3 className="text-xl font-medium text-gray-900 mb-2">No articles found</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-xl font-medium text-neutral-900 mb-2">No articles found</h3>
+            <p className="text-neutral-600 mb-6">
               {filters.query || filters.threatLevel 
                 ? "Try adjusting your search terms or filters."
                 : "No articles have been published in this category yet."

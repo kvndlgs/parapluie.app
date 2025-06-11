@@ -6,7 +6,7 @@ export const blogCategories: BlogCategory[] = [
     name: 'AI Scams & Threats',
     slug: 'ai-scams',
     description: 'Understanding AI-powered scams and how to protect yourself',
-    color: 'bg-red-500',
+    color: 'bg-secondary-500',
     icon: 'Bot'
   },
   {
@@ -14,7 +14,7 @@ export const blogCategories: BlogCategory[] = [
     name: 'Email Security',
     slug: 'email-security',
     description: 'Safe email practices and phishing prevention',
-    color: 'bg-blue-500',
+    color: 'bg-primary-500',
     icon: 'Mail'
   },
   {

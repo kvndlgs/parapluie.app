@@ -31,6 +31,7 @@ const Links = [
 const Navbar = ({ scrolled }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -47,7 +48,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/">
-          <Logo className="w-44"/>
+          <Logo className='w-44'/>
         </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
@@ -56,7 +57,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               key={index}
               to={link.url}
               className={cn(
-                'text-primary text-sm font-bold',
+                'text-primary text-sm font-regular',
                 {
                   'text-primary': !scrolled,
                 }
@@ -66,7 +67,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <Link to="#download" className='text-white text-sm font-regular bg-secondary py-2.5 px-3.5 leading-normal rounded-full hidden sm:flex hover:shadow-xl hover:bg-primary'>Early Access</Link>
+          <Link to="#download" className='text-secondary text-sm font-regular border-2 border-secondary py-[9px] px-[16px] leading-normal rounded-full hidden sm:flex hover:border-secondary-300'>Early Access</Link>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -96,7 +97,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         {/* Mobile Navigation Menu */}
         <div
           className={cn(
-            'fixed inset-0 bg-white/95 flex flex-col items-center top-52 justify-center transition-all duration-300 sm:hidden drop-shadow-md',
+            'fixed inset-0 bg-white/95 flex flex-col items-center top-48 justify-center transition-all duration-300 sm:hidden drop-shadow-md',
             {
               'opacity-100 visible': isMenuOpen,
               'opacity-0 invisible': !isMenuOpen,
