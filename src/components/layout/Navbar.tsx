@@ -2,11 +2,31 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Logo from '@/components/ui/Logo';
+import { Link } from 'react-router-dom';
 
 
 interface NavbarProps {
   scrolled: boolean;
 }
+
+const Links = [
+  {
+    label: 'Features',
+    url: '#features'
+  },
+  {
+    label: 'Subscriptions',
+    url: '#subscriptions'
+  },
+  {
+    label: 'Blog',
+    url: '/blog'
+  },
+  {
+    label: 'Learn',
+    url: '/learn'
+  }
+]
 
 const Navbar = ({ scrolled }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,15 +46,15 @@ const Navbar = ({ scrolled }: NavbarProps) => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/">
+        <Link to="/">
           <Logo className="w-44"/>
-        </a>
+        </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          {['Features', 'Subscriptions'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+          {Links.map((link, index) => (
+            <Link
+              key={index}
+              to={link.url}
               className={cn(
                 'text-primary text-sm font-bold',
                 {
@@ -42,11 +62,11 @@ const Navbar = ({ scrolled }: NavbarProps) => {
                 }
               )}
             >
-              {item}
-            </a>
+              {link.label}
+            </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <a href="#download" className='text-white text-sm font-regular bg-secondary py-2.5 px-3.5 leading-normal rounded-full hidden sm:flex hover:shadow-xl hover:bg-primary'>Early Access</a>
+          <Link to="#download" className='text-white text-sm font-regular bg-secondary py-2.5 px-3.5 leading-normal rounded-full hidden sm:flex hover:shadow-xl hover:bg-primary'>Early Access</Link>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -83,20 +103,20 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             }
           )}
         >
-          {['Features', 'Subscriptions'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+          {Links.map((link, index) => (
+            <Link
+              key={index}
+              to={link.url}
               className="text-sm w-full text-center pb-4 pt-6 font-bold text-primary transition-colors bg-white/95"
               onClick={() => setIsMenuOpen(false)}
             >
-              {item}
-            </a>
+              {link.label}
+            </Link>
           ))}
           <div className='w-full pb-5 pt-4 bg-white/95 flex items-center justify-center'>
-          <a href="#download" onClick={() => setIsMenuOpen(false)} className='rounded-full px-3 py-2 bg-primary'>
+          <Link to="#download" onClick={() => setIsMenuOpen(false)} className='rounded-full px-3 py-2 bg-primary'>
             Early Access
-          </a>
+          </Link>
           </div>
         </div>
       </div>

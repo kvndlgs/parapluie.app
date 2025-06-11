@@ -13,11 +13,431 @@
         }
       }
     },
+    "components/Layout.tsx": {
+      "scopes": {
+        "5/0/init/body/2/argument": {
+          "type": "element",
+          "hash": "c1723b61978e891ffcf3713c0b610109",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:div><element:LocaleSwitcher></element:LocaleSwitcher></element:div><element:Navbar></element:Navbar>{children}<element:Footer></element:Footer> ="
+        }
+      }
+    },
+    "components/blog/BlogCard.tsx": {
+      "scopes": {
+        "10/declaration/body/3/argument/1/expression/right/1/5/1": {
+          "type": "element",
+          "hash": "f3609815a3d2c04d58a1294c73788c82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Featured"
+        },
+        "10/declaration/body/3/argument/1/expression/right/1/7/expression/right/1": {
+          "type": "element",
+          "hash": "741199a5701beae348b77b439fcad83d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertTriangle></element:AlertTriangle>{post.threatLevel} Risk"
+        },
+        "10/declaration/body/3/argument/1/expression/right/3/7/1/3/3": {
+          "type": "element",
+          "hash": "cce09c1122468088810debc8bba60381",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Clock></element:Clock>{post.readTime} min read"
+        },
+        "10/declaration/body/3/argument/1/expression/right/3/7/3": {
+          "type": "element",
+          "hash": "0a2b0b9ff441305a0031929c04d37f4d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Read More →"
+        },
+        "10/declaration/body/3/argument/3/expression/right/3/7/3": {
+          "type": "element",
+          "hash": "463e6024b23da6aee1b3bfd4f37c8bf3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Clock></element:Clock>{post.readTime}m"
+        }
+      }
+    },
+    "components/blog/BlogCategories.tsx": {
+      "scopes": {
+        "7/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "2755a14ba8be43fbde040f7292fa5b71",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Browse by Category"
+        },
+        "7/declaration/body/1/argument/1/3": {
+          "type": "element",
+          "hash": "87d47cc4e61ae3bb867a54dc0fc5a31e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Explore cybersecurity topics organized by area of concern"
+        },
+        "7/declaration/body/1/argument/3/1/expression/0/body/3/argument/1/1/1/3/5/1": {
+          "type": "element",
+          "hash": "c88857f7a9d4831c6f53778e8994364d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{postCount} article<expression/>"
+        },
+        "7/declaration/body/1/argument/3/1/expression/0/body/3/argument/1/1/1/3/5/3/expression/right": {
+          "type": "element",
+          "hash": "2216451b9fe207e4498e8837545b1c64",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active"
+        },
+        "7/declaration/body/1/argument/7/1": {
+          "type": "element",
+          "hash": "fac10302573965751f69f608255b8ebf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Content Overview"
+        },
+        "7/declaration/body/1/argument/7/3/1/3": {
+          "type": "element",
+          "hash": "26b709b2bedb121763902156987c4d22",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total Articles"
+        },
+        "7/declaration/body/1/argument/7/3/3/3": {
+          "type": "element",
+          "hash": "fd4e44f3b1b2bba9ca45f3aef963d042",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Categories"
+        },
+        "7/declaration/body/1/argument/7/3/5/3": {
+          "type": "element",
+          "hash": "5d231ff8254aabc875f194c4b4f49c97",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "High Priority"
+        },
+        "7/declaration/body/1/argument/7/3/7/3": {
+          "type": "element",
+          "hash": "75c6f47447401f567c0578a371e59cc0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Featured"
+        }
+      }
+    },
+    "components/blog/BlogHero.tsx": {
+      "scopes": {
+        "4/declaration/body/1/argument/1/1/3": {
+          "type": "element",
+          "hash": "82290225a669e633f16e73a216ad64d6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Stay Safe in the<element:span>Digital World</element:span>"
+        },
+        "4/declaration/body/1/argument/1/1/5": {
+          "type": "element",
+          "hash": "c21667cd6db9ef605a94ca98587715e1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expert cybersecurity guidance written in plain language. Learn how to protect yourself from online threats, AI scams, and digital fraud with practical, easy-to-follow advice."
+        },
+        "4/declaration/body/1/argument/1/1/7/1/1": {
+          "type": "element",
+          "hash": "cd3423166f9d451bf09f702bd9798a61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertTriangle></element:AlertTriangle> Read Latest Alert"
+        },
+        "4/declaration/body/1/argument/1/1/7/3/1": {
+          "type": "element",
+          "hash": "5a58895a2c28ee3d2968f55580296188",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Browse All Topics<element:ArrowRight></element:ArrowRight>"
+        },
+        "4/declaration/body/1/argument/1/9/1/1": {
+          "type": "element",
+          "hash": "771bed36c00c692ec80bac06918358d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted by thousands of readers"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/1/1": {
+          "type": "element",
+          "hash": "1dbecec81b67208b4293742482bd7efe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "50K+"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/1/3": {
+          "type": "element",
+          "hash": "b13f928c99d3ef563e8f8d47cd521a5d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Monthly Readers"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/3/1": {
+          "type": "element",
+          "hash": "37845c21ffdf67ca38e5ac989256f1d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "100+"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/3/3": {
+          "type": "element",
+          "hash": "65df8d1451528bb8753823cc0848ecb3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security Articles"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/5/1": {
+          "type": "element",
+          "hash": "99d23d10ed1f47e465cfd3e6c9c0263b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expert"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/5/3": {
+          "type": "element",
+          "hash": "1bfb538ccd1b87485a29452ceb381e61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reviewed Content"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/7/1": {
+          "type": "element",
+          "hash": "0326365539c004f6088656f692602078",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Free"
+        },
+        "4/declaration/body/1/argument/1/9/1/3/7/3": {
+          "type": "element",
+          "hash": "83d8870e9e8a1294ac4fc9fa97122b3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Always Free Access"
+        }
+      }
+    },
+    "components/blog/BlogPagination.tsx": {
+      "scopes": {
+        "4/declaration/body/6/argument/3": {
+          "type": "element",
+          "hash": "1d84cf005a7e9ab49bcd44fef0968ce0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Showing <element:span>{startResult}</element:span> to <element:span>{endResult}</element:span> of <element:span>{totalPosts}</element:span> results"
+        },
+        "4/declaration/body/6/argument/7/11": {
+          "type": "element",
+          "hash": "319ae5502d65b35dd64cabc829c11b74",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Next<element:ChevronRight></element:ChevronRight>"
+        },
+        "4/declaration/body/6/argument/7/3": {
+          "type": "element",
+          "hash": "6baa901ddaa666cc23f90d409eaf0eeb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ChevronLeft></element:ChevronLeft> Previous"
+        }
+      }
+    },
+    "components/blog/BlogSearch.tsx": {
+      "scopes": {
+        "10/declaration/body/6/argument/11/expression/right/1/expression/right": {
+          "type": "element",
+          "hash": "1a0bc728bfe796df34596d96aa121e80",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Category: <expression/><element:Button><element:X></element:X></element:Button>"
+        },
+        "10/declaration/body/6/argument/11/expression/right/3/expression/right": {
+          "type": "element",
+          "hash": "b092ed50eee7740d33db06d2c8d532e3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Risk: {filters.threatLevel}<element:Button><element:X></element:X></element:Button>"
+        },
+        "10/declaration/body/6/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "f0a40c4efb5c5dcbeb81685f61d5d97e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search cybersecurity topics, threats, or protection tips..."
+        },
+        "10/declaration/body/6/argument/7/11/expression/right": {
+          "type": "element",
+          "hash": "e03f5d3d96f758b09f75984035f78d61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:X></element:X> Clear Filters"
+        },
+        "10/declaration/body/6/argument/7/3/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "2547e684d62a4710bdfbb9415a9970d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Categories"
+        },
+        "10/declaration/body/6/argument/7/3/3/1": {
+          "type": "element",
+          "hash": "2547e684d62a4710bdfbb9415a9970d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Categories"
+        },
+        "10/declaration/body/6/argument/7/7/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "d4c9ed5809feff8c20d9482532f0a2f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Threat Level"
+        },
+        "10/declaration/body/6/argument/7/7/3/1": {
+          "type": "element",
+          "hash": "e2ea11fe8c975ba986cac2255c5ed9b4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Levels"
+        },
+        "10/declaration/body/6/argument/7/7/3/3": {
+          "type": "element",
+          "hash": "2d13154dff6e8313b922b63225b004cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Low Risk"
+        },
+        "10/declaration/body/6/argument/7/7/3/5": {
+          "type": "element",
+          "hash": "dc15fdece1d3ca74f14423883bd2836c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Medium Risk"
+        },
+        "10/declaration/body/6/argument/7/7/3/7": {
+          "type": "element",
+          "hash": "ddd7cbc88914976edefdfe8cba35ad83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "High Risk"
+        },
+        "10/declaration/body/6/argument/7/7/3/9": {
+          "type": "element",
+          "hash": "d96155b7c11079b1493e7a397a341305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Critical Risk"
+        }
+      }
+    },
+    "components/blog/SocialShare.tsx": {
+      "scopes": {
+        "6/declaration/body/8/argument/1/1": {
+          "type": "element",
+          "hash": "43ab4f1250470178cc3cb81e1766d35e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Share2></element:Share2> Share"
+        },
+        "6/declaration/body/8/argument/3/1/1/1": {
+          "type": "element",
+          "hash": "01c48ab18e8cda92963de6b7efe2eef5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Share this article"
+        },
+        "6/declaration/body/8/argument/3/1/3/1": {
+          "type": "element",
+          "hash": "1106596b61ea0ff187dc1d50cccd4469",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Twitter></element:Twitter> Twitter"
+        },
+        "6/declaration/body/8/argument/3/1/3/3": {
+          "type": "element",
+          "hash": "b4f842fa72e6ed572c5fd283af0d9869",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Facebook></element:Facebook> Facebook"
+        },
+        "6/declaration/body/8/argument/3/1/3/5": {
+          "type": "element",
+          "hash": "1a72e2c6e477ac61ed1661126b1ed865",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Linkedin></element:Linkedin> LinkedIn"
+        },
+        "6/declaration/body/8/argument/3/1/3/7": {
+          "type": "element",
+          "hash": "b004f80922657633d0626ea03933cfe2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Mail></element:Mail> Email"
+        }
+      }
+    },
     "components/layout/Footer.tsx": {
       "scopes": {
         "2/0/init/body/0/argument/1/1/1/3": {
           "type": "element",
-          "hash": "baadac80a947ccb45c295f654e25c39c",
+          "hash": "d978f22b9498d89aacd8275c8fed86ec",
           "context": "",
           "skip": false,
           "overrides": {},
@@ -295,6 +715,30 @@
           "overrides": {},
           "content": "Early Access"
         },
+        "7/0/init/body/2/argument/1/11-aria-label": {
+          "type": "attribute",
+          "hash": "29dea3e0b6238874f8c7a27619df8e36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Toggle menu"
+        },
+        "7/0/init/body/2/argument/1/15/3/1": {
+          "type": "element",
+          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "7/0/init/body/2/argument/1/5/5": {
+          "type": "element",
+          "hash": "359fca35d95853e13ade0c138715b815",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
         "7/0/init/body/2/argument/3/11-aria-label": {
           "type": "attribute",
           "hash": "29dea3e0b6238874f8c7a27619df8e36",
@@ -318,6 +762,266 @@
           "skip": false,
           "overrides": {},
           "content": "Early Access"
+        }
+      }
+    },
+    "components/learn/LearnCard.tsx": {
+      "scopes": {
+        "9/declaration/body/2/argument/3/11/1": {
+          "type": "element",
+          "hash": "a80b05f764339ba775e8e41cfd089634",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Resources:"
+        },
+        "9/declaration/body/2/argument/3/11/3/3/expression/right": {
+          "type": "element",
+          "hash": "2dcc5a3c86b1b8515d5bdcd4b777e279",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+<expression/> more resources"
+        },
+        "9/declaration/body/2/argument/3/15/1": {
+          "type": "element",
+          "hash": "ff094395585bf4494a50f09c2328da98",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:null></element:null> Start Learning"
+        },
+        "9/declaration/body/2/argument/3/7/1": {
+          "type": "element",
+          "hash": "b2a1cfb0543fc8ee9a2746549f368d43",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key Takeaways:"
+        },
+        "9/declaration/body/2/argument/3/7/3/1/expression/0/body/0/expression/1": {
+          "type": "element",
+          "hash": "f05f450fffcb17520c441ab9789f40ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "."
+        },
+        "9/declaration/body/2/argument/3/7/3/3/expression/right": {
+          "type": "element",
+          "hash": "5447c93a0d368bb57efe86cb3a36cb43",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+<expression/> more insight..."
+        }
+      }
+    },
+    "components/learn/LearnHero.tsx": {
+      "scopes": {
+        "2/declaration/body/1/argument/1/1/3": {
+          "type": "element",
+          "hash": "0bcbb37de893bdb51ed818a9e6a32fb7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security Learning<element:span>Center</element:span>"
+        },
+        "2/declaration/body/1/argument/1/1/5": {
+          "type": "element",
+          "hash": "112736f776f60a97b2a94a728ba3a8fc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Master the fundamentals of web security and social engineering prevention with our comprehensive, easy-to-understand learning resources. Build confidence in your digital safety knowledge."
+        },
+        "2/declaration/body/1/argument/1/1/7/1/1": {
+          "type": "element",
+          "hash": "f0966ac2ce1e0e5dd03469403a8a13cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "What you'll learn:"
+        },
+        "2/declaration/body/1/argument/1/1/7/3/1": {
+          "type": "element",
+          "hash": "f3004ecff2abce390f41140ef36e7338",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Recognize common online threats"
+        },
+        "2/declaration/body/1/argument/1/1/7/3/3": {
+          "type": "element",
+          "hash": "97e6123c271e3b9ced8e0b5a66052aec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Create strong password strategies"
+        },
+        "2/declaration/body/1/argument/1/1/7/3/5": {
+          "type": "element",
+          "hash": "6daadc545e911945c9d042b23acdf8cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Spot social engineering tactics"
+        },
+        "2/declaration/body/1/argument/1/1/7/3/7": {
+          "type": "element",
+          "hash": "99bc432123122de8b91bee9bf6a641e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Respond to suspicious activities"
+        },
+        "2/declaration/body/1/argument/1/9/1": {
+          "type": "element",
+          "hash": "f84445ed629a7f9d79386d9cf5b022f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your Learning Journey"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/1": {
+          "type": "element",
+          "hash": "278f3c58fb91962f4e77cabfe96c8dae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "1. Web Security Fundamentals"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/3/1/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/3/1/3": {
+          "type": "element",
+          "hash": "eecef3933b5507194b3fa06d470f6888",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Understand common online threats and how they work"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/3/3/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/3/3/3": {
+          "type": "element",
+          "hash": "e9d84622c7fe00b9485ccf5341b0c6ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Learn password security and two-factor authentication"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/3/5/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "2/declaration/body/1/argument/1/9/3/1/3/5/3": {
+          "type": "element",
+          "hash": "f29851913dec2c39b960031683aed2bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Develop safe browsing and online shopping habits"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/1": {
+          "type": "element",
+          "hash": "cdc9f84553890e2936bc66fb2e1ea777",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2. Social Engineering Defense"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/3/1/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/3/1/3": {
+          "type": "element",
+          "hash": "a74aaeb0ce23a4904c119e50404640dc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Recognize manipulation tactics and red flags"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/3/3/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/3/3/3": {
+          "type": "element",
+          "hash": "8b7bbe8961f121c98cbf7f803b610be1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Study real-world attack scenarios and responses"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/3/5/1": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "2/declaration/body/1/argument/1/9/3/3/3/5/3": {
+          "type": "element",
+          "hash": "41a16997ee4c3f5b24809084475ced15",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Build effective response strategies and verification habits"
+        }
+      }
+    },
+    "components/learn/ResourceList.tsx": {
+      "scopes": {
+        "7/declaration/body/3/argument/3/1/expression/0/body/1/argument/1/1/3/5/5/expression/right": {
+          "type": "element",
+          "hash": "7a315633460a8f3c70f66dbb7d9c1273",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Clock></element:Clock>{resource.readTime} min"
+        },
+        "7/declaration/body/3/argument/5/expression/right/1/3": {
+          "type": "element",
+          "hash": "5e7e3b2e92e73d9cff7117976f59c6e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No resources available"
+        },
+        "7/declaration/body/3/argument/5/expression/right/1/5": {
+          "type": "element",
+          "hash": "cbd6eb48807784a78487296f6e282999",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Resources for this topic are being prepared. Check back soon!"
         }
       }
     },
@@ -446,6 +1150,482 @@
           "skip": false,
           "overrides": {},
           "content": "/{plan.period}"
+        }
+      }
+    },
+    "pages/BlogPage.tsx": {
+      "scopes": {
+        "0/body/0/argument/1": {
+          "type": "element",
+          "hash": "805f4718fdd22e120cfbd20c5e29f7bb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome to Parapluie Blog"
+        },
+        "0/body/0/argument/3": {
+          "type": "element",
+          "hash": "e1c0ac23e4e1d2cab7cebd024e16f57d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your trusted source for cybersecurity education and protection."
+        },
+        "0/body/0/argument/5/1": {
+          "type": "element",
+          "hash": "808035671dc99fd193e86ba3d8e5ec1f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start Learning"
+        },
+        "0/body/0/argument/5/3": {
+          "type": "element",
+          "hash": "65531c90446368f5f455261b79c49b8d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Read Security Blog"
+        },
+        "0/body/0/argument/5/5": {
+          "type": "element",
+          "hash": "f26193e6477e2a25c87c793558c10e65",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Latest Alert"
+        },
+        "1/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "aa83f4456d11185e5e72dba3260bf00b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Community"
+        },
+        "1/declaration/body/0/argument/3": {
+          "type": "element",
+          "hash": "d07bfd013fd95d7fba4a7972a21388d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Join our community of security-conscious individuals working together to stay safe online. Share experiences, ask questions, and learn from others."
+        },
+        "8/body/0/argument/1": {
+          "type": "element",
+          "hash": "805f4718fdd22e120cfbd20c5e29f7bb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome to Parapluie Blog"
+        },
+        "8/body/0/argument/3": {
+          "type": "element",
+          "hash": "e1c0ac23e4e1d2cab7cebd024e16f57d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your trusted source for cybersecurity education and protection."
+        },
+        "8/body/0/argument/5/1": {
+          "type": "element",
+          "hash": "808035671dc99fd193e86ba3d8e5ec1f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start Learning"
+        },
+        "8/body/0/argument/5/3": {
+          "type": "element",
+          "hash": "65531c90446368f5f455261b79c49b8d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Read Security Blog"
+        },
+        "8/body/0/argument/5/5": {
+          "type": "element",
+          "hash": "f26193e6477e2a25c87c793558c10e65",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Latest Alert"
+        },
+        "9/declaration/body/0/argument/1": {
+          "type": "element",
+          "hash": "aa83f4456d11185e5e72dba3260bf00b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Community"
+        },
+        "9/declaration/body/0/argument/3": {
+          "type": "element",
+          "hash": "d07bfd013fd95d7fba4a7972a21388d7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Join our community of security-conscious individuals working together to stay safe online. Share experiences, ask questions, and learn from others."
+        },
+        "9/declaration/body/10/argument/5/11/1/1": {
+          "type": "element",
+          "hash": "ff20b65836b476207c4a6501d4d60bc7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Articles"
+        },
+        "9/declaration/body/10/argument/5/11/1/3": {
+          "type": "element",
+          "hash": "877e760ff3d9775aab9430973067bb75",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Browse our complete collection of cybersecurity guides and tips"
+        },
+        "9/declaration/body/10/argument/5/19/expression/alternate/3": {
+          "type": "element",
+          "hash": "fb926da69df8f320b94ad0629eefca49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No articles found"
+        },
+        "9/declaration/body/10/argument/5/19/expression/alternate/5": {
+          "type": "element",
+          "hash": "b7af2f9cfabc93312d15832a0b06530d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Try adjusting your search terms or filters to find what you're looking for."
+        },
+        "9/declaration/body/10/argument/5/19/expression/alternate/7": {
+          "type": "element",
+          "hash": "14c1ee188bfecafd58d77f9de1fa0515",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Clear all filters"
+        },
+        "9/declaration/body/10/argument/5/3/expression/right/1/1/1": {
+          "type": "element",
+          "hash": "958e312d6b4570dad6bfa0ed80dba195",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Featured Article"
+        },
+        "9/declaration/body/10/argument/5/3/expression/right/1/1/3": {
+          "type": "element",
+          "hash": "950858ddf3ca238f369c482098101782",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Essential reading for your digital safety"
+        }
+      }
+    },
+    "pages/LearnPage.tsx": {
+      "scopes": {
+        "4/declaration/body/0/argument/5/7/1": {
+          "type": "element",
+          "hash": "33f662847b9df281fe55f789271c11ab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready to Strengthen Your Digital Security?"
+        },
+        "4/declaration/body/0/argument/5/7/3": {
+          "type": "element",
+          "hash": "f15ecd8bde31e308704ff6ed701c816a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start with any topic that interests you. Each learning module is designed to be completed independently, so you can learn at your own pace and focus on what matters most to you."
+        },
+        "4/declaration/body/0/argument/5/7/5/1": {
+          "type": "element",
+          "hash": "aaed83f6fffe2cbcc8448082c4866c69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start with Web Security"
+        },
+        "4/declaration/body/0/argument/5/7/5/3": {
+          "type": "element",
+          "hash": "378e571b871dcb11d5517c23777f9cf3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Learn Social Engineering Defense"
+        }
+      }
+    },
+    "pages/blog/BlogCategoryPage.tsx": {
+      "scopes": {
+        "9/declaration/body/13/argument/3/1/3": {
+          "type": "element",
+          "hash": "5a045436248bd9660fcc55e1fe988e20",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{totalPosts} article<expression/> in this category"
+        },
+        "9/declaration/body/13/argument/5/11/expression/alternate/3": {
+          "type": "element",
+          "hash": "fb926da69df8f320b94ad0629eefca49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No articles found"
+        },
+        "9/declaration/body/13/argument/5/11/expression/alternate/7/expression/right": {
+          "type": "element",
+          "hash": "5b50f988d71199985e15bb2e9bd33919",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Clear filters"
+        }
+      }
+    },
+    "pages/blog/BlogHomePage.tsx": {
+      "scopes": {
+        "9/declaration/body/10/argument/5/11/1/1": {
+          "type": "element",
+          "hash": "ff20b65836b476207c4a6501d4d60bc7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Articles"
+        },
+        "9/declaration/body/10/argument/5/11/1/3": {
+          "type": "element",
+          "hash": "877e760ff3d9775aab9430973067bb75",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Browse our complete collection of cybersecurity guides and tips"
+        },
+        "9/declaration/body/10/argument/5/19/expression/alternate/3": {
+          "type": "element",
+          "hash": "fb926da69df8f320b94ad0629eefca49",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No articles found"
+        },
+        "9/declaration/body/10/argument/5/19/expression/alternate/5": {
+          "type": "element",
+          "hash": "b7af2f9cfabc93312d15832a0b06530d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Try adjusting your search terms or filters to find what you're looking for."
+        },
+        "9/declaration/body/10/argument/5/19/expression/alternate/7": {
+          "type": "element",
+          "hash": "14c1ee188bfecafd58d77f9de1fa0515",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Clear all filters"
+        },
+        "9/declaration/body/10/argument/5/3/expression/right/1/1/1": {
+          "type": "element",
+          "hash": "958e312d6b4570dad6bfa0ed80dba195",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Featured Article"
+        },
+        "9/declaration/body/10/argument/5/3/expression/right/1/1/3": {
+          "type": "element",
+          "hash": "950858ddf3ca238f369c482098101782",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Essential reading for your digital safety"
+        }
+      }
+    },
+    "pages/blog/BlogPostPage.tsx": {
+      "scopes": {
+        "11/declaration/body/6/argument/3/1/1/1": {
+          "type": "element",
+          "hash": "05ed10788d14778bd56955dcffba395c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ArrowLeft></element:ArrowLeft> Back to Blog"
+        },
+        "11/declaration/body/6/argument/7/1/15/3": {
+          "type": "element",
+          "hash": "a2c71cd6620d74a1b6cf079c4d5253d3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Clock></element:Clock>{post.readTime} min read"
+        },
+        "11/declaration/body/6/argument/7/1/3/3/expression/right": {
+          "type": "element",
+          "hash": "9a96bf8856b297e2d748da69b897bf4b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:AlertTriangle></element:AlertTriangle>{post.threatLevel} Risk"
+        },
+        "11/declaration/body/6/argument/7/1/3/5/expression/right": {
+          "type": "element",
+          "hash": "f3609815a3d2c04d58a1294c73788c82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Featured"
+        },
+        "11/declaration/body/6/argument/7/1/3/7/expression/right": {
+          "type": "element",
+          "hash": "50e819f94496881382f6b826bad84af4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-Generated"
+        },
+        "11/declaration/body/6/argument/7/13/expression/right/1": {
+          "type": "element",
+          "hash": "97813c8ae67d69575fd04e35a88aed0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tags"
+        },
+        "11/declaration/body/6/argument/7/19/1/1/1": {
+          "type": "element",
+          "hash": "da71e2295b0c676d7a34e2a3cd99bc11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Found this helpful?"
+        },
+        "11/declaration/body/6/argument/7/19/1/1/3": {
+          "type": "element",
+          "hash": "05fd8bdac7a9f9cf0e8934327a62cc0a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Share it with others who might benefit from this information."
+        },
+        "11/declaration/body/6/argument/7/23/expression/right/1": {
+          "type": "element",
+          "hash": "6e73b8d4ea9525e21c13f4acc1b7f79c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Related Articles"
+        }
+      }
+    },
+    "pages/learn/LearningCenterPage.tsx": {
+      "scopes": {
+        "4/declaration/body/0/argument/5/7/1": {
+          "type": "element",
+          "hash": "33f662847b9df281fe55f789271c11ab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ready to Strengthen Your Digital Security?"
+        },
+        "4/declaration/body/0/argument/5/7/3": {
+          "type": "element",
+          "hash": "f15ecd8bde31e308704ff6ed701c816a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start with any topic that interests you. Each learning module is designed to be completed independently, so you can learn at your own pace and focus on what matters most to you."
+        },
+        "4/declaration/body/0/argument/5/7/5/1": {
+          "type": "element",
+          "hash": "aaed83f6fffe2cbcc8448082c4866c69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start with Web Security"
+        },
+        "4/declaration/body/0/argument/5/7/5/3": {
+          "type": "element",
+          "hash": "378e571b871dcb11d5517c23777f9cf3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Learn Social Engineering Defense"
+        }
+      }
+    },
+    "pages/learn/LearningTopicPage.tsx": {
+      "scopes": {
+        "10/declaration/body/7/argument/3/1/1/1": {
+          "type": "element",
+          "hash": "a4ed1b75e9f62159e9e406d9e42e9625",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ArrowLeft></element:ArrowLeft> Back to Learning Center"
+        },
+        "10/declaration/body/7/argument/5/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "025eb8360242bc54f7909eb9923127f8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Download></element:Download> Quick Reference Guide"
+        },
+        "10/declaration/body/7/argument/5/17-title": {
+          "type": "attribute",
+          "hash": "8107a25967bb2b3130123a603ce28852",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted External Resources"
+        },
+        "10/declaration/body/7/argument/5/21/1/1/1": {
+          "type": "element",
+          "hash": "cd9cd4be07bb70d4aac34fb221bd2c48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ArrowLeft></element:ArrowLeft> Back to Learning Center"
+        },
+        "10/declaration/body/7/argument/5/21/1/3/1": {
+          "type": "element",
+          "hash": "ef1792f4a0120b4c823f798981218b5f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Found this helpful? Share your knowledge!"
+        },
+        "10/declaration/body/7/argument/5/21/1/3/3/1/1": {
+          "type": "element",
+          "hash": "02a64e4c56cfdc108b0c83ee6aa5629a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:ExternalLink></element:ExternalLink> Share"
+        },
+        "10/declaration/body/7/argument/5/3/7/1": {
+          "type": "element",
+          "hash": "1a79f768b7dbcadfa93e5acdcc320eae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "What You'll Learn"
+        },
+        "10/declaration/body/7/argument/5/7/1/1": {
+          "type": "element",
+          "hash": "69efbfa0b16a1c3adb10fcbc7566a95f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:IconComponent></element:IconComponent> 5-Minute Quick Read"
         }
       }
     }

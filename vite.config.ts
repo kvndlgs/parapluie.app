@@ -10,6 +10,9 @@ const compilerConfig = {
 }
 const viteConfig = {
   plugins: [react()],
+  server: {
+    historyApiFallback: true,
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

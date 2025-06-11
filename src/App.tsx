@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import Navbar from '@/components/layout/Navbar';
-import Hero from '@/components/layout/Hero';
-import Features from '@/components/sections/Features';
-import About from '@/components/sections/About';
-import Pricing from '@/components/sections/Pricing';
-import Download from '@/components/sections/Download';
-import Footer from '@/components/layout/Footer';
-import { LocaleSwitcher } from 'lingo.dev/react-client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BlogCategoryPage } from './pages/blog/BlogCategoryPage';
+import { BlogPostPage } from './pages/blog/BlogPostPage';
+import { LearningTopicPage } from '@/pages/learn/LearningTopicPage'; 
+import Layout from '@/components/Layout';
+import HomePage from '@/pages/HomePage'
+import BlogPage from '@/pages/BlogPage';
+import LearnPage from '@/pages/LearnPage'
+import { Toaster } from '@/components/ui/toaster';
 
 
 
@@ -30,25 +31,22 @@ function App() {
   }, [scrolled]);
 
   return (
-    
-    <div className="min-h-screen bg-background">
-      
-      <div className='z-50 fixed w-20 px-3 py-2 text-sm font-regular leading-large text-primary ring-none'>
-        <LocaleSwitcher locales={["en", "fr"]} />
-      </div>
-      <Navbar scrolled={scrolled} />
-      <main>
-        <Hero />
-        <Features />
-        <About />
-        <Pricing />
-        <Download />
-      </main>
-      <Footer />
-    </div>
-    
-    
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage /> } />
+          <Route path="/learn" element={<LearnPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/blog/category/:categorySlug" element={<BlogCategoryPage />} />
+          <Route path="/learn/:topicId" element={<LearningTopicPage />} />
+          </Routes>
+          <Toaster />
+      </Layout>
+      </Router>
+
   );
 }
+
 
 export default App;
