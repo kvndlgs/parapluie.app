@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import { Search, Filter, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+// import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { BlogSearchFilters } from '@/types/blog';
 import { blogCategories } from '@/data/blogData';
 
@@ -14,7 +13,7 @@ interface BlogSearchProps {
 }
 
 export function BlogSearch({ filters, onFiltersChange }: BlogSearchProps) {
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
+//   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const handleQueryChange = (query: string) => {
     onFiltersChange({ ...filters, query });

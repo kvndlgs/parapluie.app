@@ -175,7 +175,7 @@ export function LearningTopicPage() {
         </Card>
 
         {/* Infographic */}
-        {topic.infographic && (
+        {topic?.infoGraphic && (
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -186,13 +186,13 @@ export function LearningTopicPage() {
             <CardContent>
               <div className="text-center">
                 <img
-                  src={topic.infographic.url}
-                  alt={topic.infographic.alt}
+                  src={topic.infoGraphic?.url}
+                  alt={topic.infoGraphic?.alt}
                   className="max-w-full h-auto rounded-lg shadow-sm mx-auto"
                 />
-                {topic.infographic.caption && (
+                {topic.infoGraphic?.caption && (
                   <p className="text-sm text-gray-600 mt-3 italic">
-                    {topic.infographic.caption}
+                    {topic.infoGraphic?.caption}
                   </p>
                 )}
               </div>

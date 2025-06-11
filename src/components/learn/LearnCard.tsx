@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ExternalLink, Clock, Users } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,7 +13,7 @@ interface LearnCardProps {
 }
 
 export function LearnCard({ topic, sectionColor }: LearnCardProps) {
-    const IconComponent = (Icons as any)[topic.icon] || Icons.BookOpen;
+
 
     const difficultyColors = {
         beginner: 'bg-green-100 text-green-800',
@@ -26,7 +26,7 @@ export function LearnCard({ topic, sectionColor }: LearnCardProps) {
             <CardHeader className='pb-4'>
                 <div className='flex items-start gap-3'>
                     <div className={cn('p-2 rounded-lg text-white', sectionColor)}>
-                        <IconComponent className='w-5 h-5' />
+                     {/*   <IconComponent className='w-5 h-5' /> */}
                     </div>
                 </div>
                 <CardTitle>{topic.title}</CardTitle>
@@ -45,12 +45,13 @@ export function LearnCard({ topic, sectionColor }: LearnCardProps) {
                 <div className='mb-4'>
                     <h4 className='text-sm font-medium text-neutral-800 mb-2'> Key Takeaways: </h4>
                     <ul className='text-xs text-neutral-600 space-y-1'>
-                        {topic.keyTakeaways.slice(0, 2).map((takeaway, index) => {
+                        {/* topic.keyTakeaways.slice(0, 2).map((takeaway, index) => {
                             <li key={index} className='flex items-start gap-1'>
                                 <span className='text-secondary mt-1'>.</span>
                                 <span className='line-clamp-1'>{takeaway}</span>
                             </li>
-                        })}
+                        })
+                       */}
                         {topic.keyTakeaways.length > 2 && (
                             <li className='text-neutral italic'>
                                 +{topic.keyTakeaways.length - 2} more insight...

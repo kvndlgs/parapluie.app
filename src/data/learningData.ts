@@ -1,4 +1,4 @@
-import { LearningSection } from '@/types/learning';
+import { LearningSection } from '@/types/learn';
 
 export const learningSections: LearningSection[] = [
   {

@@ -378,6 +378,102 @@
           "skip": false,
           "overrides": {},
           "content": "Critical Risk"
+        },
+        "8/declaration/body/5/argument/11/expression/right/1/expression/right": {
+          "type": "element",
+          "hash": "1a0bc728bfe796df34596d96aa121e80",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Category: <expression/><element:Button><element:X></element:X></element:Button>"
+        },
+        "8/declaration/body/5/argument/11/expression/right/3/expression/right": {
+          "type": "element",
+          "hash": "b092ed50eee7740d33db06d2c8d532e3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Risk: {filters.threatLevel}<element:Button><element:X></element:X></element:Button>"
+        },
+        "8/declaration/body/5/argument/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "f0a40c4efb5c5dcbeb81685f61d5d97e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search cybersecurity topics, threats, or protection tips..."
+        },
+        "8/declaration/body/5/argument/7/11/expression/right": {
+          "type": "element",
+          "hash": "e03f5d3d96f758b09f75984035f78d61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:X></element:X> Clear Filters"
+        },
+        "8/declaration/body/5/argument/7/3/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "2547e684d62a4710bdfbb9415a9970d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Categories"
+        },
+        "8/declaration/body/5/argument/7/3/3/1": {
+          "type": "element",
+          "hash": "2547e684d62a4710bdfbb9415a9970d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Categories"
+        },
+        "8/declaration/body/5/argument/7/7/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "d4c9ed5809feff8c20d9482532f0a2f0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Threat Level"
+        },
+        "8/declaration/body/5/argument/7/7/3/1": {
+          "type": "element",
+          "hash": "e2ea11fe8c975ba986cac2255c5ed9b4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Levels"
+        },
+        "8/declaration/body/5/argument/7/7/3/3": {
+          "type": "element",
+          "hash": "2d13154dff6e8313b922b63225b004cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Low Risk"
+        },
+        "8/declaration/body/5/argument/7/7/3/5": {
+          "type": "element",
+          "hash": "dc15fdece1d3ca74f14423883bd2836c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Medium Risk"
+        },
+        "8/declaration/body/5/argument/7/7/3/7": {
+          "type": "element",
+          "hash": "ddd7cbc88914976edefdfe8cba35ad83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "High Risk"
+        },
+        "8/declaration/body/5/argument/7/7/3/9": {
+          "type": "element",
+          "hash": "d96155b7c11079b1493e7a397a341305",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Critical Risk"
         }
       }
     },
@@ -767,6 +863,46 @@
     },
     "components/learn/LearnCard.tsx": {
       "scopes": {
+        "9/declaration/body/1/argument/3/11/1": {
+          "type": "element",
+          "hash": "a80b05f764339ba775e8e41cfd089634",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Resources:"
+        },
+        "9/declaration/body/1/argument/3/11/3/3/expression/right": {
+          "type": "element",
+          "hash": "2dcc5a3c86b1b8515d5bdcd4b777e279",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+<expression/> more resources"
+        },
+        "9/declaration/body/1/argument/3/15/1": {
+          "type": "element",
+          "hash": "ff094395585bf4494a50f09c2328da98",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:null></element:null> Start Learning"
+        },
+        "9/declaration/body/1/argument/3/7/1": {
+          "type": "element",
+          "hash": "b2a1cfb0543fc8ee9a2746549f368d43",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key Takeaways:"
+        },
+        "9/declaration/body/1/argument/3/7/3/3/expression/right": {
+          "type": "element",
+          "hash": "5447c93a0d368bb57efe86cb3a36cb43",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+<expression/> more insight..."
+        },
         "9/declaration/body/2/argument/3/11/1": {
           "type": "element",
           "hash": "a80b05f764339ba775e8e41cfd089634",
