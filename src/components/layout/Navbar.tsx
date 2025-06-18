@@ -39,7 +39,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-2.5 px-6 lg:px-12',
+        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-4 px-6 lg:px-12',
         {
           'bg-transparent': !scrolled && !isMenuOpen,
           'bg-white/90 backdrop-blur-md shadow-sm': scrolled || isMenuOpen,
@@ -48,7 +48,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/">
-          <Logo className='w-44'/>
+          <Logo />
         </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
