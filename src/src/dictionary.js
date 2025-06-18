@@ -883,6 +883,13 @@ export default {
           },
           hash: "359fca35d95853e13ade0c138715b815",
         },
+        "7/0/init/body/2/argument/1/5/5/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "b46cd0924c3a62eed2f73dd3d68061f2",
+        },
         "7/0/init/body/2/argument/3/11-aria-label": {
           content: {
             en: "Toggle menu",
@@ -1190,6 +1197,28 @@ export default {
     },
     "components/learn/ResourceList.tsx": {
       entries: {
+        "7/declaration/body/2/argument/3/1/expression/0/body/1/argument/1/1/3/5/5/expression/right":
+          {
+            content: {
+              en: "<element:Clock></element:Clock>{resource.readTime} min",
+              fr: "<element:Clock></element:Clock>{resource.readTime} min",
+            },
+            hash: "7a315633460a8f3c70f66dbb7d9c1273",
+          },
+        "7/declaration/body/2/argument/5/expression/right/1/3": {
+          content: {
+            en: "No resources available",
+            fr: "Aucune ressource disponible",
+          },
+          hash: "5e7e3b2e92e73d9cff7117976f59c6e7",
+        },
+        "7/declaration/body/2/argument/5/expression/right/1/5": {
+          content: {
+            en: "Resources for this topic are being prepared. Check back soon!",
+            fr: "Les ressources pour ce sujet sont en préparation. Veuillez revenir bientôt !",
+          },
+          hash: "cbd6eb48807784a78487296f6e282999",
+        },
         "7/declaration/body/3/argument/3/1/expression/0/body/1/argument/1/1/3/5/5/expression/right":
           {
             content: {
@@ -1208,7 +1237,7 @@ export default {
         "7/declaration/body/3/argument/5/expression/right/1/5": {
           content: {
             en: "Resources for this topic are being prepared. Check back soon!",
-            fr: "Les ressources pour ce sujet sont en préparation. Veuillez revenir bientôt!",
+            fr: "Les ressources pour ce sujet sont en préparation. Veuillez revenir bientôt !",
           },
           hash: "cbd6eb48807784a78487296f6e282999",
         },

@@ -67,7 +67,11 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <Link to="#download" className='text-secondary text-sm font-regular border-2 border-secondary py-[9px] px-[16px] leading-normal rounded-full hidden sm:flex hover:border-secondary-300'>Early Access</Link>
+          <Link to="#" className='py-[9px] px-[16px] bg-gradient-tr from-primary-600 via-primary-200 to-secondary-600 rounded-full hidden p-0.5 sm:flex'>
+            <div className="w-full h-full flex items-center justify-center rounded-full">
+          <span className="text-transparent font-bold leading-normal bg-clip-text bg-gradient-to-r from-primary-600 via-primary-200 to-secondary-600 rounded-full"> Early Access </span>
+            </div>
+          </Link>
         </nav>
 
         {/* Mobile Navigation Toggle */}
