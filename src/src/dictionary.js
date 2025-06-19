@@ -881,14 +881,21 @@ export default {
             en: "Early Access",
             fr: "Accès anticipé",
           },
-          hash: "359fca35d95853e13ade0c138715b815",
+          hash: "7b3c96a5d207e49b8ef24c60ae0a3c70",
         },
         "7/0/init/body/2/argument/1/5/5/1": {
           content: {
             en: "Early Access",
             fr: "Accès anticipé",
           },
-          hash: "b46cd0924c3a62eed2f73dd3d68061f2",
+          hash: "5b62a6bcbb106a0d0db7583b98a15b5e",
+        },
+        "7/0/init/body/2/argument/1/5/5/1/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "0fa025c841583fde56764ad95b8533a7",
         },
         "7/0/init/body/2/argument/3/11-aria-label": {
           content: {

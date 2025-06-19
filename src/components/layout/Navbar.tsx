@@ -39,7 +39,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-4 px-6 lg:px-12',
+        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-5 px-8 lg:px-12',
         {
           'bg-transparent': !scrolled && !isMenuOpen,
           'bg-white/90 backdrop-blur-md shadow-sm': scrolled || isMenuOpen,
@@ -48,7 +48,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/">
-          <Logo />
+          <Logo className="fill-primary [&>]:fill-currentColor hover:fill-primary-700 transition-all transition-ease-in duration-400" />
         </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
@@ -67,10 +67,12 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <Link to="#" className='py-[9px] px-[16px] bg-gradient-tr from-primary-600 via-primary-200 to-secondary-600 rounded-full hidden p-0.5 sm:flex'>
-            <div className="w-full h-full flex items-center justify-center rounded-full">
-          <span className="text-transparent font-bold leading-normal bg-clip-text bg-gradient-to-r from-primary-600 via-primary-200 to-secondary-600 rounded-full"> Early Access </span>
-            </div>
+          <Link to="#" className='max-w-screen max-h-screen sm:flex'>
+           <div className="w-[160px] h-12 flex items-center justify-center p-[3px] bg-gradient-to-r from-[#8438ff] via-[#ff5d38]] to-[#c738ff] rounded-full hover:from-[#c738ff] hover:via-[#ff5d38] hover:to-[#8438ff] transition-all duration-400">
+             <div className="h-full w-full flex items-center justify-center bg-white/95 text-sm text-primary font-medium rounded-full leading-loose">
+              Early Access
+              </div>
+           </div>
           </Link>
         </nav>
 
