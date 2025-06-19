@@ -20,11 +20,11 @@ const Links = [
   },
   {
     label: 'Blog',
-    url: '/blog'
+    url: '#'
   },
   {
     label: 'Learn',
-    url: '/learn'
+    url: '#'
   }
 ]
 
@@ -103,7 +103,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         {/* Mobile Navigation Menu */}
         <div
           className={cn(
-            'fixed inset-0 bg-white/95 flex flex-col items-center top-48 justify-center transition-all duration-300 sm:hidden drop-shadow-md',
+            'fixed inset-0 bg-white/95 flex flex-col items-center top-[300px] justify-center transition-all duration-300 sm:hidden drop-shadow-md',
             {
               'opacity-100 visible': isMenuOpen,
               'opacity-0 invisible': !isMenuOpen,
@@ -121,7 +121,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           <div className='w-full pb-5 pt-4 bg-white/95 flex items-center justify-center'>
-          <Link to="#download" onClick={() => setIsMenuOpen(false)} className='rounded-full px-3 py-2 bg-primary'>
+          <Link to="#download" onClick={() => setIsMenuOpen(false)} className='rounded-full px-4.5 py-2 bg-primary text-white border-b-2 border-primary-800 text-sm font-medium'>
             Early Access
           </Link>
           </div>

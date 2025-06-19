@@ -894,6 +894,54 @@
           "skip": false,
           "overrides": {},
           "content": "Early Access"
+        },
+        "4/0/init/body/0/argument/11/1-alt": {
+          "type": "attribute",
+          "hash": "0f3efb8b4ec95b6c9375951a0c5e482e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Parapluie AI-Powered Scams Protection Mockup"
+        },
+        "4/0/init/body/0/argument/3/1-alt": {
+          "type": "attribute",
+          "hash": "6c020b85ced763860d87cf4df83c8124",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "parapluie-app-background-image"
+        },
+        "4/0/init/body/0/argument/7/1/1": {
+          "type": "element",
+          "hash": "46ab728bba3364604455a04f6badad50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-Powered Protection for Senior Financial Safety"
+        },
+        "4/0/init/body/0/argument/7/3/1-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "4/0/init/body/0/argument/7/3/1/1-alt": {
+          "type": "attribute",
+          "hash": "e0962022279bb4f8a92c1ed079ca308e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Get it on Google Play"
+        },
+        "4/0/init/body/0/argument/7/3/3": {
+          "type": "element",
+          "hash": "bb13aedd989ad941e0fd0f98d9eb4389",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Join Waitlist"
         }
       }
     },
@@ -982,6 +1030,14 @@
         "7/0/init/body/2/argument/1/15/3/1": {
           "type": "element",
           "hash": "dda458d386e6b22a8eceee34b5997551",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Early Access"
+        },
+        "7/0/init/body/2/argument/1/15/3/1/1/1": {
+          "type": "element",
+          "hash": "0fa025c841583fde56764ad95b8533a7",
           "context": "",
           "skip": false,
           "overrides": {},

@@ -795,6 +795,48 @@ export default {
           },
           hash: "dda458d386e6b22a8eceee34b5997551",
         },
+        "4/0/init/body/0/argument/11/1-alt": {
+          content: {
+            en: "Parapluie AI-Powered Scams Protection Mockup",
+            fr: "Maquette de protection contre les arnaques alimentée par l'IA de Parapluie",
+          },
+          hash: "0f3efb8b4ec95b6c9375951a0c5e482e",
+        },
+        "4/0/init/body/0/argument/3/1-alt": {
+          content: {
+            en: "parapluie-app-background-image",
+            fr: "parapluie-app-background-image",
+          },
+          hash: "6c020b85ced763860d87cf4df83c8124",
+        },
+        "4/0/init/body/0/argument/7/1/1": {
+          content: {
+            en: "AI-Powered Protection for Senior Financial Safety",
+            fr: "Protection par l'IA pour la sécurité financière des seniors",
+          },
+          hash: "46ab728bba3364604455a04f6badad50",
+        },
+        "4/0/init/body/0/argument/7/3/1-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "4/0/init/body/0/argument/7/3/1/1-alt": {
+          content: {
+            en: "Get it on Google Play",
+            fr: "Téléchargez-le sur Google Play",
+          },
+          hash: "e0962022279bb4f8a92c1ed079ca308e",
+        },
+        "4/0/init/body/0/argument/7/3/3": {
+          content: {
+            en: "Join Waitlist",
+            fr: "Rejoindre la liste d'attente",
+          },
+          hash: "bb13aedd989ad941e0fd0f98d9eb4389",
+        },
       },
     },
     "components/layout/Navbar.tsx": {

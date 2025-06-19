@@ -27,7 +27,7 @@ export default {
         },
         primary: {
           DEFAULT: "hsl(264, 99%, 52%)",
-          100: "hsl(264, 99%, 96%)",
+          100: "hsl(264, 100.00%, 96.10%)",
           200: "hsl(264, 99%, 92%)",
           300: "hsl(264, 99%, 82%)",
           400: "hsl(264, 99%, 72%)",
@@ -68,8 +68,8 @@ export default {
           foreground:  "hsl(265, 11.00%, 39.20%)",
         },
         accent: {
-          DEFAULT: "hsl(341, 53.60%, 67%)",
-         foreground: "hsl(341, 53.60%, 57%)",
+          DEFAULT: "hsl(229, 98.60%, 72.00%)",
+         foreground: "hsl(229, 98.60%, 92.00%)",
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

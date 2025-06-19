@@ -1,5 +1,7 @@
 import Mockup from '@/assets/mockup.png';
 import heroBg from '@/assets/meshbgbig.png';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 const Hero = () => {
   return (
@@ -16,6 +18,15 @@ const Hero = () => {
         </h1>
         
         <div className="flex flex-row w-full items-center justify-center gap-4 md:mb-12">
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            className="w-full max-w-md bg-white/90 text-primary placeholder:text-muted-foreground focus:ring-2 focus:ring-secondary-500 focus:border-transparent"
+          />
+          <Button className="bg-primary shadow-lg text-white hover:from-secondary-500 hover:to-secondary-300 transition-all duration-300">
+            Join Waitlist
+          </Button>
+          {/*
           <a href='#' className="flex items-center justify-center text-white rounded">
             <img 
               src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
@@ -27,6 +38,7 @@ const Hero = () => {
            bg-gradient-to-br from-secondary-600 via-secondary-400 via-secondary-200 via-secondary-100 to-secondary-100 text-secondary-100">
             Early Access
           </a>
+          */}
         </div>
       </div>
       
