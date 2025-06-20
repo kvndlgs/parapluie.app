@@ -816,6 +816,13 @@ export default {
           },
           hash: "46ab728bba3364604455a04f6badad50",
         },
+        "4/0/init/body/0/argument/7/3/1": {
+          content: {
+            en: "Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing.",
+            fr: "Rejoignez la liste d'attente de Parapluie pour utiliser notre application avant tout le monde et participer aux tests bêta.",
+          },
+          hash: "b0ae72f846a19c6bd61ac6325412c6d4",
+        },
         "4/0/init/body/0/argument/7/3/1-placeholder": {
           content: {
             en: "Enter your email",
@@ -832,10 +839,220 @@ export default {
         },
         "4/0/init/body/0/argument/7/3/3": {
           content: {
-            en: "Join Waitlist",
-            fr: "Rejoindre la liste d'attente",
+            en: "Join",
+            fr: "Rejoindre",
           },
-          hash: "bb13aedd989ad941e0fd0f98d9eb4389",
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
+        },
+        "4/0/init/body/0/argument/7/3/3-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "4/0/init/body/0/argument/7/3/3/1-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "4/0/init/body/0/argument/7/3/3/3": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
+        },
+        "4/0/init/body/0/argument/7/3/5": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
+        },
+        "5/0/init/body/2/argument/11/1-alt": {
+          content: {
+            en: "Parapluie AI-Powered Scams Protection Mockup",
+            fr: "Maquette de protection contre les arnaques alimentée par l'IA de Parapluie",
+          },
+          hash: "0f3efb8b4ec95b6c9375951a0c5e482e",
+        },
+        "5/0/init/body/2/argument/3/1-alt": {
+          content: {
+            en: "parapluie-app-background-image",
+            fr: "parapluie-app-background-image",
+          },
+          hash: "6c020b85ced763860d87cf4df83c8124",
+        },
+        "5/0/init/body/2/argument/7/1/1": {
+          content: {
+            en: "AI-Powered Protection for Senior Financial Safety",
+            fr: "Protection par l'IA pour la sécurité financière des seniors",
+          },
+          hash: "46ab728bba3364604455a04f6badad50",
+        },
+        "5/0/init/body/2/argument/7/3/1": {
+          content: {
+            en: "Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing.",
+            fr: "Rejoignez la liste d'attente de Parapluie pour utiliser notre application avant tout le monde et participer aux tests bêta.",
+          },
+          hash: "b0ae72f846a19c6bd61ac6325412c6d4",
+        },
+        "5/0/init/body/2/argument/7/3/3/5-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "5/0/init/body/2/argument/7/3/3/7": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
+        },
+        "5/0/init/body/3/argument/11/1-alt": {
+          content: {
+            en: "Parapluie AI-Powered Scams Protection Mockup",
+            fr: "Maquette de protection contre les arnaques alimentée par l'IA de Parapluie",
+          },
+          hash: "0f3efb8b4ec95b6c9375951a0c5e482e",
+        },
+        "5/0/init/body/3/argument/3/1-alt": {
+          content: {
+            en: "parapluie-app-background-image",
+            fr: "parapluie-app-background-image",
+          },
+          hash: "6c020b85ced763860d87cf4df83c8124",
+        },
+        "5/0/init/body/3/argument/7/1/1": {
+          content: {
+            en: "AI-Powered Protection for Senior Financial Safety",
+            fr: "Protection Alimentée par l'IA pour la Sécurité Financière des Seniors",
+          },
+          hash: "58e8d54e2a0936c5474022bf8dae573f",
+        },
+        "5/0/init/body/3/argument/7/3/1": {
+          content: {
+            en: "  Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing.",
+            fr: "Rejoignez la liste d'attente de Parapluie pour utiliser notre application avant tout le monde et participer aux tests bêta.",
+          },
+          hash: "95031052c3d4bd3bf9d06b5cd5209169",
+        },
+        "5/0/init/body/3/argument/7/3/3/5-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "5/0/init/body/3/argument/7/3/3/7": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "b8bfaa7cd77c3fdc14a992343b915afe",
+        },
+        "6/0/init/body/2/argument/11/1-alt": {
+          content: {
+            en: "Parapluie AI-Powered Scams Protection Mockup",
+            fr: "Maquette de protection contre les arnaques alimentée par l'IA de Parapluie",
+          },
+          hash: "0f3efb8b4ec95b6c9375951a0c5e482e",
+        },
+        "6/0/init/body/2/argument/3/1-alt": {
+          content: {
+            en: "parapluie-app-background-image",
+            fr: "parapluie-app-background-image",
+          },
+          hash: "6c020b85ced763860d87cf4df83c8124",
+        },
+        "6/0/init/body/2/argument/7/1/1": {
+          content: {
+            en: "AI-Powered Protection for Senior Financial Safety",
+            fr: "Protection par l'IA pour la sécurité financière des seniors",
+          },
+          hash: "46ab728bba3364604455a04f6badad50",
+        },
+        "6/0/init/body/2/argument/7/3/1": {
+          content: {
+            en: "Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing.",
+            fr: "Rejoignez la liste d'attente de Parapluie pour utiliser notre application avant tout le monde et participer aux tests bêta.",
+          },
+          hash: "b0ae72f846a19c6bd61ac6325412c6d4",
+        },
+        "6/0/init/body/2/argument/7/3/3/1/5-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "6/0/init/body/2/argument/7/3/3/1/7": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
+        },
+        "6/0/init/body/2/argument/7/3/3/5-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "6/0/init/body/2/argument/7/3/3/7": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
+        },
+        "7/0/init/body/2/argument/11/1-alt": {
+          content: {
+            en: "Parapluie AI-Powered Scams Protection Mockup",
+            fr: "Maquette de protection contre les arnaques alimentée par l'IA de Parapluie",
+          },
+          hash: "0f3efb8b4ec95b6c9375951a0c5e482e",
+        },
+        "7/0/init/body/2/argument/3/1-alt": {
+          content: {
+            en: "parapluie-app-background-image",
+            fr: "parapluie-app-background-image",
+          },
+          hash: "6c020b85ced763860d87cf4df83c8124",
+        },
+        "7/0/init/body/2/argument/7/1/1": {
+          content: {
+            en: "AI-Powered Protection for Senior Financial Safety",
+            fr: "Protection par l'IA pour la sécurité financière des seniors",
+          },
+          hash: "46ab728bba3364604455a04f6badad50",
+        },
+        "7/0/init/body/2/argument/7/3/1": {
+          content: {
+            en: "Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing.",
+            fr: "Rejoignez la liste d'attente de Parapluie pour utiliser notre application avant tout le monde et participer aux tests bêta.",
+          },
+          hash: "b0ae72f846a19c6bd61ac6325412c6d4",
+        },
+        "7/0/init/body/2/argument/7/3/3/5-placeholder": {
+          content: {
+            en: "Enter your email",
+            fr: "Entrez votre email",
+          },
+          hash: "39931962707c99b99a5a073ab579396b",
+        },
+        "7/0/init/body/2/argument/7/3/3/7": {
+          content: {
+            en: "Join",
+            fr: "Rejoindre",
+          },
+          hash: "6d9cfc0064832d7ea89d18cd9d986c5c",
         },
       },
     },
@@ -911,6 +1128,13 @@ export default {
           },
           hash: "29dea3e0b6238874f8c7a27619df8e36",
         },
+        "7/0/init/body/2/argument/1/15/3": {
+          content: {
+            en: "Early Acess",
+            fr: "Accès anticipé",
+          },
+          hash: "3ddd8bf4e7b3a85548950004337d579d",
+        },
         "7/0/init/body/2/argument/1/15/3/1": {
           content: {
             en: "Early Access",
@@ -918,19 +1142,26 @@ export default {
           },
           hash: "dda458d386e6b22a8eceee34b5997551",
         },
+        "7/0/init/body/2/argument/1/15/3/1/1/1": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "0fa025c841583fde56764ad95b8533a7",
+        },
         "7/0/init/body/2/argument/1/5/5": {
           content: {
             en: "Early Access",
             fr: "Accès anticipé",
           },
-          hash: "7b3c96a5d207e49b8ef24c60ae0a3c70",
+          hash: "dda458d386e6b22a8eceee34b5997551",
         },
         "7/0/init/body/2/argument/1/5/5/1": {
           content: {
             en: "Early Access",
             fr: "Accès anticipé",
           },
-          hash: "5b62a6bcbb106a0d0db7583b98a15b5e",
+          hash: "e16d26bebb483de38e1078990df0fe71",
         },
         "7/0/init/body/2/argument/1/5/5/1/1": {
           content: {

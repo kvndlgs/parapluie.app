@@ -50,10 +50,10 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <section className="py-20 bg-background" id="subscriptions">
+    <section className="py-20 bg-primary-50" id="subscriptions">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+          <h2 className="text-3xl md:text-4xl text-primary-800 font-bold mb-4">Simple, Transparent Pricing</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto" >
             Choose the plan that fits your needs. No hidden fees or complicated tiers.
           </p>

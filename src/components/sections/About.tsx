@@ -16,14 +16,14 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Financial Wellness Support</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-800">Financial Wellness Support</h2>
             <p className="text-lg mb-6 text-muted-foreground">
             Sends friendly payment
             reminders. Tracks recurring
             expenses to prevent overlooked
             bills.
             </p>
-            <p className="text-lg mb-8 text-muted-foreground">
+            <p className="text-lg mb-8 text-primary-800">
             Provides simplified financial
             tools. Large, readable displays
             with intuitive controls.

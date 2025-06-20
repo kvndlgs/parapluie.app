@@ -26,10 +26,10 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 bg-primary" id="features">
+    <section className="py-20 bg-primary-100" id="features">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-lg text-white max-w-2xl mx-auto">
+          <p className="text-lg text-primary-800 font-medium max-w-2xl mx-auto">
           Technology that protects our loved ones from financial exploitation and
           scams. Simple, unobtrusive solutions designed specifically for seniors.
           </p>

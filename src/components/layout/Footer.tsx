@@ -1,15 +1,15 @@
 import { Github, Instagram, Twitter } from 'lucide-react';
-import Logo from '@/components/ui/Logo';
+import {MobileLogo} from '@/components/ui/Logo';
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="bg-card py-12 border-t border-border">
+    <footer className="bg-card py-12 px-18 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-1">
-            <Logo className="w-40 mb-2 -ml-4" />
-            <p className="text-neutral-400 text-xs -mt-2">
+            <MobileLogo />
+            <p className="text-neutral-400 text-xs mt-3">
               AI Protection for Senior Financial Safety.
             </p>
           </div>

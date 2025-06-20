@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Logo from '@/components/ui/Logo';
+import { MobileLogo } from '@/components/ui/Logo';
 import { Link } from 'react-router-dom';
 
 
@@ -39,7 +40,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-5 px-8 lg:px-12',
+        'fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-5 px-8 lg:px-16',
         {
           'bg-transparent': !scrolled && !isMenuOpen,
           'bg-white/90 backdrop-blur-md shadow-sm': scrolled || isMenuOpen,
@@ -47,9 +48,14 @@ const Navbar = ({ scrolled }: NavbarProps) => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/">
+        <>
+        <Link to="/" className='hidden md:flex'>
           <Logo className="fill-primary [&>]:fill-currentColor hover:fill-primary-700 transition-all transition-ease-in duration-400" />
         </Link>
+        <Link to="/" className="lg:hidden">
+          <MobileLogo className="fill-primary [&>]:fill-currentColor hover:fill-primary-700 transition-all transition-ease-in duration-400" />
+        </Link>
+        </>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           {Links.map((link, index) => (
@@ -67,13 +73,9 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <Link to="#" className='max-w-screen max-h-screen sm:flex'>
-           <div className="w-[160px] h-12 flex items-center justify-center p-[3px] bg-gradient-to-r from-[#8438ff] via-[#ff5d38]] to-[#c738ff] rounded-full hover:from-[#c738ff] hover:via-[#ff5d38] hover:to-[#8438ff] transition-all duration-400">
-             <div className="h-full w-full flex items-center justify-center bg-white/95 text-sm text-primary font-medium rounded-full leading-loose">
-              Early Access
-              </div>
-           </div>
-          </Link>
+          <Link to="/" className="border-gradient-r-primary py-2 px-4 rounded-full text-sm font-medium">
+            Early Access
+          </Link> 
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -120,11 +122,9 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               {link.label}
             </Link>
           ))}
-          <div className='w-full pb-5 pt-4 bg-white/95 flex items-center justify-center'>
-          <Link to="#download" onClick={() => setIsMenuOpen(false)} className='rounded-full px-4.5 py-2 bg-primary text-white border-b-2 border-primary-800 text-sm font-medium'>
-            Early Access
+          <Link to="/" className="border-gradient-r-primary py-2 px-4 rounded-full text-sm font-medium">
+           Early Acess
           </Link>
-          </div>
         </div>
       </div>
     </header>
