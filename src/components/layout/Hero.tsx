@@ -52,7 +52,7 @@ const Hero = () => {
             onSubmit={handleSubmit}
             action="https://app.us11.list-manage.com/subscribe/post"
             method="POST"
-            className="flex flex-row items-center justify-center w-1/2 max-w-4xl gap-0 my-3"
+            className="flex sm:flex-row flex-cols items-center justify-center w-full sm:w-1/2 gap-0 my-3"
           >
             <Input type="hidden" name="u" value="27613809a44ef8f4fe9601420" />
             <Input type="hidden" name="id" value="2a8ae4b7d3" />
