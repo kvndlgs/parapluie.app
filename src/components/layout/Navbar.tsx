@@ -73,7 +73,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <Link to="/" className="border-gradient-r-primary py-2 px-4 rounded-full text-sm font-medium">
+          <Link to="/" className="border-gradient-r-primary text-secondary py-2 px-4 rounded-full text-sm font-medium">
             Early Access
           </Link> 
         </nav>
@@ -105,7 +105,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
         {/* Mobile Navigation Menu */}
         <div
           className={cn(
-            'fixed inset-0 bg-white/95 flex flex-col items-center top-[300px] justify-center transition-all duration-300 sm:hidden drop-shadow-md',
+            'fixed inset-0 bg-white/95 flex flex-col items-center top-[260px] justify-center transition-all duration-300 sm:hidden drop-shadow-md',
             {
               'opacity-100 visible': isMenuOpen,
               'opacity-0 invisible': !isMenuOpen,
@@ -122,8 +122,12 @@ const Navbar = ({ scrolled }: NavbarProps) => {
               {link.label}
             </Link>
           ))}
-          <Link to="/" className="border-gradient-r-primary py-2 px-4 rounded-full text-sm font-medium">
+
+          <Link to="/" className="w-full h-auto flex items-center justify-center bg-white/95">
+
+          <span className="border-gradient-r-primary text-secondary py-6 px-6 rounded-full text-sm font-medium">
            Early Acess
+           </span>
           </Link>
         </div>
       </div>

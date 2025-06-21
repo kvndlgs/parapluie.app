@@ -35,14 +35,14 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-center px-6 lg:px-0">
-        <h1 className="text-4xl lg:text-5xl font-black text-primary lg:px-16 mb-4 leading-tight">
+        <h1 className="text-3xl lg:text-4xl font-black text-primary lg:px-16 mb-4 leading-tight">
           <span className="block md:pb-2">
             AI-Powered Protection for Senior Financial Safety
           </span>
         </h1>
 
         <div className="flex flex-col w-full items-center justify-center gap-4 md:mb-12">
-          <p className="align-center w-3/5 text-neutral-600 font-medium text-sm">
+          <p className="align-center w-3/5 text-primary-900 font-medium text-sm">
             {" "}
             Join Parapluie Waitlist to get to use our App before anyone else and
             participate in the beta testing.
@@ -52,7 +52,7 @@ const Hero = () => {
             onSubmit={handleSubmit}
             action="https://app.us11.list-manage.com/subscribe/post"
             method="POST"
-            className="flex sm:flex-row flex-cols items-center justify-center w-full sm:w-1/2 gap-0 my-3"
+            className="flex flex-row items-center justify-center w-1/2 gap-0 my-3"
           >
             <Input type="hidden" name="u" value="27613809a44ef8f4fe9601420" />
             <Input type="hidden" name="id" value="2a8ae4b7d3" />

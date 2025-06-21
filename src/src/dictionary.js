@@ -1233,6 +1233,34 @@ export default {
           },
           hash: "359fca35d95853e13ade0c138715b815",
         },
+        "8/0/init/body/2/argument/1/11-aria-label": {
+          content: {
+            en: "Toggle menu",
+            fr: "Basculer le menu",
+          },
+          hash: "29dea3e0b6238874f8c7a27619df8e36",
+        },
+        "8/0/init/body/2/argument/1/15/3": {
+          content: {
+            en: "Early Acess",
+            fr: "Accès anticipé",
+          },
+          hash: "3ddd8bf4e7b3a85548950004337d579d",
+        },
+        "8/0/init/body/2/argument/1/15/3/1": {
+          content: {
+            en: "Early Acess",
+            fr: "Accès anticipé",
+          },
+          hash: "b860310dfe21f30acfc70a97ace35d4d",
+        },
+        "8/0/init/body/2/argument/1/5/5": {
+          content: {
+            en: "Early Access",
+            fr: "Accès anticipé",
+          },
+          hash: "dda458d386e6b22a8eceee34b5997551",
+        },
       },
     },
     "components/learn/LearnCard.tsx": {
