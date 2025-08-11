@@ -42,7 +42,7 @@ const About = () => {
           <div className="rounded-xl overflow-hidden shadow-xl">
             <img 
               src={AboutImg}
-              alt="Smartphone with weather app" 
+              alt="Smartphone with financial safety app" 
               className="w-full h-auto object-cover"
             />
           </div>

@@ -1,38 +1,42 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Mockup from "@/assets/mockup.png";
-import heroBg from "@/assets/meshbgbig.png";
+// import heroBg from "@/assets/meshbgbig.png";
 import { Button } from "@/components/ui/button";
+import { WaitlistEntry } from "@/types";
 import { Input } from "@/components/ui/input";
+import WaitlistForm from "../WaitlistForm";
+
 
 const Hero = () => {
-  const [email, setEmail] = useState<string>("");
+  const [isFullFormVisible, setIsFullFormVisible] = useState<boolean>(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+
+  const handleWaitListSubmit = (data: WaitlistEntry): void => {
+    console.log('eereirueiru', data);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Email submitted:", email);
+  const handleError = (error: string): void => {
+    console.error('Error nigga', error);
+  }
+  
+  const handleSuccess = (): void => {
+    console.log('Yeeeeehaw');
+  }
 
-    setEmail(""); // Clear the input field after submission
-  };
 
   return (
     <section
       className="relative w-screen h-screen flex items-center justify-center py-6 overflow-hidden"
       id="home"
     >
-      {/* Purple Gradient Background */}
+      {/* Purple Gradient Background 
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
           alt="parapluie-app-background-image"
           className="absolute object-cover bg-center w-full h-full"
         />
-      </div>
-
+      </div> */}
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-center px-6 lg:px-0">
         <h1 className="text-3xl lg:text-4xl font-black text-primary lg:px-16 mb-4 leading-tight">
@@ -48,37 +52,31 @@ const Hero = () => {
             participate in the beta testing.
           </p>
 
-          <form
-            onSubmit={handleSubmit}
-            action="https://app.us11.list-manage.com/subscribe/post"
-            method="POST"
+          <div
             className="flex flex-row items-center justify-center w-1/2 gap-0 my-3"
           >
-            <Input type="hidden" name="u" value="27613809a44ef8f4fe9601420" />
-            <Input type="hidden" name="id" value="2a8ae4b7d3" />
             <Input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              required
               placeholder="Enter your email"
               className="w-3/5 max-w-md bg-white text-neutral-600 rounded-tr-none rounded-br-none placeholder:text-neutral-400 ring-transparent"
             />
+            { isFullFormVisible && (
+              <>
+                <WaitlistForm 
+                    onSubmit={handleWaitListSubmit} 
+                    onError={handleError} 
+                    onSuccess={handleSuccess} 
+                />
+              </>
+            )}
             <Button
+              onClick={() => setIsFullFormVisible(!isFullFormVisible)}
               type="submit"
               name="submit"
               className="bg-primary px-8 rounded-tl-none rounded-bl-none border-2 border-primary-600 text-white hover:from-secondary-500 hover:to-secondary-300 transition-all duration-300"
             >
               Join
             </Button>
-            <Input
-              type="hidden"
-              name="ht"
-              value="ab98668c46e937ca88708b75f020675a7ff8df07:MTc1MDM5NTA5Ny41MDI4"
-            />
-            <Input type="hidden" name="mc_signupsource" value="hosted" />
-          </form>
+          </div>
 
           {/*
           <a href='#' className="flex items-center justify-center text-white rounded">

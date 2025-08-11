@@ -73,8 +73,9 @@ const Navbar = ({ scrolled }: NavbarProps) => {
             </Link>
           ))}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <Link to="/" className="border-gradient-r-primary text-secondary py-2 px-4 rounded-full text-sm font-medium">
-            Early Access
+          <Link to="/" className="button">
+          <div className="hoverEffect"></div>
+          EARLY ACCESS
           </Link> 
         </nav>
 

@@ -1,7 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer'
-import { LocaleSwitcher } from 'lingo.dev/react-client'
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -29,9 +28,7 @@ const Layout: FC<LayoutProps> = ({children}) => {
 
  return (
     <div className="min-h-screen bg-background">
-      <div className='z-50 fixed w-20 -ml-2 md:ml-0  px-3 py-2 text-sm -mr-2 font-regular leading-large text-primary ring-none'>
-        <LocaleSwitcher locales={["en", "fr"]} />
-      </div>
+
     <Navbar scrolled={scrolled} />
      {children}
     <Footer />

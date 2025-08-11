@@ -983,6 +983,46 @@
           "overrides": {},
           "content": "Join"
         },
+        "4/0/init/body/3/argument/11/1-alt": {
+          "type": "attribute",
+          "hash": "0f3efb8b4ec95b6c9375951a0c5e482e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Parapluie AI-Powered Scams Protection Mockup"
+        },
+        "4/0/init/body/3/argument/7/1/1": {
+          "type": "element",
+          "hash": "58e8d54e2a0936c5474022bf8dae573f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-Powered Protection for Senior Financial Safety"
+        },
+        "4/0/init/body/3/argument/7/3/1": {
+          "type": "element",
+          "hash": "95031052c3d4bd3bf9d06b5cd5209169",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "  Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing."
+        },
+        "4/0/init/body/3/argument/7/3/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "4/0/init/body/3/argument/7/3/3/7": {
+          "type": "element",
+          "hash": "b8bfaa7cd77c3fdc14a992343b915afe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Join"
+        },
         "5/0/init/body/2/argument/11/1-alt": {
           "type": "attribute",
           "hash": "0f3efb8b4ec95b6c9375951a0c5e482e",
@@ -1039,6 +1079,14 @@
           "overrides": {},
           "content": "Parapluie AI-Powered Scams Protection Mockup"
         },
+        "5/0/init/body/3/argument/13/1-alt": {
+          "type": "attribute",
+          "hash": "0f3efb8b4ec95b6c9375951a0c5e482e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Parapluie AI-Powered Scams Protection Mockup"
+        },
         "5/0/init/body/3/argument/3/1-alt": {
           "type": "attribute",
           "hash": "6c020b85ced763860d87cf4df83c8124",
@@ -1046,6 +1094,46 @@
           "skip": false,
           "overrides": {},
           "content": "parapluie-app-background-image"
+        },
+        "5/0/init/body/3/argument/5/1-alt": {
+          "type": "attribute",
+          "hash": "6c020b85ced763860d87cf4df83c8124",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "parapluie-app-background-image"
+        },
+        "5/0/init/body/3/argument/5/1/1": {
+          "type": "element",
+          "hash": "58e8d54e2a0936c5474022bf8dae573f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-Powered Protection for Senior Financial Safety"
+        },
+        "5/0/init/body/3/argument/5/3/1": {
+          "type": "element",
+          "hash": "95031052c3d4bd3bf9d06b5cd5209169",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "  Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing."
+        },
+        "5/0/init/body/3/argument/5/3/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "5/0/init/body/3/argument/5/3/3/7": {
+          "type": "element",
+          "hash": "b8bfaa7cd77c3fdc14a992343b915afe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Join"
         },
         "5/0/init/body/3/argument/7/1/1": {
           "type": "element",
@@ -1072,6 +1160,46 @@
           "content": "Enter your email"
         },
         "5/0/init/body/3/argument/7/3/3/7": {
+          "type": "element",
+          "hash": "b8bfaa7cd77c3fdc14a992343b915afe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Join"
+        },
+        "5/0/init/body/3/argument/9/1-alt": {
+          "type": "attribute",
+          "hash": "0f3efb8b4ec95b6c9375951a0c5e482e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Parapluie AI-Powered Scams Protection Mockup"
+        },
+        "5/0/init/body/3/argument/9/1/1": {
+          "type": "element",
+          "hash": "58e8d54e2a0936c5474022bf8dae573f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI-Powered Protection for Senior Financial Safety"
+        },
+        "5/0/init/body/3/argument/9/3/1": {
+          "type": "element",
+          "hash": "95031052c3d4bd3bf9d06b5cd5209169",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "  Join Parapluie Waitlist to get to use our App before anyone else and participate in the beta testing."
+        },
+        "5/0/init/body/3/argument/9/3/3/5-placeholder": {
+          "type": "attribute",
+          "hash": "39931962707c99b99a5a073ab579396b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enter your email"
+        },
+        "5/0/init/body/3/argument/9/3/3/7": {
           "type": "element",
           "hash": "b8bfaa7cd77c3fdc14a992343b915afe",
           "context": "",
@@ -1421,11 +1549,11 @@
         },
         "8/0/init/body/2/argument/1/5/5": {
           "type": "element",
-          "hash": "dda458d386e6b22a8eceee34b5997551",
+          "hash": "b89e35ef9864ec6eaa2455600be38975",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Early Access"
+          "content": "<element:div></element:div> EARLY ACCESS"
         }
       }
     },

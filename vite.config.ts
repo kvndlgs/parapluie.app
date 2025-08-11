@@ -2,9 +2,7 @@ import path from 'path';
 import react from '@vitejs/plugin-react';
 import generateSitemap from 'vite-plugin-pages-sitemap';
 import Pages from 'vite-plugin-pages';
-import { defineConfig } from 'vite';
 
-import lingoCompiler from 'lingo.dev/compiler';
 
 
 const viteConfig = {
@@ -31,15 +29,5 @@ const viteConfig = {
 };
 
 
-export default defineConfig(() =>
-  lingoCompiler.vite({
-    sourceLocale: "en",
-    targetLocales: ["fr", "en"],
-    lingoDir: "src", 
-    models: {
-      "*:*": "groq:mistral-saba-24b",
-    },
-  })(viteConfig)
-);
-
+export default viteConfig;
 
