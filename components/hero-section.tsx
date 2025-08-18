@@ -4,11 +4,15 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 // import { Input } from '@/components/ui/input';
 import WaitListForm from "./waitlist-form";
-import { WaitlistFormProps } from '@/types';
+//import { WaitlistFormProps } from '@/types';
 // import MobilePrototype from "./mobile-prototype";
 
-export function HeroSection({isFullFormVisible, setIsFullFormVisible}: WaitlistFormProps) {
-  const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
+type HeroProps = {
+  closeForm: () => void;
+}
+
+export function HeroSection({closeForm}: HeroProps) {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
@@ -16,11 +20,11 @@ export function HeroSection({isFullFormVisible, setIsFullFormVisible}: WaitlistF
           {/* Left side - Title and content */}
           <div className="space-y-8 lg:pr-8">
             <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-slate-900 dark:text-slate-100 leading-tight">
-                 AI Powered Protection for Senior Financial Safety
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight text-primary leading-tight">
+                 AI Protection for Senior Financial Safety
               </h1>
 
-              <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+              <p className="text-lg sm:text-xl text-foreground  max-w-2xl leading-relaxed">
                 Technology that protects our loved ones from financial
                 exploitation and scams. Simple, unobtrusive solutions designed
                 specifically for seniors.{" "}
@@ -37,7 +41,7 @@ export function HeroSection({isFullFormVisible, setIsFullFormVisible}: WaitlistF
               }
           
                 <div className="flex items-center justify-between gap-2">
-                 <Button onClick={() => setIsFormOpen(true)} className='border-2 border-b-6 bg-white text-primary'> Join Waitlist </Button>
+                 <Button onClick={() => setIsFormOpen(true)} className='border-2 border-b-6 border-primary py-6 px-7 font-bold text-md bg-white text-primary hover:bg-white hover:text-primary/90'> Join Waitlist </Button>
                  </div>
             
             </div>
