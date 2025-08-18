@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from '@/components/ui/input';
+// import { Input } from '@/components/ui/input';
 import WaitListForm from "./waitlist-form";
+import { WaitlistFormProps } from '@/types';
 // import MobilePrototype from "./mobile-prototype";
 
-export function HeroSection() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+export function HeroSection({isFullFormVisible, setIsFullFormVisible}: WaitlistFormProps) {
+  const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
@@ -36,11 +37,7 @@ export function HeroSection() {
               }
           
                 <div className="flex items-center justify-between gap-2">
-                 <Input 
-                  type="text"
-                  placeholder="Enter Your Name"
-                 />
-                 <Button onClick={() => setIsFormOpen(true)}> JOIN NOW </Button>
+                 <Button onClick={() => setIsFormOpen(true)} className='border-2 border-b-6 bg-white text-primary'> Join Waitlist </Button>
                  </div>
             
             </div>
@@ -48,11 +45,11 @@ export function HeroSection() {
             <div className="flex items-center space-x-8 text-sm text-slate-500 dark:text-slate-400">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>Soon on iOS & Android</span>
+                <span> Soon on iOS & Android </span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>Join Our Early Access program</span>
+                <span>Join Early Access program</span>
               </div>
             </div>
           </div>
