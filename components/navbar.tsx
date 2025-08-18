@@ -28,13 +28,13 @@
 
     return (
       <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-16 py-2 items-center justify-between max-w-9xl mx-auto">
+        <div className="container flex h-auto py-4 items-center justify-between w-full md:max-w-9xl md:mx-auto">
           {/* Logo */}
           <a href="/" className="hidden md:flex items-center justify-center">
-            <Logo className="w-30 h-auto fill-primary hover:fill-secondary"/>
+            <Logo className="w-40 h-auto fill-primary hover:fill-secondary"/>
           </a>
-          <a href="/" className="md:hidden flex items-center justify-center">
-           <LogoIcon className="w-12 h-auto fill-primary hover:fill-secondary" />
+          <a href="/" className="w-full md:hidden flex items-center justify-center">
+           <LogoIcon className="h-12 mr-4 fill-primary hover:fill-secondary" />
           </a>
 
           {/* Desktop Navigation */}
