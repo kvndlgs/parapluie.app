@@ -7,11 +7,7 @@ import WaitListForm from "./waitlist-form";
 //import { WaitlistFormProps } from '@/types';
 // import MobilePrototype from "./mobile-prototype";
 
-type HeroProps = {
-  closeForm: () => void;
-}
-
-export function HeroSection({closeForm}: HeroProps) {
+export function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
