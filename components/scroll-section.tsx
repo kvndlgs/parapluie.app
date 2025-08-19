@@ -25,7 +25,7 @@
       }
     })
 
-    return <primitive ref={meshRef} object={scene} scale={2} />
+    return <primitive ref={meshRef} object={scene} scale={3} />
   }
 
   // Scrolling Text Component using Framer Motion
@@ -41,7 +41,7 @@
     const { scrollYProgress } = useScroll()
     const translateX = useTransform(
       scrollYProgress, 
-      [0, 1], 
+      [0, 2], 
       direction === 'left' ? [250, -500] : [-250, 500]
     )
 
@@ -54,7 +54,7 @@
           {items.concat(items).map((item, index) => (
             <div
               key={index}
-              className="text-4xl md:text-6xl font-bold text-secondary dark:text-gray-700/30 select-none"
+              className="text-6xl md:text-9xl font-black  text-secondary dark:text-gray-700/30 select-none"
             >
               {item}
             </div>

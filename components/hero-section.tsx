@@ -2,10 +2,8 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-// import { Input } from '@/components/ui/input';
 import WaitListForm from "./waitlist-form";
-//import { WaitlistFormProps } from '@/types';
-// import MobilePrototype from "./mobile-prototype";
+
 
 export default function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
