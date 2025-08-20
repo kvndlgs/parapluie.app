@@ -5,16 +5,18 @@ import { Button } from "@/components/ui/button";
 import WaitListForm from "./waitlist-form";
 
 
+
 export default function HeroSection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left side - Title and content */}
           <div className="space-y-8 lg:pr-8">
             <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight text-primary leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-normal text-secondary-300 leading-18">
                  AI Protection for Senior Financial Safety
               </h1>
 
@@ -40,7 +42,7 @@ export default function HeroSection() {
             
             </div>
 
-            <div className="flex items-center space-x-8 text-sm text-slate-500 dark:text-slate-400">
+            <div className="flex items-center space-x-8 text-sm dark:text-slate-400">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span> Soon on iOS & Android </span>
@@ -53,7 +55,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right side - Mobile device mockup */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center md:justify-end">
             <div className="relative">
               {/* Mobile device frame */}
               <div className="relative w-80 h-[640px] bg-slate-900 rounded-[3rem] p-2 shadow-2xl">
@@ -64,17 +66,7 @@ export default function HeroSection() {
 
                   {/* Screen content placeholder */}
                   <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-700 dark:to-slate-600">
-                    <div className="text-center space-y-4 px-8">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl mx-auto"></div>
-                      <div className="space-y-2">
-                        <div className="h-4 bg-slate-300 dark:bg-slate-500 rounded-full"></div>
-                        <div className="h-3 bg-slate-200 dark:bg-slate-600 rounded-full w-3/4 mx-auto"></div>
-                        <div className="h-3 bg-slate-200 dark:bg-slate-600 rounded-full w-1/2 mx-auto"></div>
-                      </div>
-                      <div className="pt-4">
-                        <div className="h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl"></div>
-                      </div>
-                    </div>
+   
                   </div>
                   
 
@@ -92,8 +84,7 @@ export default function HeroSection() {
               </div>
 
               {/* Floating elements for visual appeal */}
-              <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-400 rounded-2xl opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-xl opacity-20 animate-pulse delay-1000"></div>
+
             </div>
           </div>
         </div>

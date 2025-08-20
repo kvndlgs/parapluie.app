@@ -85,7 +85,7 @@ export default function TestColorsPage() {
         <div className="bg-card text-card-foreground p-4 rounded-lg border border-border">
           <h3 className="font-semibold mb-2">Color Token Functions</h3>
           <ul className="text-sm space-y-1 font-mono">
-            <li>getColorToken('primary', '500'): {getColorToken('primary', '500')}</li>
+            <li>getColorToken('primary', '500'): {getColorToken('primary', 500)}</li>
             <li>getComponentToken('background'): {getComponentToken('background')}</li>
           </ul>
           

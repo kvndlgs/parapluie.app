@@ -54,7 +54,7 @@
           {items.concat(items).map((item, index) => (
             <div
               key={index}
-              className="text-6xl md:text-9xl font-black  text-secondary dark:text-gray-700/30 select-none"
+              className="text-6xl md:text-9xl font-bold  text-secondary-100  select-none"
             >
               {item}
             </div>
@@ -69,7 +69,7 @@
     const rightTexts = ['TOES', 'TITS', 'HECK', 'BALLS']
 
     return (
-      <section className="relative h-[200vh] bg-foreground dark:from-slate-900 dark:to-slate-800">
+      <section className="relative bg-gradient-to-b from-[#3A2E39ff] to-[#0e0b0e]  h-[200vh]">
         {/* 3D Model Canvas */}
         <div className="sticky top-0 h-screen">
           <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
