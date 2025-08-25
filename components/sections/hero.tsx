@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Umbrella, AppleIcon, BotIcon } from "lucide-react";
+import { Umbrella } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -8,11 +7,11 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
           <div className="space-y-6 md:space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-[ultraStandard] font-normal leadind-loose text-accent-foreground">
-              Handing Back Senior's <br />
+              Handing Back Seniors' <br />
               Online Peace of Mind
             </h1>
             <p className="text-lg font-sans font-normal md:text-xl leading-relaxed text-accent-foreground/70 max-w-lg">
-              Simple, Effortless Protection Against Today's Threats
+              Simple, Real-Time Protection Against Today's Threats.
             </p>
             <div className="flex items-center justify-start gap-4 mt-2">
               <button className="flex items-center gap-4 justify-between py-1 px-4 border-1 border-[#cecece] rounded-lg">

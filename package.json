@@ -2,6 +2,16 @@
   "name": "parapluie.app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://parapluie.app",
+  "author": {
+    "name": "Kevin Desloges",
+    "email": "hello@kvds.space",
+    "url": "https://github.com/kvndlgs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvndlgs/parapluie.app.git"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -36,6 +46,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.62.0",
+    "schema-dts": "^1.1.5",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "unzip": "^0.1.11",
