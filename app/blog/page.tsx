@@ -33,9 +33,9 @@ export default function BlogPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen bg-primary py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
+          <h1 className="text-4xl font-serif text-accent-foreground mb-8">Blog</h1>
           <div className="space-y-6">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="bg-white rounded-lg shadow-md p-6 animate-pulse">
@@ -54,9 +54,9 @@ export default function BlogPage() {
     return (
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
+          <h1 className="text-4xl font-serif text-accent-foreground mb-8">Blog</h1>
           <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-            <p className="text-red-600">Failed to load blog posts. Please try again later.</p>
+            <p className="text-red-600 font-sans">Failed to load blog posts. Please try again later.</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function BlogPage() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold text-gray-900">Blog</h1>
+          <h1 className="text-4xl font-serif text-accent-foreground">Blog</h1>
           <Link 
             href="/" 
             className="text-blue-600 hover:text-blue-800 font-medium"
@@ -80,28 +80,28 @@ export default function BlogPage() {
           {data?.posts.map((post) => (
             <article key={post.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-2">
+                <div className="flex items-center font-sans text-sm text-gray-500 mb-2">
                   <span>By {post.author}</span>
                   <span className="mx-2">•</span>
                   <time>{new Date(post.publishedAt).toLocaleDateString()}</time>
                 </div>
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-2xl font-serif font-normal text-accent-foreground mb-3">
                   <Link 
                     href={`/blog/${post.id}`}
-                    className="hover:text-blue-600 transition-colors duration-200"
+                    className="hover:text-accent-foreground/80 transition-colors duration-200"
                   >
                     {post.title}
                   </Link>
                 </h2>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 font-sans leading-relaxed">
                   {post.excerpt}
                 </p>
                 
                 <Link 
                   href={`/blog/${post.id}`}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                  className="inline-flex items-center text-accent-foreground font-sans font-medium"
                 >
                   Read more →
                 </Link>
