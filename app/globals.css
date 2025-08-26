@@ -4,6 +4,111 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-right-serif: 'PP Right Serif';
+  --font-watch: 'PPWatch';
+  
+  /* Type Scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* colors */
+  --crime-100: "oklch(90.81% 0.0483 3.653)";
+  --crime-200: "oklch(82.1% 0.1008 6.28)";
+  --crime-300: "oklch(74.47% 0.1535 8.915)";
+  --crime-400: "oklch(68.09% 0.2024 12.71)";
+  --crime-500: "oklch(62.58% 0.2448 20.46)";
+  --crime-600: "oklch(49.13% 0.1787 17.11)";
+  --crime-700: "oklch(44% 0.1583 16.66)";
+  --crime-800: "oklch(33.18% 0.1159 15.64)";
+  --crime-900: "oklch(21.6% 0.0674 12.27)";
+
+
+  --honey-100: "oklch(94.22% 0.0244 94.07)";
+  --honey-200: "oklch(88.61% 0.0499 95.9)";
+  --honey-300: "oklch(82.87% 0.0751 94.91)";
+  --honey-400: "oklch(77.29% 0.0979 95.57)";
+  --honey-500: "oklch(71.53% 0.1156 94.81)";
+  --honey-600: "oklch(60.87% 0.0974 95.11)";
+  --honey-700: "oklch(49.49% 0.0775 94.4)";
+  --honey-800: "oklch(37.56% 0.0557 95.88)";
+  --honey-900: "oklch(24.4% 0.0314 94.31)";
+
+
+  --grape-100: "oklch(92.12% 0.0086 325.6)";
+  --grape-200: "oklch(83.96% 0.02 328.3)";
+  --grape-300: "oklch(75.74% 0.0295 327.7)";
+  --grape-400: "oklch(67.21% 0.0423 328.7)";
+  --grape-500: "oklch(58.58% 0.0532 328.5)";
+  --grape-600: "oklch(49.95% 0.0455 329)";
+  --grape-700: "oklch(41.03% 0.0343 328.1)";
+  --grape-800: "oklch(31.49% 0.0255 328.9)";
+  --grape-900: "oklch(21.27% 0.0124 326)";
+
+
+  --cherry-100: "oklch(90.71% 0.0255 17.63)";
+  --cherry-200: "oklch(81.41% 0.0535 18.31)";
+  --cherry-300: "oklch(72.12% 0.0867 19.4)";
+  --cherry-400: "oklch(63.25% 0.1196 21)";
+  --cherry-500: "oklch(55.1% 0.1517 23.5)";
+  --cherry-600: "oklch(46.99% 0.1271 23.34)";
+  --cherry-700: "oklch(38.51% 0.1011 23.09)";
+  --cherry-800: "oklch(29.57% 0.0704 22.34)";
+  --cherry-900: "oklch(19.94% 0.039 21.18)";
+
+  --warm-100: "oklch(95.13% 0.0303 109)";
+  --warm-200: "oklch(90.35% 0.0603 108.6)";
+  --warm-300: "oklch(85.73% 0.0918 110.2)";
+  --warm-400: "oklch(81.04% 0.1178 110.4)";
+  --warm-500: "oklch(76.34% 0.1385 111.1)";
+  --warm-600: "oklch(64.85% 0.1164 111)";
+  --warm-700: "oklch(52.74% 0.0934 111.5)";
+  --warm-800: "oklch(39.73% 0.0662 110.2)";
+  --warm-900: "oklch(25.7% 0.0383 111)";
+
+  --money-100: "oklch(93.55% 0.037 147.7)";
+  --money-200: "oklch(87.2% 0.0757 146.6)";
+  --money-300: "oklch(81.24% 0.1153 146.5)";
+  --money-400: "oklch(75.37% 0.1516 145.4)";
+  --money-500: "oklch(69.92% 0.1816 144.6)";
+  --money-600: "oklch(59.42% 0.1527 144.6)";
+  --money-700: "oklch(48.45% 0.1214 144.9)";
+  --money-800: "oklch(36.55% 0.0868 144.7)";
+  --money-900: "oklch(23.9% 0.0489 145.6)";
+
+  --background: var(--grape-100);
+  --foreground: var(--grape-600);
+  --card: var(--grape-100);
+  --card-foreground: var(--grape-800);
+  --primary: var(--crime-500);
+  --primary-foreground: var(--crime-100);
+  --secondary: var(--honey-500);
+  --secondary-foreground: var(--color-grape-100);
+  --accent: var(--grape-100);
+  --accent-foreground: var(--grape-700);
+
+  --destructive: var(--cherry-500);
+  --destructive-foreground: var(--cherry-100);
+  --border: var(--grape-200);
+  --input: var(--crime-300);
+
+
+  /*
+  
   --background: oklch(1.0000 0 0);
   --foreground: oklch(0.3188 0.0255 328.8649);
   --card: oklch(0.9662 0.0034 325.6031);
@@ -36,8 +141,8 @@
   --sidebar-accent-foreground: oklch(0.9662 0.0034 325.6031);
   --sidebar-border: oklch(0.8863 0.0059 333.9903);
   --sidebar-ring: oklch(0.4338 0.0359 327.9572);
-  --font-sans: standard, sans-serif, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: ultraFine, serif;
+  --font-sans: sans-serif, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: serif;
   --font-mono: monospace;
   --radius: 0.5rem;
   --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
@@ -50,6 +155,7 @@
   --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  */
 }
 
 .dark {
@@ -85,7 +191,7 @@
   --sidebar-accent-foreground: oklch(0.2448 0.0201 329.8522);
   --sidebar-border: oklch(0.3188 0.0255 328.8649);
   --sidebar-ring: oklch(0.8422 0.0288 327.6269);
-  --font-sans: Gantari, ui-sans-serif, sans-serif, system-ui;
+  --font-sans:  ui-sans-serif, sans-serif, system-ui;
   --font-serif: serif;
   --font-mono: monospace;
   --radius: 0.5rem;
@@ -100,6 +206,77 @@
 }
 
 @theme inline {
+
+  --grape-100: var(--grape-100);
+  --grape-200: var(--grape-200);
+  --grape-300: var(--grape-300);
+  --grape-400: var(--grape-400);
+  --grape-500: var(--grape-500);
+  --grape-600: var(--grape-600);
+  --grape-700: var(--grape-700);
+  --grape-800: var(--grape-800);
+  --grape-900: var(--grape-900);
+
+  --crime-100: var(--crime-100);
+  --crime-200: var(--crime-200);
+  --crime-300: var(--crime-300);
+  --crime-400: var(--crime-400);
+  --crime-500: var(--crime-500);
+  --crime-600: var(--crime-600);
+  --crime-700: var(--crime-700);
+  --crime-800: var(--crime-800);
+  --crime-900: var(--crime-900);
+
+  --honey-100: var(--honey-100);
+  --honey-200: var(--honey-200);
+  --honey-300: var(--honey-300);
+  --honey-400: var(--honey-400);
+  --honey-500: var(--honey-500);
+  --honey-600: var(--honey-600);
+  --honey-700: var(--honey-700);
+  --honey-800: var(--honey-800);
+  --honey-900: var(--honey-900);
+
+  --warm-100: var(--warm-100);
+  --warm-200: var(--warm-200);
+  --warm-300: var(--warm-300);
+  --warm-400: var(--warm-400);
+  --warm-500: var(--warm-500);
+  --warm-600: var(--warm-600);
+  --warm-700: var(--warm-700);
+  --warm-800: var(--warm-800);
+  --warm-900: var(--warm-900);
+
+  --money-100: var(--money-100);
+  --money-200: var(--money-200);
+  --money-300: var(--money-300);
+  --money-400: var(--money-400);
+  --money-500: var(--money-500);
+  --money-600: var(--money-600);
+  --money-700: var(--money-700);
+  --money-800: var(--money-800);
+  --money-900: var(--money-900);
+
+  --font-right-serif: var(--font-right-serif);
+  --font-watch: var(--font-watch);
+  
+  --font-size-xs: var(--font-size-xs);
+  --font-size-sm: var(--font-size-sm);
+  --font-size-base: var(--font-size-base);
+  --font-size-lg: var(--font-size-lg);
+  --font-size-xl: var(--font-size-xl);
+  --font-size-2xl: var(--font-size-2xl);
+  --font-size-3xl: var(--font-size-3xl);
+  --font-size-4xl: var(--font-size-4xl);
+  --font-size-5xl: var(--font-size-5xl);
+  --font-size-6xl: var(--font-size-6xl);
+  
+  --line-height-tight: var(--line-height-tight);
+  --line-height-snug: var(--line-height-snug);
+  --line-height-normal: var(--line-height-normal);
+  --line-height-relaxed: var(--line-height-relaxed);
+  --line-height-loose: var(--line-height-loose);
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

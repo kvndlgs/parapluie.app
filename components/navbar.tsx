@@ -30,7 +30,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "Features",
-    href: "#features"
+    href: "#features",
   },
   {
     label: "Subscriptions",
@@ -40,7 +40,7 @@ const navItems: NavItem[] = [
     label: "Blog",
     href: "/blog",
     dropdown: [
-      { label: 'Articles', href: '/blog'},
+      { label: "Articles", href: "/blog" },
       { label: "Latest Articles", href: "/blog/latest" },
       { label: "Most Read", href: "/blog/most-read" },
     ],
@@ -71,9 +71,11 @@ const DesktopDropdown = ({
         onClick={onToggle}
         onMouseEnter={onToggle}
       >
-        <span>{item.label}</span>
+        <span className="font-watch font-medium text-primary">
+          {item.label}
+        </span>
         <ChevronDown
-          className={`w-4 h-4 transition-transform duration-200 ${
+          className={`w-4 h-4 text-primary transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -92,7 +94,7 @@ const DesktopDropdown = ({
             <a
               key={dropdownItem.label}
               href={dropdownItem.href}
-              className="block px-4 py-2 rounded-b-l-md font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
+              className="block px-4 py-2 font-watch font-medium text-sm text-primary hover:text-crime-500 transition-all"
               onClick={onClose}
             >
               {dropdownItem.label}
@@ -112,7 +114,7 @@ const DesktopNavLink = ({ item }: DesktopNavLinkProps) => {
   return (
     <a
       href={item.href}
-      className="px-3 py-4 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
+      className="px-3 py-4 font-watch font-medium text-sm text-primary hover:text-crime-500 transition-all"
     >
       {item.label}
     </a>
@@ -140,9 +142,12 @@ const MobileDropdown = ({
         onClick={() => onToggle(index)}
         className="flex items-center justify-between w-full px-3 py-3 text-base text-accent-foreground hover:text-accent-foreground/90 transition-all"
       >
-        <span className="font-sans"> {item.label}</span>
+        <span className="font-watch font-medium text-primary">
+          {" "}
+          {item.label}
+        </span>
         <ChevronDown
-          className={`w-4 h-4 transition-transform duration-200 ${
+          className={`w-4 h-4 text-primary transition-transform duration-200 ${
             activeDropdown === index ? "rotate-180" : ""
           }`}
         />
@@ -161,7 +166,7 @@ const MobileDropdown = ({
               key={dropdownItem.label}
               href={dropdownItem.href}
               onClick={onLinkClick}
-              className=" block px-3 py-2 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
+              className=" block px-3 py-2 font-watch font-medium text-sm text-primary hover:text-crime-500 transition-all"
             >
               {dropdownItem.label}
             </a>
@@ -181,7 +186,7 @@ const MobileNavLink = ({ item, onLinkClick }: MobileNavLinkProps) => {
   return (
     <a
       href={item.href}
-      className="px-3 py-2 font-sans text-sm text-accent-foreground hover:text-accent-foreground/80 transition-all rounded-md hover:bg-slate-100"
+      className="px-3 py-2 font-watch font-medium text-sm text-primary hover:text-crime-500 transition-all rounded-md hover:bg-slate-100"
     >
       {item.label}
     </a>
@@ -190,27 +195,27 @@ const MobileNavLink = ({ item, onLinkClick }: MobileNavLinkProps) => {
 
 interface LogoProps {
   className?: string;
+  fill?: string;
 }
 
-const Logo = ({ className }: LogoProps) => {
+
+const Logo = ({ className, fill }: LogoProps) => {
   return (
-    <a href="/" className={`flex items-center space-x-2 ${className}`}>
+    <a href="/" className={`flex items-center space-x-2`}>
       <svg
-        width="29"
-        height="38"
-        viewBox="0 0 29 38"
-        fill="none"
+        width="35"
+        height="48"
+        viewBox="0 0 35 48"
         xmlns="http://www.w3.org/2000/svg"
+        className={className ? className : ""}
       >
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M17.0136 29.9107C17.2311 29.8579 17.4479 29.7922 17.6629 29.7133C17.7457 29.6828 17.8276 29.6505 17.9083 29.6168L18.5115 31.2574C18.5784 31.2192 18.6439 31.182 18.7098 31.1548C18.7671 31.1313 18.8326 31.1582 18.8568 31.2146L18.8589 31.2203L20.1249 34.6629L20.1339 34.6875L20.1351 34.6902L20.1366 34.6945L20.1396 34.7022L20.1538 34.7371L20.1685 34.7708C20.4781 35.4573 21.2712 35.7975 21.9895 35.5337C22.7409 35.2576 23.1262 34.4249 22.8501 33.6738C22.7538 33.4119 22.5902 33.1949 22.3863 33.0348C22.3682 33.0206 22.3498 33.007 22.3312 32.9938L22.3119 32.9802C22.3006 32.9724 22.2894 32.9649 22.2784 32.9578C22.2682 32.9512 22.2578 32.9446 22.2471 32.9381C22.2384 32.9328 22.2292 32.9273 22.2199 32.9219L22.2195 32.9217C22.2145 32.9188 22.2093 32.9158 22.202 32.9117L22.2004 32.9108L22.2 32.9106L22.1997 32.9103L22.1981 32.9094L22.1976 32.9092L22.1973 32.909L22.1967 32.9086L22.1964 32.9084L22.1933 32.9065L22.191 32.9052L22.1859 32.9017L22.1853 32.9016L22.1833 32.9001L22.183 32.9C21.9501 32.7426 21.794 32.5476 21.7428 32.3238C21.6908 32.0959 21.7587 31.8853 21.8812 31.7284C22.1014 31.4466 22.5337 31.2946 22.9179 31.462L22.9362 31.4703L22.9368 31.4706L22.9537 31.4786L22.954 31.4788L22.9544 31.4789L22.9569 31.4802L22.9583 31.481L22.9653 31.4845L22.9702 31.4868L22.9729 31.4883L22.9787 31.4916C23.5998 31.8359 24.1055 32.3967 24.3697 33.1153C24.9544 34.7055 24.1388 36.4683 22.5481 37.0527C20.9703 37.6324 19.2226 36.8353 18.6236 35.2706L18.6232 35.2696L17.3317 31.7574C17.309 31.6957 17.3437 31.628 17.4065 31.6099L17.4107 31.6087L17.415 31.6079C17.4929 31.595 17.5614 31.5834 17.6244 31.5718L17.0136 29.9107ZM22.7924 33.3809L22.7786 33.3585C22.7768 33.3558 22.7749 33.3531 22.7732 33.3504C22.7797 33.3604 22.7862 33.3706 22.7924 33.3809ZM17.4012 31.7275L17.4024 31.7315C17.4015 31.729 17.4008 31.7264 17.4004 31.7239C17.4006 31.7251 17.4008 31.7263 17.4012 31.7275Z"
-          fill="#392D38"
+          d="M20.5015 38.5021C20.7789 38.4337 21.0552 38.3483 21.3294 38.2462C21.4352 38.2067 21.54 38.1646 21.6429 38.121L22.4134 40.2467C22.4989 40.1972 22.5829 40.1491 22.6671 40.114C22.7403 40.0835 22.8233 40.1185 22.8542 40.1916L22.8568 40.1988L24.4741 44.659L24.4924 44.7101L24.5295 44.7987C24.925 45.688 25.9379 46.1291 26.8551 45.7874C27.8146 45.4297 28.3059 44.3501 27.9532 43.3769C27.8303 43.0379 27.622 42.7565 27.3616 42.5491C27.3387 42.5309 27.3148 42.5141 27.2912 42.497L27.2674 42.4789C27.2529 42.4688 27.2377 42.4585 27.2236 42.4493C27.2107 42.4408 27.1974 42.4319 27.1839 42.4236C27.1728 42.4167 27.1604 42.4099 27.1486 42.4029C27.1425 42.3993 27.1356 42.3947 27.1265 42.3895L27.1238 42.3892L27.1197 42.3853L27.1117 42.3815L27.1061 42.3769L27.1029 42.3754C26.8055 42.1715 26.6056 41.9183 26.5403 41.6285C26.4738 41.3332 26.5596 41.0599 26.716 40.8567C26.9971 40.4916 27.5497 40.295 28.0402 40.5117L28.0638 40.5219L28.0866 40.5337L28.0898 40.5352L28.0918 40.5371L28.101 40.5405L28.103 40.5424L28.1074 40.5435L28.111 40.5462L28.1178 40.5504C28.9108 40.9964 29.5567 41.7227 29.8942 42.6534C30.6407 44.7134 29.5998 46.9976 27.5689 47.7549C25.5542 48.5059 23.3224 47.4732 22.5574 45.4462L20.9072 40.8944C20.8783 40.8146 20.9228 40.7264 21.003 40.7029L21.0081 40.7023L21.0128 40.7006C21.1123 40.6838 21.2009 40.669 21.2814 40.6539L20.5015 38.5021Z"
+          fill={fill ? fill : "none"}
         />
         <path
-          d="M6.82856 0.202514C6.91305 0.171352 7.00735 0.210924 7.04435 0.293026L7.60222 1.53109L7.99389 1.67016C17.0627 3.72618 24.789 9.91717 28.102 18.9269C28.1883 19.1615 28.271 19.3966 28.3502 19.6322C28.402 19.7859 28.336 19.9542 28.1955 20.0354C25.1222 21.8127 22.4729 24.1108 20.3206 26.7717L19.727 27.5313C19.6795 27.5943 19.6323 27.6576 19.5854 27.7209C19.0454 28.4074 18.3145 28.9576 17.4343 29.281C16.5607 29.6019 15.6542 29.6574 14.8035 29.4885C14.703 29.4647 14.6023 29.4413 14.5016 29.4185L13.5878 29.2274C10.2259 28.5812 6.71856 28.5329 3.22428 29.1555C3.0647 29.1839 2.86933 28.9973 2.80949 28.8467C2.72401 28.6316 2.67778 28.5155 2.59744 28.297C-0.718409 19.2795 1.1637 9.55184 6.75289 2.11229L6.92611 1.76944L6.55152 0.474426C6.52653 0.388029 6.57261 0.297 6.657 0.265877L6.82856 0.202514Z"
-          fill="#392D38"
+          d="M7.49569 0.0135996C7.60349 -0.0265412 7.72428 0.0249808 7.77147 0.131238L8.48337 1.7346L8.98335 1.91487C20.5638 4.57849 30.4302 12.5995 34.6607 24.2721C34.7708 24.5758 34.8765 24.8802 34.9776 25.1852C35.0436 25.3842 34.9593 25.6024 34.7802 25.7078C30.8559 28.0102 27.4726 30.9882 24.7243 34.4355L23.9653 35.42C23.9049 35.5012 23.8447 35.5827 23.7849 35.6644C23.0955 36.5538 22.1621 37.2669 21.0382 37.6858C19.9227 38.1016 18.7652 38.1743 17.6789 37.9555C17.5506 37.9246 17.4221 37.8945 17.2934 37.8649L16.1268 37.6171C11.8339 36.78 7.35494 36.7167 2.89301 37.5233C2.68923 37.5601 2.43986 37.3188 2.36345 37.1237C2.25432 36.845 2.1947 36.6948 2.09218 36.4119C-2.14196 24.7294 0.261482 12.1263 7.39857 2.48796L7.62018 2.04392L7.14183 0.366443C7.10996 0.254668 7.16832 0.136629 7.27579 0.0961484L7.49569 0.0135996Z"
+          fill={fill ? fill : "none"}
         />
       </svg>
     </a>
@@ -226,7 +231,7 @@ const MobileMenuToggle = ({ isOpen, onToggle }: MobileMenuToggleProps) => {
   return (
     <button
       onClick={onToggle}
-      className="lg:hidden p-2 rounded-md font-sans text-accent-foreground hover:text-accent-foreground/90  transition-all"
+      className="lg:hidden p-2 rounded-md font-watch font-medium text-primary hover:text-crime-500  transition-all"
       aria-label="Toggle mobile menu"
       aria-expanded={isOpen}
     >
@@ -316,17 +321,16 @@ export default function Navbar({ className = "" }: NavbarProps) {
     <>
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 bg-white/80 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-background backdrop-blur-md border-b border-accent-foreground/5"
+            ? "bg-background backdrop-blur-md"
             : "bg-background/80 backdrop-blur-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* logo */}
-            <Logo />
-
+             <Logo className="path:fill-pink-500" />
             {/* desktop navigation */}
             <div className="hidden lg:flex items-center space-x-1">
               {navItems.map((item, index) => (
@@ -354,13 +358,13 @@ export default function Navbar({ className = "" }: NavbarProps) {
         </div>
         {/* mobile navigation */}
         <div
-          className={`lg:hidden fixed left-0 right-0 bg-white border-b border-accent-foreground shadow-lg transition-all duration-300 ease-out ${
+          className={`lg:hidden fixed left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-out ${
             isMobileMenuOpen
               ? "top-16 opacity-100 visibile"
               : "top-12 opacity-0 invisible"
           }`}
         >
-          <div className="max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="max-h-[calc(100vh-4rem)] overflow-y-auto bg-accent">
             {navItems.map((item, index) => (
               <div key={item.label}>
                 {item.dropdown ? (

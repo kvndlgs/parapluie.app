@@ -4,7 +4,7 @@ const iconPlaceholder = "/umbrella.png";
 const features = [
   {
     icon: iconPlaceholder,
-    title: "Voice Anylisis",
+    title: "Advanced Voice Anylisis",
     points: [
       {
         subtitle: "Detect Manipulation",
@@ -72,16 +72,16 @@ const features = [
 
 export const Features = () => {
   return (
-    <section id="features" className="bg-gradient-to-t from-white to-accent-foreground/20 py-16 md:py-32 dark:bg-transparent">
+    <section id="features" className="py-16 md:py-32 dark:bg-transparent">
       <div className="@container mx-auto max-w-6xl px-6">
         <div className="text-center lg:pb-14 pb-8">
-          <h2 className="text-balance text-4xl font-[ultraStandard] font-normal lg:text-5xl">
+          <h2 className="text-balance text-4xl font-right-serif font-medium lg:text-5xl">
             Some Features And Shit
           </h2>
         </div>
         <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
           {features.map((feature, index) => (
-            <FeatureCard key={feature.title} item={feature} />
+            <FeatureCard key={index} item={feature} />
           ))}
         </div>
       </div>
