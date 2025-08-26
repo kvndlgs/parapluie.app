@@ -1,8 +1,9 @@
-import { FeatureCard } from '@/components/feature-card';
+import { FeatureCard } from "@/components/feature-card";
+const iconPlaceholder = "/umbrella.png";
 
 const features = [
   {
-    icon: "",
+    icon: iconPlaceholder,
     title: "Voice Anylisis",
     points: [
       {
@@ -23,40 +24,46 @@ const features = [
     ],
     cta: "Learn More",
   },
-    {
-    icon: "",
+  {
+    icon: iconPlaceholder,
     title: "Digital Document Protection",
     points: [
       {
         subtitle: "Scam Language Detection",
-        description: "Analyzes emails, texts, and documents for common scam language patterns.",
+        description:
+          "Analyzes emails, texts, and documents for common scam language patterns.",
       },
       {
         subtitle: "Visual Verification",
-        description: "Identifies fake logos, doctored documents, and suspicious links.",
+        description:
+          "Identifies fake logos, doctored documents, and suspicious links.",
       },
       {
         subtitle: "Simplifies Complex Terms",
-        description: "Translates complicated financial and legal jargon into understandable language.",
+        description:
+          "Translates complicated financial and legal jargon into understandable language.",
       },
     ],
     cta: "Learn More",
   },
-      {
-    icon: "",
+  {
+    icon: iconPlaceholder,
     title: "Smart Behavioral Protection",
     points: [
       {
         subtitle: "Pattern Recognition",
-        description: "System learns normal usage and financial patterns. It identifies unusual deviations that might indicate fraud.",
+        description:
+          "System learns normal usage and financial patterns. It identifies unusual deviations that might indicate fraud.",
       },
       {
         subtitle: "Emotional Analysis",
-        description: "Recognizes signs of duress or confusion. Helps prevent decisions made under pressure or cognitive strain.",
+        description:
+          "Recognizes signs of duress or confusion. Helps prevent decisions made under pressure or cognitive strain.",
       },
       {
         subtitle: "Adaptive Security",
-        description: "Increases protections automatically during vulnerable times. Extra safeguards activate during late-night hours.",
+        description:
+          "Increases protections automatically during vulnerable times. Extra safeguards activate during late-night hours.",
       },
     ],
     cta: "Learn More",
@@ -64,19 +71,20 @@ const features = [
 ];
 
 export const Features = () => {
-    return (
-        <section id="features" className="w-screen h-auto bg-gradient-to-t from-accent-foreground/40 via-accent-foreground/30 to-accent-foreground/20 flex flex-col items-between">
-            <div className="w-full h-auto flex items-center justify-center">
-                <h1 className="text-8xl md:text-4xl sm:text-2xl text-white font-[ultraStandard] font-normal py-18"> What Can Parapluie Do ? </h1>
-            </div>
-            <div className="w-full h-auto flex items-center justify-center py-18">
-                { features.map((feature, index) => (
-                    <FeatureCard
-                      key={feature.title}
-                      item={feature}
-                    />
-                ))}
-          </div>
-        </section>
-    )
-}
+  return (
+    <section id="features" className="bg-gradient-to-t from-white to-accent-foreground/20 py-16 md:py-32 dark:bg-transparent">
+      <div className="@container mx-auto max-w-6xl px-6">
+        <div className="text-center lg:pb-14 pb-8">
+          <h2 className="text-balance text-4xl font-[ultraStandard] font-normal lg:text-5xl">
+            Some Features And Shit
+          </h2>
+        </div>
+        <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
+          {features.map((feature, index) => (
+            <FeatureCard key={feature.title} item={feature} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};

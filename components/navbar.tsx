@@ -30,12 +30,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "Features",
-    href: "#features",
-    dropdown: [
-      { label: "AI Powered", href: "#ai-feature" },
-      { label: "Health Integration", href: "#health" },
-      { label: "Highly Customizable", href: "#custom" },
-    ],
+    href: "#features"
   },
   {
     label: "Subscriptions",
@@ -72,7 +67,7 @@ const DesktopDropdown = ({
   return (
     <div className="relative">
       <button
-        className="flex items-center space-x-1 px-3 py-2 text-sm text-accent-foreground-600 hover:text-accent-foreground/90 transition-colors rounded-md hover:bg-slate-100"
+        className="flex items-center space-x-1 px-3 py-2 text-sm text-accent-foreground-600 hover:text-accent-foreground/90 transition-colors rounded-md hover:bg-muted"
         onClick={onToggle}
         onMouseEnter={onToggle}
       >
@@ -85,19 +80,19 @@ const DesktopDropdown = ({
       </button>
 
       <div
-        className={`absolute top-full left-0 mt-1 w-48 rounded-lg shadow-lg border border-accent-foreground transition-all duration-200 transform ${
+        className={`absolute top-full left-0 mt-1 w-48 rounded-b-lg shadow-md transition-all duration-200 transform ${
           isOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible translate-y-1"
         } `}
         onMouseLeave={onClose}
       >
-        <div className="py-2">
+        <div className="py-2 bg-white">
           {item.dropdown?.map((dropdownItem) => (
             <a
               key={dropdownItem.label}
               href={dropdownItem.href}
-              className="block px-4 py-2 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 hover:bg-slate-50 transition-colors"
+              className="block px-4 py-2 rounded-b-l-md font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
               onClick={onClose}
             >
               {dropdownItem.label}
@@ -117,7 +112,7 @@ const DesktopNavLink = ({ item }: DesktopNavLinkProps) => {
   return (
     <a
       href={item.href}
-      className="px-3 py-2 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
+      className="px-3 py-4 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
     >
       {item.label}
     </a>
@@ -143,7 +138,7 @@ const MobileDropdown = ({
     <div className="space-y-1">
       <button
         onClick={() => onToggle(index)}
-        className="flex items-center justify-between w-full px-3 py-3 text-base text-accent-foreground hover:text-accent=foreground/90 transition-all"
+        className="flex items-center justify-between w-full px-3 py-3 text-base text-accent-foreground hover:text-accent-foreground/90 transition-all"
       >
         <span className="font-sans"> {item.label}</span>
         <ChevronDown
@@ -166,7 +161,7 @@ const MobileDropdown = ({
               key={dropdownItem.label}
               href={dropdownItem.href}
               onClick={onLinkClick}
-              className="block px-3 py-2 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
+              className=" block px-3 py-2 font-sans text-sm text-accent-foreground hover:text-accent-foreground/90 transition-all"
             >
               {dropdownItem.label}
             </a>
@@ -323,7 +318,7 @@ export default function Navbar({ className = "" }: NavbarProps) {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-background backdrop-blur-md border-b border-accent-foreground"
+            ? "bg-background backdrop-blur-md border-b border-accent-foreground/5"
             : "bg-background/80 backdrop-blur-sm"
         }`}
       >
