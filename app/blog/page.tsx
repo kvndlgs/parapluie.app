@@ -35,7 +35,7 @@ export default function BlogPage() {
     return (
       <div className="min-h-screen bg-primary py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-serif text-accent-foreground mb-8">Blog</h1>
+          <h1 className="text-4xl font-right-serif font-medium text-accent-foreground mb-8">Blog</h1>
           <div className="space-y-6">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="bg-white rounded-lg shadow-md p-6 animate-pulse">
@@ -52,11 +52,11 @@ export default function BlogPage() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen bg-primary-50 py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-serif text-accent-foreground mb-8">Blog</h1>
+          <h1 className="text-4xl font-right-serif font-medium text-accent-foreground mb-8">Blog</h1>
           <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-            <p className="text-red-600 font-sans">Failed to load blog posts. Please try again later.</p>
+            <p className="text-red-600 font-watch font-medium">Failed to load blog posts. Please try again later.</p>
           </div>
         </div>
       </div>

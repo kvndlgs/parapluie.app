@@ -329,8 +329,8 @@ export default function Navbar({ className = "" }: NavbarProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* logo */}
-             <Logo className="path:fill-pink-500" />
+  
+             <Logo className="fill-primary-800" />
             {/* desktop navigation */}
             <div className="hidden lg:flex items-center space-x-1">
               {navItems.map((item, index) => (
