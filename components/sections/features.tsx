@@ -1,9 +1,10 @@
 import { FeatureCard } from "@/components/feature-card";
-const iconPlaceholder = "/umbrella.png";
+import { Umbrella } from 'lucide-react';
+// const iconPlaceholder = "/umbrella.png";
 
 const features = [
   {
-    icon: iconPlaceholder,
+    icon: <Umbrella className="w-12 h-12" />,
     title: "Advanced Voice Anylisis",
     points: [
       {
@@ -25,7 +26,7 @@ const features = [
     cta: "Learn More",
   },
   {
-    icon: iconPlaceholder,
+    icon: <Umbrella className="w-12 h-12" />,
     title: "Digital Document Protection",
     points: [
       {
@@ -46,40 +47,19 @@ const features = [
     ],
     cta: "Learn More",
   },
-  {
-    icon: iconPlaceholder,
-    title: "Smart Behavioral Protection",
-    points: [
-      {
-        subtitle: "Pattern Recognition",
-        description:
-          "System learns normal usage and financial patterns. It identifies unusual deviations that might indicate fraud.",
-      },
-      {
-        subtitle: "Emotional Analysis",
-        description:
-          "Recognizes signs of duress or confusion. Helps prevent decisions made under pressure or cognitive strain.",
-      },
-      {
-        subtitle: "Adaptive Security",
-        description:
-          "Increases protections automatically during vulnerable times. Extra safeguards activate during late-night hours.",
-      },
-    ],
-    cta: "Learn More",
-  },
+  
 ];
 
 export const Features = () => {
   return (
-    <section id="features" className="py-16 md:py-32 dark:bg-transparent">
+    <section id="features" className="bg-gradient-to-t from-white via-crime-50 to-crime-50/90 py-16 md:py-32">
       <div className="@container mx-auto max-w-6xl px-6">
         <div className="text-center lg:pb-14 pb-8">
           <h2 className="text-balance text-4xl font-right-serif font-medium lg:text-5xl">
             Some Features And Shit
           </h2>
         </div>
-        <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
+        <div className="@min-4xl:max-w-full @min-4xl:grid-cols-2 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
           {features.map((feature, index) => (
             <FeatureCard key={index} item={feature} />
           ))}

@@ -130,10 +130,12 @@ export default function RootLayout({
         />
       </head>
       <html lang="en">
-        <body className={`${watchSans.variable} ${rightSerif.variable} antialiase`}>
+        <body className={`bg-crime-50/90 py-2 px-3.5 md:py-[22px] md:px-[44px] ${watchSans.variable} ${rightSerif.variable} antialiase`}>
           <Providers>
+
             <Navbar />
             {children}
+       
           </Providers>
         </body>
       </html>

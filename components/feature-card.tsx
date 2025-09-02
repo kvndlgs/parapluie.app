@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Umbrella } from "lucide-react";
 
 interface FeatureItem {
-  icon: string;
+  icon: React.ReactElement;
   title: string;
   description?: string;
   points: {
@@ -20,29 +20,29 @@ interface Feature {
 
 export const FeatureCard = ({ item }: Feature) => {
   return (
-    <>
-      <Card>
-        <CardHeader className="pb-1">
+ 
+      <Card className="p-4 bg-white">
+        <CardHeader>
           <div className="flex items-center justify-center py-8">
-            <img src={item.icon} alt={item.title} className="w-20" />
+             {item.icon}
           </div>
 
-          <h2 className="mt-6 pb-10 font-right-serif text-3xl font-medium text-chart-4">
+          <h2 className="mt-4 pb-4 font-serif text-3xl font-[400] text-chart-4">
             {item.title}
           </h2>
         </CardHeader>
-        <CardContent className="flex flex-col items-stretch justify-between">
-          <p className="text-sm text-start font-watch font-medium">
+        <CardContent className="flex flex-col justify-between">
+          <p className="text-sm text-start font-watch font-bold">
             {item.description}
           </p>
-          <ul className="flex flex-col gap-8 min-h-110">
+          <ul className="flex flex-col gap-4">
             {item.points.map((point, i) => (
               <li
                 key={i}
                 className="flex items-center text-sm text-muted-foreground"
               >
-                <CheckCircle className="w-4 h-4 text-accent-secondary mr-3 flex-shrink-0" />
-                <div className="font-watch font-medium text-foreground text-start pb-2">
+                <CheckCircle className="w-4 h-4 text-muted not-[]:mr-3 flex-shrink-0" />
+                <div className="font-sans font-[600] text-foreground text-start pb-2">
                   <div>{point.subtitle}</div>
                   <div>{point.description}</div>
                 </div>
@@ -50,10 +50,10 @@ export const FeatureCard = ({ item }: Feature) => {
             ))}
           </ul>
           {item.cta && (
-            <div className="mt-12 pt-4 border-t border-border">
+            <div className="p-4 mt-2 self-end">
               <Button
                 variant="ghost"
-                className="text-primary font-watch font-medium hover:text-primary/80 p-0 h-auto"
+                className="text-crime-500 font-sans font-[600] hover:text-primary/80 p-0 h-auto"
               >
                 {item.cta} <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -61,6 +61,5 @@ export const FeatureCard = ({ item }: Feature) => {
           )}
         </CardContent>
       </Card>
-    </>
   );
 };
