@@ -113,6 +113,15 @@ export const viewport: Viewport = {
   themeColor: "",
 };
 
+const ComingSoon = () => {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white">
+      <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+      <p className="text-lg text-gray-600">We're working hard to bring you something amazing. Stay tuned!</p>
+    </div>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -132,10 +141,10 @@ export default function RootLayout({
       <html lang="en">
         <body className={`bg-crime-50/90 py-2 px-3.5 md:py-[22px] md:px-[44px] ${watchSans.variable} ${rightSerif.variable} antialiase`}>
           <Providers>
-
+{/*
             <Navbar />
             {children}
-       
+  */     }      <ComingSoon />
           </Providers>
         </body>
       </html>
