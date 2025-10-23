@@ -1,53 +1,57 @@
 "use client";
 import Logo from "./Logo";
-
 import { useState } from "react";
-import Wordmark from "./wordmark";
+
+interface LinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+const MobileLink = ({ href, children }: LinkProps) => (
+  <a
+    href={href}
+    className="flex items-center py-5 px-6 w-full hover:text-primary-300 text-poop-500 font-monument font-normal border-b-1 border-poop-100"
+  >
+    {children}
+  </a>
+);
+
+const Link = ({ href, children }: LinkProps) => (
+  <a
+    href={href}
+    className="hover:text-primary-300 md:px-4 transition-opacity text-poop-500 font-monument font-normal text-md"
+  >
+    {children}
+  </a>
+);
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="w-full h-auto py-5 flex items-center justify-center">
-      <div className="max-w-7xl flex items-center justify-between -ml-30">
-        <div className="flex justify-between items-center h-auto">
+      <div className="md:max-w-7xl w-full flex items-center justify-center md:px-0 px-8 xs:ml-0 sm:-ml-10 md:-ml-24">
+        <div className="w-full flex justify-between items-center h-auto">
           <div className="md:hidden">
             <Logo />
           </div>
           {/* Desktop Menu */}
           <div className="hidden mx-auto md:flex md:justify-between md:gap-12 py-6 h-auto items-center font-monument">
-            <a
-              href="#"
-              className="hover:opacity-70 transition-opacity text-[hsl(300, 15%, 44%)] font-monument"
-            >
-              À propos
-            </a>
-            <a
-              href="#"
-              className="hover:opacity-70 transition-opacity  text-[hsl(300, 15%, 44%)] font-monument"
-            >
-              Comment ça marche ?
-            </a>
+            <Link href="#about">À propos</Link>
+            <Link href="#howitworks">Comment ça marche ?</Link>
             <a href="/">
               {" "}
               <Logo />
             </a>
-            <a
-              href="#"
-              className="hover:opacity-70 transition-opacity  text-[hsl(300, 15%, 44%)]"
-            >
-              Abonnements
-            </a>
-            <a
-              href="#"
-              className="hover:opacity-70 transition-opacity  text-[hsl(300, 15%, 44%)] font-monument"
-            >
-              Blog
-            </a>
+            <Link href="#subscriptions">Abonnements</Link>
+            <Link href="/blog">Blog</Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="md:hidden cursor-pointer color-poop-purple-500"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -75,32 +79,12 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden border-t py-4">
-            <div className="flex flex-col gap-4">
-              <a
-                href="#"
-                className="hover:underline  text-[hsl(300, 15%, 44%)] font-monument"
-              >
-                À propos
-              </a>
-              <a
-                href="#"
-                className="hover:underline  text-[hsl(300, 15%, 44%)] font-monument"
-              >
-                Comment ça marche ?
-              </a>
-              <a
-                href="#"
-                className="hover:underline  text-[hsl(300, 15%, 44%)] font-monument"
-              >
-                Abonnements
-              </a>
-              <a
-                href="#"
-                className="hover:underline  text-[hsl(300, 15%, 44%)] font-monument"
-              >
-                Blog
-              </a>
+          <div className="absolute h-auto top-24 bg-white w-full md:hidden border-t z-50 border-b-2 border-poop-100 drop-shadow-md">
+            <div className="flex flex-col">
+              <MobileLink href="#">À propos</MobileLink>
+              <MobileLink href="#">Comment ça marche ?</MobileLink>
+              <MobileLink href="#">Abonnements</MobileLink>
+              <MobileLink href="#">Blog</MobileLink>
             </div>
           </div>
         )}
