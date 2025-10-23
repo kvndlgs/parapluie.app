@@ -1,7 +1,23 @@
-[[plugins]]
-package = "@netlify/plugin-nextjs"
-package = "@netlify/plugin-lighthouse"
+  [build]
+    command = "npm run build"
+    publish = ".next"
 
-# optional, deploy the lighthouse report to a path under your site
-[plugins.inputs.audits]
-  output_path = "reports/lighthouse.html"
+  [[plugins]]
+    package = "@netlify/plugin-nextjs"
+
+  [build.environment]
+    NODE_VERSION = "20"
+
+  # Optional: Configure redirects
+  [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 404
+
+  # Optional: Configure headers for better security
+  [[headers]]
+    for = "/*"
+    [headers.values]
+      X-Frame-Options = "DENY"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"
