@@ -1,14 +1,13 @@
-import { Hero } from "@/components/sections/hero";
-import { Features } from "@/components/sections/features";
-import { Display } from "@/components/sections/display";
-
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 export default function Home() {
   return (
-    <main className="bg-white">
-      <Hero />
-      <Features />
-      <Display />
-    </main>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+      </main>
+    </div>
   );
 }

@@ -1,11 +1,11 @@
-  {
-    "applinks": {
-      "apps": [],
-      "details": [
-        {
-          "appID": "TEAM_ID.com.parapluie.app",
-          "paths": ["/auth/*", "/invite/*"]
-        }
-      ]
-    }
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAM_ID.com.parapluie.app",
+        "paths": ["/auth/*", "/invite/*"]
+      }
+    ]
   }
+}

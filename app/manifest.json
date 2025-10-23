@@ -1,6 +1,6 @@
 {
   "name": "Parapluie",
-  "short_name": "Parapluie",
+  "short_name": "Protection contre les arnaques",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,6 +16,6 @@
     }
   ],
   "theme_color": "#ffffff",
-  "background_color": "#392d38",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
