@@ -94,51 +94,50 @@ export default function Hero() {
   */
 
   return (
-    <section id="hero" className="w-screen h-screen relative overflow-hidden">
-      <img
-        src="/bg2.png"
-        alt="herobg"
-        className="absolute min-h-screen -top-20 left-0 w-full object-cover bg-center-top -z-10"
-      />
-
-      {/*
-      <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-300 ease-out"
-        style={{
-          opacity,
-          transform: `translateY(${translateY}px)`,
-        }}
-      >
+    <section
+      id="hero"
+      className="relative min-h-screen flex flex-col items-center pt-16 px-8"
+    >
+      <div className="hero-bg"></div>
+      <div className="absolute inset-0 z-0 ">
+        <div className="absolute -bottom-80 left-0 right-0 w-full h-auto z-50">
+          <img
+            src="cloud-hero-bottom.png"
+            alt="cloud-bottom"
+            className="w-full h-full object-cover opacity-60 blur-xl"
+          />
+        </div>
+      </div>
+      <div className="mt-6 flex -bottom-[100px] mx-auto justify-center absolute -z-10">
         <img
-          src={`/walter-spritesheet/walter-${currentFrame}.png`}
-          id="pin-walter"
-          alt="Walter animation"
-          className="w-40 h-40 object-contain"
+          src="/finalmockup.png"
+          alt="Parapluie Mockup"
+          className="max-w-35/100 w-full h-auto"
         />
       </div>
-      */}
-      <div className="max-w-3xl py-12 md:py-16 mx-auto text-center relative z-10">
-        <div className="md:w-74/100 w-84/100  flex mx-auto items-center justify-center py-2 px-4 md:px-2 bg-[#FEF3C7] drop-shadow-lg drop-shadow-blur drop-shadow-[300, 15%, 25%]/10 rounded-sm md:mb-6 mb-8">
-          <p className="text-poop-600 text-sm font-monument font-normal flex items-center gap-2 md:gap-4">
-            <p className="font-monument-black md:text-2xl text-lg  text-[hsl(0,90%,70%)]">
-              341%
-            </p>{" "}
-            d'augmentation des fraudes contre les ainés depuis 2022
-          </p>
+      {/* content */}
+      <div className="relative z-20 max-w-4xl mx-auto text-center">
+        <div className="inline-block bg-yellow-100 px-4 py-1 rounded-md shadow-md-neutral-100 mb-6">
+          <span className="flex items-center">
+            <h5 className="font-bold text-lg mx-2 text-neutral-600"> 341% </h5>
+            <p className="text-neutral-800 text-sm font-normal">
+              {" "}
+              d'augmentation des fraudes contre les ainés depuis 2022
+            </p>
+          </span>
         </div>
-        <h1 className="w-80/100 mx-auto text-[40px] leading-[50px] md:text-[54px] md:w-full  align-center self-stretch md:leading-[68px] font-monument font-black  md:mb-3 text-poop-purple-700">
-          Proteger vos parents contre
-          <br />
-          la fraude de type
-          <br />
-          grand-parent et faux representants
+        <h1 className="mb-4 font-monument text-poop-700 text-[52px] font-black tracking-tight leading-[62px]">
+          {" "}
+          Protégez vos parents contre <br />
+          les fraudes de type grand-parent <br />
+          et faux représentants
         </h1>
-        <p className="md:text-[18px] leading-[32px]  font-monument font-normal mb-8 w-76/100 md:w-full mx-auto text-poop-purple-500">
-          Réagissez a temp grace a notre systeme de prévention
-          <br />
-          des menaces et alertes en temps réel
+        <p className="text-neutral-600 text-sm leading-6 -mt-2.5 pb-5 tracking-wide">
+          {" "}
+          Réagissez a temp grace a notre systême <br /> de prévention des
+          menaces et alertes en temp réel.{" "}
         </p>
-        <button className="bg-gradient-primary text-white px-8 py-3 rounded-full font-monument  hover:bg-[#7C3AED] transition-colors">
+        <button className="bg-[#8E75F0] px-5 py-3 font-medium tracking-wide text-sm  text-white border-b-3 border-[#614DB2] shadow-lg rounded-xl cursor-pointer">
           Rejoindre la liste d'attente
         </button>
       </div>

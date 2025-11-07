@@ -10,7 +10,7 @@ interface LinkProps {
 const MobileLink = ({ href, children }: LinkProps) => (
   <a
     href={href}
-    className="flex items-center py-5 px-6 w-full hover:text-primary-300 text-poop-500 font-monument font-normal border-b-1 border-poop-100"
+    className="flex items-center py-3 px-6 w-full hover:text-primary-300 text-poop-500 font-monument font-normal border-b-1 border-poop-100"
   >
     {children}
   </a>
@@ -29,17 +29,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full h-auto py-5 flex items-center justify-center">
+    <nav className="w-full h-auto py-2 flex items-center justify-center">
       <div className="md:max-w-7xl w-full flex items-center justify-center md:px-0 px-8 xs:ml-0 sm:-ml-10 md:-ml-24">
         <div className="w-full flex justify-between items-center h-auto">
           <div className="md:hidden">
             <Logo />
           </div>
           {/* Desktop Menu */}
-          <div className="hidden mx-auto md:flex md:justify-between md:gap-12 py-6 h-auto items-center font-monument">
+          <div className="hidden mx-auto md:flex md:justify-between md:gap-12 py-2.5 h-auto items-center text-sm font-monument">
             <Link href="#about">À propos</Link>
             <Link href="#howitworks">Comment ça marche ?</Link>
-            <a href="/">
+            <a href="/" className="w-[76px]">
               {" "}
               <Logo />
             </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
