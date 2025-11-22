@@ -24,7 +24,6 @@ function MenuItemDesktop({ href, label }: NavItem) {
 }
 
 const ResponsiveNavbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
