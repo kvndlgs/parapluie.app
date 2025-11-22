@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from './Logo'; // Corrected import
 
 interface NavItem {
@@ -24,15 +24,34 @@ function MenuItemDesktop({ href, label }: NavItem) {
 }
 
 const ResponsiveNavbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
 
-    <nav className="w-full flex justify-between px-4 md:justify-center items-center bg-white py-4 rounded-full">
+    <nav className={`
+      fixed top-2 left-2 right-2 z-50
+      transition-all duration-300
+      flex justify-between px-4 md:justify-center items-center
+      py-4 rounded-full
+      ${scrolled
+        ? 'backdrop-blur-lg bg-white/90 shadow-sm'
+        : 'backdrop-blur-md bg-white/80'
+      }
+    `} /*className="sticky w-full flex justify-between px-4 md:justify-center items-center bg-[rgba(255,255,255,0.95)] backdrop-blur-[12px] py-4 rounded-full"*/>
       {/* Mobile Logo (visible on mobile, hidden on desktop) */}
       <div className="md:hidden">
         <Logo variant='icon' />

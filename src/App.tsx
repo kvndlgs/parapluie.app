@@ -7,6 +7,9 @@ function App() {
     <>
       <ResponsiveNavbar />
       <Hero />
+      <div className='w-screen h-[300vh]'>
+        g
+      </div>
     </>
   );
 }

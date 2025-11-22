@@ -42,6 +42,11 @@ small,
     font-variation-settings: var(--font-var-small);
 }
 
+button {
+    font-family: var(--font-bricolage);
+    font-variation-settings: var(--font-var-display);
+}
+
 .hero-section {
     position: relative;
     min-height: 100vh;
