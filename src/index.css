@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/* In your global CSS */
+:root {
+    --font-bricolage: 'Bricolage Grotesque', sans-serif;
+    --font-var-display: 'opsz' 48, 'wdth' 100;
+    /* Headers */
+    --font-var-body: 'opsz' 16, 'wdth' 100;
+    /* Body text */
+    --font-var-small: 'opsz' 12, 'wdth' 100;
+    /* Small text */
+}
+
+*,
+** {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography scale */
+h1,
+h2,
+h3 {
+    font-family: var(--font-bricolage);
+    font-variation-settings: var(--font-var-display);
+}
+
+p,
+a,
+li {
+    font-family: var(--font-bricolage);
+    font-variation-settings: var(--font-var-body);
+}
+
+small,
+.caption {
+    font-family: var(--font-bricolage);
+    font-variation-settings: var(--font-var-small);
+}
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F5F0FA 0%, white 80%);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    /* Adjust how far down clouds go */
+    background-image: url('/clouds-full.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    /* Adjust cloud opacity */
+    mask-image: linear-gradient(to bottom,
+            black 0%,
+            black 60%,
+            transparent 100%);
+}
