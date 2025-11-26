@@ -9,11 +9,36 @@
     /* Body text */
     --font-var-small: 'opsz' 12, 'wdth' 100;
     /* Small text */
+    --primary-50: hsl(252, 98%, 98.5%);
+    --primary-100: hsl(252, 98%, 90%);
+    --primary-150: hsl(252, 98%, 85%);
+    --primary-200: hsl(252, 98%, 80%);
+    --primary-250: hsl(252, 98%, 75%);
+    --primary-300: hsl(252, 98%, 70%);
+    --primary-350: hsl(252, 98%, 65%);
+    --primary-400: hsl(252, 98%, 60%);
+    --primary-450: hsl(252, 98%, 55%);
+    --primary-500: hsl(252, 98%, 50%);
+
+    --base-50: hsl(300, 15%, 95%);
+    --base-100: hsl(300, 15%, 90%);
+    --base-500: hsl(300, 15%, 50%);
+    --base-650: hsl(300, 15%, 45%);
+    --base-700: hsl(300, 15%, 30%);
 }
 
-*,
-** {
-    box-sizing: border-box;
+@theme {
+    --color-primary-50: var(--primary-50);
+    --color-primary-100: var(--primary-100);
+    --color-primary-150: var(--primary-150);
+    --color-primary-300: var(--primary-200);
+    --color-primary-250: var(--primary-250);
+    --color-primary-300: var(--primary-300);
+    --color-base-50: var(--base-50);
+    --color-base-100: var(--base-100);
+    --color-base-500: var(--base-500);
+    --color-base-650: var(--base-650);
+    --color-base-700: var(--base-700);
 }
 
 body {
@@ -70,4 +95,14 @@ button {
             black 0%,
             black 60%,
             transparent 100%);
+}
+
+@keyframes drift {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

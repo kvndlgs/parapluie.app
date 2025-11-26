@@ -11,7 +11,7 @@ const menuItems: NavItem[] = [
   { label: 'À Propos', href: '#a-propos' },
   { label: 'Comment ça fonctionne ?', href: '#comment' },
   { label: 'Abonnements', href: '#abonnements' },
-  { label: 'Dashboard', href: '#dashboard' },
+  { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
 ];
 
 
@@ -42,12 +42,12 @@ const ResponsiveNavbar = () => {
   return (
 
     <nav className={`
-      fixed top-2 left-2 right-2 z-50
+      fixed top-2 left-2 right-2 z-30
       transition-all duration-300
       flex justify-between px-4 md:justify-center items-center
       py-4 rounded-full
       ${scrolled
-        ? 'backdrop-blur-lg bg-white/90 shadow-sm'
+        ? 'backdrop-blur-xl bg-primary-50/90 shadow-sm'
         : 'backdrop-blur-md bg-white/80'
       }
     `} /*className="sticky w-full flex justify-between px-4 md:justify-center items-center bg-[rgba(255,255,255,0.95)] backdrop-blur-[12px] py-4 rounded-full"*/>
@@ -79,7 +79,7 @@ const ResponsiveNavbar = () => {
       {/* Mobile Menu (visible when open on mobile) */}
       {isOpen && (
 
-        <div className="md:hidden flex flex-col w-94/100 left-0 right-0 absolute top-20 mx-auto bg-white rounded-2xl p-4 shadow-md">
+        <div className="md:hidden flex flex-col w-94/100 left-0 right-0 absolute top-20 mx-auto bg-primary-50/97 backdrop-blur-2xl rounded-2xl p-4 shadow-md">
           {menuItems.map(item => (
             <a
               key={item.href}
