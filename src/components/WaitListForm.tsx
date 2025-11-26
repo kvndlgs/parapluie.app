@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { generateSafetyTip } from '../../services/geminiService';
+// import { generateSafetyTip } from '../../services/geminiService';
 import { SubmissionStatus } from '../types';
 
 export interface WaitlistFormData {
@@ -31,7 +31,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
     });
 
     const [status, setStatus] = useState<SubmissionStatus>(SubmissionStatus.IDLE);
-    const [safetyTip, setSafetyTip] = useState<string>('');
+    //    const [safetyTip, setSafetyTip] = useState<string>('');
 
 
 
@@ -54,10 +54,10 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                 body: encode({ "form-name": "waitlist", ...formData })
             });
 
-            // Call Gemini for a personalized safety tip (happens after successful form submit)
+            {/*            // Call Gemini for a personalized safety tip (happens after successful form submit)
             const tip = await generateSafetyTip();
-            setSafetyTip(tip);
-
+            setSafetyTip(tip);}
+*/}
             setStatus(SubmissionStatus.SUCCESS);
             if (onSuccess) onSuccess();
         } catch (error) {
@@ -78,7 +78,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     Vous êtes maintenant sur la liste d'attente. Nous vous contacterons bientôt.
                 </p>
 
-                {/* AI Generated Content Section */}
+                {/* AI Generated Content Section 
                 <div className="bg-purple-50 p-4 rounded-xl border border-purple-100 text-left">
                     <p className="text-xs font-bold text-brand-primary uppercase tracking-wide mb-1">
                         Conseil du jour (IA)
@@ -87,6 +87,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                         "{safetyTip}"
                     </p>
                 </div>
+                */}
             </div>
         );
     }
