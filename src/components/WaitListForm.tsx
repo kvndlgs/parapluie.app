@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import { generateSafetyTip } from '../../services/geminiService';
+import { generateSafetyTip } from '../../services/geminiService';
 import { SubmissionStatus } from '../types';
 
 export interface WaitlistFormData {
@@ -13,6 +13,16 @@ interface WaitlistFormProps {
     onSuccess?: () => void;
 }
 
+
+
+
+// Helper to encode data for Netlify's x-www-form-urlencoded requirement
+const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
     const [formData, setFormData] = useState<WaitlistFormData>({
         fullName: '',
@@ -21,6 +31,10 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
     });
 
     const [status, setStatus] = useState<SubmissionStatus>(SubmissionStatus.IDLE);
+    const [safetyTip, setSafetyTip] = useState<string>('');
+
+
+
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -32,17 +46,25 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
         setStatus(SubmissionStatus.SUBMITTING);
 
         try {
+            // Netlify Forms AJAX Submission
+            // We post to "/" with a body that includes 'form-name'
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "waitlist", ...formData })
+            });
 
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            // Call Gemini for a personalized safety tip (happens after successful form submit)
+            const tip = await generateSafetyTip();
+            setSafetyTip(tip);
 
             setStatus(SubmissionStatus.SUCCESS);
             if (onSuccess) onSuccess();
         } catch (error) {
-            console.error(error);
+            console.error("Submission error:", error);
             setStatus(SubmissionStatus.ERROR);
         }
     };
-
     if (status === SubmissionStatus.SUCCESS) {
         return (
             <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
@@ -55,27 +77,33 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                 <p className="text-gray-500 mb-6">
                     Vous êtes maintenant sur la liste d'attente. Nous vous contacterons bientôt.
                 </p>
-                =
 
-                {/*
-                <div className="bg-purple-50 p-4 rounded-xl border border-primary-250 text-left">
+                {/* AI Generated Content Section */}
+                <div className="bg-purple-50 p-4 rounded-xl border border-purple-100 text-left">
                     <p className="text-xs font-bold text-brand-primary uppercase tracking-wide mb-1">
                         Conseil du jour (IA)
                     </p>
-
                     <p className="text-brand-dark italic text-sm leading-relaxed">
                         "{safetyTip}"
                     </p>
-  
                 </div>
-                    */}
             </div>
         );
     }
 
+
     return (
-        <form onSubmit={handleSubmit} className="space-y-5" name='waitlist' data-netlify='true' netlify-honeypot='bot-field'>
-            <input type='hidden' name='form-name' value='waitlist' />
+        <form
+            onSubmit={handleSubmit}
+            className="space-y-5"
+            name="waitlist"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field">
+            <input type='hidden'
+                name='form-name'
+                value='waitlist'
+            />
+            <input type="hidden" name="form-name" value="waitlist" />
             <p hidden><label>Don't fill:<input name='bot-field' /></label></p>
             <div className="text-sm text-base-650 mb-4">
                 Soyez parmis les premiers a protèger vos proches avec Parapluie.
