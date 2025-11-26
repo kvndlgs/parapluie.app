@@ -78,7 +78,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5" name='contact' data-netlify='true'>
             <div className="text-sm text-base-650 mb-4">
                 Soyez parmis les premiers a protèger vos proches avec Parapluie.
             </div>
