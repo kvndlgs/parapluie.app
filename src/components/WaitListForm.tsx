@@ -32,12 +32,8 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
         setStatus(SubmissionStatus.SUBMITTING);
 
         try {
-            // Simulate API call to backend
-            await new Promise(resolve => setTimeout(resolve, 1500));
 
-            // Call Gemini for a personalized safety tip
-            //          const tip = await generateSafetyTip();
-            //         setSafetyTip(tip);
+            await new Promise(resolve => setTimeout(resolve, 1500));
 
             setStatus(SubmissionStatus.SUCCESS);
             if (onSuccess) onSuccess();
@@ -60,7 +56,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     Vous êtes maintenant sur la liste d'attente. Nous vous contacterons bientôt.
                 </p>
                 =
-                {/* AI Generated Content Section */}
+
                 {/*
                 <div className="bg-purple-50 p-4 rounded-xl border border-primary-250 text-left">
                     <p className="text-xs font-bold text-brand-primary uppercase tracking-wide mb-1">
@@ -78,7 +74,9 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-5" name='contact' data-netlify='true'>
+        <form onSubmit={handleSubmit} className="space-y-5" name='waitlist' data-netlify='true' netlify-honeypot='bot-field'>
+            <input type='hidden' name='form-name' value='waitlist' />
+            <p hidden><label>Don't fill:<input name='bot-field' /></label></p>
             <div className="text-sm text-base-650 mb-4">
                 Soyez parmis les premiers a protèger vos proches avec Parapluie.
             </div>
@@ -92,7 +90,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     id="fullName"
                     name="fullName"
                     required
-                    placeholder="Jean Dupont"
+                    placeholder="Walter Water"
                     className="block w-full rounded-lg border border-base-200 px-4 py-3 text-base-700 placeholder-base-400 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
                     value={formData.fullName}
                     onChange={handleInputChange}
@@ -108,7 +106,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     id="email"
                     name="email"
                     required
-                    placeholder="jean@exemple.com"
+                    placeholder="walter@parapluie.app"
                     className="block w-full rounded-lg border border-base-300 px-4 py-3 text-base-700 placeholder-base-500 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
                     value={formData.email}
                     onChange={handleInputChange}
@@ -124,7 +122,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     id="phone"
                     name="phone"
                     required
-                    placeholder="06 12 34 56 78"
+                    placeholder="1-555-555-5555"
                     className="block w-full rounded-lg border border-base-300 px-4 py-3 text-base-700 placeholder-base-500 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
                     value={formData.phone}
                     onChange={handleInputChange}
