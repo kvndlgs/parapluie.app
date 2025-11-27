@@ -13,12 +13,12 @@ const features: FeatureSlide[] = [
         title: "Protection des appels et messages en temps réel",
         description: "Restez sans crainte, Walter est à l'affût, 24 heures sur 24 pour assurer qu'aucun appel ou message suspect ne vous soit transmis.",
         // Using a placeholder service to simulate a 9:19.5 phone screenshot
-        image: "/mockup/ct1.png"
+        image: "/mockup/ct1.webp"
     },
     {
         title: "Intelligence Artificielle Bienveillante",
         description: "Notre IA analyse le langage et le contexte pour détecter les tentatives de manipulation, tout en respectant la confidentialité absolue des conversations.",
-        image: "/mockup/ct.png"
+        image: "/mockup/ct.webp"
     }
 ];
 
