@@ -12,15 +12,7 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-W6LH2F5W');</script>
   <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKTHHXX806"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-JKTHHXX806');
-  </script>
+  <!-- GA4 is configured via GTM - do not add duplicate gtag here -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary Meta Tags -->
@@ -65,6 +57,53 @@
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Parapluie",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "Application de protection contre les arnaques pour les personnes âgées. Protégez vos parents contre la fraude de type grand-parent et faux représentants.",
+    "url": "https://parapluie.app",
+    "image": "https://parapluie.app/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Parapluie",
+      "url": "https://parapluie.app"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "inLanguage": "fr-CA",
+    "audience": {
+      "@type": "PeopleAudience",
+      "suggestedMinAge": 18,
+      "audienceType": "Familles et proches aidants"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Parapluie",
+    "url": "https://parapluie.app",
+    "logo": "https://parapluie.app/og-image.png",
+    "description": "Protection contre les arnaques pour les personnes âgées",
+    "sameAs": [],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["French"]
+    }
+  }
+  </script>
 </head>
 
 <body>

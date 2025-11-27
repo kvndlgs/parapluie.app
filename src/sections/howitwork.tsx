@@ -15,7 +15,7 @@ export function HowItWork() {
             title: "Protection automatique",
             description: "Chaque appel et texto entrant est analysé en temps réel. Parapluie détecte les tentatives de manipulation, les urgences fabriquées et les patterns d'arnaque connus. Trop sensible? Trop relax? Ajustez l'intensité en un clic.",
             icon: (
-                <img src='/walter-in-bush.png' alt='protection-automatique-parapluie' />
+                <img src='/walter-in-bush.png' alt='Walter la mascotte Parapluie surveillant les appels entrants' className="w-8 h-8" />
             )
         },
         {
