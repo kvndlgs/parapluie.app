@@ -11,6 +11,8 @@ lerna-debug.log*
 /_public
 /_public/*
 
+
+
 node_modules
 dist
 dist-ssr
@@ -32,3 +34,4 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+.well-known/assetlinks.json

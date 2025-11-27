@@ -21,23 +21,23 @@ export function Hero() {
         >
 
             {/* Badge */}
-            <div className="inline-block bg-primary-100 text-primary-500 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
+            <div className="inline-block bg-primary-100 text-primary-850 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
                 341% d'augmentation des fraudes contre les aînés depuis 2022
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tighter text-base-700 md:mb-6 mb-3 max-w-4xl text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tighter text-base-650 md:mb-6 mb-3 max-w-4xl text-center">
                 Protéger vos parents contre la fraude de type grand-parent <br className="hidden md:block" />
                 et faux représentants
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-base-650 max-w-2xl md:mb-10 mb-4 leading-relaxed">
+            <p className="text-lg md:text-xl text-base-600 text-center font-medium max-w-2xl md:mb-10 mb-4 leading-relaxed">
                 Réagissez à temps grâce à notre système de prévention <br className="hidden md:block" />
                 des menaces et alertes en temps réel
             </p>
 
             {/* CTA */}
-            <button onClick={openModal} className="cta-primary py-3 px-6 bg-base-650 w-50 mx-auto rounded-lg text-white text-md">
+            <button onClick={openModal} className="py-3 px-6 bg-base-650 w-50 rounded-md mx-auto text-white text-md">
                 Accès anticipé
             </button>
             {/* Modal Integration */}

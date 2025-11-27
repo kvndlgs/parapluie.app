@@ -10,14 +10,15 @@ interface NavItem {
 const menuItems: NavItem[] = [
   { label: 'À Propos', href: '#a-propos' },
   { label: 'Comment ça fonctionne ?', href: '#comment' },
-  { label: 'Abonnements', href: '#abonnements' },
+  { label: 'Abonnements', href: 'https://dashboard.parapluie.app/billing' },
   { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
 ];
 
 
 function MenuItemDesktop({ href, label }: NavItem) {
+
   return (
-    <a href={href} className="no-underline text-[#725572] font-['Bricolage_Grotesque'] font-medium text-base">
+    <a href={href} className="no-underline text-base-750 font-['Bricolage_Grotesque'] font-medium text-base">
       {label}
     </a>
   )
@@ -30,7 +31,14 @@ const ResponsiveNavbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  // Smooth scroll handler
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -47,8 +55,8 @@ const ResponsiveNavbar = () => {
       flex justify-between px-4 md:justify-center items-center
       py-4 rounded-full
       ${scrolled
-        ? 'backdrop-blur-xl bg-primary-50/90 shadow-sm'
-        : 'backdrop-blur-md bg-white/80'
+        ? 'backdrop-blur-xl bg-primary-25/93 shadow-sm'
+        : 'backdrop-blur-md bg-white'
       }
     `} /*className="sticky w-full flex justify-between px-4 md:justify-center items-center bg-[rgba(255,255,255,0.95)] backdrop-blur-[12px] py-4 rounded-full"*/>
       {/* Mobile Logo (visible on mobile, hidden on desktop) */}
@@ -58,11 +66,24 @@ const ResponsiveNavbar = () => {
 
       {/* Desktop Navigation (hidden on mobile) */}
       <div className="hidden md:flex items-center gap-16">
-        <MenuItemDesktop href="#" label='À Propos' />
-        <MenuItemDesktop href="#" label='Comment ça fonctionne ?' />
+        <div className="hidden md:flex space-x-12  font-medium text-base-750">
+          <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-brand-primary transition-colors">À Propos</a>
+          <a href="#howitwork" onClick={(e) => scrollToSection(e, 'howitwork')} className="hover:text-brand-primary transition-colors">Comment ça fonctionne ?</a>
+        </div>
+        {/*
+        <MenuItemDesktop href='#about' label='À Propos' />
+      
+        <MenuItemDesktop href="#howitwork" label='Comment ça fonctionne ?' />
+        */}
         <Logo variant='full' /> {/* Full logo for desktop */}
-        <MenuItemDesktop href="#" label='Abonnements' />
+        {/*
+        <MenuItemDesktop href="https://dashboard.parapluie.app/billing" label='Abonnements' />
         <MenuItemDesktop href='https://dashboard.parapluie.app' label="Tableau de bord" />
+        */}
+        <div className="hidden md:flex space-x-12  font-medium text-base-750">
+          <a href="https://dashboard.parapluie.app/billing" className="hover:text-brand-primary transition-colors">Abonnement</a>
+          <a href="https://dashboard.parapluie.app/login" className="hover:text-brand-primary transition-colors">Tableau de bord</a>
+        </div>
       </div>
 
       {/* Hamburger Menu (visible on mobile, hidden on desktop) */}
