@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import { Modal } from './Modal';
 import { WaitlistForm } from './WaitListForm';
 
-export function Hero() {
+interface HeroProps {
+    openModal: () => void;
+    isModalOpen: boolean;
+    closeModal: () => void;
+}
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
 
 
     return (
@@ -16,7 +16,7 @@ export function Hero() {
         bg-[linear-gradient(to bottom, #F5F0FA 0%, white 80%)]  
         w-screen 
         min-h-screen 
-        bg-[url('/bg2.png')] 
+        bg-[url('/bg2.webp')] 
         bg-center bg-cover"
         >
 
