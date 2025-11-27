@@ -47,15 +47,15 @@ export function HowItWork() {
                     <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-base-200 -z-10 transform translate-y-1/2"></div>
 
                     {steps.map((step, index) => (
-                        <div key={index} className="group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-purple-50 hover:-translate-y-2">
+                        <div key={index} className="group relative bg-white rounded-3xl p-8 shadow-sm  transition-all duration-300 border border-purple-50 hover:-translate-y-2">
 
                             {/* Icon Circle */}
-                            <div className="w-16 h-16 rounded-2xl bg-brand-primary flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 mx-auto md:mx-0">
+                            <div className="w-16 h-16 rounded-2xl bg-brand-primary flex items-center justify-center mb-8 transition-transform duration-300 mx-auto md:mx-0">
                                 {step.icon}
                             </div>
 
                             {/* Big Number Background */}
-                            <div className="absolute top-4 right-6 text-8xl font-black text-base-50 opacity-50 group-hover:text-primary-50 transition-colors select-none pointer-events-none">
+                            <div className="absolute top-4 right-6 text-8xl font-black text-base-50 opacity-50 transition-colors select-none pointer-events-none">
                                 {step.id}
                             </div>
 
