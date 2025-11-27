@@ -15,14 +15,7 @@ const menuItems: NavItem[] = [
 ];
 
 
-function MenuItemDesktop({ href, label }: NavItem) {
 
-  return (
-    <a href={href} className="no-underline text-base-750 font-['Bricolage_Grotesque'] font-medium text-base">
-      {label}
-    </a>
-  )
-}
 
 const ResponsiveNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
