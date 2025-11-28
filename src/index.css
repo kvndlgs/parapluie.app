@@ -9,7 +9,7 @@
     /* Body text */
     --font-var-small: 'opsz' 12, 'wdth' 100;
     /* Small text */
-    --primary-25: #F6F4FE;
+    --primary-25: oklch(97.155% 0.01352 295.137);
     --primary-50: #EAE5FE;
     --primary-100: #D6CCFE;
     --primary-150: #C2B3FE;
@@ -123,10 +123,10 @@
     --warning-800: #613904;
     --warning-850: #492A03;
     --warning-900: #301C02;
-    --base-25: hsl(300, 15%, 98.5%);
-    --base-50: #F4F0F4;
-    --base-100: #E9E1E9;
-    --base-150: hsl(300, 15%, 85%);
+    --base-25: oklch(98.913% 0.00175 322.594);
+    --base-50: oklch(95.936% 0.00685 324.887);
+    --base-100: oklch(91.834% 0.01378 325.335);
+    --base-150: oklch(87.89% 0.01913 325.495);
     --base-200: #D3C4D3;
     --base-250: hsl(300, 15%, 75%);
     --base-300: #BDA7BD;
@@ -143,8 +143,8 @@
     --base-850: hsl(300, 15%, 15%);
     --base-900: #1D151D;
 
-    --basic-white: #FFFFFF;
-    --basic-black: #302D34;
+    --basic-white: oklch(1 0 0 / 1);
+    --basic-black: oklch(0.30 0.01 304.96 / 1);
 
 
     --spacing-0: 0;
