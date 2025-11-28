@@ -1,71 +1,20 @@
-import React, { useState } from 'react';
-// import { generateSafetyTip } from '../../services/geminiService';
-import { SubmissionStatus } from '../types';
-
-export interface WaitlistFormData {
-    fullName: string;
-    email: string;
-    phone: string;
-}
+import { useForm, ValidationError } from '@formspree/react';
+import { useEffect } from 'react';
 
 
-interface WaitlistFormProps {
-    onSuccess?: () => void;
-}
+export const WaitlistForm = () => {
 
+    const [state, handleSubmit] = useForm('mldywgll');
 
-
-
-// Helper to encode data for Netlify's x-www-form-urlencoded requirement
-const encode = (data: Record<string, string>) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-}
-
-export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
-    const [formData, setFormData] = useState<WaitlistFormData>({
-        fullName: '',
-        email: '',
-        phone: ''
+    useEffect(() => {
+        console.log('Formspree state:', state);
+        console.log('Erros', state.errors);
     });
 
-    const [status, setStatus] = useState<SubmissionStatus>(SubmissionStatus.IDLE);
-    //    const [safetyTip, setSafetyTip] = useState<string>('');
-
-
-
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus(SubmissionStatus.SUBMITTING);
-
-        try {
-            // Netlify Forms AJAX Submission
-            // We post to "/" with a body that includes 'form-name'
-            await fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "waitlist", ...formData })
-            });
-
-            {/*            // Call Gemini for a personalized safety tip (happens after successful form submit)
-            const tip = await generateSafetyTip();
-            setSafetyTip(tip);}
-*/}
-            setStatus(SubmissionStatus.SUCCESS);
-            if (onSuccess) onSuccess();
-        } catch (error) {
-            console.error("Submission error:", error);
-            setStatus(SubmissionStatus.ERROR);
-        }
-    };
-    if (status === SubmissionStatus.SUCCESS) {
+    if (state.submitting) {
+        console.log(state.submitting);
+    }
+    if (state.succeeded) {
         return (
             <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 mb-6">
@@ -98,32 +47,25 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
             onSubmit={handleSubmit}
             className="space-y-5"
             name="waitlist"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field">
-            <input type='hidden'
-                name='form-name'
-                value='waitlist'
-            />
-            <input type="hidden" name="form-name" value="waitlist" />
-            <p hidden><label>Don't fill:<input name='bot-field' /></label></p>
+        >
+
+
             <div className="text-sm text-base-650 mb-4">
                 Soyez parmis les premiers a protèger vos proches avec Parapluie.
             </div>
 
             <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-base-650 mb-1">
-                    Nom complet
+                    Nom complet <small className='text-xs text-base-250'> Non-requis </small>
                 </label>
                 <input
                     type="text"
                     id="fullName"
                     name="fullName"
-                    required
-                    placeholder="Walter Water"
+                    placeholder="ex: Walter Water"
                     className="block w-full rounded-lg border border-base-200 px-4 py-3 text-base-700 placeholder-base-400 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
                 />
+                <ValidationError field='fullName' prefix='Nom' errors={state.errors} />
             </div>
 
             <div>
@@ -135,11 +77,10 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     id="email"
                     name="email"
                     required
-                    placeholder="walter@parapluie.app"
+                    placeholder="ex: walter@parapluie.app"
                     className="block w-full rounded-lg border border-base-300 px-4 py-3 text-base-700 placeholder-base-500 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
-                    value={formData.email}
-                    onChange={handleInputChange}
                 />
+                <ValidationError field='email' prefix='Email' errors={state.errors} />
             </div>
 
             <div>
@@ -151,25 +92,20 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
                     id="phone"
                     name="phone"
                     required
-                    placeholder="1-555-555-5555"
+                    placeholder="ex: 1-450-555-5555"
                     className="block w-full rounded-lg border border-base-300 px-4 py-3 text-base-700 placeholder-base-500 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
-                    value={formData.phone}
-                    onChange={handleInputChange}
                 />
+                <ValidationError field='phone' prefix='Phone' errors={state.errors} />
             </div>
 
-            {status === SubmissionStatus.ERROR && (
-                <div className="text-red-500 text-sm text-center">
-                    Une erreur est survenue. Veuillez réessayer.
-                </div>
-            )}
+
 
             <button
                 type="submit"
-                disabled={status === SubmissionStatus.SUBMITTING}
+                disabled={state.submitting}
                 className="w-full rounded-lg bg-base-650 px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-base-500 focus:outline-none focus:ring-1 focus:ring-primary-150 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed transition-all transform active:scale-[0.98]"
             >
-                {status === SubmissionStatus.SUBMITTING ? (
+                {state.submitting ? (
                     <span className="flex items-center justify-center">
                         <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>

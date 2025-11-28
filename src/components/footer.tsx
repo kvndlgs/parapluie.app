@@ -32,11 +32,11 @@ export function Footer({ openModal }: FooterProps) {
                             <input
                                 type="email"
                                 placeholder="Address courriel"
-                                className="bg-base-50 text-base-900 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-blue-300 w-full sm:w-auto"
+                                className="bg-base-50 text-base-900 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-secondary-300 w-full sm:w-auto"
                             />
                             <button
                                 type="button"
-                                className="bg-sky-300 hover:bg-sky-400 text-brand-dark font-bold px-6 py-3 rounded-md transition-colors"
+                                className="bg-sky-300 hover:bg-sky-400 text-brand-dark font-bold px-6 py-3 rounded-md transition-colors cusor-pointer"
                             >
                                 Je m'abonne
                             </button>
@@ -46,10 +46,10 @@ export function Footer({ openModal }: FooterProps) {
                     {/* Right Column: Navigation Links */}
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
                         <a href="#" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</a>
-                        <a href="#howitwork" className="text-lg hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</a>
+                        <a href="#howitwork" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</a>
                         <a href="#" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</a>
                         <a href="#" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</a>
-                        <button onClick={openModal} className="text-md hover:underline text-base-50 underline-offset-4 transition-all text-left md:text-right">Accès anticipé</button>
+                        <button onClick={openModal} className="text-md hover:underline cursor-pointer text-base-50 underline-offset-4 transition-all text-left md:text-right">Accès anticipé</button>
                     </div>
 
                 </div>

@@ -9,8 +9,8 @@ interface NavItem {
 
 const menuItems: NavItem[] = [
   { label: 'À Propos', href: '#a-propos' },
-  { label: 'Comment ça fonctionne ?', href: '#comment' },
-  { label: 'Abonnements', href: 'https://dashboard.parapluie.app/billing' },
+  { label: 'Comment ça fonctionne ?', href: '#howitwork' },
+  { label: 'Abonnement', href: '#subscriptions' },
   { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
 ];
 
@@ -74,7 +74,7 @@ const ResponsiveNavbar = () => {
         <MenuItemDesktop href='https://dashboard.parapluie.app' label="Tableau de bord" />
         */}
         <div className="hidden md:flex space-x-12  font-medium text-base-750">
-          <a href="https://dashboard.parapluie.app/billing" className="hover:text-brand-primary transition-colors">Abonnement</a>
+          <a onClick={(e) => scrollToSection(e, 'subscriptions')} className="hover:text-brand-primary transition-colors">Abonnement</a>
           <a href="https://dashboard.parapluie.app/login" className="hover:text-brand-primary transition-colors">Tableau de bord</a>
         </div>
       </div>

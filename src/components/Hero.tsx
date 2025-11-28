@@ -26,8 +26,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tighter text-base-650 md:mb-6 mb-3 max-w-4xl text-center">
-                Protéger vos parents contre la fraude de type grand-parent <br className="hidden md:block" />
-                et faux représentants
+                Protégez vos parents contre la fraude de type 'grand-parent' <br className="hidden md:block" /> et les faux représentants
             </h1>
 
             {/* Subheadline */}

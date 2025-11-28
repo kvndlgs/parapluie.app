@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { FeatureCarousel } from './components/FeatureCarousel';
 import { HowItWork } from './sections/howitwork';
 import { About } from './sections/about';
+import Subscriptions from './sections/subscriptions';
 import { Footer } from './components/footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       </section>
       <About />
       <HowItWork />
+      <Subscriptions />
       <Footer openModal={openModal} />
     </main>
   );

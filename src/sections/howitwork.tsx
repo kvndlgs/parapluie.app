@@ -3,7 +3,7 @@ export function HowItWork() {
         {
             id: "01",
             title: "Installer, personnaliser, protéger.",
-            description: "Téléchargez l'application, pour vous même ou pour un proche. Ajustez le niveau de protection selon vos besoins — filtrage d'appels, de textos, blocage automatique. Chaque réglage est personnalisable, rien n'est imposé.",
+            description: "Téléchargez l'application pour vous-même ou pour un proche. Ajustez le niveau de protection selon ses besoins : filtrage d'appels, de textos, blocage automatique. Chaque réglage est personnalisable, rien n'est imposé.",
             icon: (
                 <img src='/walter-picasso.webp' className="w-36 h-36 scale-x-[-1]" alt='walter-la-mascotte-qui-paint-son-autoportrait' />
             )
@@ -11,7 +11,7 @@ export function HowItWork() {
         {
             id: "02",
             title: "Votre protection, c'est du sérieux!",
-            description: "Chaque appel et texto entrant est analysé en temps réel. Parapluie détecte les tentatives de manipulation, les urgences fabriquées et les patterns d'arnaque connus. Trop sensible? Trop relax? Ajustez l'intensité en un clic.",
+            description: "Chaque appel et texto entrant est analysé en temps réel. Parapluie détecte les tentatives de manipulation, les urgences fabriquées et les schémas d'arnaque connus. Trop sensible ? Trop relax ? Ajustez l'intensité en un clic.",
             icon: (
                 <img src='/walter-cia.webp' className="h-36 w-36 opacity-90" alt='Walter la mascotte Parapluie surveillant les appels entrants' />
             )
@@ -19,7 +19,7 @@ export function HowItWork() {
         {
             id: "03",
             title: "À deux, c'est mieux.",
-            description: "Jouer un role de premier plan dans le bien être de vos proches en tant que contact de confiance, vous receverez des alertes en temp réel lors de tentative de la part des fraudeurs ",
+            description: "Jouez un rôle de premier plan dans le bien-être de vos proches. En tant que contact de confiance, vous recevrez des alertes en temps réel lors des tentatives de fraude.",
             icon: (
                 <img src='/walter-trusted-contact.webp' className='h-36 w-36' alt='walter-parapluie-trusted-contact' />
             )
