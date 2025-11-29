@@ -9,6 +9,8 @@ import Subscriptions from './sections/subscriptions';
 import { Footer } from './components/footer';
 import ArnaqueGrandParent from './pages/ArnaqueGrandParent';
 import ProtectionParents from './pages/ProtectionParents';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,6 +39,8 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/arnaque-grand-parent" element={<ArnaqueGrandParent />} />
       <Route path="/protection-parents" element={<ProtectionParents />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/post/:slug" element={<BlogPost />} />
     </Routes>
   );
 }
