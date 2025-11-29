@@ -162,7 +162,7 @@ export default function Subscriptions() {
                             </ul>
 
                             <a
-                                href={period === 'monthly' ? tier.href.monthly : tier.href.yearly}
+                                href={/*period === 'monthly' ? tier.href.monthly : tier.href.yearly*/ "#about"}
                                 className={`w-full rounded-lg font-bold py-3.5 px-4 transition-all cursor-pointer text-center block ${tier.featured
                                     ? "bg-primary-250 text-white hover:bg-base-350 border-b-3 border-primary-400"
                                     : "bg-base-650 text-white hover:bg-base-500"
