@@ -31,10 +31,12 @@ export function HowItWork() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6 tracking-tight">
-                        Comment ça fonctionne ?
+                        Comment protéger mes parents des arnaques?
                     </h2>
+                    {/* SEO: Query-rich subheading */}
+                    <h3 className="sr-only">Application anti-arnaque pour seniors - Protection téléphonique en 3 étapes</h3>
                     <p className="text-lg text-base-650 max-w-2xl mx-auto">
-                        Un system puissant, simple à mettre en place pour toute la famille.
+                        Un système puissant, simple à mettre en place pour toute la famille.
                     </p>
                 </div>
 
