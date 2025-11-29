@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import ResponsiveNavbar from './components/ResponsiveNavbar';
 import { Hero } from './components/Hero';
 import { FeatureCarousel } from './components/FeatureCarousel';
@@ -6,12 +7,15 @@ import { HowItWork } from './sections/howitwork';
 import { About } from './sections/about';
 import Subscriptions from './sections/subscriptions';
 import { Footer } from './components/footer';
+import ArnaqueGrandParent from './pages/ArnaqueGrandParent';
+import ProtectionParents from './pages/ProtectionParents';
 
-function App() {
+function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
   return (
     <main>
       <ResponsiveNavbar />
@@ -27,5 +31,14 @@ function App() {
   );
 }
 
-export default App;
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/arnaque-grand-parent" element={<ArnaqueGrandParent />} />
+      <Route path="/protection-parents" element={<ProtectionParents />} />
+    </Routes>
+  );
+}
 
+export default App;

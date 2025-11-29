@@ -26,8 +26,10 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tighter text-base-650 md:mb-6 mb-3 max-w-4xl text-center">
-                Protégez vos parents contre la fraude de type 'grand-parent' <br className="hidden md:block" /> et les faux représentants
+                L'application qui protège vos parents <br className="hidden md:block" /> contre les arnaques téléphoniques
             </h1>
+            {/* SEO: Secondary heading for query variations */}
+            <h2 className="sr-only">Protection contre l'arnaque grand-parent et les faux représentants au Québec</h2>
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-base-600 text-center font-medium max-w-2xl md:mb-10 mb-4 leading-relaxed">

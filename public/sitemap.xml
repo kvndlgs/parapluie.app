@@ -8,32 +8,54 @@
 
 <url>
   <loc>https://parapluie.app/</loc>
-  <lastmod>2025-11-27T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
   <image:image>
     <image:loc>https://parapluie.app/og-image.png</image:loc>
-    <image:title>Parapluie - Protection contre les arnaques</image:title>
+    <image:title>Parapluie - Protection contre les arnaques pour les personnes âgées</image:title>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://parapluie.app/arnaque-grand-parent</loc>
+  <lastmod>2025-11-29T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <image:image>
+    <image:loc>https://parapluie.app/og-image.png</image:loc>
+    <image:title>Protection contre l'arnaque grand-parent au Québec</image:title>
+  </image:image>
+</url>
+
+<url>
+  <loc>https://parapluie.app/protection-parents</loc>
+  <lastmod>2025-11-29T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <image:image>
+    <image:loc>https://parapluie.app/og-image.png</image:loc>
+    <image:title>Comment protéger mes parents des arnaques téléphoniques</image:title>
   </image:image>
 </url>
 
 <url>
   <loc>https://parapluie.app/#fonctionnalites</loc>
-  <lastmod>2025-11-27T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
   <loc>https://parapluie.app/#a-propos</loc>
-  <lastmod>2025-11-27T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
   <loc>https://parapluie.app/#comment-ca-marche</loc>
-  <lastmod>2025-11-27T00:00:00+00:00</lastmod>
+  <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>

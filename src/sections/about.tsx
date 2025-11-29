@@ -9,8 +9,10 @@ export function About() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="mb-16">
                     <h2 className="text-4xl md:text-6xl font-extrabold text-base-650 mb-6 tracking-tight">
-                        À propos de Parapluie
+                        Protégez vos parents contre la fraude
                     </h2>
+                    {/* SEO: Query-rich subheading */}
+                    <h3 className="sr-only">Sécurité téléphonique pour personnes âgées au Québec - Prévention des arnaques</h3>
                     <p className="text-xl text-base-600 max-w-2xl font-medium">
                         Pourquoi nous avons décidé de dire "ça suffit" aux fraudes ciblant nos aînés.
                     </p>
