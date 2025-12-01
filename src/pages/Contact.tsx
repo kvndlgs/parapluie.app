@@ -31,7 +31,7 @@ export function Contact() {
                     <h1 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6">
                         Dites bonjour!
                     </h1>
-                    <h2 className="text-3xl md:text-4xl font-bold text-base-600 mb-6"> Via courriel
+                    <h2 className="text-3xl md:text-4xl font-bold text-base-600 mb-6"> Via courriel</h2>
                 </div>
             </section>
    
