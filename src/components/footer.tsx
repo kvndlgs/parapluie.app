@@ -54,7 +54,7 @@ export function Footer({ openModal }: FooterProps) {
 
                 </div>
 
-                <div className="flex items-center justify-start gap-12 ml-24 max-w-6xl mx-auto mt-20 pt-8 border-t border-white/5 text-center text-sm text-base-350 font-regular font-xs"> <a href="/conditions-generales-d'utilisation.md"> Conditions générales d'utilisation </a>
+                <div className="w-full flex items-center justify-start gap-2 pl-4  mt-20 pt-8 border-t border-white/5 text-center text-sm text-base-350 font-regular font-xs"> <a href="/conditions-generales-d'utilisation.md"> Conditions générales d'utilisation </a>
             <a href="/politique-de-confidentialite.md"> Politique de confidentialité </a> <span>© 2025 Walter Corp. Tous droits réservés.</span>
                 </div>
             </footer>
