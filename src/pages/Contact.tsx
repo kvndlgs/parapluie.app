@@ -1,28 +1,28 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-ResponsiveNavbar from '../components/ResponsiveNavbar';
+ResponsiveNavbar from '.../components/ResponsiveNavbar';
 import { Footer } from '../components/footer';
 
 export function Contact() {
-    const [state, handleSubmit] = useForm('mldywgll');
-    
-    useEffect(() => {
-        console.log('Formspree state:', state);
-        console.log('Erros', state.errors);
-    });
-    
-    if (state.submitting) {
-        console.log(state.submitting);
-    }
-    if (state.succeeded) {
-        return (
-            <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
+  const [state, handleSubmit] = useForm('mldywgll');
+  
+  useEffect(() => {
+    console.log('Formspree state:', state);
+    console.log('Erros', state.errors);
+  });
+  
+  if (state.submitting) {
+    console.log(state.submitting);
+  }
+  if (state.succeeded) {
+    return (
+      <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
                 <h3 className="text-2xl font-bold text-base-600 mb-2">Votre message a été envoyé!</h3>
             </div>
-        );
-    }
-    return (
-        <main>
+    );
+  }
+  return (
+    <main>
             <ResponsiveNavbar />
 
             {/* Hero Section */}
@@ -113,5 +113,5 @@ export function Contact() {
         </section>
         <Footer openModal={() => {}} />
   </main>
-    )
+  )
 }
