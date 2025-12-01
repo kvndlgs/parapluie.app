@@ -11,6 +11,7 @@ import ArnaqueGrandParent from './pages/ArnaqueGrandParent';
 import ProtectionParents from './pages/ProtectionParents';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Contact from './pages/Contact.tsx'
 
 function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,6 +37,8 @@ function HomePage() {
 function App() {
   return (
     <Routes>
+      <Route path="/contact"
+        element={<Contact />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/arnaque-grand-parent" element={<ArnaqueGrandParent />} />
       <Route path="/protection-parents" element={<ProtectionParents />} />
