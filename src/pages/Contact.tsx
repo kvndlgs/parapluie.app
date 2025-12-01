@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-import ResponsiveNavbar from '.../components/ResponsiveNavbar';
+import ResponsiveNavbar from '../components/ResponsiveNavbar';
 import { Footer } from '../components/footer';
 
 export function Contact() {
