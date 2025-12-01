@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-ResponsiveNavbar from '.../components/ResponsiveNavbar';
+import ResponsiveNavbar from '.../components/ResponsiveNavbar';
 import { Footer } from '../components/footer';
 
 export function Contact() {
@@ -85,14 +85,13 @@ export function Contact() {
                     id="message"
                     name="message"
                     required
-                    placeholder="Entrer votre message ici...
-                    className="block w-full rounded-lg border border-base-300 px-4 pt-2 pb-4 text-base-700 placeholder-base-500 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50"
-                />
+                    placeholder="Entrer votre message ici..."
+         className="block w-full rounded-lg border border-base-300 px-4 pt-2 pb-4 text-base-700 placeholder-base-500 focus:border-primary-150 focus:ring-primary-150 sm:text-sm outline-none transition-shadow focus:ring-1 focus:ring-opacity-50" />
                 <ValidationError field='message' prefix='Message' errors={state.errors} />
-            </div
-
+            </div>
+            
             <button
-                type="submit"
+             type="submit"
                 disabled={state.submitting}
                 className="w-full rounded-lg bg-base-650 px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-base-500 focus:outline-none focus:ring-1 focus:ring-primary-150 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed transition-all transform active:scale-[0.98]"
             >
