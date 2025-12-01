@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import ResponsiveNavbar from '../components/ResponsiveNavbar';
 import { Footer } from '../components/footer';
 
-export function Contact() {
+export default function Contact() {
   const [state, handleSubmit] = useForm('mldywgll');
   
   useEffect(() => {
