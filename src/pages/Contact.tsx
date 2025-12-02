@@ -22,7 +22,7 @@ export default function Contact() {
     );
   }
   return (
-    <main>
+    <main className="pb-16">
             <ResponsiveNavbar />
 
             {/* Hero Section */}
@@ -31,7 +31,11 @@ export default function Contact() {
                     <h1 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6">
                         Dites bonjour!
                     </h1>
-                    <h2 className="text-3xl md:text-4xl font-bold text-base-600 mb-6"> Via courriel</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-base-600 mb-6"> Via courriel</h2> 
+                 <a href="mailto:bonjour@parapluie.app">  < h2 className="text-3xl md:text-4xl text-base-500 underline underline-offset-6 mb-6">
+         bonjour@parapluie.app 
+         </h2>
+         </a>
                 </div>
             </section>
    
@@ -51,7 +55,7 @@ export default function Contact() {
         >
             <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-base-650 mb-1">
-                    Nom complet <small className='text-xs text-base-250'> Non-requis </small>
+                    Nom complet <small className='text-xs text-base-250'> </small>
                 </label>
                 <input
                     type="text"
