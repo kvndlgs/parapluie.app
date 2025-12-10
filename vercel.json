@@ -1,8 +1,29 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/a-propos",
+      "permanent": true
+    },
+    {
+      "source": "/subscription",
+      "destination": "/abonnements",
+      "permanent": true
+    },
+    {
+      "source": "/subscriptions",
+      "destination": "/abonnements",
+      "permanent": true
+    },
+    {
+      "source": "/support/faq/",
+      "destination": "/support/faq",
+      "permanent": true
+    },
+    {
+      "source": "/support/contact/",
+      "destination": "/support/contact",
+      "permanent": true
+    }
+  ]
 }

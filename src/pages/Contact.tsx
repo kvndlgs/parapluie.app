@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
+import {Helmet} from 'react-helmet-async';
 import { Footer } from '../components/footer';
 
 export default function Contact() {
@@ -16,14 +16,17 @@ export default function Contact() {
   }
   if (state.succeeded) {
     return (
+        
       <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
                 <h3 className="text-2xl font-bold text-base-600 mb-2">Votre message a été envoyé!</h3>
             </div>
     );
   }
   return (
+      <>
+          <Helmet></Helmet>
     <main className="pb-16">
-            <ResponsiveNavbar />
+            <a href="/">Retour</a>
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
@@ -116,5 +119,6 @@ export default function Contact() {
         </section>
         <Footer openModal={() => {}} />
   </main>
+  </>
   )
 }

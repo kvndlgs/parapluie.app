@@ -2,7 +2,7 @@ import CountUp from '../components/react-bits/CountUp';
 
 export function About() {
     return (
-        <section id="about" className="py-24 px-6 bg-white relative overflow-hidden">
+        <section id="a-propos" className="py-24 px-6 bg-white relative overflow-hidden">
             {/* Subtle background decoration */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-bg opacity-50 skew-x-12 translate-x-1/2 pointer-events-none"></div>
 
