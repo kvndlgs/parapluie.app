@@ -43,7 +43,7 @@ function HomePage() {
 
 function App() {
   return (
-  <HelmetProvider>
+  
 <Routes>
   {/* Marketing */}
   <Route path="/" element={<HomePage />} />
@@ -62,7 +62,6 @@ function App() {
   <Route path="/blog" element={<Blog />} />
   <Route path="/post/:slug" element={<BlogPost />} />
 </Routes>
-</HelmetProvider>
   );
 }
 
