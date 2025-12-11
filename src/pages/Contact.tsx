@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-import { useSeo } from './hooks/useSeo';
+import { useSeo } from '../hooks/useSeo';
 import { Footer } from '../components/footer';
 
 export function Contact() {

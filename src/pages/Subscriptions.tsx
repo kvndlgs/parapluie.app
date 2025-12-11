@@ -1,4 +1,4 @@
-import { useSeo } from './hooks/useSeo'
+import { useSeo } from '../hooks/useSeo'
  
 export function SubscriptionsPage() {
   useSeo({

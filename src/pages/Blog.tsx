@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useSeo } from ' /hooks/useSeo';
+import { useSeo } from '../hooks/useSeo.ts';
 
 import { Footer } from '../components/footer';
 import { getAllPosts } from '../content/posts';
