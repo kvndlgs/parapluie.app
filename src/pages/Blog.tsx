@@ -1,19 +1,16 @@
 import { Link } from 'react-router-dom';
-import {Helmet} from 'react-helmet-async';
+import { useSeo } from ' /hooks/useSeo';
 
 import { Footer } from '../components/footer';
 import { getAllPosts } from '../content/posts';
 
 export function Blog() {
     const posts = getAllPosts();
-
+    useSeo({
+        title: 'Blog - Parapluie'
+    })
     return (
-        <>
-            <Helmet>
-                <title>
-                    Blog - Parapluie
-                </title>
-            </Helmet>
+    
         <main>
             <Link to="/">
                 Retourner a l'accueil 
@@ -93,6 +90,6 @@ export function Blog() {
 
             <Footer openModal={() => {}} />
         </main>
-        </>
+    
     );
 }

@@ -1,19 +1,15 @@
-import  {Helmet } from 'react-helmet-async';
+import { useSeo } from './hooks/useSeo'
  
 export function SubscriptionsPage() {
+  useSeo({
+    title: 'Abonnements - Parapluie',
+    canonical: 'https://parapluie.app/#abonnements'
+  })
   return (
     
-  <>
-<Helmet>
-  <title>Abonnements – Parapluie</title>
-  <link 
-    rel="canonical" 
-    href="https://parapluie.app/#abonnements"
-  />
-</Helmet>
 <section>
   <h1> Abonnements </h1>
 </section>
-</>
+
 )
 }

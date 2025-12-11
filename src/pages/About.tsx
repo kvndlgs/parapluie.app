@@ -1,18 +1,15 @@
-import { Helmet } from "react-helmet-async";
+import { useSeo } from './hooks/useSeo'
 
 export function AboutPage() {
+  useSeo({
+    title: 'À propos | Parapluie',
+    canonical: 'https://parapluie.app/#a-propos'
+  })
   return (
-    <>
-      <Helmet>
-        <title>À propos – Parapluie</title>
-        <link 
-          rel="canonical" 
-          href="https://parapluie.app/#a-propos"
-        />
-      </Helmet>
 
+      <section>
       <h1>À propos</h1>
       {/* contenu… */}
-    </>
+      </section>
   );
 }

@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-import {Helmet} from 'react-helmet-async';
+import { useSeo } from './hooks/useSeo';
 import { Footer } from '../components/footer';
 
 export function Contact() {
@@ -22,9 +22,11 @@ export function Contact() {
             </div>
     );
   }
+  useSeo({
+      title: 'Contact - Parapluie'
+  })
   return (
-      <>
-          <Helmet></Helmet>
+     
     <main className="pb-16">
             <a href="/">Retour</a>
 
@@ -119,6 +121,6 @@ export function Contact() {
         </section>
         <Footer openModal={() => {}} />
   </main>
-  </>
+  
   )
 }

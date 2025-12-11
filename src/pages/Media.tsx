@@ -1,16 +1,14 @@
-import { Helmet } from 'react-helmet-async';
+import { useSeo } from './hooks/useSeo';
 
 export function Media() {
+  useSeo({
+    title: 'Media - Parapluie'
+  })
   return (
-    <>
-      <Helmet>
-        <title>
-          Media - Parapluie
-        </title>
-      </Helmet>
+
     <section>
       <h1> Media </h1>
     </section>
-    </>
+    
   )
 }

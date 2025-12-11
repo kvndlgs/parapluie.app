@@ -1,17 +1,12 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { useSeo } from './hooks/useSeo';
 
 export function Support() {
+  useSeo({
+    title: 'Support - Parapluie',
+     description: '',
+  })
   return (
-    <>
-      <Helmet>
-        <title>Support & aide – Parapluie</title>
-        <meta
-          name="description"
-          content="Centre d'aide Parapluie : FAQ, guides anti-fraude, support technique, protection des aînés, assistance Walter."
-        />
-      </Helmet>
-
       <main className="min-h-screen bg-white text-neutral-900">
         {/* HERO */}
         <section className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 pb-10 pt-12 sm:px-6 lg:px-8">
@@ -185,6 +180,6 @@ export function Support() {
           </div>
         </section>
       </main>
-    </>
+
   );
 }
