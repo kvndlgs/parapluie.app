@@ -16,6 +16,7 @@ export default function BlogPost() {
     // Get other posts for "Read more" section
     const otherPosts = allPosts.filter(p => p.slug !== slug).slice(0, 2);
 
+
     return (
         <main>
             <ResponsiveNavbar />

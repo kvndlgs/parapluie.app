@@ -1,15 +1,20 @@
 import { Link } from 'react-router-dom';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
+import { useSeo } from '../hooks/useSeo.ts';
+
 import { Footer } from '../components/footer';
 import { getAllPosts } from '../content/posts';
 
-export default function Blog() {
+export function Blog() {
     const posts = getAllPosts();
-
+    useSeo({
+        title: 'Blog - Parapluie'
+    })
     return (
+    
         <main>
-            <ResponsiveNavbar />
-
+            <Link to="/">
+                Retourner a l'accueil 
+            </Link>
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-4xl mx-auto text-center">
@@ -19,6 +24,7 @@ export default function Blog() {
                     <p className="text-lg text-base-600 max-w-2xl mx-auto">
                         Conseils et ressources pour protéger vos proches contre la fraude téléphonique au Québec.
                     </p>
+                    
                 </div>
             </section>
 
@@ -84,5 +90,6 @@ export default function Blog() {
 
             <Footer openModal={() => {}} />
         </main>
+    
     );
 }

@@ -47,21 +47,18 @@ export function Footer({ openModal }: FooterProps) {
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
                         <a href="#" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</a>
                         <a href="#howitwork" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</a>
-                        <a href="#" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</a>
-                        <a href="#" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</a>
+                        <a href="/blog" className  ="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</a>
+                        <a href="/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</a>
                         <button onClick={openModal} className="text-md hover:underline cursor-pointer text-base-50 underline-offset-4 transition-all text-left md:text-right">Accès anticipé</button>
                     </div>
 
                 </div>
 
-                <div className="max-w-6xl mx-auto mt-20 pt-8 border-t border-white/5 text-center text-sm text-base-350 font-regular font-xs">
-                    © 2025 Walter Corp. Tous droits réservés.
+                <div className="w-full flex items-center justify-start gap-2 pl-4  mt-20 pt-8 border-t border-white/5 text-center text-sm text-base-350 font-regular font-xs"> <a href="/conditions-generales-d'utilisation.md"> Conditions générales d'utilisation </a>
+            <a href="/politique-de-confidentialite.md"> Politique de confidentialité </a> <span>© 2025 Walter Corp. Tous droits réservés.</span>
                 </div>
             </footer>
         </div>
 
     )
 }
-
-
-

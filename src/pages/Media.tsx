@@ -1,0 +1,14 @@
+import { useSeo } from '../hooks/useSeo';
+
+export function Media() {
+  useSeo({
+    title: 'Media - Parapluie'
+  })
+  return (
+
+    <section>
+      <h1> Media </h1>
+    </section>
+    
+  )
+}

@@ -10,7 +10,7 @@ interface NavItem {
 const menuItems: NavItem[] = [
   { label: 'À Propos', href: '#a-propos' },
   { label: 'Comment ça fonctionne ?', href: '#howitwork' },
-  { label: 'Abonnement', href: '#subscriptions' },
+  { label: 'Abonnement', href: '#abonnements' },
   { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
 ];
 
@@ -60,22 +60,15 @@ const ResponsiveNavbar = () => {
       {/* Desktop Navigation (hidden on mobile) */}
       <div className="hidden md:flex items-center gap-16">
         <div className="hidden md:flex space-x-12  font-medium text-base-750">
-          <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className="hover:text-brand-primary transition-colors">À Propos</a>
+          <a href="#a-propos" onClick={(e) => scrollToSection(e, 'a-propos')} className="hover:text-brand-primary transition-colors">À Propos</a>
           <a href="#howitwork" onClick={(e) => scrollToSection(e, 'howitwork')} className="hover:text-brand-primary transition-colors">Comment ça fonctionne ?</a>
         </div>
-        {/*
-        <MenuItemDesktop href='#about' label='À Propos' />
-      
-        <MenuItemDesktop href="#howitwork" label='Comment ça fonctionne ?' />
-        */}
+
         <Logo variant='full' /> {/* Full logo for desktop */}
-        {/*
-        <MenuItemDesktop href="https://dashboard.parapluie.app/billing" label='Abonnements' />
-        <MenuItemDesktop href='https://dashboard.parapluie.app' label="Tableau de bord" />
-        */}
+
         <div className="hidden md:flex space-x-12  font-medium text-base-750">
-          <a onClick={(e) => scrollToSection(e, 'subscriptions')} className="hover:text-brand-primary transition-colors">Abonnement</a>
-          <a href="https://dashboard.parapluie.app/login" className="hover:text-brand-primary transition-colors">Tableau de bord</a>
+          <a onClick={(e) => scrollToSection(e, 'abonnements')} className="hover:text-brand-primary cursor-pointer transition-colors">Abonnement</a>
+          <a href="https://dashboard.parapluie.app" className="hover:text-brand-primary cursor-pointer transition-colors">Tableau de bord</a>
         </div>
       </div>
 
@@ -98,7 +91,7 @@ const ResponsiveNavbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="py-2 text-[#725572]"
+              className="py-2 text-base-750"
             >
               {item.label}
             </a>
