@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import { Routes, Route } from 'react-router-dom';
 import ResponsiveNavbar from './components/ResponsiveNavbar';
 import { Hero } from './components/Hero';
@@ -62,6 +61,7 @@ function App() {
   <Route path="/blog" element={<Blog />} />
   <Route path="/post/:slug" element={<BlogPost />} />
 </Routes>
+<>
   );
 }
 
