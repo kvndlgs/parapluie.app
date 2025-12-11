@@ -19,6 +19,7 @@ export default function Blog() {
                     <p className="text-lg text-base-600 max-w-2xl mx-auto">
                         Conseils et ressources pour protéger vos proches contre la fraude téléphonique au Québec.
                     </p>
+                    
                 </div>
             </section>
 
