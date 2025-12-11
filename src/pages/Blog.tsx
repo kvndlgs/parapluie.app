@@ -1,15 +1,23 @@
 import { Link } from 'react-router-dom';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
+import {Helmet} from 'react-helmet';
+
 import { Footer } from '../components/footer';
 import { getAllPosts } from '../content/posts';
 
-export default function Blog() {
+export function Blog() {
     const posts = getAllPosts();
 
     return (
+        <>
+            <Helmet>
+                <title>
+                    Blog - Parapluie
+                </title>
+            </Helmet>
         <main>
-            <ResponsiveNavbar />
-
+            <Link to="/">
+                Retourner a l'accueil 
+            </Link>
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-4xl mx-auto text-center">
@@ -85,5 +93,6 @@ export default function Blog() {
 
             <Footer openModal={() => {}} />
         </main>
+        </>
     );
 }

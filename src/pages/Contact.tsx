@@ -1,9 +1,9 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-import {Helmet} from 'react-helmet-async';
+import {Helmet} from 'react-helmet';
 import { Footer } from '../components/footer';
 
-export default function Contact() {
+export function Contact() {
   const [state, handleSubmit] = useForm('mldywgll');
   
   useEffect(() => {

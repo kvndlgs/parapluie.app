@@ -10,13 +10,13 @@ import { AboutPage } from './pages/About';
 import { Footer } from './components/footer';
 import ArnaqueGrandParent from './pages/ArnaqueGrandParent';
 import ProtectionParents from './pages/ProtectionParents';
-import Blog from './pages/Blog';
-import About from './sections/about.tsx'
+import { Blog } from './pages/Blog';
+import { About } from './sections/about.tsx'
 import { Support } from './pages/Support'
 import { Media } from './pages/Media';
 import { FAQ } from './pages/FAQ';
 import BlogPost from './pages/BlogPost';
-import Contact from './pages/Contact';
+import { Contact } from './pages/Contact';
 
 
 function HomePage() {
