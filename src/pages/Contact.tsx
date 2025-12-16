@@ -1,7 +1,8 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
 import { useSeo } from '../hooks/useSeo';
-import { Footer } from '../components/footer';
+import { Link } from 'react-router-dom';
+import { Footer } from '../components/Footer';
 
 export function Contact() {
   const [state, handleSubmit] = useForm('mldywgll');
@@ -22,13 +23,16 @@ export function Contact() {
             </div>
     );
   }
+  
   useSeo({
-      title: 'Contact - Parapluie'
-  })
+      title: 'Contact - Parapluie',
+      canonical: 'https://parapluie.app/support/contact'
+  });
+      
   return (
      
     <main className="pb-16">
-            <a href="/">Retour</a>
+         <Link to="/">Retour</Link>
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
@@ -37,7 +41,7 @@ export function Contact() {
                         Dites bonjour!
                     </h1>
                     <h2 className="text-3xl md:text-4xl font-bold text-base-600 mb-6"> Via courriel</h2> 
-                 <a href="mailto:bonjour@parapluie.app">  < h2 className="text-3xl md:text-4xl text-base-500 underline underline-offset-6 mb-6">
+                 <a href="mailto:bonjour@parapluie.app">  <h2 className="text-3xl md:text-4xl text-base-500 underline underline-offset-6 mb-6">
          bonjour@parapluie.app 
          </h2>
          </a>

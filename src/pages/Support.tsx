@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { useSeo } from '../hooks/useSeo';
 
 export function Support() {
+  
   useSeo({
     title: 'Support - Parapluie',
-     description: '',
-  })
+    canonical: 'https://parapluie.app/support'
+  });
+    
   return (
       <main className="min-h-screen bg-white text-neutral-900">
         {/* HERO */}
@@ -71,7 +73,7 @@ export function Support() {
               </div>
             </article>
 
-            {/* Guides anti-fraude */}
+            
             <article className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm sm:p-6">
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50">

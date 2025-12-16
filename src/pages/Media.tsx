@@ -1,9 +1,12 @@
 import { useSeo } from '../hooks/useSeo';
 
 export function Media() {
+ 
   useSeo({
-    title: 'Media - Parapluie'
-  })
+    title: 'Media - Parapluie',
+    canonical: 'https://parapluie.app/media'
+  });
+    
   return (
 
     <section>

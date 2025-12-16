@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
-import { useSeo } from '../hooks/useSeo.ts';
+import { useSeo } from '../hooks/useSeo';
 
-import { Footer } from '../components/footer';
+import { Footer } from '../components/Footer';
 import { getAllPosts } from '../content/posts';
 
 export function Blog() {
     const posts = getAllPosts();
+   
     useSeo({
-        title: 'Blog - Parapluie'
-    })
+        title: 'Blog - Parapluie',
+        canonical: 'https://parapluie.app/blog'
+    });
+        
     return (
     
         <main>

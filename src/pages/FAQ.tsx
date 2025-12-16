@@ -57,6 +57,7 @@ export function FAQ() {
   };
 
   // Build FAQ JSON-LD once
+  
   const faqJsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -72,8 +73,10 @@ export function FAQ() {
     }),
     []
   );
+  
 
   // Apply SEO
+  
   useSeo({
     title: "FAQ – Support Parapluie",
     description:
@@ -82,6 +85,7 @@ export function FAQ() {
     jsonLd: faqJsonLd,
     jsonLdId: "parapluie-faq-jsonld",
   });
+  
 
   return (
     <section className="max-w-3xl mx-auto px-6 py-16">

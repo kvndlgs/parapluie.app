@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 const pricingTiers = [
     {
         name: "Basic",
@@ -72,7 +73,7 @@ const CheckIcon = () => (
 
 
 
-export default function Subscriptions() {
+export function Subscriptions() {
     const [period, setPeriod] = useState<'monthly' | 'yearly'>('monthly');
     return (
         <section id="abonnements" className="py-24 px-6 bg-white relative overflow-hidden">

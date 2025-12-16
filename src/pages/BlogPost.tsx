@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import ResponsiveNavbar from '../components/ResponsiveNavbar';
-import { Footer } from '../components/footer';
+import { Footer } from '../components/Footer';
 import { getPostBySlug, getAllPosts } from '../content/posts';
 
 export default function BlogPost() {

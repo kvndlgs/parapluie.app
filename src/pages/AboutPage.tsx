@@ -4,7 +4,8 @@ export function AboutPage() {
   useSeo({
     title: 'À propos | Parapluie',
     canonical: 'https://parapluie.app/#a-propos'
-  })
+  });
+  
   return (
 
       <section>
