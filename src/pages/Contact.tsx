@@ -41,7 +41,8 @@ export function Contact() {
                         Dites bonjour!
                     </h1>
                     <h2 className="text-3xl md:text-4xl font-bold text-base-600 mb-6"> Via courriel</h2> 
-                 <a href="mailto:bonjour@parapluie.app">  <h2 className="text-3xl md:text-4xl text-base-500 underline underline-offset-6 mb-6">
+                 <a href="mailto:bonjour@parapluie.app">  
+                    <h2 className="text-3xl md:text-4xl text-base-500 underline underline-offset-6 mb-6">
          bonjour@parapluie.app 
          </h2>
          </a>

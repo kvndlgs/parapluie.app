@@ -17,7 +17,7 @@ export function Home() {
             <ResponsiveNavbar />
             <Hero openModal={openModal} closeModal={closeModal} isModalOpen={isModalOpen} />
             <section className="w-full relative z-20">
-                <FeatureCarousel />
+            <FeatureCarousel />
             </section>
             <About />
             <HowItWork />

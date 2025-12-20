@@ -5,7 +5,7 @@ export function PrivacyPolicy(){
          <p><strong>Parapluie — Application de protection contre les
          arnaques</strong></p>
          <p><em>Dernière mise à jour : 30 novembre 2025</em></p>
-         <hr />
+         <br />
          <h2 id="introduction">1. Introduction</h2>
          <p>Walter Corps (« nous », « notre » ou « nos ») exploite l’application
          mobile Parapluie (le « Service »). Cette politique de confidentialité

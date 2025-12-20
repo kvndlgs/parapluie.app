@@ -5,7 +5,7 @@ export function SubscriptionsPage() {
   
   useSeo({
     title: 'Abonnements - Parapluie',
-    canonical: 'https://parapluie.app/#abonnements'
+    canonical: 'https://parapluie.app/abonnements'
   });
   
   return (
