@@ -27,7 +27,7 @@ export function HowItWork() {
     ];
 
     return (
-        <section id="howitwork" className="py-24 px-6 bg-primary-50/50 relative">
+        <section id="comment-ca-marche" className="py-24 px-6 bg-primary-50/50 relative">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6 tracking-tight">

@@ -42,16 +42,17 @@ export function Footer() {
 
                     {/* Right Column: Navigation Links */}
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
-                        <Link to="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</Link>
-                        <Link to="/comment-ca-marche" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</Link>
+                        <Link to="https://parapluie.app/#abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</Link>
+                        <Link to="https://parapluie.app/#comment-ca-marche" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</Link>
                         <Link to="/blog" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</Link>
+                        <Link to="/support" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Support</Link>
                         <Link to="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</Link>
                     </div>
 
                 </div>
 
                 <div className="w-full flex items-center justify-start gap-2 pl-4  mt-20 pt-8 border-t border-white/5 text-center text-[8px] text-base-350 font-regular font-xs"> 
-                <Link to="/conditions-generales-d-utilisation"> Conditions générales d'utd'utilisation </Link>
+                <Link to="/conditions-generales-d-utilisation"> Conditions générales d'utilisation </Link>
                 <Link to="/politique-de-confidentialite"> Politique de confidentialité </Link> <span>© 2025 Walter Corp. Tous droits réservés.</span>
                 </div>
             </footer>

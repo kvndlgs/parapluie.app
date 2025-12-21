@@ -1,48 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-          <url>
-              <loc>https://parapluie.app/</loc>
-                  <lastmod>2025-11-29</lastmod>
-                      <changefreq>weekly</changefreq>
-                          <priority>1.0</priority>
-                              <image:image>
-                                    <image:loc>https://parapluie.app/og-image.webp</image:loc>
-                                          <image:title>Parapluie - Protection contre les arnaques pour les personnes âgées</image:title>
-                                              </image:image>
-                                                </url>
-                                  <url>
-                                      <loc>https://parapluie.app/contact    </loc>
-                     <lastmod>
-              2025-12-01   </lastmod>
-              <changefreq>monthly</changefreq><priority>0.9</priority>            </url>                <url>
-                                                      <loc>https://parapluie.app/arnaque-grand-parent</loc>
-                                                          <lastmod>2025-11-29</lastmod>
-                                                              <changefreq>monthly</changefreq>
-                                                                  <priority>0.9</priority>
-                                                                    </url>
-                                                                      <url>
-                                                                          <loc>https://parapluie.app/protection-parents</loc>
-                                                                              <lastmod>2025-11-29</lastmod>
-                                                                                  <changefreq>monthly</changefreq>
-                                                                                      <priority>0.9</priority>
-                                                                                        </url>
-                                                                                          <url>
-                                                                                              <loc>https://parapluie.app/blog</loc>
-                                                                                                  <lastmod>2025-11-29</lastmod>
-                                                                                                      <changefreq>weekly</changefreq>
-                                                                                                          <priority>0.8</priority>
-                                                                                                            </url>
-                                                                                                              <url>
-                                                                                                                  <loc>https://parapluie.app/post/arnaque-grand-parent-guide-complet</loc>
-                                                                                                                      <lastmod>2025-11-29</lastmod>
-                                                                                                                          <changefreq>monthly</changefreq>
-                                                                                                                              <priority>0.7</priority>
-                                                                                                                                </url>
-                                                                                                                                  <url>
-                                                                                                                                      <loc>https://parapluie.app/post/comment-proteger-parents-ages-fraude-telephonique</loc>
-                                                                                                                                          <lastmod>2025-11-28</lastmod>
-                                                                                                                                              <changefreq>monthly</changefreq>
-                                                                                                                                                  <priority>0.7</priority>
-                                                                                                                                                    </url>
-                                                                                                                                                    </urlset>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  >
+    <!-- Home -->
+      <url>
+          <loc>https://parapluie.app/</loc>
+              <changefreq>daily</changefreq>
+                  <priority>1.0</priority>
+                    </url>
+
+                      <!-- Core pages -->
+                        <url>
+                            <loc>https://parapluie.app/a-propos</loc>
+                                <changefreq>monthly</changefreq>
+                                    <priority>0.7</priority>
+                                      </url>
+
+                                        <url>
+                                            <loc>https://parapluie.app/comment-ca-marche</loc>
+                                                <changefreq>monthly</changefreq>
+                                                    <priority>0.8</priority>
+                                                      </url>
+
+                                                        <url>
+                                                            <loc>https://parapluie.app/pour-les-aines</loc>
+                                                                <changefreq>monthly</changefreq>
+                                                                    <priority>0.8</priority>
+                                                                      </url>
+
+                                                                        <url>
+                                                                            <loc>https://parapluie.app/pour-les-proches</loc>
+                                                                                <changefreq>monthly</changefreq>
+                                                                                    <priority>0.8</priority>
+                                                                                      </url>
+
+                                                                                        <url>
+                                                                                            <loc>https://parapluie.app/pour-les-organisations</loc>
+                                                                                                <changefreq>monthly</changefreq>
+                                                                                                    <priority>0.7</priority>
+                                                                                                      </url>
+
+                                                                                                        <url>
+                                                                                                            <loc>https://parapluie.app/abonnements</loc>
+                                                                                                                <changefreq>monthly</changefreq>
+                                                                                                                    <priority>0.7</priority>
+                                                                                                                      </url>
+
+                                                                                                                        <!-- Support -->
+                                                                                                                          <url>
+                                                                                                                              <loc>https://parapluie.app/support</loc>
+                                                                                                                                  <changefreq>monthly</changefreq>
+                                                                                                                                      <priority>0.6</priority>
+                                                                                                                                        </url>
+
+                                                                                                                                          <url>
+                                                                                                                                              <loc>https://parapluie.app/support/faq</loc>
+                                                                                                                                                  <changefreq>weekly</changefreq>
+                                                                                                                                                      <priority>0.7</priority>
+                                                                                                                                                        </url>
+
+                                                                                                                                                          <url>
+                                                                                                                                                              <loc>https://parapluie.app/support/contact</loc>
+                                                                                                                                                                  <changefreq>monthly</changefreq>
+                                                                                                                                                                      <priority>0.5</priority>
+                                                                                                                                                                        </url>
+
+                                                                                                                                                                          <!-- Content hubs -->
+                                                                                                                                                                            <url>
+                                                                                                                                                                                <loc>https://parapluie.app/blog</loc>
+                                                                                                                                                                                    <changefreq>daily</changefreq>
+                                                                                                                                                                                        <priority>0.7</priority>
+                                                                                                                                                                                          </url>
+
+                                                                                                                                                                                            <url>
+                                                                                                                                                                                                <loc>https://parapluie.app/guides</loc>
+                                                                                                                                                                                                    <changefreq>weekly</changefreq>
+                                                                                                                                                                                                        <priority>0.7</priority>
+                                                                                                                                                                                                          </url>
+
+                                                                                                                                                                                                            <!-- Media / partnerships -->
+                                                                                                                                                                                                              <url>
+                                                                                                                                                                                                                  <loc>https://parapluie.app/media</loc>
+                                                                                                                                                                                                                      <changefreq>monthly</changefreq>
+                                                                                                                                                                                                                          <priority>0.4</priority>
+                                                                                                                                                                                                                            </url>
+
+                                                                                                                                                                                                                              <url>
+                                                                                                                                                                                                                                  <loc>https://parapluie.app/media/press-kit</loc>
+                                                                                                                                                                                                                                      <changefreq>monthly</changefreq>
+                                                                                                                                                                                                                                          <priority>0.3</priority>
+                                                                                                                                                                                                                                            </url>
+
+                                                                                                                                                                                                                                              <url>
+                                                                                                                                                                                                                                                  <loc>https://parapluie.app/partenariats</loc>
+                                                                                                                                                                                                                                                      <changefreq>monthly</changefreq>
+                                                                                                                                                                                                                                                          <priority>0.5</priority>
+                                                                                                                                                                                                                                                            </url>
+
+                                                                                                                                                                                                                                                              <!-- Legal -->
+                                                                                                                                                                                                                                                                <url>
+                                                                                                                                                                                                                                                                    <loc>https://parapluie.app/termes-et-conditions</loc>
+                                                                                                                                                                                                                                                                        <changefreq>yearly</changefreq>
+                                                                                                                                                                                                                                                                            <priority>0.2</priority>
+                                                                                                                                                                                                                                                                              </url>
+
+                                                                                                                                                                                                                                                                                <url>
+                                                                                                                                                                                                                                                                                    <loc>https://parapluie.app/politique-de-confidentialite</loc>
+                                                                                                                                                                                                                                                                                        <changefreq>yearly</changefreq>
+                                                                                                                                                                                                                                                                                            <priority>0.2</priority>
+                                                                                                                                                                                                                                                                                              </url>
+                                                                                                                                                                                                                                                                                              </urlset>
