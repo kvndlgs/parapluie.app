@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useSeo } from '../hooks/useSeo';
-
-import { Footer } from '../components/Footer';
 import { getAllPosts } from '../content/posts';
 
 export function Blog() {
@@ -91,7 +89,7 @@ export function Blog() {
                 </div>
             </section>
 
-            <Footer openModal={() => {}} />
+            
         </main>
     
     );

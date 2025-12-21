@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
+
 import { Modal } from '../components/Modal';
 import { WaitlistForm } from '../components/WaitListForm';
-import { Footer } from '../components/Footer';
+import { Layout } from '../components/Layout';
 
 export default function ArnaqueGrandParent() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,9 +12,7 @@ export default function ArnaqueGrandParent() {
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <main>
-            <ResponsiveNavbar />
-
+        <Layout>
             {/* Hero Section */}
             <section className="relative flex flex-col items-center justify-center md:py-24 py-20 px-8 bg-gradient-to-b from-red-50 to-white min-h-[80vh]">
                 <div className="inline-block bg-error-100 text-error-750 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
@@ -179,8 +177,6 @@ export default function ArnaqueGrandParent() {
                     </p>
                 </div>
             </section>
-
-            <Footer openModal={openModal} />
-        </main>
+        </Layout>
     );
 }

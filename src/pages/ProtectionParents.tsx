@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import ResponsiveNavbar from '../components/ResponsiveNavbar';
 import { Modal } from '../components/Modal';
 import { WaitlistForm } from '../components/WaitListForm';
-import { Footer } from '../components/Footer';
 
 export default function ProtectionParents() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -235,8 +234,6 @@ export default function ProtectionParents() {
                     </p>
                 </div>
             </section>
-
-            <Footer openModal={openModal} />
         </main>
     );
 }

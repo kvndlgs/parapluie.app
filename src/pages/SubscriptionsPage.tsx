@@ -14,6 +14,5 @@ export function SubscriptionsPage() {
   <Link to='/'> Retourner a l'accueil </Link>
   <h1> Abonnements </h1>
 </section>
-
-)
+);
 }

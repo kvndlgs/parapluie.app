@@ -182,6 +182,5 @@ export function Support() {
           </div>
         </section>
       </main>
-
   );
 }

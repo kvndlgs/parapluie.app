@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-import { useSeo } from '../hooks/useSeo';
+// import { useSeo } from '../hooks/useSeo';
 import { Link } from 'react-router-dom';
 import { Footer } from '../components/Footer';
 
@@ -23,11 +23,6 @@ export function Contact() {
             </div>
     );
   }
-  
-  useSeo({
-      title: 'Contact - Parapluie',
-      canonical: 'https://parapluie.app/support/contact'
-  });
       
   return (
      
@@ -124,8 +119,8 @@ export function Contact() {
 
         </form>
         </section>
-        <Footer openModal={() => {}} />
+        <Footer />
   </main>
   
-  )
+  );
 }

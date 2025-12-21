@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 import Logo from './Logo'; // Corrected import
+import { Link } from 'react-router-dom';
 
 interface NavItem {
   label: string;
   href: string;
-
 }
 
 const menuItems: NavItem[] = [
-  { label: 'À Propos', href: '#a-propos' },
-  { label: 'Comment ça fonctionne ?', href: '#howitwork' },
-  { label: 'Abonnement', href: '#abonnements' },
+  { label: 'À Propos', href: '/a-propos' },
+  { label: 'Comment ça marche ?', href: '/comment-ca-marche' },
+  { label: 'Abonnement', href: '/abonnements' },
   { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
 ];
 
@@ -88,13 +88,13 @@ const ResponsiveNavbar = () => {
 
         <div className="md:hidden flex flex-col w-94/100 left-0 right-0 absolute top-20 mx-auto bg-primary-50/97 backdrop-blur-2xl rounded-2xl p-4 shadow-md">
           {menuItems.map(item => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               className="py-2 text-base-750"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

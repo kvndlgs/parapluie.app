@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom';
 
-interface FooterProps {
-    openModal: () => void;
-}
-
-export function Footer({ openModal }: FooterProps) {
+export function Footer() {
     return (
         <div className="relative w-full bg-base-750">
             {/* Footer Top Wave (Light Purple -> Dark) */}
@@ -46,11 +42,10 @@ export function Footer({ openModal }: FooterProps) {
 
                     {/* Right Column: Navigation Links */}
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
-                        <a href="#" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</a>
-                        <a href="#howitwork" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</a>
-                        <Link to="/blog" className  ="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</Link>
+                        <Link to="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</Link>
+                        <Link to="/comment-ca-marche" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</Link>
+                        <Link to="/blog" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</Link>
                         <Link to="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</Link>
-                        <button onClick={openModal} className="text-md hover:underline cursor-pointer text-base-50 underline-offset-4 transition-all text-left md:text-right">Accès anticipé</button>
                     </div>
 
                 </div>

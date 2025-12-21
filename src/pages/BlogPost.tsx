@@ -137,7 +137,7 @@ export default function BlogPost() {
                 </div>
             </section>
 
-            <Footer openModal={() => {}} />
+            <Footer />
         </main>
     );
 }

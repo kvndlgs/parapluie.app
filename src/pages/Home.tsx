@@ -1,20 +1,19 @@
-import { useState } from 'react';
 import  { Hero } from '../components/Hero';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
 import { FeatureCarousel } from '../components/FeatureCarousel';
 import { About } from '../sections/About';
 import { HowItWork } from '../sections/HowItWork';
 import { Subscriptions } from '../sections/Subscriptions';
-import { Footer } from '../components/Footer';
+import { Layout } from '../components/Layout';
+import { useState } from 'react';
 
 export function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+    const openModal = () => { setIsModalOpen(true); }
+    const closeModal = () => { setIsModalOpen(false);}
+
     return (
-        <main>
-            <ResponsiveNavbar />
+        <Layout>
             <Hero openModal={openModal} closeModal={closeModal} isModalOpen={isModalOpen} />
             <section className="w-full relative z-20">
             <FeatureCarousel />
@@ -22,7 +21,6 @@ export function Home() {
             <About />
             <HowItWork />
             <Subscriptions />
-            <Footer openModal={openModal} />
-        </main>
+        </Layout>
     )
 }
