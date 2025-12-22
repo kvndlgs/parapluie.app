@@ -71,11 +71,11 @@ const router = createBrowserRouter([
   element: <ForOrgs />,
  },
  {
-  path: "/post/protection-parents", 
+  path: "/protection-parents", 
   element: <ProtectionParents />,
  },
  {
-  path: "/post/arnaque-grand-parent",
+  path: "/arnaque-grand-parent",
   element: <ArnaqueGrandParent />,
  },
  {
