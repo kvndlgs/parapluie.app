@@ -1,4 +1,4 @@
-export function Presskit() {
+export default function Presskit() {
     return (
         <section> 
             <h1>

@@ -1,6 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
 
-export function ForCaregivers(){
+export default function ForCaregivers(){
     useSeo({
         title: "Parapluie - Pour la famille et les proches aidants",
         canonical: "https://parapluie.app/pour-les-soignants",

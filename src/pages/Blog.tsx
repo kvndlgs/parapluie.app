@@ -3,7 +3,7 @@ import { useSeo } from '../hooks/useSeo';
 import { Layout } from '../components/Layout';
 import { getAllPosts } from '../content/posts';
 
-export function Blog() {
+export default function Blog() {
     const posts = getAllPosts();
    
     useSeo({

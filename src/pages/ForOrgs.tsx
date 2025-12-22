@@ -1,6 +1,6 @@
 import { useSeo } from "../hooks/useSeo";
 
-export function ForOrgs(){
+export default function ForOrgs(){
     useSeo({
         title: " Parapluie - Pour les organisations",
         canonical: "https://parapluie.app/pour-les-organisations",

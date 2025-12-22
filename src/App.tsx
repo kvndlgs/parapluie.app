@@ -1,27 +1,28 @@
 import {createBrowserRouter, RouterProvider } from 'react-router-dom';
-import  { SubscriptionsPage } from './pages/SubscriptionsPage';
-import { AboutPage } from './pages/AboutPage';
-import { Home } from './pages/Home';
+import { lazy, Suspense } from 'react';
+const SubscriptionsPage = lazy(() => import('./pages/SubscriptionsPage'));
+const  AboutPage = lazy(() => import("./pages/AboutPage"));
+const Home  = lazy(() => import("./pages/Home"));
 
-import ArnaqueGrandParent from './pages/ArnaqueGrandParent';
-import ProtectionParents from './pages/ProtectionParents';
-import { Blog } from './pages/Blog';
-import { HowItWorkPage } from './pages/Howitwork';
-import { ForSeniors } from './pages/ForSeniors';
-import { ForCaregivers } from './pages/ForCaregivers';
-import { ForOrgs } from './pages/ForOrgs';
+const ArnaqueGrandParent = lazy(() => import('./pages/ArnaqueGrandParent'));
+const  ProtectionParents = lazy(() => import('./pages/ProtectionParents'));
+const  Blog = lazy(() => import('./pages/Blog'));
+const HowItWorkPage = lazy(() => import('./pages/Howitwork'));
+const ForSeniors = lazy(() => import('./pages/ForSeniors'));
+const ForCaregivers = lazy(() => import('./pages/ForCaregivers'));
+const ForOrgs = lazy(() => import('./pages/ForOrgs'));
 
-import { Support } from './pages/Support'
-import { Media } from './pages/Media';
-import { Presskit } from './pages/Presskit';
-import { FAQ } from './pages/FAQ';
-import {Guides} from './pages/Guides';
-import GuidePost from './pages/GuidePost';
-import BlogPost from './pages/BlogPost';
-import { Contact } from './pages/Contact';
-import { TermsAndConditions } from './pages/TandC';
-import { PrivacyPolicy } from './pages/PrivacyPolicy';
-import { NotFound } from './pages/NotFound';
+const Support = lazy(() => import('./pages/Support'));
+const Media = lazy(() => import('./pages/Media'));
+const Presskit = lazy(() => import('./pages/Presskit'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Guides = lazy(() => import('./pages/Guides'));
+const GuidePost = lazy(() => import('./pages/GuidePost'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Contact = lazy(() => import('./pages/Contact'));
+const TermsAndConditions = lazy(() => import('./pages/TandC'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 
 const router = createBrowserRouter([
@@ -111,7 +112,9 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <RouterProvider router={router} />
+    <Suspense fallback={null}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
                                                                                                               

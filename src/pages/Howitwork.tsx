@@ -1,6 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
 
-export function HowItWorkPage(){
+export default function HowItWorkPage(){
     useSeo({
         title: "Parapluie - Comment ça marche",
         canonical: "https://parapluie.app/comment-ca-marche",

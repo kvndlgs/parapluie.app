@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useSeo } from '../hooks/useSeo';
 import  { Layout } from '../components/Layout';
 
-export function Support() {
+export default function Support() {
   
   useSeo({
     title: 'Support - Parapluie',

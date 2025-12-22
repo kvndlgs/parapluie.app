@@ -21,7 +21,7 @@ const faqItems = [
   }
 ]
 
-export function AboutPage() {
+export default function AboutPage() {
   const faqJsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",

@@ -6,7 +6,7 @@ import { Subscriptions } from '../sections/Subscriptions';
 import { Layout } from '../components/Layout';
 import { useState } from 'react';
 
-export function Home() {
+export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => { setIsModalOpen(true); }

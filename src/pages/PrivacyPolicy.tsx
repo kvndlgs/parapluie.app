@@ -1,4 +1,4 @@
-export function PrivacyPolicy(){
+export default function PrivacyPolicy(){
     return (
       <section>
          <h1 id="politique-de-confidentialité">Politique de confidentialité</h1>

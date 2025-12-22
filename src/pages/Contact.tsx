@@ -4,7 +4,7 @@ import { useSeo } from '../hooks/useSeo';
 import { Link } from 'react-router-dom';
 import { Layout } from "../components/Layout";
 
-export function Contact() {
+export default function Contact() {
   const [state, handleSubmit] = useForm('mldywgll');
   
   useSeo({

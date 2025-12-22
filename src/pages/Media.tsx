@@ -1,6 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
 
-export function Media() {
+export default function Media() {
  
   useSeo({
     title: 'Media - Parapluie',

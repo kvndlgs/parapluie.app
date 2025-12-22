@@ -1,6 +1,6 @@
 import { useSeo } from '../hooks/useSeo'
 
-export function TermsAndConditions(){
+export default function TermsAndConditions(){
     useSeo({
         title: "Parapluie - Conditions générales d'utilisation",
         canonical: "https://parapluie.app/conditions-generales-d'utilisation",

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useSeo } from '../hooks/useSeo';
 import { getAllGuides } from '../content/guides';
 
-export function Guides() {
+export default function Guides() {
    
     useSeo({
         title: 'Guides - Parapluie',

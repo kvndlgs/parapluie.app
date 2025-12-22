@@ -1,6 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
 
-export function ForSeniors(){
+export default function ForSeniors(){
     useSeo({
         title: "Parapluie - Pour les aînés",
         canonical: "https://parapluie.app/pour-les-aines",

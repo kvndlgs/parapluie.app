@@ -2,7 +2,7 @@ import { useRouteError } from 'react-router-dom';
 import { Layout } from "../components/Layout";
 import { useSeo } from "../hooks/useSeo";
 
-export function NotFound() {
+export default function NotFound() {
     useSeo({
         title: "404 - Parapluie"
     });
