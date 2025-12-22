@@ -14,12 +14,17 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
         <section className="relative flex flex-col 
         items-center justify-center md:py-24 py-20 px-8 
         bg-[linear-gradient(to bottom, #F5F0FA 0%, white 80%)]  
-        w-screen 
-        min-h-screen 
-        bg-[url('/bg2.webp')] 
-        bg-center bg-cover"
-        >
-
+        w-screen overflow-hidden">
+        
+             <img
+                 src="/bg2.webp"
+                     alt="Protection contre les scams pour les aînés"
+                         aria-hidden="true"
+                             className="absolute inset-0 h-full w-full object-cover"
+                                 fetchPriority="high"
+                                     decoding="async"
+                         />
+<div className="z-10">
             {/* Badge */}
             <div className="inline-block bg-primary-100 text-primary-850 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
                 341% d'augmentation des fraudes contre les aînés depuis 2022
@@ -41,6 +46,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
             <button onClick={openModal} className="py-3 px-6 bg-base-650 w-50 rounded-md mx-auto text-white text-md">
                 Accès anticipé
             </button>
+</div>
             {/* Modal Integration */}
             <Modal
                 isOpen={isModalOpen}
@@ -49,6 +55,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
             >
                 <WaitlistForm />
             </Modal>
+            
 
         </section >
     )

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap');
 
 @import "tailwindcss";
 
@@ -281,30 +281,6 @@ button {
     font-variation-settings: var(--font-var-display);
 }
 
-.hero-section {
-    position: relative;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #F5F0FA 0%, white 80%);
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80%;
-    /* Adjust how far down clouds go */
-    background-image: url('/clouds-full.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.4;
-    /* Adjust cloud opacity */
-    mask-image: linear-gradient(to bottom,
-            black 0%,
-            black 60%,
-            transparent 100%);
-}
 
 @keyframes drift {
     0% {

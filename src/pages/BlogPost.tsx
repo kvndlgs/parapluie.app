@@ -2,6 +2,8 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { getPostBySlug, getAllPosts } from '../content/posts';
 import { Layout } from '../components/Layout';
+import { useSeo } from '../hooks/useSeo';
+import stripIndent from '../utils/stripIndent';
 
 export default function BlogPost() {
     const { slug } = useParams<{ slug: string }>();
@@ -12,14 +14,19 @@ export default function BlogPost() {
         return <Navigate to="/blog" replace />;
     }
 
+    const content = stripIndent(post.content);
+
+    useSeo({
+        title: `${post.title} - Parapluie`,
+        description: post.excerpt,
+        canonical: `https://parapluie.app/post/${post.slug}`,
+    });
+
     // Get other posts for "Read more" section
     const otherPosts = allPosts.filter(p => p.slug !== slug).slice(0, 2);
 
-
     return (
         <Layout>
-        <main>
-        
 
             {/* Article Header */}
             <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
@@ -81,17 +88,37 @@ export default function BlogPost() {
                                     {children}
                                 </blockquote>
                             ),
-                            a: ({ href, children }) => (
-                                <Link to={href || '/'} className="text-primary-650 hover:text-primary-750 underline">
-                                    {children}
-                                </Link>
-                            ),
+                            a: ({ href, children, ...props }) => {
+                                  const url = href || '/';
+                                    const isExternal = /^https?:\/\//.test(url);
+
+                                      if (isExternal) {
+                                          return (
+                                                <a
+                                                        {...props}
+                                                                href={url}
+                                                                        target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                        className="text-primary-650 hover:text-primary-750 underline"
+                                                                                              >
+                                                                                                      {children}
+                                                                                                            </a>
+                                                                                                                );
+                                                                                                                  }
+
+                                                                                                                    return (
+                                                                                                                        <Link to={url} className="text-primary-650 hover:text-primary-750 underline">
+                                                                                                                              {children}
+                                                                                                                                  </Link>
+                                                                                                                                    );
+                                                                                                                                    },
+                        
                             hr: () => (
                                 <hr className="my-12 border-base-200" />
                             ),
                         }}
                     >
-                        {post.content}
+                        {content}
                     </ReactMarkdown>
                 </div>
             </article>
@@ -120,7 +147,7 @@ export default function BlogPost() {
             )}
 
             {/* CTA Section */}
-            <section className="py-16 px-6 bg-primary-100">
+            <section className="py-16 px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-2xl md:text-3xl font-bold text-primary-750 mb-4">
                         Passez à l'action
@@ -138,7 +165,6 @@ export default function BlogPost() {
             </section>
 
         
-        </main>
         </Layout>
     );
 }

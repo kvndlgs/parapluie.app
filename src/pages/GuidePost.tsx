@@ -1,24 +1,32 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
-import { Footer } from '../components/Footer';
+import { Layout } from '../components/Layout';
+import { useSeo } from '../hooks/useSeo';
 import { getGuideBySlug, getAllGuides } from '../content/guides';
-
+import stripIndent from '../utils/stripIndent';
 export default function GuidePost() {
+
+    
     const { slug } = useParams<{ slug: string }>();
     const guide = slug ? getGuideBySlug(slug) : undefined;
     const allGuides = getAllGuides();
-
+    const content = stripIndent(guide.content)
     if (!guide) {
         return <Navigate to="/guides" replace />;
     }
+
+    useSeo({
+      title: `${guide.title} - Parapluie`,
+      description: guide.excerpt,
+      canonical: `https://parapluie.app/guide/${guide.slug}`,
+    });
 
     // Get other guides for "Read more" section
     const otherGuides = allGuides.filter(g => g.slug !== slug).slice(0, 2);
 
     return (
-        <main>
-            <ResponsiveNavbar />
+        <Layout>
+        
 
             {/* Article Header */}
             <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
@@ -50,6 +58,7 @@ export default function GuidePost() {
             <article className="py-12 px-6 bg-white">
                 <div className="max-w-3xl mx-auto prose prose-lg prose-base-700">
                     <ReactMarkdown
+                        
                         components={{
                             h2: ({ children }) => (
                                 <h2 className="text-2xl md:text-3xl font-bold text-base-700 mt-12 mb-6">{children}</h2>
@@ -80,17 +89,38 @@ export default function GuidePost() {
                                     {children}
                                 </blockquote>
                             ),
-                            a: ({ href, children }) => (
-                                <Link to={href || '/'} className="text-primary-650 hover:text-primary-750 underline">
-                                    {children}
-                                </Link>
-                            ),
+                            a: ({ href, children, ...props }) => {
+                                  const url = href || '/';
+                                    const isExternal = /^https?:\/\//.test(url);
+
+                                      if (isExternal) {
+                                          return (
+                                                <a
+                                                        {...props}
+                                                                href={url}
+                                                                        target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                        className="text-primary-650 hover:text-primary-750 underline"
+                                                                                              >
+                                                                                                      {children}
+                                                                                                            </a>
+                                                                                                                );
+                                                                                                                  }
+
+                                                                                                                    return (
+                                                                                                                        <Link to={url} className="text-primary-650 hover:text-primary-750 underline">
+                                                                                                                              {children}
+                                                                                                                                  </Link>
+                                                                                                                                    );
+                                                                                                                                    },
+                            
+                        
                             hr: () => (
                                 <hr className="my-12 border-base-200" />
                             ),
                         }}
                     >
-                        {guide.content}
+                        {content}
                     </ReactMarkdown>
                 </div>
             </article>
@@ -119,7 +149,7 @@ export default function GuidePost() {
             )}
 
             {/* CTA Section */}
-            <section className="py-16 px-6 bg-primary-100">
+            <section className="py-16 px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-2xl md:text-3xl font-bold text-primary-750 mb-4">
                         Passez à l'action
@@ -135,8 +165,6 @@ export default function GuidePost() {
                     </Link>
                 </div>
             </section>
-
-            <Footer />
-        </main>
+        </Layout>
     );
 }

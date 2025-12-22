@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useSeo } from '../hooks/useSeo';
 import { getAllGuides } from '../content/guides';
+import { Layout } from '../components/Layout';
 
 export default function Guides() {
    
@@ -12,8 +13,8 @@ export default function Guides() {
     const guides = getAllGuides();
         
     return (
-    
-        <main>
+    <Layout>
+        <main className="py-12">
             <Link to="/">
                 Retourner a l'accueil 
             </Link>
@@ -92,6 +93,7 @@ export default function Guides() {
 
             
         </main>
+        </Layout>
     
     );
 }

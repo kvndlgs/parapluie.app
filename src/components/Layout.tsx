@@ -10,7 +10,9 @@ export function Layout({children}: LayoutProps) {
     return (
         <>
             <ResponsiveNavBar />
+            <main className="min-h-screen w-full py-12">
             {children}
+            </main>
             <Footer />
         </>
     )
