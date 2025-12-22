@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useSeo } from "../hooks/useSeo"; // <- adjust path if needed
+import { Layout } from "../components/Layout";
 
 const faqItems = [
   {
@@ -66,7 +67,7 @@ export function FAQ() {
   // Apply SEO
   
   useSeo({
-    title: "FAQ – Support Parapluie",
+    title: "FAQ – Parapluie",
     description: "Questions fréquentes sur Parapluie, l’application qui protège vos parents et grands-parents des arnaques téléphoniques et SMS au Québec.",
     canonical: "https://parapluie.app/support/faq",
     jsonLd: faqJsonLd,
@@ -75,6 +76,7 @@ export function FAQ() {
   
 
   return (
+    <Layout>
     <section className="max-w-3xl mx-auto px-6 py-16">
       <Link
         to="/"
@@ -110,5 +112,6 @@ export function FAQ() {
         ))}
       </div>
     </section>
+    </Layout>
   );
 }

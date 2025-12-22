@@ -1,12 +1,17 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect } from 'react';
-// import { useSeo } from '../hooks/useSeo';
+import { useSeo } from '../hooks/useSeo';
 import { Link } from 'react-router-dom';
-import { Footer } from '../components/Footer';
+import { Layout } from "../components/Layout";
 
 export function Contact() {
   const [state, handleSubmit] = useForm('mldywgll');
   
+  useSeo({
+    title: "Contact - Parapluie",
+    canonical: "https://parapluie.app/support/contact"
+  });
+
   useEffect(() => {
     console.log('Formspree state:', state);
     console.log('Erros', state.errors);
@@ -25,7 +30,7 @@ export function Contact() {
   }
       
   return (
-     
+     <Layout>
     <main className="pb-16">
          <Link to="/">Retour</Link>
 
@@ -119,8 +124,9 @@ export function Contact() {
 
         </form>
         </section>
-        <Footer />
+        
   </main>
+  </Layout>
   
   );
 }

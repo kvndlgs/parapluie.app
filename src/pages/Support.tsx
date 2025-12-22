@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSeo } from '../hooks/useSeo';
+import  { Layout } from '../components/Layout';
 
 export function Support() {
   
@@ -9,6 +10,7 @@ export function Support() {
   });
     
   return (
+    <Layout>
       <main className="min-h-screen bg-white text-neutral-900">
         {/* HERO */}
         <section className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 pb-10 pt-12 sm:px-6 lg:px-8">
@@ -171,16 +173,9 @@ export function Support() {
               </ul>
             </article>
           </div>
-
-          {/* Note de Walter */}
-          <div className="mt-10 rounded-2xl border border-neutral-200 bg-primary-50 px-5 py-4 sm:px-6">
-            <p className="text-sm text-neutral-700">
-              💬 <span className="font-semibold">Message de Walter :</span>{" "}
-              « Respirez. On va s’en sortir ensemble. Même si Alain continue
-              d’envoyer des cartes cadeaux au premier prince du Nigeria venu. »
-            </p>
-          </div>
+          
         </section>
       </main>
+      </Layout>
   );
 }

@@ -1,5 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
 import { useMemo } from 'react';
+import { Layout } from '../components/Layout';
 
 const faqItems = [
   {
@@ -46,6 +47,7 @@ export function AboutPage() {
   });
 
   return (
+    <Layout>
     <section className="space-y-4">
         <h2 className="text-base-900">Comment Parapluie aide</h2>
 
@@ -130,5 +132,6 @@ export function AboutPage() {
               </p>
           </div>
       </section>
+      </Layout>
   );
 }

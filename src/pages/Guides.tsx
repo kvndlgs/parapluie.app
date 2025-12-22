@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
 import { useSeo } from '../hooks/useSeo';
-import { Layout } from '../components/Layout';
-import { getAllPosts } from '../content/posts';
+import { getAllGuides } from '../content/guides';
 
-export function Blog() {
-    const posts = getAllPosts();
+export function Guides() {
    
     useSeo({
-        title: 'Blog - Parapluie',
-        canonical: 'https://parapluie.app/blog'
+        title: 'Guides - Parapluie',
+        canonical: 'https://parapluie.app/guides'
     });
+
+    const guides = getAllGuides();
         
     return (
-
-        <Layout>
+    
         <main>
             <Link to="/">
                 Retourner a l'accueil 
@@ -22,7 +21,7 @@ export function Blog() {
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6">
-                        Blog Parapluie
+                        Guides Parapluie
                     </h1>
                     <p className="text-lg text-base-600 max-w-2xl mx-auto">
                         Conseils et ressources pour protéger vos proches contre la fraude téléphonique au Québec.
@@ -35,33 +34,33 @@ export function Blog() {
             <section className="py-16 px-6 bg-white">
                 <div className="max-w-4xl mx-auto">
                     <div className="space-y-8">
-                        {posts.map((post) => (
-                            <article key={post.slug} className="bg-base-50 rounded-2xl p-8 border border-base-100 hover:border-primary-200 transition-colors">
+                        {guides.map((guide) => (
+                            <article key={guide.slug} className="bg-base-50 rounded-2xl p-8 border border-base-100 hover:border-primary-200 transition-colors">
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    {post.tags.map((tag) => (
+                                    {guide.tags.map((tag) => (
                                         <span key={tag} className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <Link to={`/post/${post.slug}`}>
+                                <Link to={`/guide/${guide.slug}`}>
                                     <h2 className="text-2xl font-bold text-base-700 mb-3 hover:text-primary-650 transition-colors">
-                                        {post.title}
+                                        {guide.title}
                                     </h2>
                                 </Link>
                                 <p className="text-base-600 mb-4 leading-relaxed">
-                                    {post.excerpt}
+                                    {guide.excerpt}
                                 </p>
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-4 text-sm text-base-500">
-                                        <span>{post.author}</span>
+                                        <span>{guide.author}</span>
                                         <span>•</span>
-                                        <span>{new Date(post.date).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                                        <span>{new Date(guide.date).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                                         <span>•</span>
-                                        <span>{post.readTime} de lecture</span>
+                                        <span>{guide.readTime} de lecture</span>
                                     </div>
                                     <Link
-                                        to={`/post/${post.slug}`}
+                                        to={`/guide/${guide.slug}`}
                                         className="text-primary-650 font-semibold hover:text-primary-750 transition-colors"
                                     >
                                         Lire →
@@ -93,6 +92,6 @@ export function Blog() {
 
             
         </main>
-    </Layout>
+    
     );
 }

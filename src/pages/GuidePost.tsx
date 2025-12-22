@@ -1,48 +1,47 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { getPostBySlug, getAllPosts } from '../content/posts';
-import { Layout } from '../components/Layout';
+import ResponsiveNavbar from '../components/ResponsiveNavbar';
+import { Footer } from '../components/Footer';
+import { getGuideBySlug, getAllGuides } from '../content/guides';
 
-export default function BlogPost() {
+export default function GuidePost() {
     const { slug } = useParams<{ slug: string }>();
-    const post = slug ? getPostBySlug(slug) : undefined;
-    const allPosts = getAllPosts();
+    const guide = slug ? getGuideBySlug(slug) : undefined;
+    const allGuides = getAllGuides();
 
-    if (!post) {
-        return <Navigate to="/blog" replace />;
+    if (!guide) {
+        return <Navigate to="/guides" replace />;
     }
 
-    // Get other posts for "Read more" section
-    const otherPosts = allPosts.filter(p => p.slug !== slug).slice(0, 2);
-
+    // Get other guides for "Read more" section
+    const otherGuides = allGuides.filter(g => g.slug !== slug).slice(0, 2);
 
     return (
-        <Layout>
         <main>
-        
+            <ResponsiveNavbar />
 
             {/* Article Header */}
             <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-3xl mx-auto">
-                    <Link to="/blog" className="text-primary-650 hover:text-primary-750 font-medium mb-6 inline-block">
-                        ← Retour au blog
+                    <Link to="/guides" className="text-primary-650 hover:text-primary-750 font-medium mb-6 inline-block">
+                        ← Retour au guides
                     </Link>
                     <div className="flex flex-wrap gap-2 mb-4">
-                        {post.tags.map((tag) => (
+                        {guide.tags.map((tag) => (
                             <span key={tag} className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full">
                                 {tag}
                             </span>
                         ))}
                     </div>
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-base-700 mb-6 leading-tight">
-                        {post.title}
+                        {guide.title}
                     </h1>
                     <div className="flex items-center gap-4 text-base-500">
-                        <span className="font-medium">{post.author}</span>
+                        <span className="font-medium">{guide.author}</span>
                         <span>•</span>
-                        <span>{new Date(post.date).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        <span>{new Date(guide.date).toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         <span>•</span>
-                        <span>{post.readTime} de lecture</span>
+                        <span>{guide.readTime} de lecture</span>
                     </div>
                 </div>
             </section>
@@ -91,27 +90,27 @@ export default function BlogPost() {
                             ),
                         }}
                     >
-                        {post.content}
+                        {guide.content}
                     </ReactMarkdown>
                 </div>
             </article>
 
             {/* Read More Section */}
-            {otherPosts.length > 0 && (
+            {otherGuides.length > 0 && (
                 <section className="py-16 px-6 bg-base-50">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl font-bold text-base-700 mb-8">Continuer la lecture</h2>
                         <div className="grid md:grid-cols-2 gap-6">
-                            {otherPosts.map((otherPost) => (
+                            {otherGuides.map((otherGuide) => (
                                 <Link
-                                    key={otherPost.slug}
-                                    to={`/post/${otherPost.slug}`}
+                                    key={otherGuide.slug}
+                                    to={`/guide/${otherGuide.slug}`}
                                     className="bg-white rounded-xl p-6 border border-base-100 hover:border-primary-200 transition-colors"
                                 >
                                     <h3 className="font-bold text-base-700 mb-2 hover:text-primary-650">
-                                        {otherPost.title}
+                                        {otherGuide.title}
                                     </h3>
-                                    <p className="text-sm text-base-500">{otherPost.readTime} de lecture</p>
+                                    <p className="text-sm text-base-500">{otherGuide.readTime} de lecture</p>
                                 </Link>
                             ))}
                         </div>
@@ -137,8 +136,7 @@ export default function BlogPost() {
                 </div>
             </section>
 
-        
+            <Footer />
         </main>
-        </Layout>
     );
 }

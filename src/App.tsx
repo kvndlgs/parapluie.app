@@ -15,6 +15,8 @@ import { Support } from './pages/Support'
 import { Media } from './pages/Media';
 import { Presskit } from './pages/Presskit';
 import { FAQ } from './pages/FAQ';
+import {Guides} from './pages/Guides';
+import GuidePost from './pages/GuidePost';
 import BlogPost from './pages/BlogPost';
 import { Contact } from './pages/Contact';
 import { TermsAndConditions } from './pages/TandC';
@@ -41,8 +43,16 @@ const router = createBrowserRouter([
   element: <Blog />,
  },
  {
-  path: "/blog/:slug",
+  path: "/post/:slug",
   element: <BlogPost />,
+ },
+ {
+  path: "/guides",
+  element: <Guides />,
+ },
+ {
+  path: "/guide/:slug",
+  element: <GuidePost />,
  },
  {
   path: "/comment-ca-marche",
@@ -61,11 +71,11 @@ const router = createBrowserRouter([
   element: <ForOrgs />,
  },
  {
-  path: "/protection-parents", 
+  path: "/post/protection-parents", 
   element: <ProtectionParents />,
  },
  {
-  path: "/arnaque-grand-parent",
+  path: "/post/arnaque-grand-parent",
   element: <ArnaqueGrandParent />,
  },
  {
