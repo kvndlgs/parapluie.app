@@ -64,7 +64,7 @@ const router = createBrowserRouter([
   element: <ForSeniors />,
  },
  {
-  path: "/pour-les-soignants",
+  path: "/pour-les-proches",
   element: <ForCaregivers />,
  },
  {

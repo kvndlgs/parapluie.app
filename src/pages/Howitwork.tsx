@@ -1,4 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
+import { Layout } from '../components/Layout';
+import { HowItWork } from '../sections/HowItWork';
 
 export default function HowItWorkPage(){
     useSeo({
@@ -6,8 +8,8 @@ export default function HowItWorkPage(){
         canonical: "https://parapluie.app/comment-ca-marche",
     });
     return (
-        <section>
-            <h1> Comment ca marche </h1>
-        </section>
+        <Layout>
+            <HowItWork />
+        </Layout>
     )
 }
