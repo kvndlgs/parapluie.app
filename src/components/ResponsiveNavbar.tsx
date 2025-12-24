@@ -26,7 +26,7 @@ interface NavItem {
           const element = document.getElementById(id);
                          if (element) {
         
-        elemen.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth' });
                                                   }
                                                     };
                              useEffect(() => {
