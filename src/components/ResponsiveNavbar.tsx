@@ -12,10 +12,7 @@ interface NavItem {
           { label: 'Abonnement', href: '#abonnements' },
             { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
             ];
-
-
-
-
+            
             const ResponsiveNavbar = () => {
               const [scrolled, setScrolled] = useState(false);
                 const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +22,15 @@ interface NavItem {
                         };
                           // Smooth scroll handler
                             const scrollToSection = (e: React.MouseEvent, id: string) => {
-                                e.preventDefault();
-                                    const element = document.getElementById(id);
-                                        if (element) {
-                                              element.scrollIntoView({ behavior: 'smooth' });
+               e.preventDefault();
+          const element = document.getElementById(id);
+                         if (element) {
+        
+        elemen.scrollIntoView({ behavior: 'smooth' });
                                                   }
                                                     };
-                                                      useEffect(() => {
-                                                          const handleScroll = () => {
+                             useEffect(() => {
+                          const handleScroll = () => {
                                                                 setScrolled(window.scrollY > 20);
                                                                     };
                                                                         window.addEventListener('scroll', handleScroll);

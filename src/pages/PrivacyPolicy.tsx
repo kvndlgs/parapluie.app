@@ -1,5 +1,26 @@
+import { useSeo } from "../hooks/useSeo.ts"
+import { Layout } from "../components/Layout";
+import { Link } from "react-router-dom";
+
+
 export default function PrivacyPolicy(){
+  useSeo({
+    title: "Politique de confidentialité - Parapluie",
+    canonical: "https://parapluie.app/politique-de-confidentialite"
+  });
     return (
+      <Layout>
+         <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Accueil
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">Politique de confidentialité</span>
+          </div>
+
       <section>
          <h1 id="politique-de-confidentialité">Politique de confidentialité</h1>
          <p><strong>Parapluie — Application de protection contre les
@@ -116,5 +137,6 @@ export default function PrivacyPolicy(){
          Site web : https://parapluie.app</p>
          
       </section>
+      </Layout>
     )
 }

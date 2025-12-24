@@ -1,4 +1,6 @@
-import { useSeo } from '../hooks/useSeo'
+import { useSeo } from '../hooks/useSeo';
+import { Link } from "react-router-dom";
+import { Layout } from '../components/Layout' 
 
 export default function TermsAndConditions(){
     useSeo({
@@ -6,6 +8,18 @@ export default function TermsAndConditions(){
         canonical: "https://parapluie.app/conditions-generales-d'utilisation",
     });
     return (
+        <Layout>
+             <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Accueil
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">Conditions générales d'utilisation </span>
+          </div>
+
         <section>
         <h1>Conditions générales
             d’utilisation</h1>
@@ -135,5 +149,6 @@ export default function TermsAndConditions(){
             Site web : https://parapluie.app</p>
             
         </section>
+        </Layout>
     )
 }

@@ -31,7 +31,18 @@ export default function Contact() {
       
   return (
      <Layout>
-    <main className="pb-16">
+          <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/support"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Support
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">Contact</span>
+          </div>
+
+    <main className="pb-16 w-full">
          <Link to="/">Retour</Link>
 
             {/* Hero Section */}

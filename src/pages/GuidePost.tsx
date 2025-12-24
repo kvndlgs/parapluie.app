@@ -19,6 +19,16 @@ export default function GuidePost() {
       title: `${guide.title} - Parapluie`,
       description: guide.excerpt,
       canonical: `https://parapluie.app/guide/${guide.slug}`,
+      jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": `${guide.title}`,
+    "datePublished": `${guide.publishedAt}`,
+    "timeRequired": `${guide.readTime}`,
+      "author": [
+          `${guide.author}`
+      ],
+      }
     });
 
     // Get other guides for "Read more" section
@@ -31,9 +41,17 @@ export default function GuidePost() {
             {/* Article Header */}
             <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-3xl mx-auto">
-                    <Link to="/guides" className="text-primary-650 hover:text-primary-750 font-medium mb-6 inline-block">
-                        ← Retour au guides
-                    </Link>
+                     <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/guides"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Guides
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">{guide.title}</span>
+          </div>
+
                     <div className="flex flex-wrap gap-2 mb-4">
                         {guide.tags.map((tag) => (
                             <span key={tag} className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full">

@@ -78,12 +78,18 @@ export default function FAQ() {
   return (
     <Layout>
     <section className="max-w-3xl mx-auto px-6 py-16">
-      <Link
-        to="/"
-        className="text-purple-600 hover:underline text-sm font-medium"
-      >
-        ← Retourner à l'accueil
-      </Link>
+      
+       <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/support"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Support
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">FAQ</span>
+          </div>
+
 
       <h1 className="text-4xl font-bold mt-6 mb-10 text-base-700">
         Foire aux questions

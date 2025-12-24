@@ -20,6 +20,16 @@ export default function BlogPost() {
         title: `${post.title} - Parapluie`,
         description: post.excerpt,
         canonical: `https://parapluie.app/post/${post.slug}`,
+        jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": `${post.title}`,
+    "datePublished": `${post.publishedAt}`,
+    "timeRequired": `${post.readTime}`,
+    "author": [
+        `${post.author}`
+    ],
+}
     });
 
     // Get other posts for "Read more" section
@@ -31,9 +41,17 @@ export default function BlogPost() {
             {/* Article Header */}
             <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-3xl mx-auto">
-                    <Link to="/blog" className="text-primary-650 hover:text-primary-750 font-medium mb-6 inline-block">
-                        ← Retour au blog
-                    </Link>
+                     <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Blog
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">{post.title}</span>
+          </div>
+
                     <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags.map((tag) => (
                             <span key={tag} className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full">
