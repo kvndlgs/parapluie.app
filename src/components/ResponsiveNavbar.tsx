@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Logo from './Logo'; // Corrected import
+import { Link } from "react-router-dom";
 
 interface NavItem {
   label: string;
@@ -51,20 +52,22 @@ interface NavItem {
                                                                                                                                             `} /*className="sticky w-full flex justify-between px-4 md:justify-center items-center bg-[rgba(255,255,255,0.95)] backdrop-blur-[12px] py-4 rounded-full"*/>
                                                                                                                                                   {/* Mobile Logo (visible on mobile, hidden on desktop) */}
                                                                                                                                                         <div className="md:hidden">
+                                                                                                                                                            <Link to="/">
                                                                                                                                                                 <Logo variant='icon' />
+                                                                                                                                                            </Link>
                                                                                                                                                                       </div>
 
                                                                                                                                                                             {/* Desktop Navigation (hidden on mobile) */}
                                                                                                                                                                                   <div className="hidden md:flex items-center gap-16">
                                                                                                                                                                                           <div className="hidden md:flex space-x-12  font-medium text-base-750">
                                                                                                                                                                                                     <a href="#a-propos" onClick={(e) => scrollToSection(e, 'a-propos')} className="hover:text-brand-primary transition-colors">À Propos</a>
-                                                                                                                                                                                                              <a href="comment-ca-marche" onClick={(e) => scrollToSection(e, 'comment-ca-marche')} className="hover:text-brand-primary transition-colors">Comment ça marche ?</a>
+                                                                                                                                                                                                              <a href="#comment-ca-marche" onClick={(e) => scrollToSection(e, 'comment-ca-marche')} className="hover:text-brand-primary transition-colors">Comment ça marche ?</a>
                                                                                                                                                                                                                       </div>
 
                                                                                                                                                                                                                               <Logo variant='full' /> {/* Full logo for desktop */}
 
                                                                                                                                                                                                                                       <div className="hidden md:flex space-x-12  font-medium text-base-750">
-                                                                                                                                                                                                                                                <a onClick={(e) => scrollToSection(e, 'abonnements')} className="hover:text-brand-primary cursor-pointer transition-colors">Abonnement</a>
+                                                                                                                                                                                                                                                <a href="#abonnements" onClick={(e) => scrollToSection(e, 'abonnements')} className="hover:text-brand-primary cursor-pointer transition-colors">Abonnements </a>
                                                                                                                                                                                                                                                           <a href="https://dashboard.parapluie.app" className="hover:text-brand-primary cursor-pointer transition-colors">Tableau de bord</a>
                                                                                                                                                                                                                                                                   </div>
                                                                                                                                                                                                                                                                         </div>

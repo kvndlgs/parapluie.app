@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Logo } from './Logo';
+import Logo  from './Logo';
 
 type NavItem = {
   label: string;
@@ -52,7 +52,7 @@ export default function Navbar() {
   const nav = useMemo(() => {
     const homeSections: Record<string, string> = {
       "À propos": "#a-propos",
-      "Comment ça marche": "#comment-ca-marche",
+      "Comment ça marche ?": "#comment-ca-marche",
       "Abonnements": "#abonnements",
     };
 
@@ -80,13 +80,11 @@ export default function Navbar() {
     };
 
     const left: NavItem[] = [
-      makeDual("Comment ça marche", "/comment-ca-marche", homeSections["Comment ça marche"]),
-      makeDual("Pour les aînés", "/pour-les-aines"),
+      makeDual("Comment ça marche ?", "/comment-ca-marche", homeSections["Comment ça marche ?"]),
     ];
 
     const right: NavItem[] = [
-      makeDual("Pour les proches", "/pour-les-proches"),
-      makeDual("Pour les organisations", "/pour-les-organisations"),
+      makeDual("Abonnements", "/abonnements", homeSections["Abonnements"]),
     ];
 
     return { left, right };

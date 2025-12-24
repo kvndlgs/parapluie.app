@@ -24,7 +24,7 @@ export default function BlogPost() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": `${post.title}`,
-    "datePublished": `${post.publishedAt}`,
+    "datePublished": `${post.date}`,
     "timeRequired": `${post.readTime}`,
     "author": [
         `${post.author}`

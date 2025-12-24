@@ -1,5 +1,5 @@
-// import ResponsiveNavBar from './ResponsiveNavbar';
-import Navbar from "./Navbar";
+import ResponsiveNavBar from './ResponsiveNavbar';
+// import Navbar from "./Navbar";
 import { Footer } from './Footer';
 import React from 'react';
 
@@ -10,7 +10,7 @@ interface LayoutProps {
 export function Layout({children}: LayoutProps) {
     return (
         <>
-            <Navbar />
+            <ResponsiveNavBar />
             <main className="min-h-screen w-full py-12">
             {children}
             </main>

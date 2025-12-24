@@ -23,7 +23,7 @@ export default function GuidePost() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": `${guide.title}`,
-    "datePublished": `${guide.publishedAt}`,
+    "datePublished": `${guide.date}`,
     "timeRequired": `${guide.readTime}`,
       "author": [
           `${guide.author}`
