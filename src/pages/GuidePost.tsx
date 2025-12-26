@@ -4,6 +4,11 @@ import { Layout } from '../components/Layout';
 import { useSeo } from '../hooks/useSeo';
 import { getGuideBySlug, getAllGuides } from '../content/guides';
 import stripIndent from '../utils/stripIndent';
+
+    
+
+
+
 export default function GuidePost() {
 
     
@@ -14,22 +19,73 @@ export default function GuidePost() {
     if (!guide) {
         return <Navigate to="/guides" replace />;
     }
+    
+    const breadcrumbJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://parapluie.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://parapluie.app/guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": guide.title,
+          "item": `https://parapluie.app/guide/${guide.slug}`
+        }
+      ]
+    };
+
+    const howToJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": guide.title,
+      "description": guide.excerpt,
+      "image": "https://parapluie.app/Og-guide-reflexes.png", // Explicit protective Walter
+      "totalTime": "PT5M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Ralentir et respirer",
+          "text": "Ne cédez pas au sentiment d'urgence créé par le fraudeur. Prenez une pause pour réfléchir."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Valider l'identité",
+          "text": "Raccrochez et rappelez l'institution via le numéro officiel derrière votre carte bancaire."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Consulter un proche",
+          "text": "Appelez un membre de votre famille pour lui expliquer la situation avant d'agir."
+        }
+      ],
+      "author": {
+        "@type": "Person",
+        "name": guide.author
+      },
+      "datePublished": guide.date
+    };
 
     useSeo({
       title: `${guide.title} - Parapluie`,
       description: guide.excerpt,
       canonical: `https://parapluie.app/guide/${guide.slug}`,
-      jsonLd: {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `${guide.title}`,
-    "datePublished": `${guide.date}`,
-    "timeRequired": `${guide.readTime}`,
-      "author": [
-          `${guide.author}`
-      ],
-      }
+      ogImage: "https://parapluie.app/Og-guide-reflexes.png",
+      ogType: "article",
+      jsonLd: [breadcrumbJsonLd, howToJsonLd], // Passing as array
+      jsonLdId: `jsonld-guide-${guide.slug}`
     });
+
 
     // Get other guides for "Read more" section
     const otherGuides = allGuides.filter(g => g.slug !== slug).slice(0, 2);
