@@ -105,7 +105,7 @@ export default function GuidePost() {
               Guides
             </Link>
             <span className="text-neutral-400">/</span>
-            <span className="text-neutral-700">{guide.title}</span>
+            <span className="text-neutral-700 truncate min-">{guide.title}</span>
           </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">

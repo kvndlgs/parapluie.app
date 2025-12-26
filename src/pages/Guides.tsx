@@ -15,11 +15,19 @@ export default function Guides() {
     return (
     <Layout>
         <main className="py-12">
-            <Link to="/">
-                Retourner a l'accueil 
-            </Link>
+            
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
+          <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
+            <Link
+              to="/"
+              className="hover:text-neutral-800 hover:underline underline-offset-2"
+            >
+              Accueil
+            </Link>
+            <span className="text-neutral-400">/</span>
+            <span className="text-neutral-700">Guides</span>
+          </div>
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6">
                         Guides Parapluie
