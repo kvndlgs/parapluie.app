@@ -24,7 +24,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
                                  fetchPriority="high"
                                      decoding="async"
                          />
-<div className="z-10">
+<div className="z-10 flex items-center justify-center">
             {/* Badge */}
             <div className="inline-block bg-primary-100 text-primary-850 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
                 341% d'augmentation des fraudes contre les aînés depuis 2022
