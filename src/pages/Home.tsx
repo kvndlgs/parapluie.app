@@ -1,4 +1,5 @@
 import  { Hero } from '../components/Hero';
+import { useSeo } from "../hooks/useSeo";
 import { FeatureCarousel } from '../components/FeatureCarousel';
 import { About } from '../sections/About';
 import { HowItWork } from '../sections/HowItWork';
@@ -14,6 +15,12 @@ export default function Home() {
     const closeModal = () => { setIsModalOpen(false);}
     const location = useLocation();
     
+    useSeo({
+    title: "Parapluie - Protection contre les arnaques",
+    ogImage: "https://parapluie.app/og-image.webp",
+    canonical: "https://parapluie.app/"
+});
+
     useEffect(() => {
     if (!location.hash) return;
     const id = location.hash.replace("#", "");

@@ -6,8 +6,8 @@ interface UseSeoOptions {
   title?: string;
   description?: string;
   canonical?: string;
-  ogImage?: string;    // Added to interface
-  ogType?: string;     // Added to interface
+  ogImage?: string;
+  ogType?: string;
   jsonLd?: JsonLd;
   jsonLdId?: string;
 }
@@ -22,44 +22,43 @@ export function useSeo({
   jsonLdId = "parapluie-jsonld",
 }: UseSeoOptions) {
   useEffect(() => {
-    // 1. Safety check first (crucial for mobile builds)
     if (typeof document === "undefined") return;
 
-    // 2. Standard Meta Tags
+    // 1. Titles
     if (title) {
       document.title = title;
     }
 
-    if (description) {
-      let meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.name = "description";
-        document.head.appendChild(meta);
+    // 2. Metadata helper function to avoid repetition
+    const updateMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? "property" : "name";
+      let el = document.head.querySelector(`meta[${attr}="${name}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
       }
-      meta.content = description;
-    }
+      el.setAttribute("content", content);
+    };
 
-    // 3. Open Graph Tags (The "Social Magic")
-    const ogTags = [
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:image", content: ogImage || "https://parapluie.app/walter-og.png" },
-      { property: "og:type", content: ogType },
-    ];
+    if (description) updateMeta("description", description);
 
-    ogTags.forEach(({ property, content }) => {
-      if (!content) return;
-      let element = document.head.querySelector(`meta[property="${property}"]`);
-      if (!element) {
-        element = document.createElement("meta");
-        element.setAttribute("property", property);
-        document.head.appendChild(element);
-      }
-      element.setAttribute("content", content);
-    });
+    // 3. Image Fallback (Fixing the non-existent walter-og.png)
+    const finalImage = ogImage || "https://parapluie.app/og-image.webp";
 
-    // 4. Canonical
+    // 4. Open Graph (Facebook/LinkedIn)
+    if (title) updateMeta("og:title", title, true);
+    if (description) updateMeta("og:description", description, true);
+    updateMeta("og:image", finalImage, true);
+    updateMeta("og:type", ogType, true);
+
+    // 5. Twitter Tags (Ensuring "Large Card" display)
+    updateMeta("twitter:card", "summary_large_image");
+    if (title) updateMeta("twitter:title", title);
+    if (description) updateMeta("twitter:description", description);
+    updateMeta("twitter:image", finalImage);
+
+    // 6. Canonical
     if (canonical) {
       let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
       if (!link) {
@@ -70,7 +69,7 @@ export function useSeo({
       link.href = canonical;
     }
 
-    // 5. JSON-LD
+    // 7. JSON-LD
     if (jsonLd) {
       let script = document.getElementById(jsonLdId) as HTMLScriptElement | null;
       if (!script) {

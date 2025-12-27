@@ -7,7 +7,8 @@ export default function Guides() {
    
     useSeo({
         title: 'Guides - Parapluie',
-        canonical: 'https://parapluie.app/guides'
+        canonical: 'https://parapluie.app/guides',
+        ogImage: "https://parapluie.app/og-guides.png"
     });
 
     const guides = getAllGuides();
