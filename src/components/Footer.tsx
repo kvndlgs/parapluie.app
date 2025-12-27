@@ -42,7 +42,7 @@ export function Footer() {
 
                     {/* Right Column: Navigation Links */}
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
-                        <Link to="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</Link>
+                        <Link to="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnements</Link>
                         <Link to="/guides" className="text-md hover:underline text-base-50  underline-of-transition-all">Guides</Link>
                         <Link to="/blog" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</Link>
             
