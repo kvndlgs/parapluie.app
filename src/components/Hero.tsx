@@ -43,7 +43,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
             </p>
 
             {/* CTA */}
-            <button onClick={openModal} className="py-3 px-6 bg-base-650 w-50 rounded-md mx-auto text-white text-md">
+            <button onClick={openModal} className="py-3 px-6 bg-base-650 w-50 rounded-md self-center text-white text-md">
                 Accès anticipé
             </button>
 </div>

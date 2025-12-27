@@ -42,10 +42,12 @@ export function Footer() {
 
                     {/* Right Column: Navigation Links */}
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
-                        <Link to="https://parapluie.app/#abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</Link>
-                        <Link to="https://parapluie.app/#comment-ca-marche" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Comment ça marche ?</Link>
+                        <Link to="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnement</Link>
+                        <Link to="/guides" className="text-md hover:underline text-base-50  underline-of-transition-all">Guides</Link>
                         <Link to="/blog" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</Link>
-                        <Link to="/support" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Support</Link>
+            
+            
+             <Link to="/support" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Support</Link>
                         <Link to="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</Link>
                     </div>
 
