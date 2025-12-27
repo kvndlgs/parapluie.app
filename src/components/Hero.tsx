@@ -12,7 +12,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
 
     return (
         <section className="relative flex flex-col 
-        items-center justify-center md:py-24 py-20 px-8 
+        items-center justify-center md:py-24 py-16 px-8 
         bg-[linear-gradient(to bottom, #F5F0FA 0%, white 80%)]  
         w-screen overflow-hidden">
         
@@ -24,7 +24,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
                                  fetchPriority="high"
                                      decoding="async"
                          />
-<div className="z-10 flex-col items-center w-full">
+<div className="z-10 flex-col items-center w-full justify-center">
             {/* Badge */}
             <div className="inline-block bg-primary-100 text-primary-850 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
                 341% d'augmentation des fraudes contre les aînés depuis 2022
