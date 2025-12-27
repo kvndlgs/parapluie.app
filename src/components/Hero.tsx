@@ -12,7 +12,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
 
     return (
         <section className="relative flex flex-col 
-        items-center justify-center md:py-24 py-16 pb-12 md:pb-0 px-8 
+        items-center justify-center md:py-24 py-12 pb-16 md:pb-0 px-8 
         bg-[linear-gradient(to bottom, #F5F0FA 0%, white 80%)]  
         w-screen overflow-hidden">
         
@@ -44,12 +44,24 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
 
             {/* CTA */}
             <div className="flex w-full justify-center mt-4"> {/* Conteneur de secours pour forcer le centrage */}
-    <button 
-        onClick={openModal} 
-        className="py-3 px-8 bg-base-650 rounded-md text-white text-md font-bold shadow-md hover:bg-base-700 transition-all w-fit"
-    >
-        Accès anticipé
-    </button>
+<button 
+    onClick={openModal} 
+    className="
+        py-4 px-10 
+        bg-base-650 
+        rounded-md 
+        text-white text-lg font-bold 
+        shadow-[0_4px_14px_0_rgba(114,85,114,0.39)] 
+        hover:shadow-[0_6px_20px_rgba(114,85,114,0.23)]
+        hover:bg-base-700
+        active:scale-95
+        transition-all duration-200
+        w-fit
+    "
+>
+    Accès anticipé
+</button>
+
 </div>
 
 </div>
