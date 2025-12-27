@@ -12,7 +12,7 @@ export function Hero({ openModal, isModalOpen, closeModal }: HeroProps) {
 
     return (
         <section className="relative flex flex-col 
-        items-center justify-center md:py-24 py-14 px-8 
+        items-center justify-center md:py-24 py-16 pb-12 md:pb-0 px-8 
         bg-[linear-gradient(to bottom, #F5F0FA 0%, white 80%)]  
         w-screen overflow-hidden">
         
