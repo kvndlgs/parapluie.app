@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Layout } from '../components/Layout';
 import { useSeo } from '../hooks/useSeo';
+import { Modal } from '../components/Modal';
 import { WaitlistForm } from '../components/WaitListForm';
 import { 
   Handshake, 
@@ -57,7 +58,7 @@ export default function Partnerships() {
             onClick={openModal}
             className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-primary-200"
           >
-            Rejoindre la liste d'attente partenaire
+            Laissez-nous vos coordonnées et nous vous contacterons dès l'ouverture du programme affilié.
           </button>
         </div>
       </section>
@@ -94,15 +95,16 @@ export default function Partnerships() {
         </div>
       </section>
 
-      {/* Modal - Controlled by existing state */}
-      {isModalOpen && (
-        <WaitlistForm 
-          isOpen={isModalOpen} 
-          onClose={closeModal} 
-          title="Demande de Partenariat"
-          description="Laissez-nous vos coordonnées et nous vous contacterons dès l'ouverture du programme affilié."
-        />
-      )}
+         {/* Modal Integration */}
+            <Modal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                title="Rejoignez la liste d'attente"
+            >
+                <WaitlistForm />
+            </Modal>
+            
+      
     </Layout>
   );
 }
