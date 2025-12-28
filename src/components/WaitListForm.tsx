@@ -12,7 +12,7 @@ export const WaitlistForm = ({
   formText,
   buttonText,
   confirmationText,
-}: WaitlistFormProps): JSX.Element => {
+}: WaitlistFormProps) => {
   const [state, handleSubmit] = useForm('mldywgll');
 
   // Optional: keep this for debugging during dev
