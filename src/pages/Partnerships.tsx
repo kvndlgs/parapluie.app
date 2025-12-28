@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Layout } from '../components/Layout';
 import { useSeo } from '../hooks/useSeo';
-import { WaitlistForm } from '../components/WaitlistForm';
+import { WaitlistForm } from '../components/WaitListForm';
 import { 
   Handshake, 
   ShieldCheck, 

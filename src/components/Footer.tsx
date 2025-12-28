@@ -48,7 +48,9 @@ export function Footer() {
             
             
              <Link to="/support" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Support</Link>
-                        <Link to="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</Link>
+                <Link to="/partenariats " className="text-md hover:underline text-base-50  underline-offset-4 transition-all">
+                    Partenariats 
+                </Link>      <Link to="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</Link>
                     </div>
 
                 </div>
