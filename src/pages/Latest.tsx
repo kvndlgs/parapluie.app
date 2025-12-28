@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout';
 import { Link, Navigate } from 'react-router-dom'; // Added Navigate
 import ReactMarkdown from 'react-markdown'; // Ensure this is installed
 import { getAllPosts } from '../content/posts';
-import { stripIndent } from "../utils/stripIndent";
+import  stripIndent  from "../utils/stripIndent";
 
 export default function Latest() {
     // 1. Get all posts sorted by date
