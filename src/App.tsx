@@ -50,7 +50,7 @@ const router = createBrowserRouter([
   element: <Latest />,
  },
  { 
-  path: "/partenariat",
+  path: "/partenariats",
   element: <Partnerships />,
  },
  {

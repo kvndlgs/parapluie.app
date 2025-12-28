@@ -56,9 +56,9 @@ export default function Partnerships() {
           </p>
           <button
             onClick={openModal}
-            className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-primary-200"
+            className="px-8 py-4 bg-primary-600 hover:bg-base-750 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-primary-200"
           >
-            Laissez-nous vos coordonnées et nous vous contacterons dès l'ouverture du programme affilié.
+            Rejoindre la liste d'attente
           </button>
         </div>
       </section>
