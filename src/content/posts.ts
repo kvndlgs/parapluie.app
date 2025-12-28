@@ -163,6 +163,10 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
     return posts.find(post => post.slug === slug);
 }
 
+export function getLatestPosts(limit: number): BlogPost[] {
+    return getAllPosts().slice(0, limit);
+}
+
 export function getAllPosts(): BlogPost[] {
     return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

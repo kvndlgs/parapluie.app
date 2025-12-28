@@ -7,6 +7,7 @@ const Home  = lazy(() => import("./pages/Home"));
 const ArnaqueGrandParent = lazy(() => import('./pages/ArnaqueGrandParent'));
 const  ProtectionParents = lazy(() => import('./pages/ProtectionParents'));
 const  Blog = lazy(() => import('./pages/Blog'));
+const Latest = lazy(()=> import('./pages/Latest'));
 const HowItWorkPage = lazy(() => import('./pages/Howitwork'));
 const ForSeniors = lazy(() => import('./pages/ForSeniors'));
 const ForCaregivers = lazy(() => import('./pages/ForCaregivers'));
@@ -20,6 +21,7 @@ const Guides = lazy(() => import('./pages/Guides'));
 const GuidePost = lazy(() => import('./pages/GuidePost'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Partnerships = lazy(() => import ('./pages/Partnerships'));
 const TermsAndConditions = lazy(() => import('./pages/TandC'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
  {
   path: "/blog",
   element: <Blog />,
+ },
+ {
+  path: "/blog/latest",
+  element: <Latest />,
+ },
+ { 
+  path: "/partenariat",
+  element: <Partnerships />,
  },
  {
   path: "/post/:slug",
