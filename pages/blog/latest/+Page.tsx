@@ -1,7 +1,8 @@
+// pages/blog/latest
+
 import ReactMarkdown from 'react-markdown'; 
-import { getAllPosts } from '../../../src/content/posts';
-import  stripIndent  from "../../../../src/utils/stripIndent";
-import { useData } from "vike/useData";
+import  stripIndent  from "../../../src/utils/stripIndent";
+import { useData } from "vike-react/useData";
 
 
 export default function Page() {
