@@ -1,24 +1,25 @@
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
+import vike from "vike/plugin";
 import { visualizer } from "rollup-plugin-visualizer";
-import  vike  from "vike/plugin";
 
 export default defineConfig({
-  plugins: [react(), vike({prerender: true}), tailwindcss(), visualizer({ filename:'stats.html', template:'treemap' })],
-    build: {
-        cssCodeSplit: true,           // keep it on
-            sourcemap: false,
-                rollupOptions: {
-                      output: {
-                              manualChunks(id) {
-                                        if (id.includes('node_modules')) {
-                                                    if (id.includes('react-router')) return 'vendor-router';
-                                                                            if (id.includes('lucide-react')) return 'vendor-icons';
-                                                                                        return 'vendor';
-                                                                                                  }
-                                                                                                          }
-                                                                                                                }
-                                                                                                                    }
-                                                                                                                      }
-                                                                                                                      });
+  plugins: [
+    react(), 
+    vike({
+      prerender: true 
+    }), 
+    tailwindcss(),
+    visualizer({ 
+      filename: 'dist/client/stats.html', // On le place directement dans le dossier final de Vercel
+      template: 'treemap',
+      gzipSize: true,
+      brotliSize: true
+    })
+  ],
+  build: {
+    cssCodeSplit: true,
+    sourcemap: false
+  }
+});
