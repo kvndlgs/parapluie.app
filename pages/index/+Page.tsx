@@ -1,8 +1,8 @@
-import { Hero } from '../../../src/components/Hero';
-import { FeatureCarousel } from '../../../src/components/FeatureCarousel';
-import { About } from '../../../src/sections/About';
-import { HowItWork } from '../../../src/sections/HowItWork';
-import { Subscriptions } from '../../../src/sections/Subscriptions';
+import { Hero } from '@/components/Hero';
+import { FeatureCarousel } from '@/components/FeatureCarousel';
+import { About } from '@/sections/About';
+import { HowItWork } from '@/sections/HowItWork';
+import { Subscriptions } from '@/sections/Subscriptions';
 import { useState, useEffect } from 'react';
 import { usePageContext } from 'vike-react/usePageContext'; // Remplaçant de useLocation
 import { Head } from "vike-react/Head";

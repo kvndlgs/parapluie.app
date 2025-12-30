@@ -1,6 +1,7 @@
 // pages/guide/@slug/+data.ts
 
-import { getAllGuides, getGuideBySlug } from "../../../src/content/guides";
+import { getAllGuides, getGuideBySlug } from "@/content/guides";
+import type { PageContextServer } from 'vike/types'
 
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;

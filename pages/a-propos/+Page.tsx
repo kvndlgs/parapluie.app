@@ -1,4 +1,4 @@
-import { About } from '../../src/sections/About';
+import { About } from '@/sections/About';
 
 export default function Page() {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import { Head } from "vike-react/Head";
 
 export default function Page() {

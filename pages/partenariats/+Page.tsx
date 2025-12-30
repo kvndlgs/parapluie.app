@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Head } from "vike-react/Head";
-import { Modal } from '../../src/components/Modal';
-import { WaitlistForm } from '../../src/components/WaitListForm';
+import { Modal } from '@/components/Modal';
+import { WaitlistForm } from '@/components/WaitListForm';
 import { 
   Handshake, 
   ShieldCheck, 

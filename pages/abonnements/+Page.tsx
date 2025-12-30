@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Subscriptions } from "../../../src/sections/Subscriptions";
+import { Subscriptions } from "@/sections/Subscriptions";
 import { Head } from "vike-react/Head";
 
 export default function Page() {

@@ -1,4 +1,4 @@
-import HowItWork from "../../../src/sections/HowItWork.tsx";
+import HowItWork from "@/sections/HowItWork.tsx";
 import { Head } from "vike-react/Head";
 
 export default function Page(){

@@ -1,7 +1,7 @@
 // pages/blog/latest/+data.ts
 import { redirect } from "vike/abort";
 import type { PageContextServer } from 'vike/types'
-import { getAllPosts } from '../../../src/content/posts'; // Ajuste le chemin
+import { getAllPosts } from '@/content/posts'; // Ajuste le chemin
 
 export const data = async (pageContext: PageContextServer) => {
     const allPosts = getAllPosts();

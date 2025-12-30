@@ -1,7 +1,7 @@
 // pages/blog/latest
 
 import ReactMarkdown from 'react-markdown'; 
-import  stripIndent  from "../../../src/utils/stripIndent";
+import  stripIndent  from "@/utils/stripIndent";
 import { useData } from "vike-react/useData";
 
 

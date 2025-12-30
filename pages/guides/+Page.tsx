@@ -1,4 +1,4 @@
-import { getAllGuides } from '../../../src/content/guides';
+import { getAllGuides } from '@/content/guides';
 import { Head } from "vike-react/Head";
 
 export default function Page() {
