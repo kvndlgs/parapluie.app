@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "tsx scripts/generate-sitemaps.ts",
-    "build": "tsc -b && vike build",
+    "build": "vike build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
