@@ -10,6 +10,16 @@ type LayoutProps = {
 export default function Layout({children}): LayoutProps {
   return (
     <>
+      {/* GTM Noscript - Placé au début du body */}
+      <noscript>
+        <iframe 
+          src="https://www.googletagmanager.com/ns.html?id=GTM-W6LH2F5W" 
+          height="0" 
+          width="0" 
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
+
       <ResponsiveNavbar/>
       <main>
         { children }

@@ -13,7 +13,7 @@ export function Head() {
       <link rel="canonical" href={data.canonical} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.faqJsonLd) }} // Correction ici
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.jsonLd) }} // Correction ici
       />
     </>
   );

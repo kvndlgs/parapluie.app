@@ -1,4 +1,5 @@
 // pages/+Head.tsx
+import React from "react";
 import { useData } from 'vike-react/useData';
 import { usePageContext } from 'vike-react/usePageContext';
 import type { Data } from './+data';
@@ -7,7 +8,6 @@ export function Head() {
   const data = useData<Data>();
   const pageContext = usePageContext();
   
-  fallback
   const title = pageContext.config.title || "Parapluie - Protection contre les arnaques";
   const canonical = pageContext.data?.canonical || "https://parapluie.app/";
   
@@ -19,11 +19,23 @@ export function Head() {
       <title>
         {title}
       </title>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+              'gtm.start': new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-W6LH2F5W');`,
+        }}
+      />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical"
       href={canonical}
       />
-      <meta name="og:image"
+      <meta property="og:image"
       content={ogImage}
       />
       <meta name="title" content="Parapluie - Protection contre les arnaques pour les personnes âgées" />
