@@ -1,5 +1,5 @@
 import HowItWork from "../../src/sections/HowItWork.tsx";
-import { Head } from "vike/Head";
+import { Head } from "vike-react/Head";
 
 export default function Page(){
   return (
