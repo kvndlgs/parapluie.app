@@ -2,9 +2,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 import { visualizer } from "rollup-plugin-visualizer";
+import  vike  from "vike/plugin";
 
 export default defineConfig({
-  plugins: [react(),  tailwindcss(), visualizer({ filename:'stats.html', template:'treemap' })],
+  plugins: [react(), vike({prerender: true}), tailwindcss(), visualizer({ filename:'stats.html', template:'treemap' })],
     build: {
         cssCodeSplit: true,           // keep it on
             sourcemap: false,

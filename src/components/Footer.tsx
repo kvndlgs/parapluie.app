@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export function Footer() {
+export default function Footer() {
     return (
         <div className="relative w-full bg-base-750">
             {/* Footer Top Wave (Light Purple -> Dark) */}
