@@ -1,12 +1,6 @@
 import { About } from '../../src/sections/About';
-import { useData } from "vike-react/useData";
-import type { Data } from "./+data";
-
 
 export default function Page() {
-  
-  const { faqItems } = useData<Data>(); 
-  
   return (
     <>
       <About />

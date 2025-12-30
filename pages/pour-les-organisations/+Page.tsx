@@ -5,14 +5,14 @@ export default function Page() {
     <>
       <Head>
         <title>
-          Pour les proches - Parapluie 
+          Pour les organisations - Parapluie 
         </title>
         <link rel="canonical"
-        href="https://parapluie.app/pour-les-proches"/>
+        href="https://parapluie.app/pour-les-organisations"/>
       </Head>
       <section>
         <h1>
-          Pour les proches - Comment ça marche
+          Pour les organisations - Comment ça marche
         </h1>
       </section>
     </>

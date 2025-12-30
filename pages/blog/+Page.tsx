@@ -1,15 +1,17 @@
-import { getAllPosts } from '../src/content/posts';
+import {Head} from "vike-react/Head";
+import { getAllPosts } from '../../src/content/posts';
 
-export default function Blog() {
+
+export default function Page() {
     const posts = getAllPosts();
-   /*
-    useSeo({
-        title: 'Blog - Parapluie',
-        canonical: 'https://parapluie.app/blog'
-    });
-        */
+
     return (
       <>
+          <Head>
+              <title> Blog – Parapluie </title>
+    <meta name="description" content="Blog et actualités sur la fraude visant les aînés au Québec" /> 
+    <link rel="canonical" href="https://parapluie.app/blog" />
+          </Head>
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6">

@@ -1,3 +1,4 @@
+// pages/a-propos/+data.ts
 
 export const data = async () => {
   const faqItems = [
@@ -35,8 +36,9 @@ export const data = async () => {
   return {
     title: "À propos – Parapluie",
     description: "Questions fréquentes sur Parapluie, l’application qui protège vos parents au Québec.",
+    jsonld: [
     faqJsonLd,
-    faqItems // On les passe aussi pour que +Page.tsx les utilise
+    faqItems]
   };
 };
 

@@ -1,21 +1,22 @@
-import { useSeo } from '../hooks/useSeo';
-import { Link } from "react-router-dom";
-import { Layout } from '../components/Layout' 
+import { Head } from "vike-react/Head";
 
-export default function TermsAndConditions(){
-    useSeo({
-        title: "Parapluie - Conditions générales d'utilisation",
-        canonical: "https://parapluie.app/conditions-generales-d'utilisation",
-    });
+export default function Page(){
     return (
-        <Layout>
+        <>
+          <Head>
+            <title>
+             Conditions générales d'utilisation - Parapluie
+            </title>
+            <link rel="canonical"
+            href="https://parapluie.app/conditions-generales-d-utilisation"/>
+       </Head>
              <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="hover:text-neutral-800 hover:underline underline-offset-2"
             >
               Accueil
-            </Link>
+            </a>
             <span className="text-neutral-400">/</span>
             <span className="text-neutral-700">Conditions générales d'utilisation </span>
           </div>
@@ -149,6 +150,6 @@ export default function TermsAndConditions(){
             Site web : https://parapluie.app</p>
             
         </section>
-        </Layout>
+        </>
     )
 }

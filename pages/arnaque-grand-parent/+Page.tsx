@@ -1,19 +1,23 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Modal } from '../../src/components/Modal';
+import { WaitlistForm } from '../../src/components/WaitListForm';
+import { Head } from "vike-react/Head";
 
-import { Modal } from '../components/Modal';
-import { WaitlistForm } from '../components/WaitListForm';
-import { Layout } from '../components/Layout';
-
-export default function ArnaqueGrandParent() {
+export default function Page() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <Layout>
-            {/* Hero Section */}
+        <>
+            <Head>
+              <title>
+                Arnaque grand-parent 
+              </title>
+              <link rel="canonical"
+              href="https://parapluie.app/arnaque-grand-parent" />
+            </Head>
             <section className="relative flex flex-col items-center justify-center md:py-24 py-20 px-8 bg-gradient-to-b from-red-50 to-white min-h-[80vh]">
                 <div className="inline-block bg-error-100 text-error-750 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
                     Fraude #1 ciblant les aînés au Québec
@@ -173,10 +177,10 @@ export default function ArnaqueGrandParent() {
                         Accès anticipé gratuit
                     </button>
                     <p className="text-sm text-primary-600 mt-4">
-                        <Link to="/" className="underline hover:text-primary-750">← Retour à l'accueil</Link>
+                        <a href="/" className="underline hover:text-primary-750">← Retour à l'accueil</a>
                     </p>
                 </div>
             </section>
-        </Layout>
+        </>
     );
 }

@@ -1,15 +1,15 @@
-import { useSeo } from "../hooks/useSeo.ts"
-import { Layout } from "../components/Layout";
-import { Link } from "react-router-dom";
+import { Head } from "vike-react/Head"
 
-
-export default function PrivacyPolicy(){
-  useSeo({
-    title: "Politique de confidentialité - Parapluie",
-    canonical: "https://parapluie.app/politique-de-confidentialite"
-  });
+export default function Page(){
     return (
-      <Layout>
+      <>
+        <Head>
+          <title>
+            Politiques de confidentialité - Parapluie
+          </title>
+          
+          <link rel="canonical" href="https://parapluie.app/politique-de-confidentialite" />
+        </Head>
          <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
             <Link
               to="/"
@@ -137,6 +137,6 @@ export default function PrivacyPolicy(){
          Site web : https://parapluie.app</p>
          
       </section>
-      </Layout>
+      </>
     )
 }

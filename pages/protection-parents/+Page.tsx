@@ -1,22 +1,25 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import ResponsiveNavbar from '../components/ResponsiveNavbar';
-import { Modal } from '../components/Modal';
-import { WaitlistForm } from '../components/WaitListForm';
-import { Layout } from "../components/Layout";
+import { Modal } from '../../src/components/Modal';
+import { WaitlistForm } from '../../src/components/WaitListForm';
+import { Head } from "vike-react/Head";
 
-export default function ProtectionParents() {
+
+export default function Page() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <Layout>
-        <main>
-            <ResponsiveNavbar />
-
-            {/* Hero Section */}
+        <>
+        <Head>
+          <title>
+            Protection parents
+          </title>
+          <link rel="canonical"
+          href="https://parapluie.app/protection-parents"
+          />
+        </Head>
             <section className="relative flex flex-col items-center justify-center md:py-24 py-20 px-8 bg-gradient-to-b from-primary-50 to-white min-h-[80vh]">
                 <div className="inline-block bg-primary-100 text-primary-750 text-center font-semibold text-xs md:text-sm px-4 py-2 mt-2 rounded-full mb-8 shadow-sm">
                     L'application qui protège vos parents
@@ -69,7 +72,7 @@ export default function ProtectionParents() {
                             <div className="text-2xl mb-3">👴</div>
                             <h3 className="font-bold text-lg text-base-700 mb-2">Arnaque grand-parent</h3>
                             <p className="text-base-600">Un fraudeur se fait passer pour un petit-enfant en détresse et demande de l'argent d'urgence.</p>
-                            <Link to="/arnaque-grand-parent" className="text-primary-650 text-sm font-semibold mt-2 inline-block hover:underline">En savoir plus →</Link>
+                            <a href="/arnaque-grand-parent" className="text-primary-650 text-sm font-semibold mt-2 inline-block hover:underline">En savoir plus →</a>
                         </div>
                         <div className="bg-white p-6 rounded-2xl border border-base-100">
                             <div className="text-2xl mb-3">🏦</div>
@@ -90,7 +93,7 @@ export default function ProtectionParents() {
                 </div>
             </section>
 
-            {/* Solution */}
+          
             <section className="py-20 px-6 bg-primary-50">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-primary-750 mb-4">
@@ -232,11 +235,11 @@ export default function ProtectionParents() {
                         Accès anticipé gratuit
                     </button>
                     <p className="text-sm text-primary-600 mt-4">
-                        <Link to="/" className="underline hover:text-primary-750">← Retour à l'accueil</Link>
+                        <a href="/" className="underline hover:text-primary-750">← Retour à l'accueil</a>
                     </p>
                 </div>
             </section>
-        </main>
-        </Layout>
+        
+        </>
     );
 }

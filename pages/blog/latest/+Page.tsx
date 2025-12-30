@@ -1,42 +1,26 @@
-import { useSeo } from '../hooks/useSeo';
-import { Layout } from '../components/Layout';
-import { Link, Navigate } from 'react-router-dom'; // Added Navigate
-import ReactMarkdown from 'react-markdown'; // Ensure this is installed
-import { getAllPosts } from '../content/posts';
-import  stripIndent  from "../utils/stripIndent";
+import ReactMarkdown from 'react-markdown'; 
+import { getAllPosts } from '../../../src/content/posts';
+import  stripIndent  from "../../../../src/utils/stripIndent";
+import { useData } from "vike/useData";
 
-export default function Latest() {
-    // 1. Get all posts sorted by date
-    const allPosts = getAllPosts();
+
+export default function Page() {
     
-    // 2. The "Latest" post is simply the first one in the sorted array
-    const post = allPosts[0];
+   const { post, otherPosts } = useData();
+  
 
-    // 3. Get the "next" two posts for the "Read More" section
-    const otherPosts = allPosts.slice(1, 3);
-
-    // Safety check: if no posts exist yet
-    if (!post) {
-        return <Navigate to="/" replace />;
-    }
-
-    // Process markdown content
     const content = stripIndent(post.content);
     
-    useSeo({
-        title: `${post.title} - Parapluie`,
-        canonical: "https://parapluie.app/blog/latest"
-    });
-
+  
     return (
-        <Layout>
-            {/* Article Header */}
+        <>
+            
             <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="inline-flex items-center gap-2 text-sm text-neutral-500 mb-8">
-                        <Link to="/blog" className="hover:text-neutral-800 hover:underline">
+                        <a href="/blog" className="hover:text-neutral-800 hover:underline">
                             Blog
-                        </Link>
+                        </a>
                         <span className="text-neutral-400">/</span>
                         <span className="text-neutral-700">Dernier article</span>
                     </div>
@@ -85,19 +69,19 @@ export default function Latest() {
                         <h2 className="text-2xl font-bold text-neutral-800 mb-8">Autres articles récents</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             {otherPosts.map((otherPost) => (
-                                <Link
+                                <a
                                     key={otherPost.slug}
-                                    to={`/post/${otherPost.slug}`}
+                                    href={`/post/${otherPost.slug}`}
                                     className="bg-white rounded-xl p-6 border border-neutral-200 hover:shadow-md transition-shadow"
                                 >
                                     <h3 className="font-bold text-neutral-800 mb-2">{otherPost.title}</h3>
                                     <p className="text-sm text-neutral-500">{otherPost.readTime} de lecture</p>
-                                </Link>
+                                </a>
                             ))}
                         </div>
                     </div>
                 </section>
             )}
-        </Layout>
+        </>
     );
 }

@@ -1,14 +1,16 @@
+// pages/blog/latest/+Head
 
+import type { Data } from "./+data";
 import { useData } from 'vike-react/useData';
-import type { Data } from './+data';
 
 export function Head() {
   const data = useData<Data>();
   return (
     <>
-      <title>{data.title}</title>
+      <title>
+        {data.title}</title>
       <meta name="description" content={data.description} />
-      <link rel="canonical" href={data.canonical}/>
+      <link rel="canonical" href={data.canonical} />
     </>
   );
 }

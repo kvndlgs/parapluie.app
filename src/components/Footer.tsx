@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 export default function Footer() {
     return (
         <div className="relative w-full bg-base-750">
@@ -40,24 +38,24 @@ export default function Footer() {
                         </form>
                     </div>
 
-                    {/* Right Column: Navigation Links */}
+                    {/* Right Column: Navigation as */}
                     <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
-                        <Link to="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnements</Link>
-                        <Link to="/guides" className="text-md hover:underline text-base-50  underline-of-transition-all">Guides</Link>
-                        <Link to="/blog" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</Link>
+                        <a href="/abonnements" className="text-md hover:underline text-base-50 underline-offset-4 transition-all">Abonnements</a>
+                        <a href="/guides" className="text-md hover:underline text-base-50  underline-of-transition-all">Guides</a>
+                        <a href="/blog" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Blog</a>
             
             
-             <Link to="/support" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Support</Link>
-                <Link to="/partenariats" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">
+             <a href="/support" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Support</a>
+                <a href="/partenariats" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">
                     Partenariats 
-                </Link>      <Link to="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</Link>
+                </a>      <a href="/support/contact" className="text-md hover:underline text-base-50  underline-offset-4 transition-all">Contact</a>
                     </div>
 
                 </div>
 
                 <div className="w-full flex items-center justify-start gap-2 pl-4  mt-20 pt-8 border-t border-white/5 text-center text-[8px] text-base-350 font-regular font-xs"> 
-                <Link to="/conditions-generales-d-utilisation"> Conditions générales d'utilisation </Link>
-                <Link to="/politique-de-confidentialite"> Politique de confidentialité </Link> <span>© 2025 Walter Corp. Tous droits réservés.</span>
+                <a href="/conditions-generales-d-utilisation"> Conditions générales d'utilisation </a>
+                <a href="/politique-de-confidentialite"> Politique de confidentialité </a> <span>© 2025 Walter Corp. Tous droits réservés.</span>
                 </div>
             </footer>
         </div>

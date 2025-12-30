@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo  from './Logo';
 
 type NavItem = {
@@ -21,6 +20,7 @@ function joinPathAndHash(path: string, hash?: string) {
 }
 
 export default function Navbar() {
+  /*
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -206,28 +206,28 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
       <div className="mx-auto max-w-6xl px-4">
-        {/* Desktop */}
+        {/* Desktop
         <div className="hidden md:grid grid-cols-3 items-center h-16">
-          {/* Left */}
+          {/* 
           <nav className="flex items-center gap-6">
             {nav.left.filter(isValidItem).map((item) => (
               <DesktopDropdown key={item.label} item={item} />
             ))}
           </nav>
 
-          {/* Center logo */}
+          {/* Center logo
           <div className="flex justify-center">
-            <Link to="/" className="flex items-center gap-2">
-              {/* Remplace par ton logo svg si tu veux */}
+            <a href="/" className="flex items-center gap-2">
+              {/* Remplace par ton logo svg si tu veux 
               <Logo variant="full" />
               <div className="leading-tight">
                 
                 <div className="text-xs text-neutral-500">Protection anti-arnaques</div>
               </div>
-            </Link>
+            </a>
           </div>
 
-          {/* Right */}
+          {/* Right 
           <nav className="flex items-center justify-end gap-6">
             {nav.right.filter(isValidItem).map((item) => (
               <DesktopDropdown key={item.label} item={item} />
@@ -235,12 +235,12 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile 
         <div className="md:hidden flex items-center justify-between h-14">
-          <Link to="/" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <Logo variant="icon" />
             
-          </Link>
+          </a>
 
           <button
             type="button"
@@ -263,4 +263,8 @@ export default function Navbar() {
       </div>
     </header>
   );
+}
+
+*/
+
 }

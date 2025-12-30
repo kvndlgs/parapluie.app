@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Logo from './Logo'; // Corrected import
-import { Link } from "react-router-dom";
+
 
 interface NavItem {
   label: string;
@@ -52,9 +52,9 @@ interface NavItem {
                                                                                                                                             `} /*className="sticky w-full flex justify-between px-4 md:justify-center items-center bg-[rgba(255,255,255,0.95)] backdrop-blur-[12px] py-4 rounded-full"*/>
                                                                                                                                                   {/* Mobile Logo (visible on mobile, hidden on desktop) */}
                                                                                                                                                         <div className="md:hidden">
-                                                                                                                                                            <Link to="/">
+                                                                                                                                                            <a href="/">
                                                                                                                                                                 <Logo variant='icon' />
-                                                                                                                                                            </Link>
+                                                                                                                                                            </a>
                                                                                                                                                                       </div>
 
                                                                                                                                                                             {/* Desktop Navigation (hidden on mobile) */}
