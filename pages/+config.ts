@@ -2,8 +2,12 @@
 
 import vikeReact from "vike-react/config"; // <--- AJOUTE CET IMPORT
 import type { Config } from "vike/types";
+import Layout from "./+Layout";
+
 
 export default {
+  Layout,
+  stream: true,
   // C'est cette ligne qui manquait !
   extends: [vikeReact], 
 
