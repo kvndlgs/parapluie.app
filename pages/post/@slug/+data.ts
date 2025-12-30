@@ -1,7 +1,7 @@
 // /pages/post/@slug/+data.ts
 import { redirect } from "vike/abort";
 import type { PageContextServer } from 'vike/types'
-import { getPostBySlug, getAllPosts } from '../../../content/posts'; // Ajuste le chemin
+import { getPostBySlug, getAllPosts } from '../../../src/content/posts'; // Ajuste le chemin
 
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;

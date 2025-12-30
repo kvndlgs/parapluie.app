@@ -1,5 +1,7 @@
 // pages/guide/@slug/+data.ts
-// ...
+
+import { getAllGuides, getGuideBySlug } from "../../../src/content/guides";
+
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;
     const guide = getGuideBySlug(slug);
