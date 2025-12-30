@@ -11,7 +11,7 @@ export default function Page() {
         <title>
           Guides - Parapluie
         </title>
-        <link rel="canonical"
+        <a rel="canonical"
          href="https://parapluie 
          .app/guides"
          />
@@ -23,12 +23,12 @@ export default function Page() {
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
           <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="hover:text-neutral-800 hover:underline underline-offset-2"
             >
               Accueil
-            </Link>
+            </a>
             <span className="text-neutral-400">/</span>
             <span className="text-neutral-700">Guides</span>
           </div>
@@ -56,11 +56,11 @@ export default function Page() {
                                         </span>
                                     ))}
                                 </div>
-                                <Link to={`/guide/${guide.slug}`}>
+                                <a href={`/guide/${guide.slug}`}>
                                     <h2 className="text-2xl font-bold text-base-700 mb-3 hover:text-primary-650 transition-colors">
                                         {guide.title}
                                     </h2>
-                                </Link>
+                                </a>
                                 <p className="text-base-600 mb-4 leading-relaxed">
                                     {guide.excerpt}
                                 </p>
@@ -72,12 +72,12 @@ export default function Page() {
                                         <span>•</span>
                                         <span>{guide.readTime} de lecture</span>
                                     </div>
-                                    <Link
-                                        to={`/guide/${guide.slug}`}
+                                    <a
+                                        href={`/guide/${guide.slug}`}
                                         className="text-primary-650 font-semibold hover:text-primary-750 transition-colors"
                                     >
                                         Lire →
-                                    </Link>
+                                    </a>
                                 </div>
                             </article>
                         ))}
@@ -94,12 +94,12 @@ export default function Page() {
                     <p className="text-primary-650 mb-6">
                         Recevez des alertes en temps réel quand vos proches reçoivent des appels suspects.
                     </p>
-                    <Link
-                        to="/"
+                    <a
+                        href="/"
                         className="inline-block py-3 px-8 bg-primary-650 rounded-md text-white font-semibold hover:bg-primary-700 transition-colors"
                     >
                         Découvrir Parapluie
-                    </Link>
+                    </a>
                 </div>
             </section>
 

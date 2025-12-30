@@ -8,15 +8,15 @@ export default function Page(){
             Politiques de confidentialité - Parapluie
           </title>
           
-          <link rel="canonical" href="https://parapluie.app/politique-de-confidentialite" />
+          <a rel="canonical" href="https://parapluie.app/politique-de-confidentialite" />
         </Head>
          <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="hover:text-neutral-800 hover:underline underline-offset-2"
             >
               Accueil
-            </Link>
+            </a>
             <span className="text-neutral-400">/</span>
             <span className="text-neutral-700">Politique de confidentialité</span>
           </div>

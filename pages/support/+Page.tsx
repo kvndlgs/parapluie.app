@@ -96,19 +96,19 @@ export default function Page() {
               </p>
 
               <div className="mt-auto flex flex-wrap gap-3">
-                <Link
-                  to="/arnaque-grand-parent"
+                <a
+                  href="/arnaque-grand-parent"
                   className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-800 hover:border-emerald-400 hover:text-emerald-600"
                 >
                   Arnaque grand-parent
-                </Link>
+                </a>
 
-                <Link
-                  to="/protection-parents"
+                <a
+                  href="/protection-parents"
                   className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-800 hover:border-emerald-400 hover:text-emerald-600"
                 >
                   Protéger ses parents
-                </Link>
+                </a>
               </div>
             </article>
 
@@ -134,12 +134,12 @@ export default function Page() {
               </p>
 
               <div className="mt-auto">
-                <Link
-                  to="/support/contact"
+                <a
+                  href="/support/contact"
                   className="inline-flex items-center rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-400"
                 >
                   Contacter le support ✉️
-                </Link>
+                </a>
               </div>
             </article>
 
