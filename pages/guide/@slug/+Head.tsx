@@ -1,7 +1,7 @@
 // pages/guide/@slug/+Head.tsx
 
 import { useData } from "vike-react/useData";
-import type { Data } from "./+data";
+import type { Data } from "./+data"
 
 export function Head() {
   const data = useData<Data>();

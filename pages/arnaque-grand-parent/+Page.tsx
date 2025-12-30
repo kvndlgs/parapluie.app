@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Modal } from '../../src/components/Modal';
-import { WaitlistForm } from '../../src/components/WaitListForm';
+import { Modal } from '../../../src/components/Modal';
+import { WaitlistForm } from '../../../src/components/WaitListForm';
 import { Head } from "vike-react/Head";
 
 export default function Page() {
