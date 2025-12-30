@@ -1,5 +1,4 @@
 import ReactMarkdown from 'react-markdown';
-import { getPostBySlug, getAllPosts } from '../../content/posts';
 import stripIndent from '../../../utils/stripIndent';
 import { useEffect } from "react";
 import { usePageContext } from "vike-react/usePageContext";
