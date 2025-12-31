@@ -1,2 +1,2 @@
 // pages/guide/@slug/+route.ts
-export default '/guide/:slug';
+export default '/guide/@slug';
