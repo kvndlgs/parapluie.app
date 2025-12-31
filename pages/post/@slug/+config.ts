@@ -1,6 +1,5 @@
-import { onBeforePrerenderStart } from "./prerender";
+// pages/post/@slug/+config.ts
 
 export default {
-  // On passe juste la référence de la fonction importée
-  onBeforePrerenderStart
+  onBeforePrerenderStart: 'import:./prerender:onBeforePrerenderStart'
 };
