@@ -18,9 +18,7 @@ export default defineConfig({
   plugins: [
     react(), 
     vike({
-      prerender: {
-        partial: true,
-      },
+      prerender: true,
     }), 
     tailwindcss(),
     imagemin({
