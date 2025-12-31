@@ -1,5 +1,5 @@
 // pages/blog/+prerender.ts
-import { getAllPosts } from '../../../src/content/posts';
+import { getAllPosts } from '@/content/posts';
 
 export const onBeforePrerenderStart = async () => {
   const posts = getAllPosts();

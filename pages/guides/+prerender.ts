@@ -1,5 +1,5 @@
 // pages/guides/+prerender.ts
-import { getAllGuides } from '../../../src/content/guides';
+import { getAllGuides } from '@/content/guides';
 
 export const onBeforePrerenderStart = async () => {
   const guides = getAllGuides();

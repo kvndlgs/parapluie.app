@@ -1,7 +1,7 @@
 // /pages/post/@slug/+data.ts
 import { redirect } from "vike/abort";
 import type { PageContextServer } from 'vike/types'
-import { getPostBySlug } from '@/content/posts'; // Ajuste le chemin
+import { getPostBySlug, getAllPosts } from '@/content/posts'; // Ajuste le chemin
 
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;
@@ -10,7 +10,11 @@ export const data = async (pageContext: PageContextServer) => {
     if (!post) {
         throw redirect("/blog");
     }
-
+    
+    const allPosts = getAllPosts();
+    const otherPosts = allPosts.filter(p => p.slug !== slug).slice(0,2);
+    
+    
     
 
     const blogJsonLd = {
@@ -23,6 +27,7 @@ export const data = async (pageContext: PageContextServer) => {
 
     return {
         post,
+        otherPosts,
         title: `${post.title} - Parapluie`,
         description: post.excerpt,
         canonical: `https://parapluie.app/post/${slug}`,
