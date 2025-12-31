@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import stripIndent from '@/utils/stripIndent';
 import { useEffect } from "react";
 import { usePageContext } from "vike-react/usePageContext";
+import { useData } from "vike-react/useData";
     
 
 export default function Page() {
