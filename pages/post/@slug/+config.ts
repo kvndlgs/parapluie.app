@@ -1,4 +1,4 @@
-import { getAllPosts } from "@/content/posts";
+import { getAllPosts } from "../../../src/content/posts";
 
 export default {
   // ... tes autres configs (title, etc.)
