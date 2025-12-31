@@ -15,9 +15,21 @@ export const data = async () => {
     "name": "Parapluie",
     "url": "https://parapluie.app"
   };
+  
+  const publisherJsonLd = {
+    "publisher": {
+  "@type": "Organization",
+  "name": "Parapluie",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://parapluie.app/logo.png"
+  }
+}
+
+  }
  
   return {
-    globalJsonLd: [mainJsonLd, orgJsonLd]
+    globalJsonLd: [mainJsonLd, orgJsonLd, publisherJsonLd]
   };
 };
 

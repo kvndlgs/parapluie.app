@@ -13,10 +13,14 @@ export function Head() {
       <meta property="og:type" content="article" />
       <link rel="canonical" href={data.canonical} />
       {/* CORRECTION : data.jsonLd (correspond au return du +data.ts) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
-      />
+      {data?.guideJsonLd && (
+  <script 
+    type="application/ld+json" 
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }} 
+  />
+)}
+
+
     </>
   );
 }

@@ -1,26 +1,42 @@
 export interface Guide {
-        slug: string;
-            title: string;
-                excerpt: string;
-                    date: string;
-                        author: string;
-                            readTime: string;
-                                tags: string[];
-                                    content: string;
-                                    }
-
-                                    export const guides: Guide[] = [
-            {    steps: [
-      { title: "Ne donnez aucune info", content: "Votre banque ne demandera jamais votre NIP ou mot de passe par téléphone." },
-      { title: "Raccrochez poliment", content: "Si on vous met de la pression, raccrochez immédiatement." },
-      { title: "Validez par vous-même", content: "Rappelez l'organisme en utilisant le numéro officiel sur votre facture." }
-    ]            
-                
-            },       {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  readTime: string;
+  tags: string[];
+  content: string;
+  steps: { title: string; content: string }[]; // Maintenant obligatoire pour le JSON-LD
+}                      export const guides: Guide[] = [
+      {
+    slug: "comment-reagir-appel-sms-suspect-guide-seniors",
+    title: "Appel ou SMS suspect : les bons réflexes à adopter immédiatement",
+    excerpt: "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",
+    date: "2024-12-22",
+    author: "Équipe Parapluie",
+    readTime: "5 min",
+    tags: ["prévention", "SMS frauduleux", "réflexes sécurité", "Québec"],
+    steps: [
+      { 
+        title: "Ne donnez aucune information", 
+        content: "Votre banque ou institution ne vous demandera jamais votre NIP, NAS ou mot de passe par téléphone ou SMS." 
+      },
+      { 
+        title: "Raccrochez et reprenez le contrôle", 
+        content: "Si l'interlocuteur vous met de la pression ou semble menaçant, raccrochez immédiatement." 
+      },
+      { 
+        title: "Validez par vous-même", 
+        content: "Trouvez le numéro officiel de l'organisme sur une facture ou au dos de votre carte bancaire et rappelez-les directement." 
+      }
+    ]
+      },
+      {
                                             slug: "comment-reagir-appel-sms-suspect-guide-seniors",
                                                 title: "Appel ou SMS suspect : les bons réflexes à adopter immédiatement",
                                                     excerpt: "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",
-                                                        date: "2024-12-22",
+                                                        date: "2025-12-22",
                                                             author: "Équipe Parapluie",
                                                                 readTime: "5 min",
                                                                     tags: ["prévention", "SMS frauduleux", "réflexes sécurité", "Québec"],

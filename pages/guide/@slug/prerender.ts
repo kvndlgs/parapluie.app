@@ -1,12 +1,7 @@
 // pages/guide/@slug/prerender.ts
-import { getAllGuides } from '../../../src/content/guides';
+import { getAllGuides } from "../../../src/content/guides";
 
-const prerender = async () => {
-  const guides = getAllGuides();
-  
-  // On ne génère des pages QUE pour les guides qui existent
-  // Vike n'appellera jamais le +data.ts avec un mauvais slug pendant le build
-  return guides.map(guide => `/guide/${guide.slug}`);
+export const onBeforePrerenderStart = async () => {
+    const guides = getAllGuides();
+    return guides.map((guide) => `/guide/${guide.slug}`);
 };
-
-export default prerender;
