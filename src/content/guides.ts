@@ -10,7 +10,13 @@ export interface Guide {
                                     }
 
                                     export const guides: Guide[] = [
-                                        {
+            {    steps: [
+      { title: "Ne donnez aucune info", content: "Votre banque ne demandera jamais votre NIP ou mot de passe par téléphone." },
+      { title: "Raccrochez poliment", content: "Si on vous met de la pression, raccrochez immédiatement." },
+      { title: "Validez par vous-même", content: "Rappelez l'organisme en utilisant le numéro officiel sur votre facture." }
+    ]            
+                
+            },       {
                                             slug: "comment-reagir-appel-sms-suspect-guide-seniors",
                                                 title: "Appel ou SMS suspect : les bons réflexes à adopter immédiatement",
                                                     excerpt: "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",

@@ -1,7 +1,7 @@
 import React from "react";
-import "../src/index.css";
-import  ResponsiveNavbar from '../src/components/ResponsiveNavbar';
-import Footer from '../src/components/Footer';
+import "@/index.css";
+import  ResponsiveNavbar from '@/components/ResponsiveNavbar';
+import Footer from '../@/components/Footer';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -21,7 +21,7 @@ export default function Layout({children}): LayoutProps {
       </noscript>
 
       <ResponsiveNavbar/>
-      <main className="py-16 md:py-34">
+      <main className="py-8 md:py-24">
         { children }
       </main>
       <Footer />
