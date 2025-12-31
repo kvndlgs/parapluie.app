@@ -1,7 +1,9 @@
 // pages/guide/@slug/+config.ts
 
-import { onBeforePrerenderStart } from "./prerender";
+import { Config } from "vike/types";
+
+const onBeforePrerenderStart = "import:./prerender:onBeforePrerenderStart"
 
 export default {
   onBeforePrerenderStart 
-};
+} satisfies Config;
