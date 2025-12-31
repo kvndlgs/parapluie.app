@@ -32,10 +32,5 @@ export const data = async (pageContext: PageContextServer) => {
     };
 };
 
-export const onBeforePrerenderStart = async () => {
-    const posts = getAllPosts();
-    // On retourne la liste des URLs complètes que Vike doit générer en HTML
-    return posts.map((post) => `/post/${post.slug}`);
-};
 
 export type Data = Awaited<ReturnType<typeof data>>;

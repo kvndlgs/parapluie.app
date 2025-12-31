@@ -27,10 +27,5 @@ export const data = async (pageContext: PageContextServer) => {
 };
 
 
-export const onBeforePrerenderStart = async () => {
-    const guides = getAllGuides();
-    // On retourne la liste des URLs complètes que Vike doit générer en HTML
-    return guides.map((guide) => `/guide/${guide.slug}`);
-};
 
 export type Data = Awaited<ReturnType<typeof data>>;
