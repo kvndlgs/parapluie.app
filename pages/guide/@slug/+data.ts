@@ -13,6 +13,9 @@ export const data = async (pageContext: PageContextServer) => {
         throw redirect("/guides"); 
     }
     
+    const allGuides = getAllGuides();
+    const otherGuides = allGuides.filter(g => g.slug !== slug).slice(0, 2);
+    
     // ... reste du code identique ...
 
     return {
