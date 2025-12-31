@@ -8,7 +8,7 @@ export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;
     const guide = getGuideBySlug(slug);
 
-    if (!guides) {
+    if (!guide) {
         throw redirect("/guides");
     }
 
