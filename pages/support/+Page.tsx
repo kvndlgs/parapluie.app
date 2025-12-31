@@ -5,9 +5,13 @@ export default function Page() {
   return (
     <>
       <Head>
-        title: 'Support - Parapluie',
-    description: "Support hub de l'application Parapluie",
-    canonical: 'https://parapluie.app/support'
+        <title>
+      Support - Parapluie
+      </title>
+      <meta name="
+    description" content="Support hub de l'application Parapluie" />
+    <link rel="canonical" href='https://parapluie.app/support'
+    />
       </Head>
       <section className="min-h-screen bg-white text-neutral-900">
         {/* HERO */}
