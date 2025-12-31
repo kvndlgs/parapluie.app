@@ -1,5 +1,5 @@
 // pages/blog/+prerender.ts (or wherever it is)
-import { getAllPosts } from '../../../src/content/posts';  // Same idea—count the ../
+import { getAllPosts } from '../../src/content/posts';  // Same idea—count the ../
 
 export const onBeforePrerenderStart = async () => {
   const posts = getAllPosts();
