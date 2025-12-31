@@ -1,7 +1,7 @@
-// pages/podr/@slug/prerender.ts
+// pages/guide/@slug/prerender.ts
 import { getAllGuides } from "../../../src/content/guides";
 
 export const onBeforePrerenderStart = async () => {
-    const posts = getAllGuides();
+    const guides = getAllGuides();
     return guides.map((guide) => `/guide/${guide.slug}`);
 };
