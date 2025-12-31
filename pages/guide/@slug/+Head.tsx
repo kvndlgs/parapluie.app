@@ -15,7 +15,7 @@ export function Head() {
       {/* CORRECTION : data.jsonLd (correspond au return du +data.ts) */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
       />
     </>
   );
