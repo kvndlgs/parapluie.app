@@ -8,12 +8,10 @@ export function Head() {
     <>
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
-      <meta property="og:image" content={data.ogImage} />
-      <meta property="og:type" content="website" />
       <link rel="canonical" href={data.canonical} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.jsonLd) }} // Correction ici
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.aboutJsonLd) }} // Correction ici
       />
     </>
   );

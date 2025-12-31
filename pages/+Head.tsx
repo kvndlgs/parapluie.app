@@ -3,15 +3,15 @@ import React from "react";
 import { useData } from 'vike-react/useData';
 import { usePageContext } from 'vike-react/usePageContext';
 import type { Data } from './+data';
-const favicon = "../assets/favicon.ico";
-const manifest = "../assets/manifest.json";
+import favicon from "../assets/favicon.ico";
+import manifest from "../assets/manifest.json";
+
 export function Head() {
   const data = useData<Data>();
   const pageContext = usePageContext();
 
   // On récupère les JSON-LD (soit globaux, soit spécifiques à la page)
-  const scripts = data?.globalJsonLd || [];
-  const guideScript = data?.guideJsonLd; 
+  
 
   return (
     <>
@@ -31,13 +31,15 @@ export function Head() {
       <meta name="twitter:card" content="summary_large_image" />
 
       {/* 4. JSON-LD propre */}
-      {scripts.map((json, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }} />
-      ))}
-      
-      {guideScript && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guideScript) }} />
-      )}
+      <script 
+       type="application/ld+json"
+       dangerouslySetInnerHTML={{ __html: JSON.stringify(data.mainJsonLd) }} 
+       />
+       
+      <script 
+       type="application/ld+json"
+       dangerouslySetInnerHTML={{ __html: JSON.stringify(data.orgJsonLd) }} 
+       />
     </>
   );
 }

@@ -20,7 +20,7 @@ export const data = async () => {
   }
 ];
   
-  const faqJsonLd = {
+  const aboutJsonLd = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: faqItems.map((item) => ({
@@ -36,9 +36,7 @@ export const data = async () => {
   return {
     title: "À propos – Parapluie",
     description: "Questions fréquentes sur Parapluie, l’application qui protège vos parents au Québec.",
-    jsonld: [
-    faqJsonLd,
-    faqItems]
+    aboutJsonLd
   };
 };
 

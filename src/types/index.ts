@@ -19,3 +19,5 @@ export interface ModalProps {
     children: React.ReactNode;
     title?: string;
 }
+
+export const SITE_URL = "https://parapluie.app/";

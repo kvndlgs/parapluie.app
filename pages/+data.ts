@@ -13,24 +13,16 @@ export const data = async () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Parapluie",
-    "url": "https://parapluie.app"
+    "url": "https://parapluie.app",
+    "logo": "https://parapluie.app/logo.png",
   };
   
-  const publisherJsonLd = {
-    "publisher": {
-  "@type": "Organization",
-  "name": "Parapluie",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://parapluie.app/logo.png"
-  }
-}
 
   }
  
   return {
-    globalJsonLd: [mainJsonLd, orgJsonLd, publisherJsonLd]
-  };
+    mainJsonLd, 
+    orgJsonLd
 };
 
 export type Data = Awaited<ReturnType<typeof data>>;

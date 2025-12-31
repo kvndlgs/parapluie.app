@@ -6,6 +6,7 @@ import type { Config } from "vike/types";
 
 
 export default {
+  lang: 'fr',
 //  Layout,
   stream: true,
   // C'est cette ligne qui manquait !
