@@ -5,6 +5,6 @@ export default {
   
   onBeforePrerenderStart: async () => {
     const guides = getAllGuides();
-    return guides.map(g => `/guide/${g.slug}`);
+    return guides.map(p => `/guide/${p.slug}`);
   }
 };
