@@ -1,6 +1,7 @@
 // pages/guide/@slug/+data.ts
 
 import { getAllGuides, getGuideBySlug } from "@/content/guides";
+import { redirect } from 'vike/abort'; // Très important pour le SSR
 import type { PageContextServer } from 'vike/types';
 
 export const data = async (pageContext: PageContextServer) => {
@@ -24,6 +25,7 @@ export const data = async (pageContext: PageContextServer) => {
         jsonLd: [breadcrumbJsonLd, howToJsonLd], // C'est ici que tu nommes la clé
     };
 };
+
 
 export const onBeforePrerenderStart = async () => {
     const guides = getAllGuides();

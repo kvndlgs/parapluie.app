@@ -8,7 +8,7 @@ export const data = async (pageContext: PageContextServer) => {
     const post = getPostBySlug(slug);
 
     if (!post) {
-        throw redirect("/");
+        throw redirect("/blog");
     }
 
     const allPosts = getAllPosts();
