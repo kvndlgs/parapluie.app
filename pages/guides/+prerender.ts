@@ -1,4 +1,5 @@
 // pages/guides/+prerender.ts
+/*
 import { getAllGuides } from '../../src/content/guides';
 
 const onBeforePrerenderStart = async () => {
@@ -8,3 +9,4 @@ const onBeforePrerenderStart = async () => {
 };
 
 export default onBeforePrerenderStart;
+*/

@@ -1,4 +1,5 @@
 // pages/blog/+prerender.ts
+/*
 import { getAllPosts } from '../../src/content/posts';
 
 const onBeforePrerenderStart = async () => {
@@ -8,3 +9,4 @@ const onBeforePrerenderStart = async () => {
 };
 
 export default onBeforePrerenderStart;
+*/
