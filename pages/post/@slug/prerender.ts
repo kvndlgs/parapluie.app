@@ -1,4 +1,4 @@
-// pages/post/@slug/prerender.ts
+// pages/podr/@slug/prerender.ts
 import { getAllPosts } from "../../../src/content/posts";
 
 export const onBeforePrerenderStart = async () => {
