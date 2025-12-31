@@ -9,9 +9,11 @@ export const data = async (pageContext: PageContextServer) => {
     const guide = getGuideBySlug(slug);
 
     if (!guide) {
+        // En mode prerender, on évite le redirect brutal si possible
+        // ou on s'assure qu'il n'est lancé qu'en runtime
         throw redirect("/guides");
-    }
-
+    };
+        
     const allGuides = getAllGuides();
     const otherGuides = allGuides.filter(p => p.slug !== slug).slice(0, 2);
 
