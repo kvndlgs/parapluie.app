@@ -1,3 +1,5 @@
+// pages/guides/+Pages.tsx
+
 import { getAllGuides } from '@/content/guides';
 import { Head } from "vike-react/Head";
 

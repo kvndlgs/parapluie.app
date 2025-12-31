@@ -1,3 +1,5 @@
+// pages/guide/@slug/+Pages.tsx
+
 import ReactMarkdown from 'react-markdown';
 import stripIndent from '@/utils/stripIndent';
 import { useEffect } from "react";

@@ -1,8 +1,8 @@
-// /pages/guide/@slug/+data.ts
+// pages/guide/@slug/+data.ts
 
 import { redirect } from "vike/abort";
 import type { PageContextServer } from 'vike/types'
-import { getGuideBySlug } from '@/content/guides'; // Ajuste le chemin
+import { getGuideBySlug, getAllGuides } from '@/content/guides'; // Ajuste le chemin
 
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;
@@ -13,6 +13,10 @@ export const data = async (pageContext: PageContextServer) => {
         // ou on s'assure qu'il n'est lancé qu'en runtime
         throw redirect("/guides");
     };
+    
+    const allGuides = getAllGuides();
+    const otherGuides = allGuides.filter(p => p.slug !== slug).slice(0, 2);    
+    
         
 
     const guideJsonLd = {
@@ -34,6 +38,7 @@ export const data = async (pageContext: PageContextServer) => {
     };
 
     return {
+        otherGuides,
         guide,
         title: `${guide.title} - Parapluie`,
         description: guide.excerpt,
