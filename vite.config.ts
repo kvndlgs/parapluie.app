@@ -22,10 +22,11 @@ export default defineConfig({
     }), 
     tailwindcss(),
     imagemin({
-       plugins: {
-       jpg: imageminMozjpeg({ quality: 80 }),
-        png: imageminPngquant({ quality: [0.6, 0.8] }),
-      },
+      // Optional: optimize originals
+     plugins: {
+        jpg: imageminMozjpeg({ quality: 80 }),
+         png: imageminPngquant({ quality: [0.6, 0.8] }),
+       },
       makeWebp: {
         plugins: {
           jpg: imageminWebp({ quality: 75 }),
