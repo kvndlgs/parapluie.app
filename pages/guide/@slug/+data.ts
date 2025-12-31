@@ -1,34 +1,47 @@
-// pages/guide/@slug/+data.ts
+// /pages/guide/@slug/+data.ts
 
-import { getAllGuides, getGuideBySlug } from "@/content/guides";
-import { redirect } from 'vike/abort'; // Très important pour le SSR
-import type { PageContextServer } from 'vike/types';
+import { redirect } from "vike/abort";
+import type { PageContextServer } from 'vike/types'
+import { getGuideBySlug, getAllGuides } from '@/content/guides';
 
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;
     const guide = getGuideBySlug(slug);
 
-    // CORRECTION : On teste 'guide' directement
+    // FIX 1: Utilise 'guide' (sans s)
     if (!guide) {
-        throw redirect("/guides"); 
+        throw redirect("/guides");
     }
-    
+
     const allGuides = getAllGuides();
-    const otherGuides = allGuides.filter(g => g.slug !== slug).slice(0, 2);
-    
-    // ... reste du code identique ...
+    const otherGuides = allGuides.filter(p => p.slug !== slug).slice(0, 2);
+
+    // FIX 2: Assure-toi que .description ou .excerpt existe sur ton objet
+    const guideJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": guide.title,
+      "description": guide.excerpt || guide.description, 
+      "image": guide.image || "https://parapluie.app/og-guides.png",
+      "step": guide.steps?.map((step: any, index: number) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "name": step.title,
+        "itemListElement": [{
+          "@type": "HowToDirection",
+          "text": step.content
+        }]
+      })) || []
+    };
 
     return {
         guide,
         otherGuides,
         title: `${guide.title} - Parapluie`,
         description: guide.excerpt,
-        canonical: `https://parapluie.app/guide/${guide.slug}`,
-        ogImage: "https://parapluie.app/og-guides.png",
-        jsonLd: [breadcrumbJsonLd, howToJsonLd], // C'est ici que tu nommes la clé
+        canonical: `https://parapluie.app/guide/${slug}`,
+        guideJsonLd,
     };
 };
-
-
 
 export type Data = Awaited<ReturnType<typeof data>>;
