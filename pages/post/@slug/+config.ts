@@ -1,10 +1,6 @@
-import { getAllPosts } from "../../../src/content/posts";
+import { onBeforePrerenderStart } from "./prerender";
 
 export default {
-  // ... tes autres configs (title, etc.)
-  
-  onBeforePrerenderStart: async () => {
-    const posts = getAllPosts();
-    return posts.map(p => `/post/${p.slug}`);
-  }
+  // On passe juste la référence de la fonction importée
+  onBeforePrerenderStart
 };
