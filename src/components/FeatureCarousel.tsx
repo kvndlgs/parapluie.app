@@ -53,6 +53,8 @@ export const FeatureCarousel: React.FC = () => {
 
                         {/* Screen Area */}
                         <div className="w-full h-full bg-base-50 rounded-[2.5rem] overflow-hidden relative">
+           
+          
                             <img
                                 src={features[currentIndex].image}
                                 alt={features[currentIndex].title}

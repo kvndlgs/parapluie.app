@@ -17,9 +17,7 @@ export default defineConfig({
   },
   plugins: [
     react(), 
-    vike({
-      prerender: true,
-    }), 
+    vike(), 
     tailwindcss(),
     imagemin({
       // Optional: optimize originals
