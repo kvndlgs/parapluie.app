@@ -17,7 +17,7 @@ export default function Page() {
                                             if (state.succeeded) {
                                                 return (
                                                         
-                                                              <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
+                                                           <div className="text-center py-6 animate-[fadeIn_0.5s_ease-out]">
                                                                               <h3 className="text-2xl font-bold text-base-600 mb-2">Votre message a été envoyé!</h3>
                                                                                           </div>
                                                                                               );
@@ -28,10 +28,14 @@ export default function Page() {
                                                                                                                       
                                                                                                                          <>
                                                                                                                              <Head>
-                                                                                   title: "Contact – Parapluie",
-    description: "Page contact officielle de l'application Parapluie.",
-    canonical: "https://parapluie.app/support/contact"            
-                                                                                                                             </Head> <section className="pb-16 w-full">
+                                                                                   <title> Contact – Parapluie </title>
+    <meta name="description"
+    content="Page contact officielle de l'application Parapluie." />
+   <link  
+   rel="canonical"
+   href="https://parapluie.app/support/contact"
+   />
+                                                                                                                         </Head> <section className="pb-16 w-full">
                                                                                                                                     
                                                                                                                                                   <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
                                                                                                                                                                    <div className="inline-flex items-center gap-2 text-sm text-neutral-500 py-6">

@@ -14,7 +14,7 @@ export default function Page() {
         <>
         <Head>
           <title>
-            Protection parents
+            Protection parents - Parapluie
           </title>
           <link rel="canonical"
           href="https://parapluie.app/protection-parents"
