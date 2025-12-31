@@ -1,6 +1,7 @@
 // pages/guide/@slug/+config.ts
 
+import { onBeforePrerenderStart } from "./prerender";
+
 export default {
-  // Cette syntaxe "import:..." est le "Pointer Import" officiel de Vike
-  onBeforePrerenderStart: 'import:./prerender:onBeforePrerenderStart'
+  onBeforePrerenderStart 
 };
