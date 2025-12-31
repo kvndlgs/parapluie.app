@@ -1,7 +1,7 @@
 // pages/guide/@slug/+data.ts
 
 import { getAllGuides, getGuideBySlug } from "@/content/guides";
-import type { PageContextServer } from 'vike/types'
+import type { PageContextServer } from 'vike/types';
 
 export const data = async (pageContext: PageContextServer) => {
     const { slug } = pageContext.routeParams;
@@ -23,6 +23,12 @@ export const data = async (pageContext: PageContextServer) => {
         ogImage: "https://parapluie.app/og-guides.png",
         jsonLd: [breadcrumbJsonLd, howToJsonLd], // C'est ici que tu nommes la clé
     };
+};
+
+export const onBeforePrerenderStart = async () => {
+    const guides = getAllGuides();
+    // On retourne la liste des URLs complètes que Vike doit générer en HTML
+    return guides.map((guide) => `/guide/${guide.slug}`);
 };
 
 export type Data = Awaited<ReturnType<typeof data>>;

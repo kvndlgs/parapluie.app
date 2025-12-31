@@ -21,7 +21,7 @@ export default function Layout({children}): LayoutProps {
       </noscript>
 
       <ResponsiveNavbar/>
-      <main>
+      <main className="py-16 md:py-34">
         { children }
       </main>
       <Footer />
