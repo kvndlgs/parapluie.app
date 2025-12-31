@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/content/posts';  // or relative path
+import { getAllPosts } from '../../src/content/posts';  // or relative path
 
 const onBeforePrerenderStart = async () => {
   const posts = getAllPosts();

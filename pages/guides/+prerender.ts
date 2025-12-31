@@ -1,4 +1,4 @@
-import { getAllGuides } from '@/content/guides';  // or relative path
+import { getAllGuides } from '../../src/content/guides';  // or relative path
 
 const onBeforePrerenderStart = async () => {
   const guides = getAllGuides();
