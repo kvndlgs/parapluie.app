@@ -2,7 +2,8 @@
 
 import { redirect } from "vike/abort";
 import type { PageContextServer } from "vike/types";
-import { getGuideBySlug, getAllGuides } from "@/content/guides"; // Ajuste le chemin
+import { getGuideBySlug, getAllGuides } from "@/content/guides";
+import ogImg from "../../../assets/og-guides.png";
 
 export const data = async (pageContext: PageContextServer) => {
   const { slug } = pageContext.routeParams;
@@ -22,8 +23,7 @@ export const data = async (pageContext: PageContextServer) => {
     "@type": "HowTo",
     name: guide.title,
     description: guide.excerpt || guide.description || "",
-    image: guide.image || "https://parapluie.app/og-guides.png",
-    // FIX ICI: Ajout du ? avant .map et du || [] au cas où steps n'existe pas
+    image: ogImg,
     step:
       guide.steps?.map((step: any, index: number) => ({
         "@type": "HowToStep",
@@ -45,6 +45,7 @@ export const data = async (pageContext: PageContextServer) => {
     description: guide.excerpt,
     canonical: `https://parapluie.app/guide/${slug}`,
     guideJsonLd,
+    ogImg
   };
 };
 
