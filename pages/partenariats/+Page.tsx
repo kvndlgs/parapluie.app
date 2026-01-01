@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Head } from "vike-react/Head";
+//import { Head } from "vike-react/Head";
 import { Modal } from '@/components/Modal';
 import { WaitlistForm } from '@/components/WaitListForm';
 import { 
@@ -34,12 +34,6 @@ export default function Page() {
 
   return (
     <>
-      <Head>
-        <title>Programme de partenariat - Parapluie </title>
-    <meta name="description" content="Rejoignez la mission Parapluie. Devenez partenaire et aidez-nous à protéger les aînés contre la fraude téléphonique au Québec." />
-    <link rel="canonical" href="https://parapluie.app/partenariats"
-    />
-      </Head>
       <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-primary-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-base-100 text-base-700 text-sm font-medium mb-6">

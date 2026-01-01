@@ -1,14 +1,13 @@
 // pages/+Head.tsx
 import React from "react";
 import { useData } from 'vike-react/useData';
-import { usePageContext } from 'vike-react/usePageContext';
+//import { usePageContext } from 'vike-react/usePageContext';
 import type { Data } from './+data';
-import favicon from "../assets/favicon.ico";
-import manifest from "../assets/manifest.json";
+const favicon = "@/assets/favicon.ico";
+const manifest = "@/assets/manifest.json";
 
 export function Head() {
   const data = useData<Data>();
-  const pageContext = usePageContext();
 
   // On récupère les JSON-LD (soit globaux, soit spécifiques à la page)
   
@@ -26,7 +25,7 @@ export function Head() {
       <link rel="icon" href={favicon} />
 
       {/* 3. Open Graph (Vike-React ne gère pas og:image par défaut) */}
-      <meta property="og:image" content={pageContext.data?.ogImage || "https://parapluie.app/og-image.webp"} />
+      <meta property="og:image" content="https://parapluie.app/og-image.webp" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
 

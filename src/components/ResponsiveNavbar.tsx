@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Logo from './Logo'; // Corrected import
+import Logo from './Logo';
 
 
 interface NavItem {
@@ -11,6 +11,9 @@ interface NavItem {
       { label: 'À Propos', href: '#a-propos' },
         { label: 'Comment ça marche ?', href: '#comment-ca-marche' },
           { label: 'Abonnement', href: '#abonnements' },
+           { label: 'Guides', href: '/guides' },
+            { label: 'Partenariats', href: '/partenariats' },
+            { label: 'Contact', href:'/support/contact' },
             { label: 'Dashboard', href: 'https://dashboard.parapluie.app' },
             ];
             

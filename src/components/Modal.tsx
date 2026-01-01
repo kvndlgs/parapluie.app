@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { ModalProps } from '../types/index';
 
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {

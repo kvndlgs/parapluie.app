@@ -15,14 +15,12 @@ export const data = async () => {
     "name": "Parapluie",
     "url": "https://parapluie.app",
     "logo": "https://parapluie.app/logo.png",
-  };
-  
-
   }
- 
+
   return {
     mainJsonLd, 
     orgJsonLd
-};
+  }
+}
 
 export type Data = Awaited<ReturnType<typeof data>>;
