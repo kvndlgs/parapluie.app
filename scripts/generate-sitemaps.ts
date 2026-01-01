@@ -31,7 +31,7 @@ const STATIC_PATHS: Array<{
 
   { loc: "/partenariats", changefreq: "monthly", priority: 0.5 },
 
-  { loc: "/termes-et-conditions", changefreq: "yearly", priority: 0.2 },
+  { loc: "/conditions-generales-d-utilisation", changefreq: "yearly", priority: 0.2 },
   { loc: "/politique-de-confidentialite", changefreq: "yearly", priority: 0.2 },
 ];
 
@@ -139,7 +139,7 @@ async function main() {
   // ---- 2) BLOG POSTS
   // ✅ ajuste ces chemins si tes contenus sont ailleurs
   const postsMod = await safeImport<{ posts?: any[] }>(
-    pathToFileUrl(path.join(root, "src/content/posts.ts")),
+    pathToFileUrl(path.join(root, "src/content/posts.json")),
   );
   const posts = postsMod?.posts ?? [];
 
@@ -159,7 +159,7 @@ async function main() {
 
   // ---- 3) GUIDES
   const guidesMod = await safeImport<{ guides?: any[] }>(
-    pathToFileUrl(path.join(root, "src/content/guides.ts")),
+    pathToFileUrl(path.join(root, "src/content/guides.json")),
   );
   const guides = guidesMod?.guides ?? [];
 
