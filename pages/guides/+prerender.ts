@@ -1,4 +1,4 @@
-import guides from '@/content/guides.json';
+import guides from '../../src/content/guides.json';
 
 export const prerender = () => {
   // Vike saura exactement quelles pages générer au build
