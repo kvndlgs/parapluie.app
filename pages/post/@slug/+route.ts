@@ -1,2 +1,2 @@
 // pages/post/@slug/+route.ts
-export default '/post/:slug';
+export default "/post/:slug";

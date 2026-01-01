@@ -8,39 +8,45 @@ export interface Guide {
   tags: string[];
   content: string;
   steps: { title: string; content: string }[]; // Maintenant obligatoire pour le JSON-LD
-}                      export const guides: Guide[] = [
-      {
+}
+export const guides: Guide[] = [
+  {
     slug: "comment-reagir-appel-sms-suspect-guide-seniors",
     title: "Appel ou SMS suspect : les bons réflexes à adopter immédiatement",
-    excerpt: "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",
+    excerpt:
+      "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",
     date: "2024-12-22",
     author: "Équipe Parapluie",
     readTime: "5 min",
     tags: ["prévention", "SMS frauduleux", "réflexes sécurité", "Québec"],
     steps: [
-      { 
-        title: "Ne donnez aucune information", 
-        content: "Votre banque ou institution ne vous demandera jamais votre NIP, NAS ou mot de passe par téléphone ou SMS." 
-      },
-      { 
-        title: "Raccrochez et reprenez le contrôle", 
-        content: "Si l'interlocuteur vous met de la pression ou semble menaçant, raccrochez immédiatement." 
-      },
-      { 
-        title: "Validez par vous-même", 
-        content: "Trouvez le numéro officiel de l'organisme sur une facture ou au dos de votre carte bancaire et rappelez-les directement." 
-      }
-    ]
+      {
+        title: "Ne donnez aucune information",
+        content:
+          "Votre banque ou institution ne vous demandera jamais votre NIP, NAS ou mot de passe par téléphone ou SMS.",
       },
       {
-                                            slug: "comment-reagir-appel-sms-suspect-guide-seniors",
-                                                title: "Appel ou SMS suspect : les bons réflexes à adopter immédiatement",
-                                                    excerpt: "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",
-                                                        date: "2025-12-22",
-                                                            author: "Équipe Parapluie",
-                                                                readTime: "5 min",
-                                                                    tags: ["prévention", "SMS frauduleux", "réflexes sécurité", "Québec"],
-                                                                        content: `
+        title: "Raccrochez et reprenez le contrôle",
+        content:
+          "Si l'interlocuteur vous met de la pression ou semble menaçant, raccrochez immédiatement.",
+      },
+      {
+        title: "Validez par vous-même",
+        content:
+          "Trouvez le numéro officiel de l'organisme sur une facture ou au dos de votre carte bancaire et rappelez-les directement.",
+      },
+    ],
+  },
+  {
+    slug: "comment-reagir-appel-sms-suspect-guide-seniors",
+    title: "Appel ou SMS suspect : les bons réflexes à adopter immédiatement",
+    excerpt:
+      "Même si l'interlocuteur semble crédible, les fraudeurs sont passés maîtres dans l'art de la manipulation. Apprenez comment réagir face à un doute.",
+    date: "2025-12-22",
+    author: "Équipe Parapluie",
+    readTime: "5 min",
+    tags: ["prévention", "SMS frauduleux", "réflexes sécurité", "Québec"],
+    content: `
                                                                         ## Ça a l'air vrai, mais est-ce que ça l'est?
 
                                                                         Aujourd'hui, les fraudeurs utilisent des technologies pour afficher de **faux numéros de téléphone** (comme celui de votre banque ou d'Hydro-Québec) sur votre écran. Ils peuvent même utiliser l'intelligence artificielle pour imiter des voix connues. 
@@ -94,17 +100,16 @@ export interface Guide {
                                                                         ---
 
                                                                         *Reprenez le contrôle de votre téléphone. [Installez Parapluie](/) pour bloquer les tentatives de fraude avant même qu'elles ne vous atteignent.*
-                                                                        `
-                                                                        }
-                                                                        ];
+                                                                        `,
+  },
+];
 
-                                                                        export function getGuideBySlug(slug: string): Guide | undefined {
-                                                                            return guides.find(guide => guide.slug === slug);
-                                                                            }
+export function getGuideBySlug(slug: string): Guide | undefined {
+  return guides.find((guide) => guide.slug === slug);
+}
 
-                                                                        export function getAllGuides(): Guide[] {
-                                                                                return guides.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-                                                                        }
-
-
-
+export function getAllGuides(): Guide[] {
+  return guides.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+}

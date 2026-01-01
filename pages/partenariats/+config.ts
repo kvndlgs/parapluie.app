@@ -1,3 +1,3 @@
 export default {
-    title: "Partenariats - Parapluie"
-}
+  title: "Partenariats - Parapluie",
+};

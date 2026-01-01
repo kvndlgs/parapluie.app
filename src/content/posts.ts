@@ -1,24 +1,25 @@
 export interface BlogPost {
-    slug: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    author: string;
-    readTime: string;
-    tags: string[];
-    content: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  readTime: string;
+  tags: string[];
+  content: string;
 }
 
 export const posts: BlogPost[] = [
-    {
-        slug: "arnaque-grand-parent-guide-complet",
-        title: "L'arnaque grand-parent : Guide complet pour protéger vos proches",
-        excerpt: "Découvrez comment fonctionne l'arnaque grand-parent et les mesures concrètes pour protéger vos parents âgés contre cette fraude en hausse au Québec.",
-        date: "2024-11-29",
-        author: "Équipe Parapluie",
-        readTime: "5 min",
-        tags: ["arnaque grand-parent", "fraude", "protection seniors"],
-        content: `
+  {
+    slug: "arnaque-grand-parent-guide-complet",
+    title: "L'arnaque grand-parent : Guide complet pour protéger vos proches",
+    excerpt:
+      "Découvrez comment fonctionne l'arnaque grand-parent et les mesures concrètes pour protéger vos parents âgés contre cette fraude en hausse au Québec.",
+    date: "2024-11-29",
+    author: "Équipe Parapluie",
+    readTime: "5 min",
+    tags: ["arnaque grand-parent", "fraude", "protection seniors"],
+    content: `
 ## Qu'est-ce que l'arnaque grand-parent?
 
 L'arnaque grand-parent est une des fraudes les plus répandues ciblant les personnes âgées au Québec. Le stratagème est simple mais redoutablement efficace : un fraudeur appelle en se faisant passer pour un petit-enfant en situation d'urgence.
@@ -64,17 +65,18 @@ Notre application analyse les appels en temps réel et détecte les tentatives d
 ---
 
 *Protégez vos parents avant qu'il ne soit trop tard. [Inscrivez-vous à Parapluie](/) pour recevoir des alertes en temps réel.*
-`
-    },
-    {
-        slug: "comment-proteger-parents-ages-fraude-telephonique",
-        title: "Comment protéger vos parents âgés contre la fraude téléphonique",
-        excerpt: "Guide pratique pour aider vos parents à se protéger des arnaques téléphoniques sans les infantiliser. Conseils concrets et outils recommandés.",
-        date: "2024-11-28",
-        author: "Équipe Parapluie",
-        readTime: "6 min",
-        tags: ["protection parents", "fraude téléphonique", "seniors"],
-        content: `
+`,
+  },
+  {
+    slug: "comment-proteger-parents-ages-fraude-telephonique",
+    title: "Comment protéger vos parents âgés contre la fraude téléphonique",
+    excerpt:
+      "Guide pratique pour aider vos parents à se protéger des arnaques téléphoniques sans les infantiliser. Conseils concrets et outils recommandés.",
+    date: "2024-11-28",
+    author: "Équipe Parapluie",
+    readTime: "6 min",
+    tags: ["protection parents", "fraude téléphonique", "seniors"],
+    content: `
 ## Pourquoi nos parents sont-ils ciblés?
 
 Les fraudeurs ciblent spécifiquement les personnes âgées pour plusieurs raisons :
@@ -155,18 +157,20 @@ Si vos parents entendent ces phrases, c'est probablement une arnaque :
 ---
 
 *Ne laissez pas vos parents vulnérables. [Découvrez Parapluie](/) et recevez des alertes en temps réel quand ils reçoivent des appels suspects.*
-`
-    }
+`,
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-    return posts.find(post => post.slug === slug);
+  return posts.find((post) => post.slug === slug);
 }
 
 export function getLatestPosts(limit: number): BlogPost[] {
-    return getAllPosts().slice(0, limit);
+  return getAllPosts().slice(0, limit);
 }
 
 export function getAllPosts(): BlogPost[] {
-    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 }

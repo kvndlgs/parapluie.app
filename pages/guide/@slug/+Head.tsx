@@ -1,7 +1,7 @@
 // pages/guide/@slug/+Head.tsx
 
 import { useData } from "vike-react/useData";
-import type { Data } from "./+data"
+import type { Data } from "./+data";
 
 export function Head() {
   const data = useData<Data>();
@@ -14,13 +14,11 @@ export function Head() {
       <link rel="canonical" href={data.canonical} />
       {/* CORRECTION : data.jsonLd (correspond au return du +data.ts) */}
       {data?.guideJsonLd && (
-  <script 
-    type="application/ld+json" 
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }} 
-  />
-)}
-
-
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
+        />
+      )}
     </>
   );
 }

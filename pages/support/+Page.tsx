@@ -1,7 +1,6 @@
 // import { Head } from "vike-react/Head";
 
 export default function Page() {
-  
   return (
     <>
       <section className="min-h-screen bg-white text-neutral-900">
@@ -68,7 +67,6 @@ export default function Page() {
               </div>
             </article>
 
-            
             <article className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm sm:p-6">
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50">
@@ -85,9 +83,9 @@ export default function Page() {
               </div>
 
               <p className="mb-4 text-sm text-neutral-600">
-                Comprenez les arnaques les plus fréquentes au Québec
-                (arnaque grand-parent, faux représentants, fraude bancaire…)
-                avec des explications simples et concrètes.
+                Comprenez les arnaques les plus fréquentes au Québec (arnaque
+                grand-parent, faux représentants, fraude bancaire…) avec des
+                explications simples et concrètes.
               </p>
 
               <div className="mt-auto flex flex-wrap gap-3">
@@ -166,9 +164,8 @@ export default function Page() {
               </ul>
             </article>
           </div>
-          
         </section>
       </section>
-      </>
+    </>
   );
 }

@@ -1,17 +1,14 @@
 // pages/+config.ts
 
 import vikeReact from "vike-react/config"; // <--- AJOUTE CET IMPORT
+import vikePhoton from "vike-photon/config";
 import type { Config } from "vike/types";
-// import Layout from "./+Layout";
-
 
 export default {
-  lang: 'fr',
-//  Layout,
+  lang: "fr",
+  title: "Parapluie - Protection contre la fraude.",
   stream: true,
-  // C'est cette ligne qui manquait !
-  extends: [vikeReact], 
-
-  title: "Parapluie - Protection contre la fraude",
+  extends: [vikeReact, vikePhoton],
+  prerender: true,
   description: "Protection contre les arnaques au Québec",
 } satisfies Config;
