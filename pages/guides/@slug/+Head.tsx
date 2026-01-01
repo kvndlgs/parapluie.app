@@ -9,15 +9,19 @@ export function Head() {
     <>
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
+      <meta property="og:title" content={data.title} />
+      <meta property="og:image" content={data.image} />
       <meta property="og:type" content="article" />
+      <meta property="og:description" content={data.description} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={data.title} />
+      <meta name="twitter:description" content={data.description} />
       <link rel="canonical" href={data.canonical} />
-      {/* CORRECTION : data.jsonLd (correspond au return du +data.ts) */}
-      {data?.guideJsonLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
         />
-      )}
+    
     </>
   );
 }

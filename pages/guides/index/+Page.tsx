@@ -1,10 +1,9 @@
 // pages/guides/+Pages.tsx
 
-import { getAllGuides } from "@/content/guides";
+import guides from "@/content/guides.json";
 import { Head } from "vike-react/Head";
 
 export default function Page() {
-  const guides = getAllGuides();
 
   return (
     <>

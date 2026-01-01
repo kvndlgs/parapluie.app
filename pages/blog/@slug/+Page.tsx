@@ -1,33 +1,37 @@
-// pages/guide/@slug/+Pages.tsx
-
 import ReactMarkdown from "react-markdown";
 import stripIndent from "@/utils/stripIndent";
 // import { useEffect } from "react";
-// import { usePageContext } from "vike-react/usePageContext";
+import { useConfig } from "vike-react/useConfig";
 import { useData } from "vike-react/useData";
-import type { Data } from "./+Data";
+import type { Data } from "./+data";
 
 export default function Page() {
-  const { guide, otherGuides } = useData<Data>();
-  const content = stripIndent(guide.content);
+  const { post, otherPosts } = useData<Data>();
+  const config = useConfig();
+  const content = stripIndent(post.content);
+
+  config({
+    title: post.title,
+    description: post.excerpt,
+  });
 
   return (
     <>
-      <section className="pt-32 pb-12 px-6 b:g-gradient-to-b from-base-50 to-white">
-        <div className="max-w-3xl mx-auto py-12">
+      <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
+        <div className="max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 text-sm text-neutral-500">
             <a
-              href="/guides"
+              href="/"
               className="hover:text-neutral-800 hover:underline underline-offset-2"
             >
-              Guides
+              Blog
             </a>
             <span className="text-neutral-400">/</span>
-            <span className="text-neutral-700">{guide.title}</span>
+            <span className="text-neutral-700">{post.title}</span>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-4">
-            {guide.tags.map((tag) => (
+            {post.tags.map((tag) => (
               <span
                 key={tag}
                 className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full"
@@ -37,20 +41,20 @@ export default function Page() {
             ))}
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-base-700 mb-6 leading-tight">
-            {guide.title}
+            {post.title}
           </h1>
           <div className="flex items-center gap-4 text-base-500">
-            <span className="font-medium">{guide.author}</span>
+            <span className="font-medium">{post.author}</span>
             <span>•</span>
             <span>
-              {new Date(guide.date).toLocaleDateString("fr-CA", {
+              {new Date(post.date).toLocaleDateString("fr-CA", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })}
             </span>
             <span>•</span>
-            <span>{guide.readTime} de lecture</span>
+            <span>{post.readTime} de lecture</span>
           </div>
         </div>
       </section>
@@ -136,24 +140,24 @@ export default function Page() {
       </article>
 
       {/* Read More Section */}
-      {otherGuides.length > 0 && (
+      {otherPosts.length > 0 && (
         <section className="py-16 px-6 bg-base-50">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-base-700 mb-8">
               Continuer la lecture
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {otherGuides.map((otherGuide) => (
+              {otherPosts.map((otherPost) => (
                 <a
-                  key={otherGuide.slug}
-                  href={`/guide/${otherGuide.slug}`}
+                  key={otherPost.slug}
+                  href={`/post/${otherPost.slug}`}
                   className="bg-white rounded-xl p-6 border border-base-100 hover:border-primary-200 transition-colors"
                 >
                   <h3 className="font-bold text-base-700 mb-2 hover:text-primary-650">
-                    {otherGuide.title}
+                    {otherPost.title}
                   </h3>
                   <p className="text-sm text-base-500">
-                    {otherGuide.readTime} de lecture
+                    {otherPost.readTime} de lecture
                   </p>
                 </a>
               ))}

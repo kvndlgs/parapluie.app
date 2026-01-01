@@ -1,8 +1,7 @@
 import { Head } from "vike-react/Head";
-import { getAllPosts } from "@/content/posts";
+import posts from "@/content/posts";
 
 export default function Page() {
-  const posts = getAllPosts();
 
   return (
     <>
