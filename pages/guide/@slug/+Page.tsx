@@ -5,6 +5,7 @@ import stripIndent from "@/utils/stripIndent";
 import { useEffect } from "react";
 import { usePageContext } from "vike-react/usePageContext";
 import { useData } from "vike-react/useData";
+import type { Data } from "./+Data";
 
 export default function Page() {
   const { guide, otherGuides } = useData<Data>();

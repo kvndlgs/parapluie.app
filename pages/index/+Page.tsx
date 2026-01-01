@@ -33,11 +33,6 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Parapluie - Protection contre les arnaques</title>
-        <meta
-          property="og:image"
-          content="https://parapluie.app/og-image.webp"
-        />
         <link rel="canonical" href="https://parapluie.app/" />
       </Head>
       <Hero
