@@ -5,9 +5,20 @@ import stripIndent from "../../../src/utils/stripIndent";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
+interface OtherPosts {
+  otherPost: string;
+  slug: string;
+  title: string;
+  readTime: string;
+}
+
 export default function Page() {
   const { post, otherPosts } = useData<Data>();
+  if(!post) return;
   const content = stripIndent(post.content);
+
+  const allOtherPosts = otherPosts as OtherPosts[];
+
   return (
     <>
       <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
@@ -140,7 +151,7 @@ export default function Page() {
               Continuer la lecture
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {otherPosts.map((otherPost) => (
+              {allOtherPosts.map((otherPost) => (
                 <a
                   key={otherPost.slug}
                   href={`/post/${otherPost.slug}`}

@@ -9,6 +9,8 @@ const manifest = "../../assets/manifest.json";
 export function Head() {
   const data = useData<Data>();
 
+  if(!data) return;
+
   // On récupère les JSON-LD (soit globaux, soit spécifiques à la page)
 
   return (

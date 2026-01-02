@@ -9,9 +9,14 @@ import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
 
+
 export default function Page() {
-  const { guide, otherGuides } = useData<Data>();
+  const {guide, otherGuides } = useData<Data>();
+
+  if(!guide) return;
+
   const content = stripIndent(guide.content);
+  
   
   return (
     <>

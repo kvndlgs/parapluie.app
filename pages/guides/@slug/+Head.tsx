@@ -5,6 +5,7 @@ import type { Data } from "./+data";
 
 export function Head() {
   const data = useData<Data>();
+  if (!data) return null;
   return (
     <>
       <title>{data.title}</title>

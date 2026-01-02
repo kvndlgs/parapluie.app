@@ -1,9 +1,41 @@
 // pages/guides/+Pages.tsx
 
-import guides from "@/content/guides.json";
-import { Head } from "vike-react/Head";
 
+import { Head } from "vike-react/Head";
+import { useData } from "vike-react/useData";
+import type { Data } from "../@slug/+data";
+ 
+export interface Guide {
+      slug: string;
+            
+      title: string;
+               
+      excerpt: string;
+                
+      date: string;
+                
+      author: string;
+                 
+      readTime: string;
+               
+      tags: string[];
+                
+      content: string;
+
+
+                
+      image?: string;
+                
+      description?: string;
+           
+}
+                                                                                                                                                                                                                              
 export default function Page() {
+  const  {guide, otherGuides} = useData<Data>();
+ 
+  if(!guide) return;
+
+  const guides = otherGuides as Guide[];
 
   return (
     <>
