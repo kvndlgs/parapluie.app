@@ -1,20 +1,13 @@
 import ReactMarkdown from "react-markdown";
-import stripIndent from "@/utils/stripIndent";
+import stripIndent from "../../../src/utils/stripIndent";
 // import { useEffect } from "react";
-import { useConfig } from "vike-react/useConfig";
+// import { useConfig } from "vike-react/useConfig";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
 export default function Page() {
   const { post, otherPosts } = useData<Data>();
-  const config = useConfig();
   const content = stripIndent(post.content);
-
-  config({
-    title: post.title,
-    description: post.excerpt,
-  });
-
   return (
     <>
       <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">

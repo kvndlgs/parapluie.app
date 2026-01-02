@@ -1,7 +1,9 @@
 // pages/blog/latest/+data.ts
 import { redirect } from "vike/abort";
 // import type { PageContextServer } from "vike/types";
-import posts from "@/content/posts.json";
+import posts from "../../../src/content/posts.json";
+
+
 
 export const data = async () => {
 
@@ -16,12 +18,17 @@ export const data = async () => {
   }
 
   return {
+   
     post,
+            
     otherPosts,
-    title: "Articles récents - Parapluie",
-    description: "Derniers articles du blog",
-    canonical: "https://parapluie.app/blog/latest",
-  };
+            
+    title: `${post.title} - Parapluie`,
+        
+    description: post.excerpt,
+       
+    canonical: `https://parapluie.app/blog/latest`,                             };
+  
 };
 
 export type Data = Awaited<ReturnType<typeof data>>;

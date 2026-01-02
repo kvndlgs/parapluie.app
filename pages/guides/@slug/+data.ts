@@ -1,79 +1,68 @@
 import { redirect } from "vike/abort";
 import type { PageContextServer } from 'vike/types';
-import guides from '@/content/guides.json'; 
-import ogImg from "../../assets/og-guides.png";
+import guidesData from '../../../src/content/guides.json'; 
 
+// On définit l'interface pour le typage TypeScript
 export interface Guide {
     slug: string;
+        title: string;
+            excerpt: string;
+                date: string;
+                    author: string;
+                        readTime: string;
+                            tags: string[];
+                                content: string;
 
-    title: string;
+                                    image?: string;
+                                        description?: string;
+                                        }
 
-    excerpt: string;
+                                        // 1. Logique d'extraction (Cast du JSON en type Guide[])
+                                        const guides = guidesData as Guide[];
 
-    date: string;
-          
-    author: string;
+                                        const getGuideBySlug = (slug: string) => guides.find(g => g.slug === slug);
+                                        const getAllGuides = () => [...guides].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    readTime: string;
+                                        // 2. La fonction DATA (Serveur)
+                                        export const data = async (pageContext: PageContextServer) => {
+                                          const { slug } = pageContext.routeParams;
+                                            const guide = getGuideBySlug(slug);
+                                              
+                                                if (!guide) {
+                                                    throw redirect("/guides");
+                                                      }
 
-      tags: string[];
+                                                        const allGuides = getAllGuides();
+                                                          const otherGuides = allGuides.filter(p => p.slug !== slug).slice(0, 2);
 
-      content: string;
-      
-      steps: { title: string; content: string }[];
-}
-
-export const data = async (pageContext: PageContextServer) => {
-
-                    
-    const { slug } = pageContext.routeParams;
-           
-           
-              
-          // On trouve le guide dans le JSON importé
-
-          const guide = (guides as Guide[]).find(g => g.slug === slug);
-
-
-               
-             if (!guide) {
-               
-                 throw redirect("/guides");
-                
-                  }
-
- // Logique pour les guides suggérés (Optionnel)
-
-               
-                       const otherGuides = (guides as Guide[]).filter(g => g.slug !== slug)
-                                              .slice(0, 2);
-
-                                                return {
-                                                    guide,
-                                                    otherGuides,
-                                                    title: `${guide.title} - Parapluie`,
-                                                    description: guide.excerpt,
-                                                    canonical: `https://parapluie.app/guide/${slug}`,
-                                                    image: ogImg,
-                                                                        // Le JSON-LD HowTo que nous avons construit ensemble
-                                                    guideJsonLd: {
-                                                        "@context": "https://schema.org",
-                                                                                        "@type": "HowTo",
-                                                                                              "name": guide.title,
-                                                                                                    "description": guide.excerpt,
-                                                                                                          "step": guide.steps.map((s, i) => ({
-                                                                                                                  "@type": "HowToStep",
-                                                                                                                          "position": i + 1,
-                                                                                                                                  "name": s.title,
-                                                                                                                                          "itemListElement": [{ "@type": "HowToDirection", "text": s.content }]
-                                                                                                                                                }))
-                                                                                                                                                    }
-                                                                                                                                                      };
-              
+                                                            const guideJsonLd = {
+                                                                "@context": "https://schema.org",
+                                                                    "@type": "HowTo",   
+                                                                        "name": guide.title,    
+                                                                            "description": guide.excerpt || guide.description || "",  
+                                                                                "image": guide.image || "https://parapluie.app/og-guides.png",       
+                                                                                    "step": guide.steps?.map((step, index) => ({  
+                                                                                          "@type": "HowToStep",
+                                                                                                "position": index + 1,
+                                                                                                      "name": step.title || `Étape ${index + 1}`, 
+                                                                                                            "itemListElement": [{   
+                                                                                                                    "@type": "HowToDirection", 
+                                                                                                                            "text": step.content || ""
+                                                                                                                                  }]
+                                                                                                                                      })) || []     
                                                                                                                                         };
 
+                                                                                                                                          // IMPORTANT: On retourne les données pour qu'elles soient accessibles
+                                                                                                                                            return {
+                                                                                                                                                guide, 
+                                                                                                                                                    otherGuides,
+                                                                                                                                                        title: `${guide.title} - Parapluie`,
+                                                                                                                                                            description: guide.excerpt,
+                                                                                                                                                                canonical: `https://parapluie.app/guide/${slug}`,     
+                                                                                                                                                                    image: "https://parapluie.app/og-guides.png", // Utilise une URL absolue idéalement      
+                                                                                                                                                                        guideJsonLd
+                                                                                                                                                                          };
+                                                                                                                                                                          };
 
-                                                                                                                                                      
-export type Data = Awaited<ReturnType<typeof data>>;
-      
-                                                                                                                                                      
+                                                                                                                                                                          export type Data = Awaited<ReturnType<typeof data>>;
+                                                                                                                                                                          

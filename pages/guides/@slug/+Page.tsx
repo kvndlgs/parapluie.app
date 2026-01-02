@@ -1,22 +1,17 @@
 // pages/guide/@slug/+Pages.tsx
 
 import ReactMarkdown from "react-markdown";
-import stripIndent from "@/utils/stripIndent";
+import stripIndent from "../../../src/utils/stripIndent";
 // import { useEffect } from "react";ClientOnly
 // import { usePageContext } from "vike-react/usePageContext";
-import { useConfig } from "vike-react/useConfig";
+// import { useConfig } from "vike-react/useConfig";
 import { useData } from "vike-react/useData";
-import type { Data } from "./+Data";
+import type { Data } from "./+data";
+
 
 export default function Page() {
   const { guide, otherGuides } = useData<Data>();
-  const config = useConfig();
   const content = stripIndent(guide.content);
-
-  config({
-    title: guide.title,
-    description: guide.description
-  });
   
   return (
     <>
