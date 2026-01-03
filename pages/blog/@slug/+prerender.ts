@@ -5,6 +5,5 @@ interface Post {
 }
 
 export const prerender = () => {
-      // Vike saura exactement quelles pages générer au build
         return (postsData as Post[]).map(post => `/post/${post.slug}`);
 };
