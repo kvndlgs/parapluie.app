@@ -14,7 +14,7 @@ export const data = async () => {
 };
 
 export type Data = {
-  posts: any[];
+  posts: allPosts;
   title: string;
   description: string;
   readTime: string;
