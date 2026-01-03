@@ -8,5 +8,5 @@ export default {
   title: "Parapluie - Protection contre la fraude.",
   stream: true,
   extends: [vikeReact],
- // prerender: true,
+  prerender: true,
 } satisfies Config;
