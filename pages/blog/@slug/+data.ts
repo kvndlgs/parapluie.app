@@ -32,23 +32,13 @@ export const data = async (pageContext: PageContextServer) => {
   }
 
   const allPosts = getAllPosts();
-  const otherPosts = allGuides.filter(p => p.slug !== slug).slice(0, 2);
+  const otherPosts = allPosts.filter(p => p.slug !== slug).slice(0, 2);
 
   const blogJsonLd = {
     "@context": "https://schema.org",
-    "@type": "HowTo",   
-    "name": guide.title,    
-    "description": guide.excerpt || guide.description || "",  
-    "image": guide.image || "https://parapluie.app/og-guides.png",       
-    "step": guide.steps?.map((step, index) => ({  
-      "@type": "HowToStep",
-      "position": index + 1,
-      "name": step.title || `Étape ${index + 1}`, 
-      "itemListElement": [{   
-        "@type": "HowToDirection", 
-        "text": step.content || ""
-      }]
-    })) || []     
+    "@type": "blogPosting",   
+    "name": post.title,    
+    "description": post.excerpt || post.description || "",
   };
 
   return {
