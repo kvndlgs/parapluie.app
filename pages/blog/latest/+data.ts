@@ -1,6 +1,6 @@
 // pages/blog/latest/+data.ts 
 
-import posts from "../../../src/content/posts.json";
+import postsData from "../../../src/content/posts.json";
 
 export const data = async () => {
   const allPosts = [...postsData].sort((a, b) => 
