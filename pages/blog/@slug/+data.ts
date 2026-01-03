@@ -42,10 +42,10 @@ export const data = async (pageContext: PageContextServer) => {
   };
 
   return {
-    guide, 
-    otherGuides,
+    post, 
+    otherPosts,
     title: `${post.title} - Parapluie`,
-    description: guide.excerpt,
+    description: post.excerpt,
     canonical: `https://parapluie.app/post/${slug}`, 
     blogJsonLd
   };
