@@ -1,7 +1,5 @@
 import ReactMarkdown from "react-markdown";
 import stripIndent from "../../../src/utils/stripIndent";
-// import { useEffect } from "react";
-// import { useConfig } from "vike-react/useConfig";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 

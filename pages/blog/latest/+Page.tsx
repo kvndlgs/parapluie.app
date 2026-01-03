@@ -1,106 +1,104 @@
-// pages/blog/latest
-
-import ReactMarkdown from "react-markdown";
-import stripIndent from "@/utils/stripIndent";
+import { Head } from "vike-react/Head";
+import type { Data } from "./+data";
 import { useData } from "vike-react/useData";
 
-export default function Page() {
-  const { post, otherPosts } = useData();
 
-  const content = stripIndent(post.content);
+export default function Page() {
+  const {posts} = useData<Data>();
+  
+  if(!posts) return;
 
   return (
     <>
-      <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 text-sm text-neutral-500 mb-8">
-            <a href="/blog" className="hover:text-neutral-800 hover:underline">
-              Blog
-            </a>
-            <span className="text-neutral-400">/</span>
-            <span className="text-neutral-700">Dernier article</span>
-          </div>
-
-          <div className="flex flex-wrap gap-2 mb-4">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-base-700 mb-6 leading-tight">
-            {post.title}
+      <Head>
+        <title> Dernier Posts – Parapluie </title>
+        <meta
+          name="description"
+          content="Blog et actualités sur la fraude visant les aînés au Québec"
+        />
+        <link rel="canonical" href="https://parapluie.app/blog/latest" />
+      </Head>
+      <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-base-650 mb-6">
+            Blog Parapluie
           </h1>
-
-          <div className="flex items-center gap-4 text-neutral-500 text-sm">
-            <span className="font-medium text-neutral-900">{post.author}</span>
-            <span>•</span>
-            <span>
-              {new Date(post.date).toLocaleDateString("fr-CA", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
-            <span>•</span>
-            <span>{post.readTime} de lecture</span>
+          <p className="text-lg text-base-600 max-w-2xl mx-auto">
+            Conseils et ressources pour protéger vos proches contre la fraude
+            téléphonique au Québec.
+          </p>
+        </div>
+      </section>
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            {posts.map((post) => (
+              <article
+                key={post.slug}
+                className="bg-base-50 rounded-2xl p-8 border border-base-100 hover:border-primary-200 transition-colors"
+              >
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs font-medium bg-primary-100 text-primary-700 px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={`/post/${post.slug}`}>
+                  <h2 className="text-2xl font-bold text-base-700 mb-3 hover:text-primary-650 transition-colors">
+                    {post.title}
+                  </h2>
+                </a>
+                <p className="text-base-600 mb-4 leading-relaxed">
+                  {post.excerpt}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4 text-sm text-base-500">
+                    <span>{post.author}</span>
+                    <span>•</span>
+                    <span>
+                      {new Date(post.date).toLocaleDateString("fr-CA", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                    <span>•</span>
+                    <span>{post.readTime} de lecture</span>
+                  </div>
+                  <a
+                    href={`/post/${post.slug}`}
+                    className="text-primary-650 font-semibold hover:text-primary-750 transition-colors"
+                  >
+                    Lire →
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
-
-      {/* Article Content */}
-      <article className="py-12 px-6 bg-white">
-        <div className="max-w-3xl mx-auto prose prose-lg prose-blue">
-          <ReactMarkdown
-            components={{
-              h2: ({ children }) => (
-                <h2 className="text-2xl font-bold text-neutral-800 mt-12 mb-6">
-                  {children}
-                </h2>
-              ),
-              p: ({ children }) => (
-                <p className="text-neutral-600 leading-relaxed mb-6">
-                  {children}
-                </p>
-              ),
-              // ... keep your other custom components
-            }}
+      /* CTA Section */
+      <section className="py-16 px-6 bg-primary-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-750 mb-4">
+            Protégez vos parents dès aujourd'hui
+          </h2>
+          <p className="text-primary-650 mb-6">
+            Recevez des alertes en temps réel quand vos proches reçoivent des
+            appels suspects.
+          </p>
+          <a
+            href="/"
+            className="inline-block py-3 px-8 bg-primary-650 rounded-md text-white font-semibold hover:bg-primary-700 transition-colors"
           >
-            {content}
-          </ReactMarkdown>
+            Découvrir Parapluie
+          </a>
         </div>
-      </article>
-
-      {/* Read More Section */}
-      {otherPosts.length > 0 && (
-        <section className="py-16 px-6 bg-neutral-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-8">
-              Autres articles récents
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {otherPosts.map((otherPost) => (
-                <a
-                  key={otherPost.slug}
-                  href={`/post/${otherPost.slug}`}
-                  className="bg-white rounded-xl p-6 border border-neutral-200 hover:shadow-md transition-shadow"
-                >
-                  <h3 className="font-bold text-neutral-800 mb-2">
-                    {otherPost.title}
-                  </h3>
-                  <p className="text-sm text-neutral-500">
-                    {otherPost.readTime} de lecture
-                  </p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      </section>
     </>
   );
 }

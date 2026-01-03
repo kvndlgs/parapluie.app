@@ -1,25 +1,12 @@
 import { Head } from "vike-react/Head";
-import type { Data } from "../@slug/+data";
+import type { Data } from "./+data";
 import { useData } from "vike-react/useData";
 
-interface Post {
-      slug: string;
-          title: string;
-              excerpt: string;
-                  date: string;
-                      author: string;
-                          readTime: string;
-                              tags: string[];
-                                  content: string;
-                                      description?: string;
-                                      }
-
-}
 
 export default function Page() {
-  const {otherPosts} = useData<Data>();
-
-  const posts = otherPosts as Post[];
+  const {posts} = useData<Data>();
+  
+  if(!posts) return;
 
   return (
     <>

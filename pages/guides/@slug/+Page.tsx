@@ -2,9 +2,6 @@
 
 import ReactMarkdown from "react-markdown";
 import stripIndent from "../../../src/utils/stripIndent";
-// import { useEffect } from "react";ClientOnly
-// import { usePageContext } from "vike-react/usePageContext";
-// import { useConfig } from "vike-react/useConfig";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
@@ -13,7 +10,7 @@ import type { Data } from "./+data";
 export default function Page() {
   const {guide, otherGuides } = useData<Data>();
 
-  if(!guide) return;
+  if(!guide && otherGuides) return;
 
   const content = stripIndent(guide.content);
   

@@ -3,44 +3,17 @@
 
 import { Head } from "vike-react/Head";
 import { useData } from "vike-react/useData";
-import type { Data } from "../@slug/+data";
- 
-export interface Guide {
-      slug: string;
-            
-      title: string;
-               
-      excerpt: string;
-                
-      date: string;
-                
-      author: string;
-                 
-      readTime: string;
-               
-      tags: string[];
-                
-      content: string;
+import type { Data } from "./+data";
 
-
-                
-      image?: string;
-                
-      description?: string;
-           
-}
-                                                                                                                                                                                                                              
 export default function Page() {
-  const  {guide, otherGuides} = useData<Data>();
+  const  {guides} = useData<Data>();
  
-  if(!guide) return;
-
-  const guides = otherGuides as Guide[];
+  if(!guides) return;
 
   return (
     <>
       <Head>
-        <title>Guides - Parapluie</title>
+        <title>{guides.title}</title>
         <a
           rel="canonical"
           href="https://parapluie 

@@ -1,7 +1,6 @@
 // pages/+config.ts
 
-import vikeReact from "vike-react/config"; // <--- AJOUTE CET IMPORT
-// import vikePhoton from "vike-photon/config";
+import vikeReact from "vike-react/config";
 import type { Config } from "vike/types";
 
 export default {
@@ -10,5 +9,4 @@ export default {
   stream: true,
   extends: [vikeReact],
   prerender: true,
-  description: "Protection contre les arnaques au Québec",
 } satisfies Config;
