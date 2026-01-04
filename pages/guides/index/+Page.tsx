@@ -13,8 +13,8 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>{guides.title}</title>
-        <a
+        <title>Guides - Parapluie </title>
+        <link
           rel="canonical"
           href="https://parapluie 
          .app/guides"

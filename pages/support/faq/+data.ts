@@ -1,5 +1,6 @@
 // pages/support/faq/+data.ts
 export const data = async () => {
+  const canonical = "https://parapluie.app/support/faq" 
   const faqItems = [
     {
       question: "Comment protéger mes parents des arnaques téléphoniques ?",
@@ -63,7 +64,8 @@ export const data = async () => {
     description:
       "Questions fréquentes sur Parapluie, l’application qui protège vos parents au Québec.",
     faqJsonLd,
-    faqItems, // On les passe aussi pour que +Page.tsx les utilise
+    faqItems,
+    canonical
   };
 };
 

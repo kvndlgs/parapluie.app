@@ -33,6 +33,7 @@ export default function Page() {
   return (
     <>
       <Head>
+        <title> Parapluie - Protection contre les escroqueries </title>
         <link rel="canonical" href="https://parapluie.app/" />
       </Head>
       <Hero

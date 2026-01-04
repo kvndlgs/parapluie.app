@@ -1,4 +1,4 @@
-const ogImg = "@/assets/og-image.webp";
+const ogImg = "../assets/og-image.webp";
 
 export const data = async () => {
   const mainJsonLd = {

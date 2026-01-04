@@ -3,8 +3,6 @@ import React from "react";
 import { useData } from "vike-react/useData";
 //import { usePageContext } from 'vike-react/usePageContext';
 import type { Data } from "./+data";
-const favicon = "../../assets/favicon.ico";
-const manifest = "../../assets/manifest.json";
 
 export function Head() {
   const data = useData<Data>();
@@ -26,8 +24,8 @@ export function Head() {
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#725572" />
-      <link rel="manifest" href={manifest} />
-      <link rel="icon" href={favicon} />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="icon" href="https://parapluie.app/favicon.ico" />
 
       {/* 3. Open Graph (Vike-React ne gère pas og:image par défaut) */}
       <meta property="og:image" content={data.ogImg} />
