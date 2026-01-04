@@ -283,3 +283,14 @@ button {
     transform: rotate(360deg);
   }
 }
+
+/* État normal */
+#page-view {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+/* État pendant le chargement (quand la classe est présente) */
+body.page-transition #page-view {
+  opacity: 0;
+}
