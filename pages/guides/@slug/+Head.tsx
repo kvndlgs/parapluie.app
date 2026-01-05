@@ -5,7 +5,6 @@ import type { Data } from "./+data";
 
 export function Head() {
   const data = useData<Data>();
-  if (!data) return null;
   return (
     <>
       <title>{data.title}</title>
@@ -14,7 +13,6 @@ export function Head() {
       <meta property="og:image" content={data.image} />
       <meta property="og:type" content="article" />
       <meta property="og:description" content={data.description} />
-      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={data.title} />
       <meta name="twitter:description" content={data.description} />
       <link rel="canonical" href={data.canonical} />

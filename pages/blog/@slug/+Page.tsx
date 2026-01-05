@@ -15,8 +15,6 @@ export default function Page() {
   if (!post) return;
   const content = stripIndent(post.content);
 
-  const allOtherPosts = otherPosts as OtherPosts[];
-
   return (
     <>
       <section className="pt-32 pb-12 px-6 bg-gradient-to-b from-base-50 to-white">
@@ -149,7 +147,7 @@ export default function Page() {
               Continuer la lecture
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {allOtherPosts.map((otherPost) => (
+              {otherPosts.map((otherPost) => (
                 <a
                   key={otherPost.slug}
                   href={`/post/${otherPost.slug}`}

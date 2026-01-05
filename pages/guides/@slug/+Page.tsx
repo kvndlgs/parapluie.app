@@ -8,8 +8,6 @@ import type { Data } from "./+data";
 export default function Page() {
   const { guide, otherGuides } = useData<Data>();
 
-  if (!guide && otherGuides) return;
-
   const content = stripIndent(guide.content);
 
   return (
