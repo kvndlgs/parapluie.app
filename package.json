@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
-    "@photonjs/vercel": "^0.1.22",
     "lucide-react": "^0.554.0",
     "material-icons": "^1.13.14",
     "motion": "^12.23.26",
@@ -28,6 +27,8 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@tailwindcss/vite": "^4.1.17",
+    "@types/imagemin-mozjpeg": "^8.0.4",
+    "@types/imagemin-webp": "7.0.3",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -41,8 +42,6 @@
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "10.0.0",
     "imagemin-webp": "8.0.0",
-    "@types/imagemin-mozjpeg": "^8.0.4",
-    "@types/imagemin-webp": "7.0.3",
     "postcss": "^8.5.6",
     "prettier": "^3.7.4",
     "rollup-plugin-visualizer": "^6.0.5",

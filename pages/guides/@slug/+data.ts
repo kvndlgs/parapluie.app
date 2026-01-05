@@ -44,15 +44,16 @@ export const data = async (pageContext: PageContextServer) => {
     description: guide.excerpt || guide.description || "",
     image: guide.image || "https://parapluie.app/og-guides.png",
     step: guide.steps?.map((step, index) => ({
-        "@type": "HowToStep",
-        position: index + 1,
-        name: step.title || `Étape ${index + 1}`,
+          "@type": "HowToStep",
+              position: index + 1,
+                  name: (step.title || "").replace(/"/g, '\"'),
         itemListElement: [
-          {
-            "@type": "HowToDirection",
-            text: step.content || "",
-          },
-        ],
+                {
+                   "@type": "HowToDirection",
+                    // Nettoie les sauts de ligne qui font planter le JSON en ligne 10
+                    text: (step.content || "").replace(/\n/g, " ").replace(/"/g, '\"'),
+                 },
+               ],
       })) || [],
   };
 
