@@ -5,9 +5,10 @@ import type { Data } from "./+data";
 
 export function Head() {
   const data = useData<Data>();
+  const hasSteps = data?.guideJsonLd?.step && data.guideJsonLd.step.length > 0;
   return (
     <>
-      <title>{data.title}</title>
+      <title>{data?.title}</title>
       <meta name="description" content={data.description} />
       <meta property="og:title" content={data.title} />
       <meta property="og:image" content={data.image} />
@@ -16,10 +17,13 @@ export function Head() {
       <meta name="twitter:title" content={data.title} />
       <meta name="twitter:description" content={data.description} />
       <link rel="canonical" href={data.canonical} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
-      />
-    </>
-  );
+       {hasSteps && (
+                <script
+                          type="application/ld+json"
+                                    id="json-ld-guide" // Ajouter un ID aide à déboguer
+                                              dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
+                                                      />
+                                           )}
+</>
+   )
 }
