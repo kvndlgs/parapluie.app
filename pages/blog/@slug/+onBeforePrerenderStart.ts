@@ -1,4 +1,4 @@
-import postsData from '../../../src/content/posts.json';
+import postsData from "../../../src/content/posts.json";
 
 interface Post {
   slug: string;
@@ -6,8 +6,8 @@ interface Post {
 
 const onBeforePrerenderStart = () => {
   const posts = postsData as Post[];
-  
-  return posts.map(post => `/post/${post.slug}`);
+
+  return posts.map((post) => `/post/${post.slug}`);
 };
 
 export default onBeforePrerenderStart;

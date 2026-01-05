@@ -37,12 +37,14 @@ export const data = async () => {
       },
     })),
   };
+  const canonical = "https://parapluie.app/a-propos";
 
   return {
     title: "À propos – Parapluie",
     description:
       "Questions fréquentes sur Parapluie, l’application qui protège vos parents au Québec.",
     aboutJsonLd,
+    canonical
   };
 };
 

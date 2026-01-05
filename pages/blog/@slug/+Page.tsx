@@ -12,7 +12,7 @@ interface OtherPosts {
 
 export default function Page() {
   const { post, otherPosts } = useData<Data>();
-  if(!post) return;
+  if (!post) return;
   const content = stripIndent(post.content);
 
   const allOtherPosts = otherPosts as OtherPosts[];

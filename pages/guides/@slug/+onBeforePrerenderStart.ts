@@ -1,4 +1,4 @@
-import guidesData from '../../../src/content/guides.json';
+import guidesData from "../../../src/content/guides.json";
 
 interface Guide {
   slug: string;
@@ -6,8 +6,8 @@ interface Guide {
 
 const onBeforePrerenderStart = () => {
   const guides = guidesData as Guide[];
-  
-  return guides.map(guide => `/guide/${guide.slug}`);
+
+  return guides.map((guide) => `/guide/${guide.slug}`);
 };
 
 export default onBeforePrerenderStart;

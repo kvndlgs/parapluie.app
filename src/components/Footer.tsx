@@ -1,7 +1,6 @@
 export default function Footer() {
   return (
     <div className="relative w-full bg-base-750">
-  
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[99%]">
         <svg
           dataName="Layer 1"
@@ -12,13 +11,12 @@ export default function Footer() {
         >
           <path
             d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            fill="var(--base-750)">
-          </path>
+            fill="var(--base-750)"
+          ></path>
         </svg>
       </div>
       <footer className="w-full text-white pt-12 pb-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-4">
-          
           <div className="max-w-md">
             <div className="flex flex-col items-start cursor-pointer select-none mb-4">
               <svg
@@ -55,7 +53,6 @@ export default function Footer() {
             </form>
           </div>
 
-        
           <div className="flex flex-col items-start md:items-end space-y-4 pt-4">
             <a
               href="/abonnements"
@@ -109,5 +106,5 @@ export default function Footer() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

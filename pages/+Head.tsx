@@ -7,7 +7,7 @@ import type { Data } from "./+data";
 export function Head() {
   const data = useData<Data>();
 
-  if(!data) return;
+  if (!data) return;
 
   // On récupère les JSON-LD (soit globaux, soit spécifiques à la page)
 

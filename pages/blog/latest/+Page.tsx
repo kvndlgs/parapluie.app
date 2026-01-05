@@ -2,11 +2,10 @@ import { Head } from "vike-react/Head";
 import type { Data } from "../latest/+data";
 import { useData } from "vike-react/useData";
 
-
 export default function Page() {
-  const {posts} = useData<Data>();
-  
-  if(!posts) return;
+  const { posts } = useData<Data>();
+
+  if (!posts) return;
 
   return (
     <>

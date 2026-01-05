@@ -3,8 +3,7 @@ import "@/index.css";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 
-export default function Layout({children}: {children: React.ReactNode}) {
-  
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {/* GTM Noscript - Placé au début du body */}
@@ -18,7 +17,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
       </noscript>
       <ResponsiveNavbar />
       <main className="py-8 md:py-24">{children}</main>
-      <Footer /> 
+      <Footer />
     </>
   );
 }

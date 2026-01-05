@@ -5,16 +5,13 @@ import stripIndent from "../../../src/utils/stripIndent";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
-
-
 export default function Page() {
-  const {guide, otherGuides } = useData<Data>();
+  const { guide, otherGuides } = useData<Data>();
 
-  if(!guide && otherGuides) return;
+  if (!guide && otherGuides) return;
 
   const content = stripIndent(guide.content);
-  
-  
+
   return (
     <>
       <section className="pt-32 pb-12 px-6 b:g-gradient-to-b from-base-50 to-white">

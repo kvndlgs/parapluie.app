@@ -3,10 +3,10 @@ import { Head } from "vike-react/Head";
 export default function Page() {
   return (
     <>
-    <Head>
-      <title> Support - Parapluie </title>
-      <link rel="canonical" href="https://parapluie.app/support" />
-    </Head>
+      <Head>
+        <title> Support - Parapluie </title>
+        <link rel="canonical" href="https://parapluie.app/support" />
+      </Head>
       <section className="min-h-screen bg-white text-neutral-900">
         {/* HERO */}
         <section className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-4 pb-10 pt-12 sm:px-6 lg:px-8">

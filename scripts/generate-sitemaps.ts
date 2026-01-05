@@ -1,47 +1,32 @@
-// scripts/generate-sitemaps.ts
 import fs from "node:fs/promises";
 import path from "node:path";
 
-// ✅ Adapte si besoin
 const BASE_URL = "https://parapluie.app";
 
-// ✅ Tes routes "statiques" (sans slugs)
-const STATIC_PATHS: Array<{
-  loc: string;
-  changefreq?: string;
-  priority?: number;
-}> = [
+const STATIC_PATHS = [
   { loc: "/", changefreq: "daily", priority: 1.0 },
-
   { loc: "/a-propos", changefreq: "monthly", priority: 0.7 },
   { loc: "/comment-ca-marche", changefreq: "monthly", priority: 0.8 },
   { loc: "/pour-les-aines", changefreq: "monthly", priority: 0.8 },
   { loc: "/pour-les-proches", changefreq: "monthly", priority: 0.8 },
   { loc: "/pour-les-organisations", changefreq: "monthly", priority: 0.7 },
-
   { loc: "/support", changefreq: "monthly", priority: 0.6 },
   { loc: "/support/contact", changefreq: "monthly", priority: 0.5 },
   { loc: "/support/faq", changefreq: "weekly", priority: 0.9 },
-
   { loc: "/blog", changefreq: "weekly", priority: 0.9 },
   { loc: "/guides", changefreq: "weekly", priority: 0.9 },
-
   { loc: "/media", changefreq: "monthly", priority: 0.4 },
   { loc: "/media/press-kit", changefreq: "monthly", priority: 0.4 },
-
   { loc: "/partenariats", changefreq: "monthly", priority: 0.5 },
-
-  { loc: "/conditions-generales-d-utilisation", changefreq: "yearly", priority: 0.2 },
+  {
+    loc: "/conditions-generales-d-utilisation",
+    changefreq: "yearly",
+    priority: 0.2,
+  },
   { loc: "/politique-de-confidentialite", changefreq: "yearly", priority: 0.2 },
 ];
 
-type SitemapEntry = {
-  loc: string; // absolute URL
-  lastmod?: string; // ISO date
-  changefreq?: string;
-  priority?: number;
-};
-
+// --- Fonctions utilitaires (On les garde !) ---
 function escapeXml(str: string) {
   return str
     .replace(/&/g, "&amp;")
@@ -50,176 +35,118 @@ function escapeXml(str: string) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
 }
-
 function toAbsoluteUrl(p: string) {
-  if (!p.startsWith("/")) p = "/" + p;
-  return `${BASE_URL}${p}`;
+  return `${BASE_URL}${p.startsWith("/") ? p : "/" + p}`;
 }
-
-function normalizeIsoDate(maybeDate: unknown): string | undefined {
-  if (typeof maybeDate !== "string") return undefined;
-  // accepte "2024-12-22" ou ISO complet
+function normalizeIsoDate(maybeDate: any): string | undefined {
+  if (!maybeDate) return undefined;
   const d = new Date(maybeDate);
-  if (Number.isNaN(d.getTime())) return undefined;
-  // Google aime bien YYYY-MM-DD
-  return d.toISOString().slice(0, 10);
+  return Number.isNaN(d.getTime()) ? undefined : d.toISOString().slice(0, 10);
 }
 
-function buildUrlset(entries: SitemapEntry[]) {
+function buildUrlset(entries: any[]) {
   const body = entries
-    .map((e) => {
-      const parts = [
-        `<loc>${escapeXml(e.loc)}</loc>`,
-        e.lastmod ? `<lastmod>${escapeXml(e.lastmod)}</lastmod>` : "",
-        e.changefreq
-          ? `<changefreq>${escapeXml(e.changefreq)}</changefreq>`
-          : "",
-        typeof e.priority === "number"
-          ? `<priority>${e.priority.toFixed(1)}</priority>`
-          : "",
-      ].filter(Boolean);
-
-      return `  <url>\n    ${parts.join("\n    ")}\n  </url>`;
-    })
+    .map(
+      (e) => `  <url>
+                                                <loc>${escapeXml(e.loc)}</loc>
+                                                    ${e.lastmod ? `<lastmod>${e.lastmod}</lastmod>` : ""}
+                                                        ${e.changefreq ? `<changefreq>${e.changefreq}</changefreq>` : ""}
+                                                            ${e.priority ? `<priority>${e.priority.toFixed(1)}</priority>` : ""}
+                                                              </url>`,
+    )
     .join("\n");
-
-  return (
-    `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    `${body}\n` +
-    `</urlset>\n`
-  );
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>`;
 }
 
-function buildSitemapIndex(sitemaps: Array<{ loc: string; lastmod?: string }>) {
+function buildSitemapIndex(sitemaps: any[]) {
   const body = sitemaps
-    .map((s) => {
-      const parts = [
-        `<loc>${escapeXml(s.loc)}</loc>`,
-        s.lastmod ? `<lastmod>${escapeXml(s.lastmod)}</lastmod>` : "",
-      ].filter(Boolean);
-
-      return `  <sitemap>\n    ${parts.join("\n    ")}\n  </sitemap>`;
-    })
+    .map(
+      (s) => `  <sitemap>
+                                                                      <loc>${escapeXml(s.loc)}</loc>
+                                                                          ${s.lastmod ? `<lastmod>${s.lastmod}</lastmod>` : ""}
+                                                                            </sitemap>`,
+    )
     .join("\n");
-
-  return (
-    `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    `${body}\n` +
-    `</sitemapindex>\n`
-  );
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</sitemapindex>`;
 }
 
-async function safeImport<T = any>(modulePath: string): Promise<T | null> {
-  try {
-    // tsx supporte l'import relatif avec extension .ts
-    const mod = await import(modulePath);
-    return mod as T;
-  } catch (err) {
-    console.warn(`[sitemap] Import failed for ${modulePath}`);
-    console.warn(err);
-    return null;
-  }
-}
-
+// --- Logique principale modifiée ---
 async function main() {
   const root = process.cwd();
   const publicDir = path.join(root, "public");
   await fs.mkdir(publicDir, { recursive: true });
 
-  // ---- 1) PAGES (statiques)
-  const pagesEntries: SitemapEntry[] = STATIC_PATHS.map((p) => ({
+  // 1. Pages statiques
+  const pagesEntries = STATIC_PATHS.map((p) => ({
     loc: toAbsoluteUrl(p.loc),
     changefreq: p.changefreq,
     priority: p.priority,
-    lastmod: undefined,
   }));
 
-  // ---- 2) BLOG POSTS
-  // ✅ ajuste ces chemins si tes contenus sont ailleurs
-  const postsMod = await safeImport<{ posts?: any[] }>(
-    pathToFileUrl(path.join(root, "src/content/posts.json")),
-  );
-  const posts = postsMod?.posts ?? [];
+  // 2. Lecture des fichiers JSON (Méthode robuste par lecture de fichier)
+  const readJson = async (fileName: string) => {
+    try {
+      const content = await fs.readFile(
+        path.join(root, "src/content", fileName),
+        "utf-8",
+      );
+      const data = JSON.parse(content);
+      // Gère si le JSON est [...] ou { "posts": [...] }
+      return Array.isArray(data) ? data : data.posts || data.guides || [];
+    } catch (e) {
+      console.error(`[sitemap] Erreur lecture ${fileName}:`, e);
+      return [];
+    }
+  };
 
-  const blogEntries: SitemapEntry[] = posts
-    .map((post) => {
-      const slug = post?.slug;
-      if (!slug || typeof slug !== "string") return null;
+  const posts = await readJson("posts.json");
+  const guides = await readJson("guides.json");
 
-      return {
-        loc: toAbsoluteUrl(`/post/${slug}`),
-        lastmod: normalizeIsoDate(post?.date),
-        changefreq: "weekly",
-        priority: 0.7,
-      } satisfies SitemapEntry;
-    })
-    .filter(Boolean) as SitemapEntry[];
+  const blogEntries = posts
+    .map((p: any) => ({
+      loc: toAbsoluteUrl(`/post/${p.slug}`),
+      lastmod: normalizeIsoDate(p.date),
+      changefreq: "weekly",
+      priority: 0.7,
+    }))
+    .filter((e: any) => e.loc.includes("/post/"));
 
-  // ---- 3) GUIDES
-  const guidesMod = await safeImport<{ guides?: any[] }>(
-    pathToFileUrl(path.join(root, "src/content/guides.json")),
-  );
-  const guides = guidesMod?.guides ?? [];
+  const guidesEntries = guides
+    .map((g: any) => ({
+      loc: toAbsoluteUrl(`/guide/${g.slug}`),
+      lastmod: normalizeIsoDate(g.date),
+      changefreq: "monthly",
+      priority: 0.7,
+    }))
+    .filter((e: any) => e.loc.includes("/guide/"));
 
-  const guidesEntries: SitemapEntry[] = guides
-    .map((g) => {
-      const slug = g?.slug;
-      if (!slug || typeof slug !== "string") return null;
-
-      return {
-        loc: toAbsoluteUrl(`/guide/${slug}`),
-        lastmod: normalizeIsoDate(g?.date),
-        changefreq: "monthly",
-        priority: 0.7,
-      } satisfies SitemapEntry;
-    })
-    .filter(Boolean) as SitemapEntry[];
-
-  // ---- Write files
-  const pagesXml = buildUrlset(pagesEntries);
-  const blogXml = buildUrlset(blogEntries);
-  const guidesXml = buildUrlset(guidesEntries);
-
+  // 3. Écriture
   await fs.writeFile(
     path.join(publicDir, "sitemap-pages.xml"),
-    pagesXml,
-    "utf8",
+    buildUrlset(pagesEntries),
   );
-  await fs.writeFile(path.join(publicDir, "sitemap-blog.xml"), blogXml, "utf8");
+  await fs.writeFile(
+    path.join(publicDir, "sitemap-blog.xml"),
+    buildUrlset(blogEntries),
+  );
   await fs.writeFile(
     path.join(publicDir, "sitemap-guides.xml"),
-    guidesXml,
-    "utf8",
+    buildUrlset(guidesEntries),
   );
 
-  // ---- Sitemap index
   const today = new Date().toISOString().slice(0, 10);
-  const indexXml = buildSitemapIndex([
-    { loc: toAbsoluteUrl("/sitemap-pages.xml"), lastmod: today },
-    { loc: toAbsoluteUrl("/sitemap-blog.xml"), lastmod: today },
-    { loc: toAbsoluteUrl("/sitemap-guides.xml"), lastmod: today },
-  ]);
+  await fs.writeFile(
+    path.join(publicDir, "sitemap.xml"),
+    buildSitemapIndex([
+      { loc: toAbsoluteUrl("/sitemap-pages.xml"), lastmod: today },
+      { loc: toAbsoluteUrl("/sitemap-blog.xml"), lastmod: today },
+      { loc: toAbsoluteUrl("/sitemap-guides.xml"), lastmod: today },
+    ]),
+  );
 
-  await fs.writeFile(path.join(publicDir, "sitemap.xml"), indexXml, "utf8");
-
-  console.log(`[sitemap] ✅ done`);
-  console.log(`- public/sitemap.xml`);
-  console.log(`- public/sitemap-pages.xml (${pagesEntries.length})`);
-  console.log(`- public/sitemap-blog.xml (${blogEntries.length})`);
-  console.log(`- public/sitemap-guides.xml (${guidesEntries.length})`);
+  console.log(
+    `[sitemap] ✅ Terminé : Pages(${pagesEntries.length}), Blog(${blogEntries.length}), Guides(${guidesEntries.length})`,
+  );
 }
 
-// Node ESM helper: convert absolute path to file:// URL
-function pathToFileUrl(p: string) {
-  const resolved = path.resolve(p);
-  // windows-safe
-  const url = new URL(`file://${resolved}`);
-  return url.href;
-}
-
-main().catch((e) => {
-  console.error("[sitemap] ❌ error", e);
-  process.exit(1);
-});
+main().catch(console.error);

@@ -1,14 +1,13 @@
 // pages/guides/+Pages.tsx
 
-
 import { Head } from "vike-react/Head";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
 export default function Page() {
-  const  {guides} = useData<Data>();
- 
-  if(!guides) return;
+  const { guides } = useData<Data>();
+
+  if (!guides) return;
 
   return (
     <>

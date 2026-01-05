@@ -18,11 +18,10 @@ export function Head() {
       <meta name="twitter:title" content={data.title} />
       <meta name="twitter:description" content={data.description} />
       <link rel="canonical" href={data.canonical} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
-        />
-    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.guideJsonLd) }}
+      />
     </>
   );
 }

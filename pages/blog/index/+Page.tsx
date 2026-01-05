@@ -2,11 +2,10 @@ import { Head } from "vike-react/Head";
 import type { Data } from "../latest/+data";
 import { useData } from "vike-react/useData";
 
-
 export default function Page() {
-  const {posts} = useData<Data>();
-  
-  if(!posts) return;
+  const { posts } = useData<Data>();
+
+  if (!posts) return;
 
   return (
     <>
@@ -17,7 +16,6 @@ export default function Page() {
           content="Blog et actualités sur la fraude visant les aînés au Québec"
         />
         <link rel="canonical" href="https://parapluie.app/blog" />
-        
       </Head>
       <section className="pt-32 pb-16 px-6 bg-gradient-to-b from-base-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
