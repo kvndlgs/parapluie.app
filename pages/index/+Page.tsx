@@ -39,10 +39,14 @@ export default function Page() {
         <title> Parapluie - Protection contre les escroqueries </title>
         <link rel="canonical" href="https://parapluie.app/" />
         <meta property="og:image" content={ogImg} />
-        <script type="application/json+ld"
-         dangerouslySetInnerHTML={{__html: JSON.stringify(mainJsonLd) }} />
-        <script type="application/json+ld"
-         dangerouslySetInnerHTML={{__html: JSON.stringify(orgJsonLd)}} />
+        <script
+          type="application/json+ld"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(mainJsonLd) }}
+        />
+        <script
+          type="application/json+ld"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
       </Head>
       <Hero
         openModal={openModal}

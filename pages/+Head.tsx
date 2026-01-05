@@ -1,13 +1,7 @@
 // pages/+Head.tsx
 import React from "react";
-import { useData } from "vike-react/useData";
-//import { usePageContext } from 'vike-react/usePageContext';
-import type { Data } from "./+data";
 
 export function Head() {
-  const data = useData<Data>();
-
-  if (!data) return;
 
   // On récupère les JSON-LD (soit globaux, soit spécifiques à la page)
 
@@ -28,20 +22,9 @@ export function Head() {
       <link rel="icon" href="https://parapluie.app/favicon.ico" />
 
       {/* 3. Open Graph (Vike-React ne gère pas og:image par défaut) */}
-      <meta property="og:image" content={data.ogImg} />
+      <meta property="og:image" content="https://parapluie.app/og-image.webp" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-
-      {/* 4. JSON-LD propre */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.mainJsonLd) }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.orgJsonLd) }}
-      />
     </>
   );
 }
