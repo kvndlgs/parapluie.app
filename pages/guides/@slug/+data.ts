@@ -34,15 +34,16 @@ export const data = async (pageContext: PageContextServer) => {
 
   const allGuides = getAllGuides();
   const otherGuides = allGuides.filter((p) => p.slug !== slug).slice(0, 2);
-
+ // const cleanContent = step.content.replace(/\n/g, " ").replace(/"/g, '\\"');
+  // ... puis utilise cleanContent dans ton objet JSON-LD
+  
   const guideJsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: guide.title,
     description: guide.excerpt || guide.description || "",
     image: guide.image || "https://parapluie.app/og-guides.png",
-    step:
-      guide.steps?.map((step, index) => ({
+    step: guide.steps?.map((step, index) => ({
         "@type": "HowToStep",
         position: index + 1,
         name: step.title || `Étape ${index + 1}`,
