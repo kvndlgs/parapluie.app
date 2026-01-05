@@ -1,0 +1,17 @@
+{
+      "redirects": [
+          {
+                "source": "/:path*",
+                      "has": [
+                              {
+                                        "type": "host",
+                                                  "value": "www.parapluie.app"
+                                                          }
+                                                                ],
+                                                                      "destination": "https://parapluie.app/:path*",
+                                                                            "permanent": true
+                                                                                }
+                                                                                  ]
+                                                                                  }
+                                                                                  
+}
