@@ -11,7 +11,7 @@ export interface Guide {
   readTime: string;
   tags: string[];
   content: string;
-  steps: { title: string; content: string }[];
+  steps?: { title: string; content: string }[];
   items: {
     title: string;
   };
@@ -26,6 +26,7 @@ const getAllGuides = () =>
   [...guides].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
+
 
 export const data = async (pageContext: PageContextServer) => {
   const { slug } = pageContext.routeParams;
@@ -66,6 +67,7 @@ export const data = async (pageContext: PageContextServer) => {
   const howTo = {
     "@context": "https://schema.org",
     "@type": "HowTo",
+    "@id": `https://parapluie.app/guide/${slug}#howto`,
     name: guide.title,
     description: guide.excerpt || guide.description || "",
     image: guide.image || "https://parapluie.app/og-guides.png",
@@ -82,6 +84,7 @@ export const data = async (pageContext: PageContextServer) => {
         ],
       })) || [],
   };
+
 
   return {
     guide,

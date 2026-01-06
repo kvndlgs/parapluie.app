@@ -14,12 +14,13 @@ export function Head() {
       <meta name="description" content={data.description} />
       <link rel="canonical" href={data.canonical} />
       <script
+        key="json-ld-blogposting"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(data.blogPosting) }}
       />
       <script
-       key="json-ld-blogposting"
-       type="application/json+ld"
+       key="json-ld-breadcumblist"
+       type="application/ld+json"
        dangerouslySetInnerHTML={{__html: JSON.stringify(data.breadCrumbList)}}
     />
        </>

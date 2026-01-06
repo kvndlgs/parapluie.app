@@ -7,12 +7,8 @@ export function Head() {
 
   return (
     <>
-      {/* 1. GTM en priorité absolue */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-W6LH2F5W');`,
-        }}
-      />
+    
+      <script async={true} src="https://www.googletagmanager.com/gtag/js?id=GTM-W6LH2F5W" />
 
       {/* 2. Tags techniques (Vike ne les gère pas par défaut) */}
       <meta charSet="UTF-8" />
