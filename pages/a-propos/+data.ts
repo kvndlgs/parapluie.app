@@ -44,7 +44,7 @@ export const data = async () => {
     description:
       "Questions fréquentes sur Parapluie, l’application qui protège vos parents au Québec.",
     aboutJsonLd,
-    canonical
+    canonical,
   };
 };
 

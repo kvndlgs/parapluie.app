@@ -18,8 +18,7 @@ export function Head() {
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#725572" />
-      <link rel="manifest" href="/manifest.json" />
-      <link rel="icon" href="https://parapluie.app/favicon.ico" />
+      <link rel="manifest" href="../assets/manifest.json" />
 
       {/* 3. Open Graph (Vike-React ne gère pas og:image par défaut) */}
       <meta property="og:image" content="https://parapluie.app/og-image.webp" />

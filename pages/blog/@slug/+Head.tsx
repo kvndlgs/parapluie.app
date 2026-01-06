@@ -4,7 +4,10 @@ import type { Data } from "./+data";
 import { useData } from "vike-react/useData";
 
 export function Head() {
-  const data = useData<Data>();
+  const  data  = useData<Data>();
+ 
+  if(!data) return null;
+
   return (
     <>
       <title>{data.title}</title>
@@ -12,8 +15,13 @@ export function Head() {
       <link rel="canonical" href={data.canonical} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.blogJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data.blogPosting) }}
       />
-    </>
+      <script
+       key="json-ld-blogposting"
+       type="application/json+ld"
+       dangerouslySetInnerHTML={{__html: JSON.stringify(data.breadCrumbList)}}
+    />
+       </>
   );
 }

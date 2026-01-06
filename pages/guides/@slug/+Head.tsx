@@ -2,12 +2,7 @@ import { useData } from "vike-react/useData";
 import type { Data } from "./+data";
 
 export function Head() {
-  const { guideJsonLd, title, description, image, canonical} = useData<Data>();
-
-  // 1. On vérifie que data existe ET que le JSON-LD a des étapes
-  if (!guideJsonLd?.step || guideJsonLd.step.length === 0) {
-    return null;
-  }
+  const { howTo, breadCrumbList, title, description, image, canonical} = useData<Data>();
 
   return (
     <>
@@ -25,8 +20,13 @@ export function Head() {
       <script
         key="json-ld-howto"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(guideJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }}
       />
-    </>
+      <script 
+       key="json-ld-breadcrumblist"
+       type="application/json+ld"
+       dangerouslySetInnerHTML={{__html: JSON.stringify(breadCrumbList) }}
+       />
+       </>
   );
 }

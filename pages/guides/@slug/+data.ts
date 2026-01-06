@@ -12,6 +12,9 @@ export interface Guide {
   tags: string[];
   content: string;
   steps: { title: string; content: string }[];
+  items: {
+    title: string;
+  };
   image?: string;
   description?: string;
 }
@@ -34,26 +37,49 @@ export const data = async (pageContext: PageContextServer) => {
 
   const allGuides = getAllGuides();
   const otherGuides = allGuides.filter((p) => p.slug !== slug).slice(0, 2);
- // const cleanContent = step.content.replace(/\n/g, " ").replace(/"/g, '\\"');
-  // ... puis utilise cleanContent dans ton objet JSON-LD
-  
-  const guideJsonLd = {
+
+  const breadCrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://parapluie.app",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: "https://parapluie.app/guides",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: guide.title,
+        item: `https://parapluie.app/guide/${guide.slug}`,
+      },
+    ],
+  };
+
+  const howTo = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: guide.title,
     description: guide.excerpt || guide.description || "",
     image: guide.image || "https://parapluie.app/og-guides.png",
-    step: guide.steps?.map((step, index) => ({
-          "@type": "HowToStep",
-              position: index + 1,
-                  name: (step.title || "").replace(/"/g, '\"'),
+    step:
+      guide.steps?.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: (step.title || "").replace(/"/g, '\"'),
         itemListElement: [
-                {
-                   "@type": "HowToDirection",
-                    // Nettoie les sauts de ligne qui font planter le JSON en ligne 10
-                    text: (step.content || "").replace(/\n/g, " ").replace(/"/g, '\"'),
-                 },
-               ],
+          {
+            "@type": "HowToDirection",
+            text: (step.content || "").replace(/\n/g, " ").replace(/"/g, '\"'),
+          },
+        ],
       })) || [],
   };
 
@@ -64,7 +90,8 @@ export const data = async (pageContext: PageContextServer) => {
     description: guide.excerpt,
     canonical: `https://parapluie.app/guide/${slug}`,
     image: "https://parapluie.app/og-guides.png", // Utilise une URL absolue idéalement
-    guideJsonLd,
+    howTo,
+    breadCrumbList,
   };
 };
 
